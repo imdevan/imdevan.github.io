@@ -1,19 +1,20 @@
 ---
 layout: page
-title: About Pixyll
+title: Sup Homie? 
 permalink: /about/
 ---
 
-This Jekyll theme was crafted with <3 by [John Otander](http://johnotander.com)
-([@4lpine](https://twitter.com/4lpine)).
+You are a badass! Thanks for being you!
 
-Checkout the [Github repository](https://github.com/johnotander/pixyll) to download it,
-request a feature, report a bug, or contribute. It's free, and open source
-([MIT](http://opensource.org/licenses/MIT)).
+You are probably really cool. This page is a bit about me. You should say hi because I like chattting with cool people.
 
-Thanks to the following:
+<h1 class="section-title">Where I Work</h1>
 
-* [BASSCSS](http://basscss.com)
-* [Jekyll](http://jekyllrb.com)
-* [Refills](http://refills.bourbon.io/)
-* [Type Scale](http://type-scale.com/)
+<artical class="section-article">
+    <p>
+        I currently work as a front end developer, and badass at IBM Design.
+    </p>
+    <p>
+        I like to go to hackathons in my free time.
+    </p>
+</artical>				

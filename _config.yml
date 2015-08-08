@@ -1,10 +1,11 @@
 # Site settings
-title:       Pixyll
-email:       your_email@example.com
-author:      John Otander
-description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
+title:       Devan H.
+email:       huapayadevan@gmail.com
+author:      Devan Huapaya
+description: "Personal website if super awesome front end developer unicorn person, Devannnnn Huapaya!"
 baseurl:     ""
-url:         "http://pixyll.com"
+port: 3000
+url:         "http://devan.im"
 
 # Google analytics
 google_analytics:
@@ -32,7 +33,7 @@ paypal_url:
 flattr_button:
 
 # Post sharing icons
-show_sharing_icons: false
+show_sharing_icons: true
 share_text: 'Share this post!'
 # Change to 'true' to enable individual icons
 share_facebook: false
@@ -51,6 +52,7 @@ redcarpet:
   extensions: ['smart', 'tables', 'with_toc_data']
 permalink:    pretty
 paginate:     4
+destination: _site/blog
 sass:
   compressed: true
 gems:
