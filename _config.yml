@@ -1,59 +1,25 @@
-# Site settings
-title:       Devan H.
-email:       huapayadevan@gmail.com
-author:      Devan Huapaya
+# This will be the first part of the title tag for your site <title> site.name + page.title </title>
+name: Devan Huapaya
+
+# Populates the meta description for the site. Should be under 150 characters for best SEO purposes.
 description: "Personal website if super awesome front end developer unicorn person, Devannnnn Huapaya!"
-baseurl:     ""
-port: 3000
-url:         "http://devan.im"
 
-# Google analytics
-google_analytics:
+# Owner (organization or individual) of site content
+author: Devan Huapaya
 
-# Optional features
-animated:           false
-show_related_posts: false
-show_post_footers:  false
-show_social_icons:  false
+#url: "[http:// ]"
+url: "http://devan.im"
 
-# Disqus post comments
-# (leave blank to disable Disqus)
-disqus_shortname:
+markdown: kramdown
 
-# Social icons
-github_username:
-stackoverflow_id:
-twitter_username:
-google_plus_id:
-linkedin_username:
-angellist_username:
-medium_id:
-bitcoin_url:
-paypal_url:
-flattr_button:
+# Pagination variable for how many posts to show in a list
+paginate: 5
 
-# Post sharing icons
-show_sharing_icons: true
-share_text: 'Share this post!'
-# Change to 'true' to enable individual icons
-share_facebook: false
-share_twitter: false
-share_googleplus: false
-share_linkedin: false
-share_digg: false
-share_tumblr: false
-share_reddit: false
-share_stumbleupon: false
-share_hackernews: false
+# Style of permalinks
+permalink: /:categories/:title
 
-# Build settings
-markdown:     kramdown
-redcarpet:
-  extensions: ['smart', 'tables', 'with_toc_data']
-permalink:    pretty
-paginate:     4
-destination: _site/blog
-sass:
-  compressed: true
-gems:
-  - jekyll-sitemap
+gems: ['jekyll-sitemap']
+
+pygments: true
+
+exclude: [node_modules, Gruntfile.js, package.json]

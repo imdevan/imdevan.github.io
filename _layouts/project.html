@@ -1,0 +1,55 @@
+{% include _head.html %}
+<body ontouchstart="">
+  {% include _navigation.html %}
+  <header id="page-header" style="background:#eee url({{page.header_img}}) no-repeat center center; background-size:cover;" class="header-full-bleed row">
+      <div class="h1 full-bleed-title">{{page.title}}</div>
+      <br/>
+      <div class="full-bleed-subtitle">
+        <p><time datetime="{{page.date}}">{{page.date | date: "%B %d, %Y"}}</time></p>
+        <p>{{page.project_type}}</p>
+      </div>
+      <div class="header-scroll">
+        <i class="fa fa-angle-double-down fa-4x pulse"></i>
+      </div>
+    </header>
+    <div class="single-column">
+  <article class="mt-2 post">
+    <!-- This is where post content lives -->
+      {{content}}
+    <!-- end of post content -->
+    <footer class="mt-2">
+      {% if page.author %}
+      <p class="meta author">
+      <time  class="meta" datetime="{{page.date}}">{{page.date | date: "%B %d, %Y"}}</time><br />
+      By: <a href="" rel="author">{{page.author}}</a></p>
+      {% endif %}
+    </footer>
+  </article>
+  
+  {% include _related_posts.html %}
+  {% include _footer.html %}
+  {% include _google_analytics.html %}
+  <script>
+    $('#page-header').css('min-height',window.innerHeight + 'px');
+
+    $(document).ready(function() {
+      if (window.innerHeight < $('#page-header').height()) {
+         $('.header-scroll').hide();
+      }
+
+      $('.header-scroll').click(function() {
+         $('html, body').animate({
+             scrollTop: $('.single-column').offset().top
+         }, 500);
+       return false;
+      });
+   });
+  </script>
+
+  {% if page.theme == 'light' %}
+  <script>
+      $('.site-nav--link, .header-scroll .fa').addClass('light');
+  </script>
+  {% endif %}
+</body>
+</html>

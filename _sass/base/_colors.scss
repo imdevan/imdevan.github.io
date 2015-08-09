@@ -1,0 +1,33 @@
+// Primary Colors
+$black:#2e2e2e;
+$teal: #81BDA4;
+$tan: #E8DDCB;
+$salmon: #FEA6A2;
+$white: #fff;
+
+$blue-dark:#003399;
+$blue-medium:#3366CC;
+$blue-light:#407FFF;
+
+$grey-dark:#222;
+$grey-medium:#777;
+$grey-light:#eee;
+
+// Base Colors
+$bgColor: $white;
+$highlightColor: lighten(#81BDA4, 20%);
+$primaryColor: #333;
+$linkColor: $teal;
+$codeBGColor: $grey-dark;
+
+// Class Specific Colors
+$bodyBGColor: $bgColor;
+$bodyColor: $primaryColor;
+
+$navBGColor: $bgColor;
+$navHoverBG: $teal; 
+$navHoverColor: $bgColor;
+$navColor: $bodyColor;
+
+$footerBorderColor: rgba($primaryColor, 0.5);
+$footerLinkColor: $linkColor;

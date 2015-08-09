@@ -1,0 +1,41 @@
+._nav {
+    @extend %raleway;
+    position: fixed;
+    width: 100%;
+    height: $navHeight;
+    line-height: $navHeight;
+    top: 0;
+    right: 0;
+    text-align: center;
+    background: $navBGColor;
+    transition: opacity 0.3s ease-in-out,  transform 0.3s ease-in-out;
+    &--list {
+        margin: 0 0;
+        font-size: 0rem;
+    }
+    &--item {
+        display: inline-block;
+        text-align: center;
+        padding-left: 1em;
+        padding-right: 1em;
+        transition:  background 0.15s linear;
+    }
+    &--link {
+        transition: color 0.15s linear;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $navColor;
+        display: inline-block;
+        font-size: $navFontSize;
+        &:hover {
+            ._nav--item{
+                background: $navHoverBG;
+            }
+            color: $navHoverColor;
+        }
+    }
+    &.hide{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
