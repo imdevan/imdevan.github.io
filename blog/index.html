@@ -2,21 +2,26 @@
 layout: page
 title: "Blog"
 ---
-
-<section class="single-column wide">
-  <h1>Blog</h1>
-  <div class="articles-list">
-  {% for post in site.categories.blog %}
-    {% if post.header_img %}
-    <a href="{{post.url}}">
-      <header style="background:#eee url({{post.header_img}}) no-repeat center center; background-size: cover; margin-bottom:2em;" class="header-full-bleed small row">
-        <div class="h2 full-bleed-title">{{post.title}}</div>
-        <div class="full-bleed-subtitle">
-          <p><time datetime="{{post.date}}">{{post.date | date: "%B %d, %Y"}}</time></p>
-        </div>
-      </header>
-    </a>
-    {% endif %}
-  {% endfor %}
-  </div>
+<section class="_blog-page">
+    <h1 class="_blog-page--title">Blog</h1>
+    <h2>Comeing Soon! ☃ </h2>
+  {% comment %}
+    <div class="_blog-page--list">
+        {% for post in site.categories.blog %} 
+          <header class="_blog-page--post">
+              <div class="_blog-page--post-title">
+                <a href="{{post.url}}">{{post.title}}</a>
+              </div>
+              <div class="_blot--content">
+                  {% if post.content contains "<!-- more -->" %} 
+                    {{ post.content | split:"<!-- more -->" | first % }}
+                    <a href="{{ post.url }}" class="read-more-link">Read more &raquo;</a> 
+                  {% else %} 
+                    {{ post.excerpt }} 
+                  {% endif %}
+              </div>
+          </header>
+      {% endfor %}
+    </div>
+  {% endcomment %}
 </section>

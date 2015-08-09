@@ -4,8 +4,11 @@ title: "Arts"
 ---
 
 
-<section class="single-column wide">
-   <h1>Arts</h1>
+<section class="_arts">
+   <h1 class="_arts--title">Arts</h1>
+    <h2>Comeing Soon! ☃ </h2>
+    
+  {% comment %}
    <div class="projects-list">
    {% for post in site.categories.arts %}
       {% if post.header_img %}
@@ -20,4 +23,5 @@ title: "Arts"
       {% endif %}
    {% endfor %}
    </div>
+   {% endcomment %}
 </section>
