@@ -22,13 +22,6 @@ module.exports = function (grunt) {
     postcss: {
       options: {
         map: true, // inline sourcemaps
-
-        // or
-        map: {
-          inline: false, // save all sourcemaps as separate files...
-          annotation: 'dist/css/maps/' // ...to the specified directory
-        },
-
         processors: [
           require('pixrem')(), // add fallbacks for rem units
           require('autoprefixer-core')({
@@ -80,7 +73,7 @@ module.exports = function (grunt) {
       },
       css: {
         files: ['_sass/**/*.scss', 'css/i.css'],
-        tasks: ['sass', 'jekyll'],
+        tasks: ['sass', 'postcss', 'jekyll'],
         options: {
           livereload: true
         }
@@ -98,6 +91,7 @@ module.exports = function (grunt) {
   grunt.registerTask('serve', function () {
     grunt.task.run([
       'sass',
+      'postcss',
       'jekyll',
       'connect:livereload',
       'watch'

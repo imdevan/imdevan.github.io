@@ -16,8 +16,7 @@
     &--item {
         display: inline-block;
         text-align: center;
-        padding-left: 1em;
-        padding-right: 1em;
+        padding: 1em;
         background: $navBGColor;
         transition:  background 0.15s linear;
     }
