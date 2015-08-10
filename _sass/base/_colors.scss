@@ -1,13 +1,13 @@
 // Primary Colors
 $black:#2e2e2e;
 $teal: #81BDA4;
-$tan: #E8DDCB;
+$tan: #F9F2E7;
 $salmon: #FEA6A2;
 $white: #fff;
 
 $blue-dark:#003399;
-$blue-medium:#3366CC;
-$blue-light:#407FFF;
+$blue-medium:#00A8C6;
+$blue-light:#40C0CB;
 
 $grey-dark:#222;
 $grey-medium:#777;
@@ -15,7 +15,7 @@ $grey-light:#eee;
 
 // Base Colors
 $bgColor: $white;
-$highlightColor: lighten(#81BDA4, 20%);
+$highlightColor: $blue-light;
 $primaryColor: #333;
 $linkColor: $teal;
 $codeBGColor: $grey-dark;
