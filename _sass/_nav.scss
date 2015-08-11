@@ -8,7 +8,7 @@
     right: 0;
     text-align: center;
     background: $navBGColor;
-    transition: opacity 0.3s ease-in-out,  transform 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     &--list {
         margin: 0 0;
         font-size: 0rem;
@@ -18,7 +18,8 @@
         text-align: center;
         padding: 1em;
         background: $navBGColor;
-        transition:  background 0.15s linear;
+        transition: background 0.15s linear;
+        border-bottom: 1px solid $navBorderColor;
     }
     &--link {
         transition: color 0.15s linear;
@@ -28,13 +29,13 @@
         display: inline-block;
         font-size: $navFontSize;
         &:hover {
-            ._nav--item{
+            ._nav--item {
                 background: $navHoverBG;
             }
             color: $navHoverColor;
         }
     }
-    &.hide{
+    &.hide {
         transform: translateY(-100%);
         opacity: 0;
     }

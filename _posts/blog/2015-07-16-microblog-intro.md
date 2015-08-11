@@ -3,7 +3,7 @@ layout: blog_article
 title: "µBlog"
 author: Devan Huapaya
 category: blog
-
+style_mod: BASIC
 header_img: ""
 ---
 A µblog is a blog with moderately short blog postings. Longer than facebook status' shorter than a medium blog. The µblog!

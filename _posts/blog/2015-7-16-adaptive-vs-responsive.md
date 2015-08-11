@@ -3,7 +3,7 @@ layout: blog_article
 title: "Adaptive != Reponsive"
 author: Devan Huapaya
 category: blog
-
+style_mod: BASIC
 header_img: ""
 ---
 

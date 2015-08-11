@@ -4,15 +4,17 @@ title: "Blog"
 ---
 <section class="_blog-page">
     <h1 class="_blog-page--title">Blog</h1>
-    <h2>Comeing Soon! ☃ </h2>
-  {% comment %}
+    <!-- <h2>Comeing Soon! ☃ </h2> -->
     <div class="_blog-page--list">
         {% for post in site.categories.blog %} 
-          <header class="_blog-page--post">
-              <div class="_blog-page--post-title">
-                <a href="{{post.url}}">{{post.title}}</a>
-              </div>
-              <div class="_blot--content">
+
+          <header class="page-post--{{ post.style_mod }}">
+              <a href="{{post.url}}">
+                <h2 class="page-post--title">
+                  {{post.title}}
+                </h2>
+              </a>
+              <div class="page-post--content">
                   {% if post.content contains "<!-- more -->" %} 
                     {{ post.content | split:"<!-- more -->" | first % }}
                     <a href="{{ post.url }}" class="read-more-link">Read more &raquo;</a> 
@@ -23,5 +25,4 @@ title: "Blog"
           </header>
       {% endfor %}
     </div>
-  {% endcomment %}
 </section>

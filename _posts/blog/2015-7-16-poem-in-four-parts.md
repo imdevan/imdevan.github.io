@@ -3,7 +3,7 @@ layout: blog_article
 title: "A poem in 4 parts"
 author: Devan Huapaya
 category: blog
-
+style_mod: BIG
 header_img: ""
 ---
 
