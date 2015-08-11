@@ -7,16 +7,16 @@
     float: left;
     &--BIG {
         @extend .page-post;
-        width: 80%;
-        margin: 5% 10%;
+        // width: 80%;
+        // margin: 5% 10%;
         font-size: 2em;
-    	clear: 'both';
-    	display: block;
+        @include float-span(8);
     }
     &--BASIC {
         @extend .page-post;
-        width: 40%;
-        margin: 5%;
+        // width: 40%;
+        // margin: 5%;
         font-size: 1.5em;
+        @include float-span(4);
     }
 }
