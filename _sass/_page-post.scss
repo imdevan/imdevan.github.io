@@ -1,5 +1,6 @@
 // Sytles for blog / art / projects listed on a page (excluding archive)
 .page-post {
+    @include float-span(12);
     border: 1px solid $pagePostColor;
     padding: 2em;
     margin-bottom: 2em;
@@ -10,12 +11,16 @@
     &--BIG {
         @extend .page-post;
         font-size: 2em;
-        @include float-span(8);
+        @include breakpoint($bp-m) {
+            @include float-span(8);
+        }
     }
     &--BASIC {
         @extend .page-post;
         font-size: 1.5em;
-        @include float-span(4);
+        @include breakpoint($bp-m) {
+            @include float-span(4);
+        }
     }
     &--title {
         color: $pagePostColor;
@@ -26,7 +31,7 @@
             text-decoration: none;
             color: lighten($pagePostColor, 10%);
         }
-        &:hover{
+        &:hover {
             text-decoration: underline;
         }
     }
@@ -39,7 +44,7 @@
             text-decoration: none;
             color: lighten($pagePostColor, 10%);
         }
-        &:hover{
+        &:hover {
             border-bottom: 3px solid $pagePostColor;
         }
     }
