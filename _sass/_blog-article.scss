@@ -17,5 +17,6 @@
     	@extend %pd-2;
     	font-size: 0.75em;
         background: $grey-light;
+        overflow: scroll;
     }
 }
