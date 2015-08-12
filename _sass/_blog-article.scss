@@ -3,9 +3,16 @@
     @extend %group;
     @extend %mt-4;
     font-size: 2em;
-    h1, h2, h3{
-    	@extend %raleway;
-    	font-weight: 400;
-    	color: $highlightColor;
+    h1,
+    h2,
+    h3 {
+        @extend %raleway;
+        font-weight: 400;
+        color: $highlightColor;
+    }
+    .highlight {
+    	@extend %pd-2;
+    	font-size: 0.75em;
+        background: $grey-light;
     }
 }
