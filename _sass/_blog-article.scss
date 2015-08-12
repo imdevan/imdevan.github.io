@@ -1,0 +1,11 @@
+._blog-article {
+    @include grid-span(10, 2);
+    @extend %group;
+    @extend %mt-4;
+    font-size: 2em;
+    h1, h2, h3{
+    	@extend %raleway;
+    	font-weight: 400;
+    	color: $highlightColor;
+    }
+}

@@ -2,16 +2,17 @@
 layout: default
 ---
 
-{% include _standard_header.html %}
-<article class="_post--article">
+<article class="_blog-article">
+
+    <h1 class="blog-article--title">{{page.title}}</h1>
 
     {{content}}
 
-    <footer class="date-footer">
+    <footer class="blog-article--date-footer">
       <time  class="meta" datetime="{{page.date}}">{{page.date | date: "%B %d, %Y"}}</time><br />
     </footer>
-  </article>
+</article>
 
 {% include _disqus_thread.html %}
-{% include _related_posts.html %}
+<!-- {% include _related_posts.html %} -->
 

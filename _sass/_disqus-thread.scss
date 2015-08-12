@@ -1,5 +1,5 @@
 .disqus-thread{
-    text-align: center;
     @include grid-span(10, 2);
     @extend %mt-4;
+	clear: both;
 }
