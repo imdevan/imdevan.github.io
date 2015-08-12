@@ -1,4 +1,17 @@
 ---
-layout: full_bleed_header
+layout: default
 ---
-{{ content }}
+
+{% include _standard_header.html %}
+<article class="_post--article">
+
+    {{content}}
+
+    <footer class="date-footer">
+      <time  class="meta" datetime="{{page.date}}">{{page.date | date: "%B %d, %Y"}}</time><br />
+    </footer>
+  </article>
+
+{% include _disqus_thread.html %}
+{% include _related_posts.html %}
+
