@@ -2,7 +2,7 @@
 .page-post {
     @include float-span(12);
     border: 1px solid $pagePostColor;
-    padding: 2em;
+    padding: 5%;
     margin-bottom: 2em;
     box-sizing: border-box;
     display: block;
@@ -47,5 +47,11 @@
         &:hover {
             border-bottom: 3px solid $pagePostColor;
         }
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+        margin-top: 0;
     }
 }
