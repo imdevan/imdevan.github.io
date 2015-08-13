@@ -1,7 +1,9 @@
 // Sytles for blog / art / projects listed on a page (excluding archive)
+$page-post-secondary-color: $highlightColor;
+
 .page-post {
     @include float-span(12);
-    border: 1px solid $pagePostColor;
+    box-shadow: 10px 10px 30px rgba(black, 0.25);
     padding: 5%;
     margin-bottom: 2em;
     box-sizing: border-box;
@@ -23,29 +25,29 @@
         }
     }
     &--title {
-        color: $pagePostColor;
+        color: $page-post-secondary-color;
         text-decoration: none;
         &:visited,
         &:active,
         &:focus {
             text-decoration: none;
-            color: lighten($pagePostColor, 10%);
+            color: lighten($page-post-secondary-color, 10%);
         }
         &:hover {
             text-decoration: underline;
         }
     }
     a {
-        color: $pagePostColor;
+        color: $page-post-secondary-color;
         text-decoration: none;
         &:visited,
         &:active,
         &:focus {
             text-decoration: none;
-            color: lighten($pagePostColor, 10%);
+            color: lighten($page-post-secondary-color, 10%);
         }
         &:hover {
-            border-bottom: 3px solid $pagePostColor;
+            border-bottom: 3px solid $page-post-secondary-color;
         }
     }
     h1,
