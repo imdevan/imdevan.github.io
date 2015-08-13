@@ -3,6 +3,12 @@
     @extend %group;
     @extend %mt-4;
     font-size: 2em;
+    a{
+        color: $linkColor;
+        &:visited, &:focus{
+            color: lighten($linkColor, 10%);
+        }
+    }
     h1,
     h2,
     h3 {
@@ -11,7 +17,8 @@
         color: $highlightColor;
     }
     ul{
-    	list-style-type: disc;
+    	// list-style-type: disc;
+        line-height: 1.5em;
     }
     .highlight {
     	@extend %pd-2;
