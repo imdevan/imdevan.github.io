@@ -14,8 +14,10 @@
     &--list {
         margin: 0 0;
         font-size: 0rem;
+        box-sizing:border-box;
     }
     &--item {
+        box-sizing:border-box;
         display: inline-block;
         text-align: center;
         padding: 1em;
