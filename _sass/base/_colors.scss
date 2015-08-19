@@ -21,10 +21,10 @@ $linkColor: $blue-medium;
 $codeBGColor: $grey-dark;
 
 // Class Specific Colors
-$bodyBGColor: $bgColor;
+$bodyBGColor: $white;
 $bodyColor: $primaryColor;
 
-$navBGColor: $bgColor;
+$navBGColor: $bodyBGColor;
 $navHoverBG: $linkColor; 
 $navHoverColor: $bgColor;
 $navColor: $bodyColor;
