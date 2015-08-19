@@ -1,12 +1,15 @@
 ._nav {
     @extend %raleway;
+    @include grid-span(10, 2);
+    top: 0;
+    // ucomment when further developed
+    // width: 100%;
+    // right: 0;
+    // change to center when further developed
+    text-align: left;
     position: fixed;
-    width: 100%;
     height: $navHeight;
     line-height: $navHeight;
-    top: 0;
-    right: 0;
-    text-align: center;
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     &--list {
         margin: 0 0;
