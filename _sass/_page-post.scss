@@ -11,6 +11,10 @@ $page-post-secondary-color: $highlightColor;
     float: left;
     line-height: 1.2em;
     animation: fadeinup 2s;
+    &--MASSIVE {
+        @extend .page-post;
+        font-size: 3em;
+    }
     &--BIG {
         @extend .page-post;
         font-size: 2em;
