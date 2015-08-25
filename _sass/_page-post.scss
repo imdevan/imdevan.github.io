@@ -13,6 +13,8 @@ $page-post-secondary-color: $highlightColor;
     animation: fadeinup 2s;
     &--MASSIVE {
         @extend .page-post;
+        box-shadow: none;
+        color: $black;
         font-size: 3em;
     }
     &--BIG {
