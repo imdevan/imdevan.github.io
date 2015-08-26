@@ -2,5 +2,6 @@
 .sub {
 	&--text-hook {
 		@include ms(4);
+		clear: both;
 	}
 }

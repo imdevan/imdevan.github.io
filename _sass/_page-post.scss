@@ -15,18 +15,18 @@ $page-post-secondary-color: $highlightColor;
         @extend .page-post;
         box-shadow: none;
         color: $black;
-        font-size: 3em;
+        @include ms(4);
     }
     &--BIG {
         @extend .page-post;
-        font-size: 2em;
+        @include ms(2);
         @include breakpoint($bp-m) {
             @include float-span(8);
         }
     }
     &--BASIC {
         @extend .page-post;
-        font-size: 1.5em;
+        @include ms();
         @include breakpoint($bp-m) {
             @include float-span(4);
         }
