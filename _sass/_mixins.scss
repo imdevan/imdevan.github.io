@@ -1,0 +1,7 @@
+$modScaleUtil: 1.5;
+$modScale: $modScaleUtil * 1em;
+
+@mixin ms($s: 1) {
+	$t: $s * $modScale;
+	font-size: $t;
+}

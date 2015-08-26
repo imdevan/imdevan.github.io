@@ -1,7 +1,9 @@
 // compiled into s_main.css
 @import "vendor/all";
 @import "base/all";
+@import "mixins";
 
+// All content at the top of the page
 @import "nav";
 @import "footer";
 
@@ -14,3 +16,6 @@
 @import "arts";
 @import "archive";
 @import "messages";
+
+// All content at the bottom of the page
+@import "sub";

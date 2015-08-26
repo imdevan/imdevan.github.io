@@ -1,0 +1,6 @@
+
+.sub {
+	&--text-hook {
+		@include ms(4);
+	}
+}
