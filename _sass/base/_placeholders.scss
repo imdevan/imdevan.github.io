@@ -15,5 +15,8 @@
 	clear: both;
 	height: 0;
 	}
+%box-shadow {
+    box-shadow: 10px 10px 30px rgba(black, 0.25);
+}
 * html %group             { zoom: 1; } /* IE6 */
 *:first-child+html %group { zoom: 1; } /* IE7 */

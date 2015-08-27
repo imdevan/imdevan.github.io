@@ -3,7 +3,7 @@ $page-post-secondary-color: $highlightColor;
 
 .page-post {
     @include float-span(12);
-    box-shadow: 10px 10px 30px rgba(black, 0.25);
+    @extend %box-shadow;
     padding: 5%;
     margin-bottom: 2em;
     box-sizing: border-box;
