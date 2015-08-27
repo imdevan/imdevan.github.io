@@ -19,7 +19,7 @@ $page-post-secondary-color: $highlightColor;
     }
     &--BIG {
         @extend .page-post;
-        @include ms(2);
+        @include ms(1);
         @include breakpoint($bp-m) {
             @include float-span(8);
         }
