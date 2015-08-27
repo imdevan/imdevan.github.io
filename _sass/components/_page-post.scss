@@ -16,6 +16,10 @@ $page-post-secondary-color: $highlightColor;
         box-shadow: none;
         color: $black;
         @include ms(4);
+        &:hover {
+            background-color: $page-post-secondary-color;
+            color: #fff;
+        }
     }
     &--BIG {
         @extend .page-post;
@@ -44,19 +48,7 @@ $page-post-secondary-color: $highlightColor;
             text-decoration: underline;
         }
     }
-    a {
-        color: $page-post-secondary-color;
-        text-decoration: none;
-        &:visited,
-        &:active,
-        &:focus {
-            text-decoration: none;
-            color: lighten($page-post-secondary-color, 10%);
-        }
-        &:hover {
-            border-bottom: 3px solid $page-post-secondary-color;
-        }
-    }
+    
     h1,
     h2,
     h3,

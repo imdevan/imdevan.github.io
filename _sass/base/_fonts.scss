@@ -31,4 +31,5 @@ $modScale: $modScaleUtil * 1em;
 @mixin ms($s: 1) {
 	$t: $s * $modScale;
 	font-size: $t;
+	line-height: 1.5;
 }

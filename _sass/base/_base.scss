@@ -13,13 +13,6 @@ body{
   font-size: $bodyFontSize;
 }
 
-    h1,
-    h2,
-    h3 {
-        @extend %josefin;
-        font-weight: 400;
-        color: $highlightColor;
-    }
 ._page{
     padding-top: $navHeight * 2;
 }
