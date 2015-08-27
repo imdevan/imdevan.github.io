@@ -24,3 +24,11 @@ $smallHeader: 2.61803em;
 	font-family: 'Crimson Text', serif;
 	font-weight: 400;
 }
+
+$modScaleUtil: 1.5;
+$modScale: $modScaleUtil * 1em;
+
+@mixin ms($s: 1) {
+	$t: $s * $modScale;
+	font-size: $t;
+}

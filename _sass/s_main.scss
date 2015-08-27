@@ -1,21 +1,9 @@
 // compiled into s_main.css
-@import "vendor/all";
 @import "base/all";
-@import "mixins";
+@import "components/all";
 
-// All content at the top of the page
-@import "nav";
-@import "footer";
-
-@import "homepage/all";
+@import "homepage";
 @import "projects";
 @import "blog";
-@import "blog-article";
-@import "page-post";
-@import "disqus-thread";
 @import "arts";
 @import "archive";
-@import "messages";
-
-// All content at the bottom of the page
-@import "sub";
