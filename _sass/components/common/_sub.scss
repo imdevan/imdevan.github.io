@@ -1,7 +1,9 @@
 
 .sub {
 	&--text-hook {
+		@include grid-span(12,1);
 		@include ms(1);
+		text-align: center;
 		clear: both;
 	}
 }
