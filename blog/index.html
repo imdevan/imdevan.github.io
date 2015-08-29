@@ -8,6 +8,23 @@ subtext:
     <h1 class="_blog-page--title">Blog</h1>
     <!-- <h2>Comeing Soon! ☃ </h2> -->
     <div class="_blog-page--list">
+        {% for post in site.categories.blog--pinned %}
+
+          <header class="page-post--{{ post.style_mod }} {{post.color}}">
+              <a  class="page-post--title" href="{{post.url}}">
+                <h2>
+                  {{post.title}}
+                </h2>
+              </a>
+              <div class="page-post--content">
+                  {% if post.content contains "<!-- more -->" %}
+                    {{ post.content | split:"<!-- more -->" | first % }}
+                  {% else %}
+                    {{ post.excerpt }}
+                  {% endif %}
+              </div>
+          </header>
+      {% endfor %}
         {% for post in site.categories.blog %}
 
           <header class="page-post--{{ post.style_mod }} {{post.color}}">
@@ -19,7 +36,6 @@ subtext:
               <div class="page-post--content">
                   {% if post.content contains "<!-- more -->" %}
                     {{ post.content | split:"<!-- more -->" | first % }}
-                    <a href="{{ post.url }}" class="read-more-link">Read more &raquo;</a>
                   {% else %}
                     {{ post.excerpt }}
                   {% endif %}
