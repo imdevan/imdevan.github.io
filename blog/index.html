@@ -16,13 +16,6 @@ subtext:
                   {{post.title}}
                 </h2>
               </a>
-              <div class="page-post--content">
-                  {% if post.content contains "<!-- more -->" %}
-                    {{ post.content | split:"<!-- more -->" | first % }}
-                  {% else %}
-                    {{ post.excerpt }}
-                  {% endif %}
-              </div>
           </header>
       {% endfor %}
         {% for post in site.categories.blog %}
@@ -33,13 +26,6 @@ subtext:
                   {{post.title}}
                 </h2>
               </a>
-              <div class="page-post--content">
-                  {% if post.content contains "<!-- more -->" %}
-                    {{ post.content | split:"<!-- more -->" | first % }}
-                  {% else %}
-                    {{ post.excerpt }}
-                  {% endif %}
-              </div>
           </header>
       {% endfor %}
     </div>
