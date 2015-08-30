@@ -10,7 +10,7 @@ $post-header-secondary-color: $highlightColor;
     line-height: 1.2em;
     animation: fadeinup 2s;
     transition: all .3s linear;
-
+    z-index: 1;
     color: $post-header-secondary-color;
     text-decoration: none;
     &:visited,
@@ -43,5 +43,11 @@ $post-header-secondary-color: $highlightColor;
         @include breakpoint($bp-m) {
             @include float-span(4);
         }
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+        margin: 0;
     }
 }

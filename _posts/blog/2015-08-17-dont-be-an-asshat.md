@@ -3,7 +3,7 @@ layout: blog_article
 title: "Don't Be an Asshat"
 author: Devan Huapaya
 category: blog
-style_mod: BIG
+style_mod: BASIC
 ---
 
 <!-- more -->
