@@ -2,7 +2,7 @@
     @include grid-span(10, 2);
     @extend %group;
     @extend %mt-4;
-    font-size: 2em;
+
     a{
         color: $linkColor;
         &:visited, &:focus{
@@ -17,7 +17,6 @@
         color: $highlightColor;
     }
     ul{
-    	// list-style-type: disc;
         line-height: 1.5em;
     }
     .highlight {
