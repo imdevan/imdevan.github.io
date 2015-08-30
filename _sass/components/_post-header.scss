@@ -5,54 +5,43 @@ $post-header-secondary-color: $highlightColor;
     @include float-span(12);
     @extend %box-shadow;
     padding: 5%;
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
     box-sizing: border-box;
-    display: block;
-    float: left;
     line-height: 1.2em;
     animation: fadeinup 2s;
+    transition: all .3s linear;
+
+    color: $post-header-secondary-color;
+    text-decoration: none;
+    &:visited,
+    &:active,
+    &:focus {
+        text-decoration: none;
+        color: lighten($post-header-secondary-color, 10%);
+    }
+    &:hover {
+        background-color: $post-header-secondary-color;
+        color: #fff;
+    }
+
     &--MASSIVE {
         @extend .post-header;
         box-shadow: none;
         color: $black;
         @include ms(4);
-        &:hover {
-            background-color: $post-header-secondary-color;
-            color: #fff;
-        }
     }
+
     &--BIG {
         @extend .post-header;
-        @include ms();
         @include breakpoint($bp-m) {
             @include float-span(8);
         }
     }
+
     &--BASIC {
         @extend .post-header;
-        @include ms();
         @include breakpoint($bp-m) {
             @include float-span(4);
         }
-    }
-    &--title {
-        color: $post-header-secondary-color;
-        text-decoration: none;
-        &:visited,
-        &:active,
-        &:focus {
-            text-decoration: none;
-            color: lighten($post-header-secondary-color, 10%);
-        }
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-    
-    h1,
-    h2,
-    h3,
-    h4 {
-        margin-top: 0;
     }
 }
