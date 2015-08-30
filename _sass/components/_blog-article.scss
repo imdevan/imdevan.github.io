@@ -1,5 +1,8 @@
 ._blog-article {
     @include grid-span(10, 2);
+    @include breakpoint($bp-m) {
+        @include grid-span(6, 4);
+    }
     @extend %group;
     @extend %mt-4;
 

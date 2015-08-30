@@ -22,6 +22,7 @@ $post-header-secondary-color: $highlightColor;
     &:hover {
         background-color: $post-header-secondary-color;
         color: #fff;
+        box-shadow: none;
     }
 
     &--MASSIVE {

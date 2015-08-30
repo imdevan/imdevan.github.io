@@ -3,7 +3,7 @@ layout: blog_article
 title: "My Everything Workflow"
 author: Devan Huapaya
 category: blog
-style_mod: BIG
+style_mod: BASIC
 ---
 
 For me,being optimally productive is a constant struggle.
