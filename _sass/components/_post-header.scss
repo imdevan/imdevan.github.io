@@ -1,7 +1,7 @@
 // Sytles for blog / art / projects listed on a page (excluding archive)
-$page-post-secondary-color: $highlightColor;
+$post-header-secondary-color: $highlightColor;
 
-.page-post {
+.post-header {
     @include float-span(12);
     @extend %box-shadow;
     padding: 5%;
@@ -12,37 +12,37 @@ $page-post-secondary-color: $highlightColor;
     line-height: 1.2em;
     animation: fadeinup 2s;
     &--MASSIVE {
-        @extend .page-post;
+        @extend .post-header;
         box-shadow: none;
         color: $black;
         @include ms(4);
         &:hover {
-            background-color: $page-post-secondary-color;
+            background-color: $post-header-secondary-color;
             color: #fff;
         }
     }
     &--BIG {
-        @extend .page-post;
-        @include ms(1);
+        @extend .post-header;
+        @include ms();
         @include breakpoint($bp-m) {
             @include float-span(8);
         }
     }
     &--BASIC {
-        @extend .page-post;
+        @extend .post-header;
         @include ms();
         @include breakpoint($bp-m) {
             @include float-span(4);
         }
     }
     &--title {
-        color: $page-post-secondary-color;
+        color: $post-header-secondary-color;
         text-decoration: none;
         &:visited,
         &:active,
         &:focus {
             text-decoration: none;
-            color: lighten($page-post-secondary-color, 10%);
+            color: lighten($post-header-secondary-color, 10%);
         }
         &:hover {
             text-decoration: underline;
