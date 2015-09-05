@@ -6,11 +6,12 @@ $post-header-secondary-color: $highlightColor;
     @extend %box-shadow;
 
     animation: fadeinup 2s;
+    box-sizing: border-box;
     color: $post-header-secondary-color;
-    height: 5rem;
+    height: 10rem;
     line-height: 1.2em;
     margin-bottom: 2rem;
-    padding: 5%;
+    padding: 2.5rem;
     text-decoration: none;
     transition: all .3s linear;
     z-index: 1;
