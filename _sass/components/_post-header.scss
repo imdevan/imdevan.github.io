@@ -4,21 +4,24 @@ $post-header-secondary-color: $highlightColor;
 .post-header {
     @include float-span(12);
     @extend %box-shadow;
-    padding: 5%;
-    margin-bottom: 2rem;
-    box-sizing: border-box;
-    line-height: 1.2em;
+
     animation: fadeinup 2s;
+    color: $post-header-secondary-color;
+    height: 5rem;
+    line-height: 1.2em;
+    margin-bottom: 2rem;
+    padding: 5%;
+    text-decoration: none;
     transition: all .3s linear;
     z-index: 1;
-    color: $post-header-secondary-color;
-    text-decoration: none;
+
     &:visited,
     &:active,
     &:focus {
         text-decoration: none;
         color: lighten($post-header-secondary-color, 10%);
     }
+
     &:hover {
         background-color: $post-header-secondary-color;
         color: #fff;
@@ -45,6 +48,7 @@ $post-header-secondary-color: $highlightColor;
             @include float-span(4);
         }
     }
+
     h1,
     h2,
     h3,

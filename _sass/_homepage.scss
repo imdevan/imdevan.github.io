@@ -1,6 +1,10 @@
 ._home-page{
 	clear: both;
 	@include grid-span(8, 3);
+
+	svg {
+		z-index: -1;
+	}
 }
 ._section--link{
 	@extend %link;
