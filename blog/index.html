@@ -7,21 +7,20 @@ title: "Blog"
     <!-- <h2>Comeing Soon! ☃ </h2> -->
     <div class="_blog-page--list">
         {% for post in site.categories.blog--pinned %}
+          <a  class="post-header--{{ post.style_mod }} {{post.color}}" href="{{post.url}}">
+            <h2>
+              {{post.title}}
+            </h2>
+          </a>
+        {% endfor %}
 
-        <a  class="post-header--{{ post.style_mod }} {{post.color}}" href="{{post.url}}">
-          <h2>
-            {{post.title}}
-          </h2>
-        </a>
-      {% endfor %}
         {% for post in site.categories.blog %}
-
-        <a  class="post-header--{{ post.style_mod }} {{post.color}}" href="{{post.url}}">
-          <h2>
-            {{post.title}}
-          </h2>
-        </a>
-      {% endfor %}
+          <a  class="post-header--{{ post.style_mod }} {{post.color}}" href="{{post.url}}">
+            <h2>
+              {{post.title}}
+            </h2>
+          </a>
+        {% endfor %}
     </div>
     {% for part in page.subtext %}
       <p class="sub--text-hook">
