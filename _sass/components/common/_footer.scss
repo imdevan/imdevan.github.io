@@ -1,5 +1,5 @@
 ._footer {
-	border-top: 1px solid $footerBorderColor;
+	border-top: 1px solid inherit;
     text-align: center;
     @include grid-span(10, 2);
     @extend %mt-4;
@@ -12,7 +12,7 @@
         &-link{
         	@extend %link;
             position: relative;
-            color: $footerLinkColor;
+            color: inherit;
             &:hover{
                 &::after{
                     position: absolute;

@@ -1,5 +1,4 @@
 // Sytles for blog / art / projects listed on a page (excluding archive)
-$post-header-secondary-color: $highlightColor;
 
 .post-header {
     @include float-span(12);
@@ -7,7 +6,7 @@ $post-header-secondary-color: $highlightColor;
 
     animation: fadeinup 2s;
     box-sizing: border-box;
-    color: $post-header-secondary-color;
+    color: inherit;
     height: 10rem;
     line-height: 1.2em;
     margin-bottom: 2rem;
@@ -20,11 +19,11 @@ $post-header-secondary-color: $highlightColor;
     &:active,
     &:focus {
         text-decoration: none;
-        color: lighten($post-header-secondary-color, 10%);
+        color: inherit;
     }
 
     &:hover {
-        background-color: $post-header-secondary-color;
+        background-color: inherit;
         color: #fff;
         box-shadow: none;
     }

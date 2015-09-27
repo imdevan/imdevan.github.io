@@ -7,9 +7,9 @@
     @extend %mt-4;
 
     a{
-        color: $linkColor;
+        color: inherit;
         &:visited, &:focus{
-            color: lighten($linkColor, 10%);
+            color: inherit;
         }
     }
     h1,
@@ -17,7 +17,7 @@
     h3 {
         @extend %raleway;
         font-weight: 400;
-        color: $highlightColor;
+        color: inherit;
     }
     ul{
         line-height: 1.5em;
@@ -25,7 +25,7 @@
     .highlight {
     	@extend %pd-2;
     	font-size: 0.75em;
-        background: $grey-light;
+        background: inherit;
         overflow: scroll;
     }
 }

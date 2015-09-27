@@ -1,11 +1,11 @@
 %link{
+	color: inherit;
 	text-decoration: none;
-	color: $linkColor;
 	&:hover{
 		text-decoration: underline;
 	}
 	&:visited, &:focus, &:active{
-		color: $linkColor;
+		color: inherit;
 	}
 }
 %group:after {

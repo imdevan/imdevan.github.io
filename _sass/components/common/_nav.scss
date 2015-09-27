@@ -17,22 +17,22 @@
         display: inline-block;
         text-align: center;
         padding: 1em;
-        background: $navBGColor;
+        background: inherit;
         transition: background 0.15s linear;
-        border-bottom: 1px solid $navBorderColor;
+        border-bottom: 1px solid inherit;
     }
     &--link {
         transition: color 0.15s linear;
         text-decoration: none;
         text-transform: uppercase;
-        color: $navColor;
+        color: inherit;
         display: inline-block;
         font-size: $navFontSize;
         &:hover {
             ._nav--item {
-                background: $navHoverBG;
+                background: inherit;
             }
-            color: $navHoverColor;
+            color: inherit;
         }
     }
     &.hide {
