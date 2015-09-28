@@ -1,7 +1,7 @@
 ._footer {
     @include grid-span(10, 2);
 
-    border-top: 1px solid darken();
+    border-top: 1px solid rgba(lighten($primaryColor, $scale2), 0.5);
     text-align: center;
     margin-top: 15rem;
     clear: both;
