@@ -4,7 +4,7 @@
         @include grid-span(6, 4);
     }
     @extend %group;
-    @extend %mt-4;
+    margin-top: 4rem;
 
     a{
         color: inherit;
@@ -23,7 +23,7 @@
         line-height: 1.5em;
     }
     .highlight {
-    	@extend %pd-2;
+        padding-bottom: 2rem;
     	font-size: 0.75em;
         background: inherit;
         overflow: scroll;
