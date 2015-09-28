@@ -1,5 +1,6 @@
-$scale1: 50%;
-$scale2: 25%;
+$scale1: 50%;   // constant
+$scale2: 25%;   // constant
+$primaryColor: $peach-echo; // constant
 
 * {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -15,11 +16,11 @@ body {
     @include add-grid(12);
     @include add-gutter(1/3);
     @include add-gutter-style('split');
-    background: $peach-echo;
-    color: lighten($peach-echo, $scale1);
+    background: $primaryColor;
+    color: lighten($primaryColor, $scale1);
     ::selection {
-      background: lighten($peach-echo, $scale1); /* WebKit/Blink Browsers */
-      color: darken($peach-echo, $scale2);
+      background: lighten($primaryColor, $scale1); /* WebKit/Blink Browsers */
+      color: darken($primaryColor, $scale2);
     }
 }
 ._page {

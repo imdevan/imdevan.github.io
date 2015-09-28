@@ -1,18 +1,22 @@
 ._footer {
-	border-top: 1px solid inherit;
-    text-align: center;
     @include grid-span(10, 2);
-    margin-top: 4rem;
+
+    border-top: 1px solid darken();
+    text-align: center;
+    margin-top: 15rem;
     clear: both;
+
     &--social-list-item{
     	text-decoration: none;
         display: inline-block;
         list-style: none;
         padding: 2em;
+
         &-link{
         	@extend %link;
             position: relative;
             color: inherit;
+
             &:hover{
                 &::after{
                     position: absolute;
