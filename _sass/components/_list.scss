@@ -1,0 +1,30 @@
+.list {
+    list-style-type: none;
+    margin: 0 0;
+    padding: 0 0;
+    
+    &--item {
+        box-size: border-box;
+        font-size: 3em;
+        text-align: center;
+        cursor: pointer;
+
+    }
+
+    &--link {
+        padding: 1rem;
+        animation: inandup .3s cubic-bezier(.19,.14,.08,1.39);
+        text-decoration: none;
+        color: $body-color;
+        
+        &:hover {
+          background: $body-color;
+          color: $body-background;
+        }
+    }
+}
+
+@keyframes inandup {
+    0% {transform: translateY(100%) scale(.5);}
+    100% {transform: translateY(0%) scale(1);}
+}

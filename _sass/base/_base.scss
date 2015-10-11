@@ -1,26 +1,33 @@
-$scale1: 50%;   // constant
-$scale2: 25%;   // constant
-$primaryColor: $peach-echo; // constant
+$body-background: #F9F2E7;
+$body-color: #555;
+
+
+$highlight-text-background: lighten($body-color, 25%);
+$highlight-text-color: darken($body-background, 25%);
 
 * {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
-    background: inherit;
-    color: inherit;
+    background:  $body-background;
+    color: $body-color;
     padding: 0 0;
     margin: 0 0;
+
+    // Font 
     @extend %lato;
+
+    // Default layout 
     @include ms(1);
     @include add-grid(12);
     @include add-gutter(1/3);
     @include add-gutter-style('split');
-    background: $primaryColor;
-    color: lighten($primaryColor, $scale1);
+
+    // Text selected
     ::selection {
-      background: lighten($primaryColor, $scale1); /* WebKit/Blink Browsers */
-      color: darken($primaryColor, $scale2);
+      background: $highlight-text-background; /* WebKit/Blink Browsers */
+      color: $highlight-text-color;
     }
 }
 ._page {

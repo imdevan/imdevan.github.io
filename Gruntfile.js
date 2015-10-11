@@ -11,7 +11,7 @@ module.exports = function (grunt) {
       dist: {
         options: {
           loadPath: ['bower_components',
-            'bower_components/breakpoint/breakpoint/',
+            'bower_components/breakpoint-sass/stylesheets/',
             'bower_components/singularity/stylesheets/'
           ]
         },

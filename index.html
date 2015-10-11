@@ -1,30 +1,28 @@
 ---
-layout: page
+layout: home-page
 title: Hi, I'm Devan
+list-items: 
+    - name: Projects
+      link: projects
+    - name: Blog
+      link: blog
+    - name: Talks
+      link: talks
+    - name: About
+      link: about
 ---
 
-<h1 class="page--title">
-    {{ page.title }}
-</h1>
-
-<section class="section">
-    <h1 class="section--title">
-      Work
+<main class="_full-page--CENTERED">
+    <h1 class="_home-page--title">
+        {{ page.title }}
     </h1>
-    <p class="section--text">
-        I currently work at IBM Design, I LOVE to do projects in my free time, check out some of my dope projects or articles, if you want to, you do you.
-    </p>
-</section>
 
-<section class="section">
-    <h1 class="section--title">
-    Sup Homie? 
-  </h1>
-    <p class="section--text">
-        You're awesome! Give your self a super big, Shai LaBeouf sized, round of applause!
-    </p>
-    <p class="section--text">
-        Thanks for checking out my sweet ass slice of the interwebs!
-    </p>
-</section>
+    <div class="_home-page--squiggle">{% include svg/squiggle.svg %}</div>
 
+    <ul class="list">
+        {% for item in page.list-items %}
+            <li class="list--item"><a href="/{{ item.link }}"class="list--link">{{ item.name }}</a></li>
+        {% endfor %}
+    </ul>
+</main>
+    

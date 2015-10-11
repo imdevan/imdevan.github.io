@@ -2,8 +2,7 @@
 
 .post-header {
     @include float-span(12);
-    @extend %box-shadow;
-
+    border-left: 3px solid $body-color;
     animation: fadeinup 2s;
     box-sizing: border-box;
     color: inherit;
@@ -23,9 +22,8 @@
     }
 
     &:hover {
+        @extend %box-shadow;
         background-color: inherit;
-        color: #fff;
-        box-shadow: none;
     }
 
     &--MASSIVE {

@@ -1,0 +1,27 @@
+---
+layout: page
+title: Talks
+list-items: 
+    - name: Publishing A Website With Github Pages
+      link: http://imdevan.github.io/github-pages-talk/#/
+    - name: Design & Hackathons
+      link: http://imdevan.github.io/hackingdesign/#/
+---
+
+<main class="_full-page--CENTERED">
+
+    <h1 class="_talks-page--title">
+        {{ page.title }}
+    </h1>
+
+    <div class="_talks-page--squiggle">
+            {% include svg/squiggle.svg %}
+    </div>
+    
+    <ul class="list">
+        {% for item in page.list-items %}
+            <li class="list--item"><a href="{{ item.link }}"class="list--link">{{ item.name }}</a></li>
+        {% endfor %}
+    </ul>
+</main>
+    

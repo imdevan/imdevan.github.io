@@ -1,9 +1,0 @@
-// Symmetric grid with fluid gutters, 1/2 gutter on each side of a column
-@include add-grid(12);
-@include add-gutter(1/3);
-@include add-gutter-style('split');
-
-._projects{
-	clear: both;
-	@include grid-span(8, 3);
-}

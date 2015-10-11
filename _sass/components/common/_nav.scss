@@ -1,3 +1,5 @@
+$nav-background: $body-background;
+
 ._nav {
     @extend %raleway;
     @include grid-span(10, 2);
@@ -7,11 +9,14 @@
     height: $navHeight;
     line-height: $navHeight;
     transition: opacity .3s, transform .3s;
+    background-color: $nav-background;
+
     &--list {
         margin: 0 0;
         font-size: 0rem;
         box-sizing:border-box;
     }
+
     &--item {
         box-sizing:border-box;
         display: inline-block;
@@ -21,6 +26,7 @@
         transition: background 0.15s linear;
         border-bottom: 1px solid inherit;
     }
+
     &--link {
         transition: color 0.15s linear;
         text-decoration: none;
@@ -35,6 +41,7 @@
             color: inherit;
         }
     }
+
     &.hide {
         transform: translateY(-100%);
         opacity: 0;

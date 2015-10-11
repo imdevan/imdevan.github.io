@@ -1,0 +1,8 @@
+._full-page {
+    width: 100%;
+
+    &--CENTERED {
+        @extend ._full-page;
+        text-align: center;
+    }
+}
