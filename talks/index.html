@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: talks-page
 title: Talks
 list-items: 
     - name: Publishing A Website With Github Pages
@@ -14,9 +14,7 @@ list-items:
         {{ page.title }}
     </h1>
 
-    <div class="_talks-page--squiggle">
-            {% include svg/squiggle.svg %}
-    </div>
+    {% include svg/squiggle.svg %}
     
     <ul class="list">
         {% for item in page.list-items %}
