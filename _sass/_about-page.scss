@@ -1,0 +1,7 @@
+._about-page {
+    @extend ._home-page;
+    
+    &--section {
+        margin: 5rem auto;
+    }
+}

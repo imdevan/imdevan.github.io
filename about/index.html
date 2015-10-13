@@ -1,26 +1,39 @@
 ---
 layout: about-page
 title: About Meh
+sections: 
+    - section:
+        header: tl;dr
+        text: I like cats, I want to be your friend and talk about design and stuff
+    - section:
+        header: Also,
+        text: I currently work at IBM Design, live in Austin, TX. 
 ---
 
 <main class="_full-page--CENTERED">
-    <h1 class="_home-page--title">
+    <h1 class="_about-page--title">
         {{ page.title }}
     </h1>
 
     {% include svg/squiggle.svg %}
 
-    <h2 class="about--sub-header">
-      tl;dr
-    </h2>
-
-    <p>
-      I like cats, I want to be your friend and talk about design and stuff
-    </p>
+    {% for section in page.sections %}
+        <section class="_about-page--section">
+            
+            <h2 class="_about-page--sub-header">
+              {{ section.section.header }}
+            </h2>
+        
+            <p>
+              {{ section.section.text }}
+            </p>
+        </section>
+    {% endfor %}
     
-
-    <div class="small-cat" style="transform: scale(.5); margin-top: 2rem;">
+    <div class="small-cat">
         {% include svg/catgrad.svg %}
     </div>
+
+    
 </main>
     

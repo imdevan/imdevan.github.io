@@ -1,7 +1,6 @@
 ._footer {
     @include grid-span(10, 2);
     text-align: center;
-    margin-top: 15rem;
     clear: both;
 
     &--social-list-item{
