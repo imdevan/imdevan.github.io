@@ -1,6 +1,7 @@
 ._home-page {
-	clear: both;
 	@include grid-span(8, 3);
+    clear: both;
+    margin-bottom: 15rem;
 
     &--title {
         font-size: 3em;
