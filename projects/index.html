@@ -1,7 +1,28 @@
 ---
 layout: page
-title: Hi, I'm Devan
+title: "Projects"
 projects: 
+    - name: Coming
+    - name: Soon
+    - name: <3
 ---
 
-Coming Soon <3
+<section class="_blog-page">
+    <h1 class="_blog-page--title">{{page.title}}</h1>
+    <!-- <h2>Comeing Soon! ☃ </h2> -->
+    <div class="_blog-page--list">
+        {% for proj in page.projects %}
+          <span  class="post-header--BASIC">
+            <h2>
+              {{proj.name}}
+            </h2>
+          </span>
+        {% endfor %}
+    </div>
+
+
+    <div class="small-cat">
+        {% include svg/catgrad.svg %}
+    </div>
+</section>
+
