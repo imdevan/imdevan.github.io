@@ -2,6 +2,7 @@ module.exports = function (grunt) {
 
   require('load-grunt-tasks')(grunt);
   require('time-grunt')(grunt);
+  grunt.loadNpmTasks('grunt-scss-lint');
 
   var base = './_site';
 
@@ -88,6 +89,19 @@ module.exports = function (grunt) {
       }
     }
   });
+
+  grunt.config('scsslint',{
+    allFiles: [
+      '_sass/**/*.scss'
+    ],
+    options: {
+      config: '.scss-lint.yml',
+      reporterOutput: 'scss-lint-report.xml',
+      colorizeOutput: true
+    }
+  });
+
+  grunt.registerTask('slint', ['scsslint']);
 
   grunt.registerTask('serve', function () {
     grunt.task.run([

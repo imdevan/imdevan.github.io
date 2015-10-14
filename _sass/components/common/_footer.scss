@@ -3,6 +3,9 @@
     text-align: center;
     clear: both;
 
+    @include breakpoint(650) {
+        @include grid-span(5, 1);
+    }
     &--social-list-item{
     	text-decoration: none;
         display: inline-block;
