@@ -13,7 +13,13 @@ $fade-background: $body-background;
     background-position: 30% 0%;
     width: 50%;
     filter: opacity(50%);
+    transition: width .3s ease-in-out;
     
+    @media screen and (max-width: 900px) {
+        width: 100%;
+    }
+
+
     &::after{
         display: block;
         content: "";

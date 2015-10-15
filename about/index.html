@@ -2,12 +2,13 @@
 layout: about-page
 title: About Meh
 sections: 
-    - section:
-        header: tl;dr
-        text: I like cats, I want to be your friend and talk about design and stuff
-    - section:
-        header: Also,
-        text: I currently work at IBM Design, live in Austin, TX. 
+    - header: tl;dr
+      text: 
+        - I like cats, I want to be your friend and talk about design and stuff
+    - header: Also,
+      text: 
+        - I currently work at IBM Design, live in Austin, TX. 
+        - I think that rats make for really cute and very inteligent pets. Ironically enough I draw a lot of cat doodles. I like to play board games and card games based on roleplaying games.
 ---
 
 <main class="_full-page--CENTERED">
@@ -21,12 +22,15 @@ sections:
         <section class="_about-page--section">
             
             <h2 class="_about-page--sub-header">
-              {{ section.section.header }}
+              {{ section.header }}
             </h2>
-        
-            <p>
-              {{ section.section.text }}
-            </p>
+            {% for p in section.text %}
+
+                <p class="_about-page--p">
+                    {{ p }}
+                </p>
+
+            {% endfor %}
         </section>
     {% endfor %}
     
