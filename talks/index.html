@@ -18,7 +18,7 @@ list-items:
     
     <ul class="list">
         {% for item in page.list-items %}
-            <li class="list--item"><a href="{{ item.link }}"class="list--link">{{ item.name }}</a></li>
+            <a href="{{ item.link }}"class="list--link"><li class="list--item">{{ item.name }}</li></a>
         {% endfor %}
     </ul>
 </main>

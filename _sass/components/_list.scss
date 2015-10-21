@@ -1,23 +1,30 @@
 .list {
-    list-style-type: none;
-    margin: 0 0;
     padding: 0 0;
-    
+    margin: 0 0;
+
+    list-style-type: none;
+
+    text-align: left;
+
     &--item {
-        animation: inandup .3s cubic-bezier(.19,.14,.08,1.39);
-        box-size: border-box;
-        color: $body-color;
-        cursor: pointer;
-        font-size: 3em;
-        margin: auto;
-        padding: 1rem;
-        text-align: center;
-        text-decoration: none;
         width: 50%;
+        padding: 1rem;
+        margin: auto;
+
+        font-size: 3em;
+
+        cursor: pointer;
+        animation: inandup .3s cubic-bezier(.19,.14,.08,1.39);
+        text-align: left;
+        text-decoration: none;
+
+        color: $body-color;
+
+        box-size: border-box;
 
         &:hover {
-          background: $body-color;
-          color: $body-background;
+            color: $body-background;
+            background: $body-color;
         }
     }
 
@@ -27,6 +34,10 @@
 }
 
 @keyframes inandup {
-    0% {transform: translateY(100%) scale(.5);}
-    100% {transform: translateY(0%) scale(1);}
+    0% {
+        transform: translateY(100%) scale(.5);
+    }
+    100% {
+        transform: translateY(0%) scale(1);
+    }
 }
