@@ -1,20 +1,22 @@
 ---
 layout: blog_article
-title: "Don't Be an Asshat"
+title: "How to be Outstanding"
 author: Devan Huapaya
 category: blog
 style_mod: BASIC
 ---
 
-<!-- more -->
+# ... At work, mostly
 
-## Build a Culture of Engagement
+### So I read this book, 
 
-We shouldn't be building an engaging and inclusive culture because we are Hackathon Hackers, 
-we should be building an engaging and inclusive culture because it is the right thing to do.
 
-I have seen WAY too many people posting online about about how someone whill shut down someone else's ideas because of x, y, or z. 
+It's a good book that my manager sent to me, with a big bright 
+and shiny star on the front that remembes that of the sort stars 
+that one would receive in elementry school for having done 
+some thing that was of not particularly, although still, above, 
+and somtimes beyond.
 
-As a call to action I ask everyone to explicitely state that they will answer any question, no matter how simple they may seem.
+Even though to cover is aweful, I decided to infact NOT judge this 
+book by it's cover and try giving it a read. 
 
-Being good to others opens the doors to a community of people who are happy and will generally make the world a better place.
