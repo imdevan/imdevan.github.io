@@ -1,7 +1,13 @@
+
 .page {
-    &--title {
-        @extend .section;
-        margin-top: 7rem;
-        margin-bottom: 7rem;
-    }
+  font-family: Helvetica;
+  font-weight: lighter;
+  padding-top: 5*$br;
+  padding-bottom: 10*$br;
+  background: $white;
+  color: $black;
+  
+  &--headline {
+    font-size: ms(1);
+  }
 }

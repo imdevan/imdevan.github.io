@@ -1,3 +1,22 @@
+%hoverUnderline {
+    position: relative;
+    
+    &:after{
+        content: "";
+        transition: width 0.3s ease-in-out;
+        position: absolute;
+        bottom: 0;
+        height: 0.15rem;
+        width: 0;
+        background: currentColor;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    &:hover:after{
+        width: 100%;
+    } 
+}
 
 @keyframes fadeinup {
     from {

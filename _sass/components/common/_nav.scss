@@ -1,49 +1,11 @@
-$nav-background: $body-background;
 
-._nav {
-    @extend %raleway;
-    @include grid-span(10, 2);
-    top: 0;
-    text-align: left;
-    position: fixed;
-    height: $navHeight;
-    line-height: $navHeight;
-    transition: opacity .3s, transform .3s;
-    background-color: $nav-background;
-
-    &--list {
-        margin: 0 0;
-        font-size: 0rem;
-        box-sizing:border-box;
-    }
-
-    &--item {
-        box-sizing:border-box;
-        display: inline-block;
-        text-align: center;
-        padding: 1em;
-        background: inherit;
-        transition: background 0.15s linear;
-        border-bottom: 1px solid inherit;
-    }
-
-    &--link {
-        transition: color 0.15s linear;
-        text-decoration: none;
-        text-transform: uppercase;
-        color: inherit;
-        display: inline-block;
-        font-size: $navFontSize;
-        &:hover {
-            ._nav--item {
-                background: inherit;
-            }
-            color: inherit;
-        }
-    }
-
-    &.hide {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
+.nav {
+  @extend .base--h2;
+  margin-top: 6 * $br;
+  
+  &--item {
+    @extend %hoverUnderline;
+    display: inline-block;
+    position: relative;
+  }
 }

@@ -1,8 +1,12 @@
-._full-page {
-    width: 100%;
+$max-width: 60%;
+$br: 1.38rem;
 
-    &--CENTERED {
-        @extend ._full-page;
-        text-align: center;
-    }
+._full {
+  max-width: $max-width;
+  margin: auto;
+}
+
+._half {
+  width: 50%;
+  float: left;
 }
