@@ -1,5 +1,5 @@
 ---
-layout: home-page
+layout: default
 title: Hi, I'm Devan
 headline:
     - Hi, I’m Devan. Thanks for stoping by <span class="emoji">ᵔᴥᵔ</span>
@@ -8,18 +8,26 @@ nav:
     - name: Projects I've worked on
       link: projects
       end: ", "
+      color: blue
+      endcolor: salmon
     - name: blog posts I've written
       link: blog
       end: ", "
+      color: seafoam
+      endcolor: purple
     - name: talks I've given
       link: talks
       end: ", and "
+      color: salmon
+      endcolor: blue
     - name: some more deets about myself
       link: about
       end: ". "
+      color: purple
+      endcolor: seafoam
 ---
 
-<main class="_full-page--CENTERED">
+<main class="_full">
     <div class="page--headline">
         {% for paragraph in page.headline %}
             <p>{{paragraph}}</p>
@@ -28,10 +36,9 @@ nav:
 
     <div class="nav">
         {% for item in page.nav %}
-            <a href="{{item.link}}" class="nav--item">
+            <a href="{{item.link}}" class="nav--item {{item.color}}">
                 {{ item.name }}
-            </a>
-            <span>{{ item.end }}</span>
+            </a><span class="{{item.endcolor}}">{{ item.end }}</span>
         {% endfor %}
     </div>
 </main>

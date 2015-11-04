@@ -1,13 +1,10 @@
-
 .page {
   font-family: Helvetica;
   font-weight: lighter;
-  padding-top: 5*$br;
-  padding-bottom: 10*$br;
-  background: $white;
-  color: $black;
-  
+
   &--headline {
-    font-size: ms(1);
+    margin-top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.15rem;
   }
 }

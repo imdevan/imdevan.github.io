@@ -1,21 +1,23 @@
+$br: 1.38rem;
+
 .base {
-    
+
     &--h2 {
         font-size: 2rem;
         line-height: 3rem;
         padding: 2*$br 0;
-        
+
         &--HALF {
             @extend .base--h2;
             @extend ._half;
         }
     }
-    
+
     &--h3 {
         font-size: 1.5rem;
         line-height: 2.25rem;
         position: relative;
-        
+
         &:after{
             content: "";
             position: absolute;
@@ -26,8 +28,8 @@
             background: currentColor;
         }
     }
-    
-        
+
+
     &--emoji {
        margin-left: 1rem;
     }
@@ -36,5 +38,6 @@
 
 body {
   margin: 0; padding:0;
-  min-height: 100vh;
 }
+
+a { text-decoration: none; }
