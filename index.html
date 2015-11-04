@@ -1,26 +1,37 @@
 ---
 layout: home-page
 title: Hi, I'm Devan
-list-items: 
-    - name: Blog
+headline:
+    - Hi, I’m Devan. Thanks for stoping by <span class="emoji">ᵔᴥᵔ</span>
+    - Feel free to check out some of my
+nav:
+    - name: Projects I've worked on
+      link: projects
+      end: ", "
+    - name: blog posts I've written
       link: blog
-    - name: Talks
+      end: ", "
+    - name: talks I've given
       link: talks
-    - name: About
+      end: ", and "
+    - name: some more deets about myself
       link: about
+      end: ". "
 ---
 
 <main class="_full-page--CENTERED">
-    <h1 class="_home-page--title">
-        {{ page.title }}
-    </h1>
-
-    {% include svg/squiggle.svg %}
-
-    <ul class="list">
-        {% for item in page.list-items %}
-            <a href="{{ item.link }}"class="list--link"><li class="list--item">{{ item.name }}</li></a>
+    <div class="page--headline">
+        {% for paragraph in page.headline %}
+            <p>{{paragraph}}</p>
         {% endfor %}
-    </ul>
+    </div>
+
+    <div class="nav">
+        {% for item in page.nav %}
+            <a href="{{item.link}}" class="nav--item">
+                {{ item.name }}
+            </a>
+            <span>{{ item.end }}</span>
+        {% endfor %}
+    </div>
 </main>
-    
