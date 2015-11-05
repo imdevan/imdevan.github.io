@@ -1,9 +1,12 @@
+$timing-function: cubic-bezier(0,1.22,1,1);
+$timing-function-2: cubic-bezier(0,0,.26,.93);
+
 %hoverUnderline {
     position: relative;
-    
+
     &:after{
         content: "";
-        transition: width 0.3s ease-in-out;
+        transition: width 0.3s $timing-function;
         position: absolute;
         bottom: 0;
         height: 0.15rem;
@@ -12,12 +15,26 @@
         left: 50%;
         transform: translateX(-50%);
     }
-    
+
     &:hover:after{
         width: 100%;
-    } 
+    }
 }
 
+%fadein {
+    opacity: 0;
+    animation: fadein 3s $timing-function-2;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 @keyframes fadeinup {
     from {
         opacity: 0;
