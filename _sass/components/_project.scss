@@ -1,5 +1,6 @@
 %project--image {
     padding: 0;
+    transition: all 0.3s $timing-function-2;
 
     .project:hover &  {
         box-shadow: $base--box-shadow;
@@ -10,6 +11,34 @@
     transition: all 0.3s $timing-function-2;
     position: relative;
 
+    &::after {
+        background-image: linear-gradient(to bottom, $blue, $purple);
+        content: "";
+        transition: all 0.3s $timing-function-2;
+        position: absolute;
+        transform: scale(0);
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        z-index: -1;
+    }
+
+    &:nth-child(3n) {
+        &::after {
+            background-image: linear-gradient(to bottom, $seafoam, $blue);
+        }
+    }
+
+    &:nth-child(4n) {
+        &::after {
+            background-image: linear-gradient(to bottom, $purple, $blue);
+        }
+    }
+
     &--wrapper {
         @extend ._full;
         font-size: 0;
@@ -17,15 +46,9 @@
     }
 
     &:hover {
-        background-image: linear-gradient(to right, $blue, $purple);
-        box-shadow: $base--box-shadow;
-
-        &:nth-child(3n) {
-            background-image: linear-gradient(to right, $seafoam, $blue);
-        }
-
-        &:nth-child(4n) {
-            background-image: linear-gradient(to right, $purple, $blue);
+        &::after {
+            transform: scale(1);
+            opacity: 1;
         }
 
         & .project--name {
@@ -38,21 +61,22 @@
 
     &--aspect {
         width:50%;
+        padding: 2*$br;
+        box-sizing: border-box;
         display: inline-block;
         vertical-align: middle;
     }
 
     &--image {
-        transition: all 0.3s $timing-function-2;
 
         &--RIGHT {
             @extend %project--image;
-            float: right;
+            float: left;
         }
 
         &--LEFT{
             @extend %project--image;
-            float: left;
+            float: right;
         }
     }
 
@@ -62,12 +86,12 @@
 
         &--RIGHT {
             @extend .project--name;
-            float: right;
+            float: left;
         }
 
         &--LEFT{
             @extend .project--name;
-            float: left;
+            float: right;
         }
     }
 }

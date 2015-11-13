@@ -2,15 +2,7 @@
 layout: default
 title: "Projects"
 page-title: "Projects I've worked on"
-projects:
-    - name: Background for Inbox
-      image: http://fillmurray.com/300/300
-    - name: Word Swap
-      image: http://fillmurray.com/300/300
-    - name: Sign-To-Line
-      image: http://fillmurray.com/300/300
-    - name: Hola
-      image: http://fillmurray.com/300/300
+image: http://fillmurray.com/300/300
 ---
 
 <section class="projects-page">
@@ -20,20 +12,63 @@ projects:
         </h1>
     </div>
 
-    {% for project in page.projects %}
     <div class="project">
         <div class="project--wrapper">
             <div class="project--aspect">
                 <h2 class="project--name--LEFT purple">
-                    {{ project.name }}
+                    Background for Inbox
                 </h2>
             </div>
             <div class="project--aspect">
                 <div class="project--image--RIGHT">
-                    <img src="{{ project.image }}" alt="">
+                    <img src="{{ page.image }}" alt="">
                 </div>
             </div>
         </div>
     </div>
-    {% endfor %}
+
+    <div class="project">
+        <div class="project--wrapper">
+            <div class="project--aspect">
+                <div class="project--image--LEFT">
+                    <img src="{{ page.image }}" alt="">
+                </div>
+            </div>
+            <div class="project--aspect">
+                <h2 class="project--name--RIGHT seafoam">
+                    Sign To Line
+                </h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="project">
+        <div class="project--wrapper">
+            <div class="project--aspect">
+                <h2 class="project--name--LEFT salmon">
+                    Word Swap
+                </h2>
+            </div>
+            <div class="project--aspect">
+                <div class="project--image--RIGHT">
+                    <img src="{{ page.image }}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project">
+        <div class="project--wrapper">
+            <div class="project--aspect">
+                <div class="project--image--LEFT">
+                    <img src="{{ page.image }}" alt="">
+                </div>
+            </div>
+            <div class="project--aspect">
+                <h2 class="project--name--RIGHT blue">
+                    Hola
+                </h2>
+            </div>
+        </div>
+    </div>
 </section>
