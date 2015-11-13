@@ -35,19 +35,20 @@
 
     &:nth-child(4n) {
         &::after {
-            background-image: linear-gradient(to bottom, $purple, $blue);
+            background-image: linear-gradient(to bottom, $purple, $salmon);
         }
     }
 
     &--wrapper {
         @extend ._full;
         font-size: 0;
-        padding: 3*$br 0;
+        padding: 1*$br 0;
     }
 
     &:hover {
         &::after {
-            transform: scale(1);
+            transform: scale(.45);
+            box-shadow: $base--box-shadow--flipped;
             opacity: 1;
         }
 
