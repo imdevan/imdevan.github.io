@@ -1,0 +1,73 @@
+%project--image {
+    padding: 0;
+
+    .project:hover &  {
+        box-shadow: $base--box-shadow;
+    }
+}
+
+.project {
+    transition: all 0.3s $timing-function-2;
+    position: relative;
+
+    &--wrapper {
+        @extend ._full;
+        font-size: 0;
+        padding: 3*$br 0;
+    }
+
+    &:hover {
+        background-image: linear-gradient(to right, $blue, $purple);
+        box-shadow: $base--box-shadow;
+
+        &:nth-child(3n) {
+            background-image: linear-gradient(to right, $seafoam, $blue);
+        }
+
+        &:nth-child(4n) {
+            background-image: linear-gradient(to right, $purple, $blue);
+        }
+
+        & .project--name {
+            color: $white;
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+
+    &--aspect {
+        width:50%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &--image {
+        transition: all 0.3s $timing-function-2;
+
+        &--RIGHT {
+            @extend %project--image;
+            float: right;
+        }
+
+        &--LEFT{
+            @extend %project--image;
+            float: left;
+        }
+    }
+
+    &--name {
+        @extend %hoverUnderline;
+        @extend .base--h2;
+
+        &--RIGHT {
+            @extend .project--name;
+            float: right;
+        }
+
+        &--LEFT{
+            @extend .project--name;
+            float: left;
+        }
+    }
+}

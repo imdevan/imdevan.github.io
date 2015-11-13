@@ -7,8 +7,14 @@
 
 
     &--headline {
-        margin-top: 50%;
-        transform: translateY(-50%);
-        font-size: 1.15rem;
+        @include ms(2);
+        font-weight: lighter;
+        margin-top: 8rem;
+
+        &--SMALL {
+            @include ms(1);
+            margin-top: 50%;
+            transform: translateY(-50%);
+        }
     }
 }

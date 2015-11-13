@@ -1,9 +1,11 @@
 $br: 1.38rem;
+$base--box-shadow: 20px 20px 50px rgba($black, 0.2);
 
 .base {
 
     &--h2 {
         font-size: 2rem;
+        font-weight: normal;
         line-height: 3rem;
         padding: 2*$br 0;
 
@@ -32,6 +34,10 @@ $br: 1.38rem;
 
     &--emoji {
        margin-left: 1rem;
+    }
+
+    &--box-shadow {
+        box-shadow: 20px 20px 50px rgba($black, 0.2);
     }
 }
 
