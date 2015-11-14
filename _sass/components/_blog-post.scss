@@ -1,14 +1,17 @@
-.talk {
+.blog-post {
 
     &--link {
         @extend .base--h2;
-        @extend .purple;
+        @extend .blue;
         padding: $br 0;
         overflow: auto;
         display: block;
 
         &:nth-child(2n) {
-            @extend .blue;
+            @extend .salmon;
+        }
+        &:nth-child(3n) {
+            @extend .purple;
         }
     }
 

@@ -1,30 +1,20 @@
 ---
-layout: page
-title: "Blog"
+layout: default
+title: Blog posts I've written
 ---
-<section class="_blog-page">
-    <h1 class="_blog-page--title">Blog</h1>
-    <!-- <h2>Comeing Soon! ☃ </h2> -->
-    <div class="_blog-page--list">
-        {% for post in site.categories.blog--pinned %}
-          <a  class="post-header--{{ post.style_mod }} {{post.color}}" href="{{post.url}}">
-            <h2>
-              {{post.title}}
-            </h2>
-          </a>
-        {% endfor %}
 
+<main class="_full">
+    <h1 class="page--headline seafoam">
+        {{ page.title }}
+    </h1>
+
+    <ul class="list">
         {% for post in site.categories.blog %}
-          <a  class="post-header--{{ post.style_mod }} {{post.color}}" href="{{post.url}}">
-            <h2>
+          <a  class="blog-post--link" href="{{post.url}}">
+            <li class="blog-post--list-item">
               {{post.title}}
-            </h2>
+          </li>
           </a>
         {% endfor %}
-    </div>
-    {% for part in page.subtext %}
-      <p class="sub--text-hook">
-        {{ part }}
-      </p>
-    {% endfor %}
-</section>
+    </ul>
+</main>
