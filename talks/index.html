@@ -1,25 +1,22 @@
 ---
-layout: talks-page
-title: Talks
-list-items: 
+layout: default
+title: Talks I've given
+list-items:
     - name: Publishing A Website With Github Pages
       link: http://imdevan.github.io/github-pages-talk/#/
     - name: Design & Hackathons
       link: http://imdevan.github.io/hackingdesign/#/
 ---
 
-<main class="_full-page--CENTERED">
+<main class="_full">
 
-    <h1 class="_talks-page--title">
+    <h1 class="page--headline salmon">
         {{ page.title }}
     </h1>
 
-    {% include svg/squiggle.svg %}
-    
     <ul class="list">
         {% for item in page.list-items %}
-            <a href="{{ item.link }}"class="list--link"><li class="list--item">{{ item.name }}</li></a>
+            <a href="{{ item.link }}" class="talk--link"><li class="talk--list-item">{{ item.name }}</li></a>
         {% endfor %}
     </ul>
 </main>
-    

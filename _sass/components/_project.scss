@@ -14,7 +14,7 @@
     &::after {
         background-image: linear-gradient(to bottom, $blue, $purple);
         content: "";
-        transition: all 0.3s $timing-function-2;
+        transition: all 0.15s $timing-function-2;
         position: absolute;
         transform: scale(0);
         width: 100%;
@@ -47,7 +47,7 @@
 
     &:hover {
         &::after {
-            transform: scale(.45);
+            transform: scale(.5);
             box-shadow: $base--box-shadow--flipped;
             opacity: 1;
         }

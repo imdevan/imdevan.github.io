@@ -1,0 +1,27 @@
+.talk {
+
+    &--link {
+        @extend .base--h2;
+
+        @extend .purple;
+        padding: 2*$br 0;
+        overflow: auto;
+        display: block;
+
+        &:nth-child(2n) {
+            @extend .blue;
+        }
+    }
+
+    &--list-item {
+        @extend .list--item;
+        transform: translateX(0);
+        transition: all 0.2s $timing-function;
+        @extend %hoverUnderline;
+        display: inline-block;
+
+        &:hover {
+            transform: translateX(25px);
+        }
+    }
+}
