@@ -1,6 +1,11 @@
 %project--image {
     padding: 0;
     transition: all 0.3s $timing-function-2;
+    background-position: center;
+    background-size: cover;
+    display: block;
+    height: 18.75rem;
+    width: 18.75rem;
 
     .project:hover &  {
         box-shadow: $base--box-shadow;
@@ -79,6 +84,7 @@
             @extend %project--image;
             float: right;
         }
+
     }
 
     &--name {

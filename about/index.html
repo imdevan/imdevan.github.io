@@ -1,16 +1,17 @@
 ---
 layout: about-page
 title: About Meh
-sections: 
+sections:
     - header: tl;dr
-      text: 
+      text:
         - I like cats, I want to be your friend and talk about design and stuff
     - header: Also,
-      text: 
-        - I currently work at IBM Design, live in Austin, TX. 
+      text:
+        - I currently work at IBM Design, live in Austin, TX.
         - I think that rats make for really cute and very inteligent pets. Ironically enough I draw a lot of cat doodles. I like to play board games and card games based on roleplaying games.
-        - I thought that I would try building this website without a navigation menu, so I hope that doesn't inconvience you. 
+        - I thought that I would try building this website without a navigation menu, so I hope that doesn't inconvience you.
         - You're really great and I'm glad that you've read this far. I'll share a secret with you. If you type "telnet towel.blinkenlights.nl" in your terminal, without quotes, you can watch the original starwars movie in your terminal, which I think is pretty cool.
+        - My favorite presets on my bp50 multi-effect bass pedel are 64, 32, 31, 4, & 5
 ---
 
 <main class="_full-page--CENTERED">
@@ -22,7 +23,7 @@ sections:
 
     {% for section in page.sections %}
         <section class="_about-page--section">
-            
+
             <h2 class="_about-page--sub-header">
               {{ section.header }}
             </h2>
@@ -35,11 +36,10 @@ sections:
             {% endfor %}
         </section>
     {% endfor %}
-    
+
     <div class="small-cat">
         {% include svg/catgrad.svg %}
     </div>
 
     <div class="background-image--FADED"></div>
 </main>
-    

@@ -3,6 +3,19 @@ layout: default
 title: "Projects"
 page-title: "Projects I've worked on"
 image: http://fillmurray.com/300/300
+projects:
+    - name: Background for Inbox
+      image: "https://raw.githubusercontent.com/imdevan/background-for-inbox/master/screenshot.png"
+      link: https://github.com/imdevan/background-for-inbox
+    - name: Sign To linear
+      image: "https://raw.githubusercontent.com/imdevan/background-for-inbox/master/screenshot.png"
+      link: https://github.com/imdevan/background-for-inbox
+    - name: Word Swap
+      image: "https://raw.githubusercontent.com/imdevan/background-for-inbox/master/screenshot.png"
+      link: https://github.com/imdevan/background-for-inbox
+    - name: Hola
+      image: "https://raw.githubusercontent.com/imdevan/background-for-inbox/master/screenshot.png"
+      link: https://github.com/imdevan/background-for-inbox
 ---
 
 <section class="projects-page">
@@ -12,63 +25,21 @@ image: http://fillmurray.com/300/300
         </h1>
     </div>
 
-    <div class="project">
-        <div class="project--wrapper">
-            <div class="project--aspect">
-                <h2 class="project--name--LEFT purple">
-                    Background for Inbox
-                </h2>
-            </div>
-            <div class="project--aspect">
-                <div class="project--image--RIGHT">
-                    <img src="{{ page.image }}" alt="">
+    {% for project in page.projects %}
+    <a href="{{project.link}}">
+        <div class="project">
+            <div class="project--wrapper">
+                <div class="project--aspect">
+                    <h2 class="project--name--LEFT">
+                        {{project.name}}
+                    </h2>
+                </div>
+                <div class="project--aspect">
+                    <div class="project--image--RIGHT" style="background-image: url('{{project.image}}')">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="project">
-        <div class="project--wrapper">
-            <div class="project--aspect">
-                <div class="project--image--LEFT">
-                    <img src="{{ page.image }}" alt="">
-                </div>
-            </div>
-            <div class="project--aspect">
-                <h2 class="project--name--RIGHT seafoam">
-                    Sign To Line
-                </h2>
-            </div>
-        </div>
-    </div>
-
-    <div class="project">
-        <div class="project--wrapper">
-            <div class="project--aspect">
-                <h2 class="project--name--LEFT salmon">
-                    Word Swap
-                </h2>
-            </div>
-            <div class="project--aspect">
-                <div class="project--image--RIGHT">
-                    <img src="{{ page.image }}" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="project">
-        <div class="project--wrapper">
-            <div class="project--aspect">
-                <div class="project--image--LEFT">
-                    <img src="{{ page.image }}" alt="">
-                </div>
-            </div>
-            <div class="project--aspect">
-                <h2 class="project--name--RIGHT blue">
-                    Hola
-                </h2>
-            </div>
-        </div>
-    </div>
+        </a>
+    {% endfor %}
 </section>
