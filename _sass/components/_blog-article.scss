@@ -1,7 +1,11 @@
+%blog--heading {
+    margin-top: 5*$br;
+}
+
 .blog-article {
 
-    h2 { @extend .base--h2; }
-    h3 { @extend .base--h3; }
+    h2 { @extend .base--h2; @extend %blog--heading; }
+    h3 { @extend .base--h3; @extend %blog--heading; }
 
     p {
         font-size: 21px;
@@ -10,7 +14,10 @@
 
     .highlight {
         margin: 5*$br auto;
-        border-left: 3px solid cadetblue;
+        border-left: 3px solid $blue;
+        box-shadow: $base--box-shadow;
+        background: darken($base--bg, 2%);
+        color: lighten($base--color, 5%);
         padding: $br;
         font-size: 16px;
         line-height: 1.5;
