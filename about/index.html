@@ -1,11 +1,14 @@
 ---
 layout: default
-title: About Meh
+title: Some more deets about myself
+title-color: purple
 sections:
     - header: tl;dr
+      color: blue
       text:
         - I like cats, I want to be your friend and talk about design and stuff
     - header: Also,
+      color: seafoam
       text:
         - I currently work at IBM Design, live in Austin, TX.
         - I think that rats make for really cute and very inteligent pets. Ironically enough I draw a lot of cat doodles. I like to play board games and card games based on roleplaying games.
@@ -15,16 +18,17 @@ sections:
 ---
 
 <main class="_full">
-    <h1 class="page--headline">
+    <h1 class="page--headline {{ page.title-color }}">
         {{ page.title }}
     </h1>
 
     {% for section in page.sections %}
         <section class="page--section">
 
-            <h2 class="base--h2">
+            <h2 class="base--h2 {{ section.color }}">
               {{ section.header }}
             </h2>
+
             {% for p in section.text %}
                 <p class="base--p">
                     {{ p }}
