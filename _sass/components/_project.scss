@@ -17,7 +17,6 @@
     position: relative;
 
     &::after {
-        background-image: linear-gradient(to bottom, $blue, $purple);
         content: "";
         transition: all 0.15s $timing-function-2;
         position: absolute;
@@ -32,15 +31,27 @@
         z-index: -1;
     }
 
-    &:nth-child(3n) {
+    &.seafoam {
         &::after {
             background-image: linear-gradient(to bottom, $seafoam, $blue);
         }
     }
 
-    &:nth-child(4n) {
+    &.blue {
         &::after {
-            background-image: linear-gradient(to bottom, $purple, $salmon);
+            background-image: linear-gradient(to bottom, $blue, $purple);
+        }
+    }
+
+    &.salmon {
+        &::after {
+            background-image: linear-gradient(to bottom, $salmon, $purple);
+        }
+    }
+
+    &.purple {
+        &::after {
+            background-image: linear-gradient(to bottom, $purple, $seafoam);
         }
     }
 

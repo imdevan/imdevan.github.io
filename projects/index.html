@@ -41,7 +41,7 @@ projects:
     {% for project in page.projects %}
     {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
     <a href="{{project.link}}">
-        <div class="project">
+        <div class="project {{project.color}}">
             <div class="project--wrapper">
                 <div class="project--aspect">
                     {% if thecycle == 'odd' %}
