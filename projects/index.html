@@ -5,15 +5,19 @@ page-title: "Projects I've worked on"
 image: http://fillmurray.com/300/300
 projects:
     - name: Background for Inbox
+      color: seafoam
       image: "https://raw.githubusercontent.com/imdevan/background-for-inbox/master/screenshot.png"
       link: https://github.com/imdevan/background-for-inbox
     - name: Sign To linear
+      color: salmon
       image: "https://raw.githubusercontent.com/imdevan/background-for-inbox/master/screenshot.png"
       link: https://github.com/imdevan/background-for-inbox
     - name: Word Swap
+      color: purple
       image: "https://raw.githubusercontent.com/imdevan/background-for-inbox/master/screenshot.png"
       link: https://github.com/imdevan/background-for-inbox
     - name: Hola
+      color: blue
       image: "https://raw.githubusercontent.com/imdevan/background-for-inbox/master/screenshot.png"
       link: https://github.com/imdevan/background-for-inbox
 ---
@@ -26,20 +30,32 @@ projects:
     </div>
 
     {% for project in page.projects %}
+    {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
     <a href="{{project.link}}">
         <div class="project">
             <div class="project--wrapper">
                 <div class="project--aspect">
-                    <h2 class="project--name--LEFT">
+                    {% if thecycle == 'odd' %}
+                    <h2 class="project--name--LEFT {{project.color}}">
                         {{project.name}}
                     </h2>
+                    {% else %}
+                    <div class="project--image--LEFT" style="background-image: url('{{project.image}}')">
+                    </div>
+                    {% endif %}
                 </div>
                 <div class="project--aspect">
+                    {% if thecycle == 'odd' %}
                     <div class="project--image--RIGHT" style="background-image: url('{{project.image}}')">
                     </div>
+                    {% else %}
+                    <h2 class="project--name--RIGHT {{project.color}}">
+                        {{project.name}}
+                    </h2>
+                    {% endif %}
                 </div>
             </div>
         </div>
-        </a>
+    </a>
     {% endfor %}
 </section>
