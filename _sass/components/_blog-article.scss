@@ -4,6 +4,35 @@
 
 .blog-article {
 
+    &.blue {
+        color: $base--color;
+        h1 { @extend .blue; }
+        h2 { @extend .seafoam; }
+        h3 { @extend .salmon; }
+        h4 { @extend .purple; }
+    }
+    &.seafoam {
+        color: $base--color;
+        h4 { @extend .blue; }
+        h1 { @extend .seafoam; }
+        h2 { @extend .salmon; }
+        h3 { @extend .purple; }
+    }
+    &.salmon {
+        color: $base--color;
+        h3 { @extend .blue; }
+        h4 { @extend .seafoam; }
+        h1 { @extend .salmon; }
+        h2 { @extend .purple; }
+    }
+    &.purple {
+        color: $base--color;
+        h2 { @extend .blue; }
+        h3 { @extend .seafoam; }
+        h4 { @extend .salmon; }
+        h1 { @extend .purple; }
+    }
+    
     h2 { @extend .base--h2; @extend %blog--heading; }
     h3 { @extend .base--h3; @extend %blog--heading; }
 
