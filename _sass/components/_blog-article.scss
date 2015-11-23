@@ -62,6 +62,7 @@ $blog-article--margin--CENTERED: 5*$br auto;
         padding: $br;
         font-size: 16px;
         line-height: 1.5;
+        overflow: scroll;
     }
 
     img {
