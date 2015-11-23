@@ -28,11 +28,15 @@ $smallHeader: 2.61803em;
 	font-weight: 400;
 }
 
-$modScaleUtil: 1.5;
+$modScaleUtil: 1.2;
 $modScale: $modScaleUtil * 1rem;
 
 @mixin ms($s: 1) {
 	$t: $s * $modScale;
 	font-size: $t;
-	line-height: $t*1.5;
+	line-height: $t*1.58;
+}
+
+body{
+	@include ms(1);
 }

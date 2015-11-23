@@ -2,37 +2,49 @@
     margin-top: 5*$br;
 }
 
+$color-list: $blue $seafoam $salmon $purple;
+$blog-article--margin--CENTERED: 5*$br auto;
+
+@mixin color($first) {
+    $second: ( ($first + 4) % 4 + 1 );
+    $third: ( ($first + 5) % 4 + 1 );
+    $fourth: ( ($first + 6) % 4 + 1 );
+
+    color: $base--color;
+    h1 { color: nth($color-list, $first); }
+    h2 { color: nth($color-list, $second); }
+    h3 { color: nth($color-list, $third); }
+    h4 { color: nth($color-list, $fourth); }
+
+    .highlight {
+        border-color: nth($color-list, $first);
+    }
+
+    a {
+        @extend %hoverUnderline;
+        color: nth($color-list, $third);
+
+        &:focus, &:visited {
+            color: nth($color-list, $third);
+        }
+    }
+}
+
 .blog-article {
 
     &.blue {
-        color: $base--color;
-        h1 { @extend .blue; }
-        h2 { @extend .seafoam; }
-        h3 { @extend .salmon; }
-        h4 { @extend .purple; }
+        @include color(1);
     }
     &.seafoam {
-        color: $base--color;
-        h4 { @extend .blue; }
-        h1 { @extend .seafoam; }
-        h2 { @extend .salmon; }
-        h3 { @extend .purple; }
+        @include color(2);
     }
     &.salmon {
-        color: $base--color;
-        h3 { @extend .blue; }
-        h4 { @extend .seafoam; }
-        h1 { @extend .salmon; }
-        h2 { @extend .purple; }
+        @include color(3);
     }
     &.purple {
-        color: $base--color;
-        h2 { @extend .blue; }
-        h3 { @extend .seafoam; }
-        h4 { @extend .salmon; }
-        h1 { @extend .purple; }
+        @include color(4);
     }
-    
+
     h2 { @extend .base--h2; @extend %blog--heading; }
     h3 { @extend .base--h3; @extend %blog--heading; }
 
@@ -42,7 +54,7 @@
     }
 
     .highlight {
-        margin: 5*$br auto;
+        margin: $blog-article--margin--CENTERED;
         border-left: 3px solid $blue;
         box-shadow: $base--box-shadow;
         background: darken($base--bg, 2%);
@@ -50,5 +62,10 @@
         padding: $br;
         font-size: 16px;
         line-height: 1.5;
+    }
+
+    img {
+        @extend .image;
+        margin: $blog-article--margin--CENTERED;
     }
 }
