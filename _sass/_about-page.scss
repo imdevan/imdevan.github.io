@@ -1,12 +1,22 @@
-._about-page {
-    @extend ._home-page;
-    
-    &--title {
-        @extend ._home-page--title;
-    }
-    
+.about-page {
+    @extend .page;
+
     &--section {
-        margin: 5rem auto;
-        text-align: left;
+        @extend .page--section;
+
+        &--CENTERED {
+            @extend .page--section;
+
+            text-align: center;
+            padding: {
+                bottom: 3.5*$br;
+                top: 3.5*$br;
+            }
+        }
+    }
+
+    &--headline {
+        @extend .page--headline;
+        text-align: center;
     }
 }

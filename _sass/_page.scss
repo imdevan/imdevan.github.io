@@ -3,8 +3,18 @@
     @extend %fadein;
     font-family: Helvetica;
     font-weight: lighter;
+    padding-bottom: 10*$br;
     opacity: 0;
 
+
+    &--section {
+
+        text-align: left;
+        padding: {
+            bottom: 2.5*$br;
+            top: 1.5*$br;
+        }
+    }
 
     &--headline {
         @include ms(2);
