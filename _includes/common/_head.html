@@ -10,5 +10,10 @@
     <meta name="description" content="{{page.excerpt | strip_html}}"> {% else %}
     <meta name="description" content="{{site.description}}"> {% endif %} {% if page.keywords %}
     <meta name="keywords" content="{{page.keywords}}"> {% endif %}
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">j
+    <link rel="stylesheet" href="/css/s_main.css">
+    {% if page.header_img %}
+        <link rel="image_src" href="{{page.header_img}}" />
+    {% endif %}
+
 </head>
