@@ -13,10 +13,11 @@ list-items:
     <h1 class="page--headline salmon">
         {{ page.title }}
     </h1>
-
-    <ul class="list">
-        {% for item in page.list-items %}
-            <a href="{{ item.link }}" class="talk--link"><li class="talk--list-item">{{ item.name }}</li></a>
-        {% endfor %}
-    </ul>
+    <div class="page--section">
+        <ul class="list">
+            {% for item in page.list-items %}
+                <a href="{{ item.link }}" class="talk--link"><li class="talk--list-item">{{ item.name }}</li></a>
+            {% endfor %}
+        </ul>
+    </div>
 </main>

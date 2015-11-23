@@ -7,14 +7,16 @@ title: Blog posts I've written
     <h1 class="page--headline seafoam">
         {{ page.title }}
     </h1>
-
-    <ul class="list">
-        {% for post in site.categories.blog %}
-          <a  class="blog-post--link" href="{{post.url}}">
-            <li class="blog-post--list-item">
-              {{post.title}}
-          </li>
-          </a>
-        {% endfor %}
-    </ul>
+    
+    <div class="page--section">
+        <ul class="list">
+            {% for post in site.categories.blog %}
+              <a  class="blog-post--link" href="{{post.url}}">
+                <li class="blog-post--list-item">
+                  {{post.title}}
+              </li>
+              </a>
+            {% endfor %}
+        </ul>
+    </div>
 </main>
