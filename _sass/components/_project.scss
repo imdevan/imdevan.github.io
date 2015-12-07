@@ -1,6 +1,7 @@
 %project--image {
     padding: 0;
     transition: all 0.3s $timing-function-2;
+    background-color: rgba(#456, 0.7);
     background-position: center;
     background-size: cover;
     display: block;
@@ -9,6 +10,14 @@
 
     .project:hover &  {
         box-shadow: $base--box-shadow;
+    }
+
+    @media (max-width: 900px) {
+        position:absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 350px;
     }
 }
 
@@ -74,6 +83,7 @@
                 width: 100%;
             }
         }
+
     }
 
     &--aspect {
@@ -82,6 +92,10 @@
         box-sizing: border-box;
         display: inline-block;
         vertical-align: middle;
+
+        @media (max-width: 900px) {
+            width: 100%;
+        }
     }
 
     &--image {
@@ -101,6 +115,9 @@
     &--name {
         @extend %hoverUnderline;
         @extend .base--h2;
+        @media (max-width: 900px) {
+            display: none;
+        }
 
         &--RIGHT {
             @extend .project--name;
@@ -111,5 +128,24 @@
             @extend .project--name;
             float: right;
         }
+    }
+
+
+    @media (max-width: 900px) {
+        position:relative;
+        overflow: auto;
+        margin: 0 auto 5*$br auto;
+        width: 90%;
+
+        &:hover {
+            &::after {
+                transform: scale(1);
+            }
+        }
+
+        &--aspect {
+            width: 100%;
+        }
+
     }
 }
