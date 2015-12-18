@@ -20,8 +20,8 @@ That will be handled in another post later on. ᵔᴥᵔ
 
 ## Tech Used
 
-[Ducks](https://github.com/erikras/ducks-modular-redux)
-[React] (http://facebook.github.io)
+[Ducks](https://github.com/erikras/ducks-modular-redux)  
+[React](http://facebook.github.io)  
 
 ## In the view
 
