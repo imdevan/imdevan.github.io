@@ -18,6 +18,12 @@ paginate: 5
 # Style of permalinks
 permalink: /:categories/:title
 
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+
 gems: ['jekyll-sitemap']
 
 exclude: [node_modules, Gruntfile.js, package.json]
