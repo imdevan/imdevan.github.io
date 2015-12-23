@@ -1,6 +1,7 @@
 ---
-layout: project-page
+layout: blog-article
 title: "Sign 2 Line"
+title-color: salmon
 ---
 
 <a href="https://github.com/imdevan/sign2line" class="base--a">

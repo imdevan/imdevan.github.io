@@ -1,6 +1,7 @@
 ---
-layout: project-page
+layout: blog-article
 title: "Culture Hunt"
+title-color: salmon
 ---
 
 <a href="https://github.com/imdevan/atxdivhack" class="base--a">

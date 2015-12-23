@@ -1,7 +1,7 @@
 ---
 layout: blog-article
 title: "How to be Outstanding"
-title-color: salmon
+title-color: seafoam
 author: Devan Huapaya
 category: blog
 style_mod: BASIC

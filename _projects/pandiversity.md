@@ -1,6 +1,7 @@
 ---
-layout: project-page
+layout: blog-article
 title: "PanDiversity"
+title-color: salmon
 ---
 
 <a href=" https://github.com/imdevan/div-hack-atx" class="base--a">

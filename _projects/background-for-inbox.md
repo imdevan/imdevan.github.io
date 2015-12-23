@@ -1,6 +1,7 @@
 ---
-layout: project-page
+layout: blog-article
 title: "Background for Inbox"
+title-color: seafoam
 ---
 
 Background for inbox was made to fill the proverbial and literal whitespace
