@@ -1,5 +1,5 @@
 ---
-layout: blog-article
+layout: project-page
 title: "PanDiversity"
 title-color: salmon
 ---

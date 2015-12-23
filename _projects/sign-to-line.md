@@ -1,5 +1,5 @@
 ---
-layout: blog-article
+layout: project-page
 title: "Sign 2 Line"
 title-color: salmon
 ---

@@ -1,5 +1,5 @@
 ---
-layout: blog-article
+layout: project-page
 title: "Culture Hunt"
 title-color: salmon
 ---
