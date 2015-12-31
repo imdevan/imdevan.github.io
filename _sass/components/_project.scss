@@ -1,151 +1,51 @@
-%project--image {
-    padding: 0;
-    transition: all 0.3s $timing-function-2;
-    background-color: rgba(#456, 0.7);
-    background-position: center;
-    background-size: cover;
-    display: block;
-    height: 18.75rem;
-    width: 18.75rem;
-
-    .project:hover &  {
-        box-shadow: $base--box-shadow;
-    }
-
-    @media (max-width: 900px) {
-        position:absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 350px;
-    }
-}
-
 .project {
-    transition: all 0.3s $timing-function-2;
+    display: block;
     position: relative;
+    width: 100%;
+    height: 100%;
 
-    &::after {
-        content: "";
-        transition: all 0.15s $timing-function-2;
+    &--name {
+        font-size: 1.5rem;
+        margin: 1rem;
+    }
+
+    &--img {
         position: absolute;
-        transform: scale(0);
-        width: 100%;
+        left: 50%;
+        top: 50%;
+        transform: translateY(-50%)  translateX(-50%);
+        width: 80%;
         height: auto;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        opacity: 0;
-        z-index: -1;
+    }
+
+    &--tools {
+        position: absolute;
+        bottom: 1.58rem;
+        left: 1.58rem;
+        width: 100%;
+    }
+
+    &--tool {
+        display: inline-block;
+        margin-right: 1rem;
+        border-bottom: 3px solid;
     }
 
     &.seafoam {
-        &::after {
-            background-image: linear-gradient(to bottom, $seafoam, $blue);
-        }
+        background: $seafoam;
+        color: $white;
     }
-
-    &.blue {
-        &::after {
-            background-image: linear-gradient(to bottom, $blue, $purple);
-        }
-    }
-
     &.salmon {
-        &::after {
-            background-image: linear-gradient(to bottom, $salmon, $purple);
-        }
+        background: $salmon;
+        color: $white;
     }
 
     &.purple {
-        &::after {
-            background-image: linear-gradient(to bottom, $purple, $seafoam);
-        }
+        background: $purple;
+        color: $white;
     }
-
-    &--wrapper {
-        @extend ._full;
-        font-size: 0;
-        padding: 1*$br 0;
-    }
-
-    &:hover {
-        &::after {
-            transform: scale(.5);
-            box-shadow: $base--box-shadow--flipped;
-            opacity: 1;
-        }
-
-        & .project--name {
-            color: $white;
-            &::after {
-                width: 100%;
-            }
-        }
-
-    }
-
-    &--aspect {
-        width:50%;
-        padding: 2*$br;
-        box-sizing: border-box;
-        display: inline-block;
-        vertical-align: middle;
-
-        @media (max-width: 900px) {
-            width: 100%;
-        }
-    }
-
-    &--image {
-
-        &--RIGHT {
-            @extend %project--image;
-            float: left;
-        }
-
-        &--LEFT{
-            @extend %project--image;
-            float: right;
-        }
-
-    }
-
-    &--name {
-        @extend %hoverUnderline;
-        @extend .base--h2;
-        @media (max-width: 900px) {
-            display: none;
-        }
-
-        &--RIGHT {
-            @extend .project--name;
-            float: left;
-        }
-
-        &--LEFT{
-            @extend .project--name;
-            float: right;
-        }
-    }
-
-
-    @media (max-width: 900px) {
-        position:relative;
-        overflow: auto;
-        margin: 0 auto 5*$br auto;
-        width: 90%;
-
-        &:hover {
-            &::after {
-                transform: scale(1);
-            }
-        }
-
-        &--aspect {
-            width: 100%;
-        }
-
+    &.blue {
+        background: $blue;
+        color: $white;
     }
 }

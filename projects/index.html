@@ -7,11 +7,15 @@ image: http://fillmurray.com/300/300
 projects:
     - name: Background for Inbox
       color: seafoam
-      image: "https://raw.githubusercontent.com/imdevan/background-for-inbox/master/screenshot.png"
+      image: "https://cloud.githubusercontent.com/assets/3521824/12057240/daa0ce18-af0c-11e5-8458-c5983e8eac71.png"
       link: background-for-inbox
+      tools:
+          - Chrome extension
+          - Chrome storage api
+          - Javascript
     - name: Sign To Line
       color: salmon
-      image: "https://cloud.githubusercontent.com/assets/3521824/11903213/3153885c-a57d-11e5-8d41-45c1c34167bc.jpg"
+      image: "https://cloud.githubusercontent.com/assets/3521824/12057161/1a3c11fa-af0c-11e5-9676-f7a6e8938140.png"
       link: sign-to-line
     - name: Word Swap
       color: purple
@@ -37,34 +41,21 @@ projects:
             {{page.page-title}}
         </h1>
     </div>
-
-    {% for project in page.projects %}
-    {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
-    <a href="/projects/{{project.link}}">
-        <div class="project {{project.color}}">
-            <div class="project--wrapper">
-                <div class="project--aspect">
-                    {% if thecycle == 'odd' %}
-                    <h2 class="project--name--LEFT {{project.color}}">
-                        {{project.name}}
-                    </h2>
-                    {% else %}
-                    <div class="project--image--LEFT" style="background-image: url('{{project.image}}')">
+    <div class="_project-list">
+        {% for project in page.projects %}
+            <a href="/projects/{{project.link}}">
+                <div class="_project-list--item">
+                    <div class="project {{project.color}}">
+                        <div class="project--name">{{project.name}}</div>
+                        <img src="{{project.image}}" alt="" class="project--img">
+                        <div class="project--tools">
+                            {% for tool in project.tools %}
+                                <div class="project--tool">{{tool}}</div>
+                            {% endfor %}
+                        </div>
                     </div>
-                    {% endif %}
                 </div>
-                <div class="project--aspect">
-                    {% if thecycle == 'odd' %}
-                    <div class="project--image--RIGHT" style="background-image: url('{{project.image}}')">
-                    </div>
-                    {% else %}
-                    <h2 class="project--name--RIGHT {{project.color}}">
-                        {{project.name}}
-                    </h2>
-                    {% endif %}
-                </div>
-            </div>
-        </div>
-    </a>
-    {% endfor %}
+            </a>
+        {% endfor %}
+    </div>
 </section>

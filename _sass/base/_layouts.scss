@@ -10,3 +10,17 @@ $br: 1.38rem;
   width: 50%;
   float: left;
 }
+
+
+._project-list {
+  &--item {
+    height: 90vh;
+    display: block;
+    float: left;
+    width: 50%;
+
+    @media (max-width: 700px){
+      width: 100%;
+    }
+  }
+}

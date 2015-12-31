@@ -1,0 +1,117 @@
+// Frome codepen
+
+// css
+.page {
+  font-family: helvetica;
+  font-weight: lighter;
+  line-height: 1.58;
+  color: #444;
+  width: 100%;
+
+  &--title {
+    box-sizing: border-box;
+    font-size: 2.4rem;
+    width: 100%;
+    padding: 5rem;
+    color: #01a0ff;
+    @media (max-width: 700px){
+      padding: 5rem 0;
+      text-align: center;
+    }
+  }
+}
+
+._projects {
+  &--item {
+    height: 90vh;
+    display: block;
+    float: left;
+    &-LARGE {
+      @extend .projects--item;
+      width: 100%;
+    }
+    &-HALF {
+      @extend .projects--item;
+      width: 50%;
+      @media (max-width: 700px){
+        width: 100%;
+      }
+    }
+  }
+}
+
+.project {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &--title {
+    font-size: 1.5rem;
+    margin: 1rem;
+  }
+  &--img {
+    /* @extend .img; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%)  translateX(-50%);
+    width: 80%;
+    height: auto;
+  }
+  &--tools {
+    position: absolute;
+    bottom: 1.58rem;
+    left: 1.58rem;
+    width: 100%;
+  }
+  &--tool {
+    display: inline-block;
+    margin-right: 1rem;
+    border-bottom: 3px solid;
+  }
+}
+.white { background: #fff; }
+.blue { background: #36B2FE; color: #fff;}
+.purple { background: #9C62E5; color: #fff;}
+.green { background: #3FE4C8; }
+.salmon { background: salmon; }
+
+.img {
+  display: block;
+  background: #fefefe;
+  box-shadow: 20px 20px 40px rgba(black, 0.2);
+  height: 10rem;
+  width: 10rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+    box-sizing: border-box;
+}
+
+
+// jade
+.page
+  .page--title Projects I've worked on
+  .projects--item-HALF.blue
+    .project
+      .project--title Background for Inbox
+        img(src="https://cloud.githubusercontent.com/assets/3521824/12057240/daa0ce18-af0c-11e5-8458-c5983e8eac71.png").project--img
+        .project--tools
+          .project--tool Chrome extension
+  .projects--item-HALF.salmon
+    .project
+      .project--title Sign To Line
+        img(src="https://cloud.githubusercontent.com/assets/3521824/12057161/1a3c11fa-af0c-11e5-9676-f7a6e8938140.png").project--img
+        .project--tools
+          .project--tool Javascript
+          .project--tool Leap motion
+  .projects--item-HALF.green
+    .project
+      .project--title Background for Inbox
+      .project--img
+  .projects--item-HALF.purple
+    .project
+      .project--title Background for Inbox
+      .project--img
