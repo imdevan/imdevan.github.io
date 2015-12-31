@@ -8,7 +8,7 @@ $timing-function-2: cubic-bezier(0,0,.26,.93);
         content: "";
         transition: width 0.3s $timing-function;
         position: absolute;
-        bottom: 0;
+        bottom: -0.25rem;
         height: 0.15rem;
         width: 0;
         background: currentColor;

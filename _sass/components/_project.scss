@@ -5,8 +5,13 @@
     height: 100%;
 
     &--name {
+        @extend %hoverUnderline;
+        display: inline-block;
         font-size: 1.5rem;
         margin: 1rem;
+        .project:hover & {
+            &:after { width: 100%; }
+        }
     }
 
     &--img {
@@ -16,13 +21,19 @@
         transform: translateY(-50%)  translateX(-50%);
         width: 80%;
         height: auto;
+        max-height: 100%;
+
+        &--SMALL {
+            @extend .project--img;
+            height: 60%;
+            width: auto;
+        }
     }
 
     &--tools {
         position: absolute;
         bottom: 1.58rem;
         left: 1.58rem;
-        width: 100%;
     }
 
     &--tool {
