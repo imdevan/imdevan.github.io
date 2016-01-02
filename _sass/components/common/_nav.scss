@@ -22,5 +22,16 @@
     &:hover:after{
       width: 100%;
     }
+
+    @media (max-width: $sm-view) {
+        display: block;
+        margin-bottom:  2 * $br;
+    }
+  }
+
+  &--punctuation {
+    @media (max-width: $sm-view) {
+      display: none;
+    }
   }
 }
