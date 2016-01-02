@@ -1,70 +1,46 @@
 ---
 layout: default
 title: Hi, I'm Devan
+sections:
+  - title: Home page
+    color: purple
+    list:
+      - Page larger than 100vh, but doesn't need to be
+      - Comas look weird on small vp
+  - title: Porfolio
+    color: blue
+    list:
+      - Title formatting is un-even
+      - Need images for each project
+      - All projects need descriptions and analysis
+  - title: Blog articles
+    color: seafoam
+    list:
+      - All images should have max-width 100%
+  - title: Global
+    color: salmon
+    list:
+      - Need a way to navigate back to home or to other pages
+      - I know that last one seems like I should just have a menu,
+        but I'm trying to avoid that
 ---
 
 <div class="page">
     <div class="_full">
         <div class="page--headline">
             <p>
-                Hi, I’m Devan. This is the progress of my new site
+                Hi, I’m Devan. This is the progress / parts remining of my site
                 <span class="emoji">ᵔᴥᵔ</span>
-            </p>
         </div>
-        <div class="base--h2--HALF purple">
-          1 week behind schedule
-        </div>
-        <div class="base--h2--HALF salmon">
-          Dec 1st <span class="emoji">ᵔᴥᵔ</span>
-        </div>
-        <div class="base--h2--HALF blue">
-          4 week milestone
-        </div>
-        <div class="base--h2--HALF seafoam">
-          Nov 25th <span class="emoji">ᵔᴥᵔ</span>
-        </div>
-        <div class="base--h2 purple">
-          Week 1 - Nov 4th
-        </div>
-        <div class="base--h3 salmon">
-          Design Iteration
+        {% for section in page.sections %}
+        <div class="base--h3 {{section.color}}">
+          {{ section.title }}
         </div>
         <ul>
-          <li>front page (1 day)</li>
-          <li>project page (1 day)</li>
-          <li>about page (1 day)</li>
-          <li>blog page (1 day)</li>
+            {% for item in section.list %}
+            <li>{{ item }}</li>
+            {% endfor %}
         </ul>
-        <div class="base--h2 blue">
-          Week 2 - Nov 11th
-        </div>
-        <div class="base--h3 seafoam">
-          Code Iteration
-        </div>
-        <ul>
-          <li>front page (1 day)</li>
-          <li>project page (1 day)</li>
-          <li>about page (1 day)</li>
-          <li>blog page (1 day)</li>
-        </ul>
-        <div class="base--h2 blue">
-          Week 3 - Nov 18th
-        </div>
-        <div class="base--h3 purple">
-          Refactor blog posts
-        </div>
-        <p>
-          Make em' look not poopy!
-        </p>
-        <div class="base--h2 salmon">
-          Week 4 - Nov 25th
-        </div>
-        <div class="base--h3 blue">
-          Polish!
-        </div>
-        <p>
-          Just going to do hose cleaning on this week and
-          have a ship on the 25th!
-        </p>
+        {% endfor %}
     </div>
 </div>
