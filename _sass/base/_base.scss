@@ -5,6 +5,10 @@ $base--bg: $white;
 $base--color: $black;
 $sm-view: 700px;
 
+@function br($val: 1) {
+    @return $val * $br;
+}
+
 .base {
 
     &--h2 {

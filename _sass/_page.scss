@@ -3,16 +3,14 @@
     @extend %fadein;
     font-family: Helvetica;
     font-weight: lighter;
-    padding-bottom: 10*$br;
+    padding-bottom: br(10);
     opacity: 0;
 
-
     &--section {
-
         text-align: left;
         padding: {
-            bottom: 2.5*$br;
-            top: 1.5*$br;
+            bottom: br(3);
+            top: br(2);
         }
     }
 
@@ -23,8 +21,7 @@
 
         &--SMALL {
             @include ms(1);
-            margin-top: 50%;
-            transform: translateY(-50%);
+            padding-top: 2.5*$br;
         }
     }
 }
