@@ -17,11 +17,11 @@
     &--headline {
         @include ms(2);
         font-weight: lighter;
-        margin-top: 8rem;
+        padding: br(8) auto;
 
         &--SMALL {
             @include ms(1);
-            padding-top: 2.5*$br;
+            padding-top: br(2);
         }
     }
 }
