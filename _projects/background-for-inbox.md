@@ -4,13 +4,17 @@ title: "Background for Inbox"
 title-color: seafoam
 ---
 
-Background for inbox was made to fill the proverbial and literal whitespace
-of <a class="base--a" href="http://inbox.google.com">Google Inbox</a>.
+<div class="filler-image--LG"></div>
 
-At it's core it uses javascript to set the background of the div behind emails on the inbox.google.com page.
 
-What I like about this project is that it demonstrates the capacity to see something that could be improved on and be adopted by thousands of people.
+The intent behind Background for Inbox was to add a touch of personal detail to an otherwise amazing
+email client, <a class="base--a" href="http://inbox.google.com">Google Inbox</a>.
+
+The extension only runs when a user goes to
+<a class="base--a" href="http://inbox.google.com">http://inbox.google.com</a>.
+
+
 
 <a  href="https://chrome.google.com/webstore/detail/background-for-inbox/comnjhiolfpohdfffgggojgamelmanac" class="base--a">
-    <span class="project--external-link">Get the app</span>
+    <span class="project--external-link">Get the extension</span>
 </a>
