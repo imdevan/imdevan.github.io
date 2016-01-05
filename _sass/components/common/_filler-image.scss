@@ -1,6 +1,6 @@
 $sm-size: 5rem;
-$md-size: 10rem;
-$lg-size: 20rem;
+$md-size: 30rem;
+$lg-size: 38rem;;
 
 .filler-image {
     display: block;
@@ -9,19 +9,20 @@ $lg-size: 20rem;
 
     &--SM {
         @extend .filler-image;
-        height: $sm-size;
+        height: $sm-size / 2;
         width: $sm-size;
     }
 
     &--MD {
         @extend .filler-image;
-        height: $md-size;
+        height: $md-size * (9/16);
         width: $md-size;
     }
 
     &--LG {
         @extend .filler-image;
-        height: $lg-size;
+        height: $lg-size / 2;
         width: $lg-size;
+        max-width: 100%;
     }
 }

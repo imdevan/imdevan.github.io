@@ -1,33 +1,45 @@
-<nav role="navigation" id="nav" class="_nav">
-    <ul class="_nav--list">
-        <a href="/" title="Home" class="_nav--link">
-            <li class="_nav--item">
-                //
-            </li>
-        </a>
-        <!-- 🍔 -->
-        <!-- uncomment when further developed
-        <a href="/projects" title="Projects" class="_nav--link">
-            <li class="_nav--item">
-                Projects
-            </li>
-        </a> -->
-        <a href="/blog" title="Blog" class="_nav--link">
-            <li class="_nav--item">
-                Blog
-            </li>
-        </a>
-        <!-- uncomment when further developed
-        <a href="/arts" title="Arts" class="_nav--link">
-            <li class="_nav--item">
-                Arts
-            </li>
-        </a> -->
-        <!--  uncomment when further developed
-        <a href="/archives" title="Arts" class="_nav--link">
-            <li class="_nav--item">
-                The Magic That Happens
-            </li>
-        </a> -->
-    </ul>
-</nav>
+---
+title: Hi, I'm Devan
+headline:
+    - Hi, I’m Devan. Thanks for stopping by <span class="emoji">ᵔᴥᵔ</span>
+    - <a href="/status" class="base--a">This site is still under construction</a>
+    - Feel free to check out some of my
+nav:
+    - name: Projects I've worked on
+      link: projects
+      end: ", "
+      color: blue
+      endcolor: salmon
+    - name: blog posts I've written
+      link: blog
+      end: ", "
+      color: seafoam
+      endcolor: purple
+    - name: talks I've given
+      link: talks
+      end: ", and "
+      color: salmon
+      endcolor: blue
+    - name: some more deets about myself
+      link: about
+      end: ". "
+      color: purple
+      endcolor: seafoam
+---
+
+<main class="_full">
+    <div class="page--headline--SMALL">
+        {% for paragraph in page.headline %}
+            <p>{{paragraph}}</p>
+        {% endfor %}
+    </div>
+
+
+    <div class="nav">
+        {% for item in page.nav %}
+            <a href="{{item.link}}" class="nav--item {{item.color}}">
+                {{ item.name }}
+            </a><span class="nav--punctuation {{item.endcolor}}">{{ item.end }}</span>
+        {% endfor %}
+    </div>  </div>
+</main>

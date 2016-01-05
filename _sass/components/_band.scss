@@ -1,3 +1,10 @@
 .band {
-    
+    margin: br(4) auto;
+
+    &--CENTERED {
+        @extend .band;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 }
