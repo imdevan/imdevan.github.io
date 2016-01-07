@@ -17,9 +17,14 @@ to set a pre-defined list of words in the options page for the extension, and wh
 the user goes to a webpage that contains any of the words they set, the word is
 replaced with another word that they chose.
 
+### The extension in action
+
 <div class="band--CENTERED">
-    <div class="filler-image--SM"></div>
-    <div class="filler-image--SM"></div>
+    <div class="filler-image--MD"></div>
+</div>
+
+<div class="band--CENTERED">
+    <div class="filler-image--MD"></div>
 </div>
 
 <div class="band--CENTERED">

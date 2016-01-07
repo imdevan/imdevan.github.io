@@ -1,4 +1,4 @@
-$sm-size: 5rem;
+$sm-size: 20rem;
 $md-size: 30rem;
 $lg-size: 38rem;;
 
@@ -11,7 +11,7 @@ $lg-size: 38rem;;
 
     &--SM {
         @extend .filler-image;
-        height: $sm-size / 2;
+        height: $sm-size * (9/16);
         width: $sm-size;
     }
 
