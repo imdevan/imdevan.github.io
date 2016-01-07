@@ -4,7 +4,6 @@ title: "Background for Inbox"
 title-color: seafoam
 ---
 
-
 <div class="band--CENTERED">
     <div class="filler-image--LG"></div>
 </div>
