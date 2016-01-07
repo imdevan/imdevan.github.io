@@ -1,6 +1,6 @@
 ---
 layout: project-page
-title: "Background for Inbox"
+title: "Napkin"
 title-color: purple
 ---
 
