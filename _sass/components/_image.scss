@@ -21,4 +21,11 @@
         width: 100%;
         height: 22*$br;
     }
+
+    &--MD {
+        @extend .image;
+        width: $md-size;
+        height: auto;
+        max-width: 100%;
+    }
 }
