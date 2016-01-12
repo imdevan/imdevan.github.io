@@ -34,12 +34,11 @@ nav:
         {% endfor %}
     </div>
 
-
     <div class="nav">
         {% for item in page.nav %}
             <a href="{{item.link}}" class="nav--item {{item.color}}">
                 {{ item.name }}
             </a><span class="nav--punctuation {{item.endcolor}}">{{ item.end }}</span>
         {% endfor %}
-    </div>  </div>
+    </div>
 </main>

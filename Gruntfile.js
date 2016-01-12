@@ -69,7 +69,7 @@ module.exports = function (grunt) {
           '_posts/**/*.md',
           '_projects/**/*.md',
           '_layouts/*.html',
-          '_includes/*.html',
+          '_includes/**/*.html',
         ],
         tasks: ['jekyll'],
         options: {
