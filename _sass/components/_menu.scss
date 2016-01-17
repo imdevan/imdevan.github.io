@@ -13,6 +13,13 @@
     background: $base--bg;
     cursor: default;
 
+    & .base--a {
+        &.blue{color:$blue;}
+        &.purple{color:$purple;}
+        &.salmon{color:$salmon;}
+        &.seafoam{color:$seafoam;}
+    }
+
     &--list {
         display: flex;
         flex-direction: column;
