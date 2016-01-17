@@ -1,10 +1,12 @@
 
 .page {
     @extend %fadein;
-    font-family: Helvetica;
-    font-weight: lighter;
     padding-bottom: br(10);
     opacity: 0;
+    transition: transform $long $timing-function;
+    &.open {
+        transform: translateX(-$menu-width);
+    }
 
     &--section {
         text-align: left;

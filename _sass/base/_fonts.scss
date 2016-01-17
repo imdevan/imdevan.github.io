@@ -2,11 +2,6 @@ $largeHeader: 5.38836em;
 $mediumHeader:4.23607em;
 $sectionHeader: 3.33019em;
 $smallHeader: 2.61803em;
-
-%helvetica{
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: lighter;
-}
 $modScaleUtil: 1.2;
 $modScale: $modScaleUtil * 1rem;
 
@@ -14,6 +9,11 @@ $modScale: $modScaleUtil * 1rem;
 	$t: $s * $modScale;
 	font-size: $t;
 	line-height: $t*1.58;
+}
+
+%helvetica{
+    font-family: Helvetica;
+    font-weight: lighter;
 }
 
 body{
