@@ -1,44 +1,22 @@
----
-title: Hi, I'm Devan
-headline:
-    - Hi, I’m Devan. Thanks for stopping by <span class="emoji">ᵔᴥᵔ</span>
-    - <a href="/status" class="base--a">This site is still under construction</a>
-    - Feel free to check out some of my
-nav:
-    - name: Projects I've worked on
-      link: projects
-      end: ", "
-      color: blue
-      endcolor: salmon
-    - name: blog posts I've written
-      link: blog
-      end: ", "
-      color: seafoam
-      endcolor: purple
-    - name: talks I've given
-      link: talks
-      end: ", and "
-      color: salmon
-      endcolor: blue
-    - name: some more deets about myself
-      link: about
-      end: ". "
-      color: purple
-      endcolor: seafoam
----
-
-<main class="_full">
-    <div class="page--headline--SMALL">
-        {% for paragraph in page.headline %}
-            <p>{{paragraph}}</p>
-        {% endfor %}
-    </div>
-
-    <div class="nav">
-        {% for item in page.nav %}
-            <a href="{{item.link}}" class="nav--item {{item.color}}">
-                {{ item.name }}
-            </a><span class="nav--punctuation {{item.endcolor}}">{{ item.end }}</span>
-        {% endfor %}
-    </div>
-</main>
+{% include svg/menu.svg %}
+<div  id="menu" class="menu--container">
+    <aside class="menu">
+        <nav class="menu--list">
+            <a href="/projects" class="base--a">
+                Projects
+            </a>
+            <a href="/projects" class="base--a seafoam">
+                Blogs
+            </a>
+            <a href="/projects" class="base--a salmon">
+                Talks
+            </a>
+            <a href="/projects" class="base--a purple">
+                About
+            </a>
+            <a href="/projects" class="base--a">
+                Resume
+            </a>
+        </nav>
+    </aside>
+</div>

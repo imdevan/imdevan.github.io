@@ -1,12 +1,14 @@
 $timing-function: cubic-bezier(0,1.22,1,1);
 $timing-function-2: cubic-bezier(0,0,.26,.93);
+$short: 0.3s;
+$long: 3s;
 
 %hoverUnderline {
     position: relative;
 
     &:after{
         content: "";
-        transition: width 0.3s $timing-function;
+        transition: width $short $timing-function;
         position: absolute;
         bottom: -0.25rem;
         height: 0.15rem;
@@ -23,7 +25,7 @@ $timing-function-2: cubic-bezier(0,0,.26,.93);
 
 %fadein {
     opacity: 0;
-    animation: fadein 3s $timing-function-2;
+    animation: fadein $long $timing-function-2;
     animation-fill-mode: forwards;
 }
 

@@ -1,25 +1,37 @@
-console.log('called');
-
-var s, scrollapp = {
+var m, menu = {
 	vars: {
-		scrollpos: 0,
-		prevScrollPos: 0,
-		nav: $('#nav')
+		menu: document.querySelector('.menu'),
+		menuButton: document.querySelector('.menu--button'),
+		container: document.querySelector('.menu--container')
 	},
 	init: function (){
-		s = this.vars;
-		this.checkWindowPosition();
+		m = this.vars;
+		this.bindUI();
 	},
-	checkWindowPosition: function() {
-		setInterval(function(){ 
-			if($(window).scrollTop() < s.prevScrollPos){
-				s.nav.removeClass('hide');
-			}else if($(window).scrollTop() > s.prevScrollPos && $(window).scrollTop() > s.nav.outerHeight()){
-				s.nav.addClass('hide');
-			}
-			s.prevScrollPos = $(window).scrollTop();
-		}, 50);
+	toggle: function() {
+		m.container.classList.toggle('open');
+		m.menuButton.classList.toggle('open');
+		m.menu.classList.toggle('open');
+	},
+	close: function() {
+		m.container.classList.remove('open');
+		m.menu.classList.remove('open');
+		m.menuButton.classList.remove('open');
+	},
+	bindUI: function() {
+		m.menu.addEventListener('click', function(e) {
+			e.stopPropagation();
+			console.log(m.menu.classList);
+		})
+		m.menuButton.addEventListener('click', function(e) {
+			menu.toggle();
+			e.stopPropagation();
+		});
+		m.container.addEventListener('click', function() {
+			menu.close();
+			console.log(m.menu.classList);
+		});
 	}
 };
 
-scrollapp.init();
+menu.init();

@@ -1,0 +1,50 @@
+.menu {
+
+    position: fixed;
+    right: 0;
+    top:0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    max-width: 25rem;
+    background: $base--bg;
+    cursor: default;
+
+    &--list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 50%;
+        @include ms(2);
+    }
+
+    &--container{
+        position: fixed;
+        top:0;
+        height: 100%;
+        width: 100%;
+        background: rgba($black, 0.5);
+        display: none;
+        z-index: 2;
+        cursor: url('../img/close.svg') 38 38, pointer;
+        &.open {
+            display: block;
+        }
+    }
+
+    &--button {
+        position: fixed;
+        right: br(2);
+        top: br(2);
+        cursor: pointer;
+        transition: fill $short $timing-function;
+        z-index: 2;
+        &:hover{
+            fill: $blue;
+        }
+    }
+}
