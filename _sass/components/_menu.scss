@@ -56,4 +56,7 @@ $menu-width: 25rem;
             fill: $blue;
         }
     }
+    &--close {
+        @extend .menu--button;
+    }
 }

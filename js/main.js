@@ -2,6 +2,7 @@ var m, menu = {
 	vars: {
 		menu: document.querySelector('.menu'),
 		menuButton: document.querySelector('.menu--button'),
+		menuCloseButton: document.querySelector('.menu--close'),
 		container: document.querySelector('.menu--container'),
 		page: document.querySelector('.page')
 	},
@@ -15,6 +16,12 @@ var m, menu = {
 		m.menu.classList.toggle('open');
 		m.page.classList.toggle('open');
 	},
+	open: function() {
+		m.container.classList.add('open');
+		m.menuButton.classList.add('open');
+		m.menu.classList.add('open');
+		m.page.classList.add('open');
+	},
 	close: function() {
 		m.container.classList.remove('open');
 		m.menuButton.classList.remove('open');
@@ -26,15 +33,23 @@ var m, menu = {
 			e.stopPropagation();
 		})
 		m.menuButton.addEventListener('click', function(e) {
-			menu.toggle();
+			menu.open();
 			e.stopPropagation();
 		});
 		m.container.addEventListener('click', function() {
 			menu.close();
 		});
-		document.addEventListener('keypress', function(e) {
-			if(e.which === 27)
+		m.menuCloseButton.addEventListener('click', function() {
+			menu.close();
+		});
+		document.addEventListener('keydown', function(e) {
+			console.log(e.which);
+			if(e.which === 27) {
 				menu.close();
+			}
+			if(e.which === 77) {
+				menu.open();
+			}
 		});
 	}
 };
