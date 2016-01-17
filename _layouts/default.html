@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 {% include common/_head.html %}
 <body ontouchstart="">
 
@@ -7,10 +9,11 @@
     </div>
 
     {% include common/_google_analytics.html %}
+
     {% if jekyll.environment == "development" %}
-    <script type="text/javascript" src="{{site.baseurl}}js/main.js"></script>
+        <script type="text/javascript" src="{{site.baseurl}}/js/main.js"></script>
     {% else %}
-    <script type="text/javascript" src="{{site.url}}js/main.js"></script>
+        <script type="text/javascript" src="{{site.url}}/js/main.js"></script>
     {% endif %}
 </body>
 </html>

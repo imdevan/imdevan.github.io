@@ -9,7 +9,7 @@ author: Devan Huapaya
 
 #url: "[http:// ]"
 url: "http://imdevan.github.io"
-baseurl: "http://0.0.0.0:8080/"
+baseurl: "http://0.0.0.0:8080"
 
 markdown: kramdown
 
