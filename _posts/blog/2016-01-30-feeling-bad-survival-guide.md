@@ -1,7 +1,7 @@
 ---
 layout: blog-article
 title: "Feeling Bad Survival Guide"
-title-color: seafoam
+title-color: purple
 author: Devan Huapaya
 category: blog
 style_mod: BASIC
@@ -74,4 +74,4 @@ we're not thinking clearly, and there's no obvious external cause. It happens.
 Keep yourself going for a full week, whatever it takes, and see if you still
 feel the same way then.
 
-forked from http://imgur.com/pTsqcrw
+forked from [http://imgur.com/pTsqcrw](http://imgur.com/pTsqcrw)

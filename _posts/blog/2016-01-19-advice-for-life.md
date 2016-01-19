@@ -1,6 +1,6 @@
 ---
 layout: blog-article
-title: "30 Things To Keep in Mind"
+title: "27 Things To Keep in Mind"
 title-color: salmon
 author: Devan Huapaya
 category: blog
@@ -37,4 +37,4 @@ style_mod: BASIC
 * If you have to, make the first move. It's scary, but someone has to do it.
 * Take plenty of pictures. Of the sunset, your food, your friends, your dog, selfies. Everything. That way, later when you scroll through yor camera rooll, you'll remember everything about that day.
 
-forked from http://imgur.com/account/favorites/xb7gHZ1
+forked from [http://imgur.com/xb7gHZ1](http://imgur.com/xb7gHZ1)
