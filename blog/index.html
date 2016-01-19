@@ -7,12 +7,12 @@ title: Blog posts I've written
     <h1 class="page--headline seafoam">
         {{ page.title }}
     </h1>
-    
+
     <div class="page--section">
         <ul class="list">
             {% for post in site.categories.blog %}
               <a  class="blog-post--link" href="{{post.url}}">
-                <li class="blog-post--list-item">
+                <li class="blog-post--list-item {{post.title-color}}">
                   {{post.title}}
               </li>
               </a>
