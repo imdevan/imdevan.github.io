@@ -6,18 +6,25 @@
             <a href="/projects" class="base--a">
                 Projects
             </a>
-            <a href="/blog" class="base--a seafoam">
+            <a href="/blog" class="base--a">
                 Blog
             </a>
-            <a href="/talks" class="base--a salmon">
+            <a href="/talks" class="base--a">
                 Talks
             </a>
-            <a href="/about" class="base--a purple">
+            <a href="/about" class="base--a">
                 About
             </a>
             <a href="/resume/Devan_Huapaya_Resume.pdf" target="_blank" class="base--a">
                 Resume
             </a>
+        </nav>
+        <nav class="menu--social-nav">
+            {% for social in site.data.social %}
+            <a class="menu--social-link icon--{{social.icon}}"
+                target="_blank"
+                href="{{social.link}}"></a>
+            {% endfor %}
         </nav>
     </aside>
 </div>

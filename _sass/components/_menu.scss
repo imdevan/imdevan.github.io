@@ -60,4 +60,25 @@ $menu-width: 25rem;
     &--close {
         @extend .menu--button;
     }
+
+    &--social-nav {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: br(3);
+    }
+
+    &--social-link {
+        @include ms(1.5);
+        color: $white !important;
+        transition: transform $short $timing-function;
+
+        &:hover {
+            transform: scale(1.5, 1.5);
+        }
+
+        &:active, &:focus {
+            transform: scale(1, 1);
+        }
+    }
 }

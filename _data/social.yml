@@ -1,8 +1,8 @@
-- link: http://facebook.com
-  img: linkedin
-- link: http://facebook.com
-  img: twitter
-- link: http://facebook.com
-  img: github
-- link: http://facebook.com
-  img: email
+- link: https://www.linkedin.com/in/devanhuapaya
+  icon: linkedin
+- link: https://twitter.com/devanipsum
+  icon: twitter
+- link: https://github.com/imdevan
+  icon: github
+- link: mailto:huapayadevan@gmail.com
+  icon: email

@@ -22,14 +22,14 @@ If not, do so right now. If you don't have the energy for a run or a trip to
 the gym, walk around the block, then keep walking as long as you please.
 
 ## Have you said something nice to someone in the past day?
-If not, do so, whether online or in pereson. Make it genuine; wait until yoursee something really wonderful about someone, and tell them about it.
+If not, do so, whether online or in person. Make it genuine; wait until you see something really wonderful about someone, and tell them about it.
 
 ## Have you moved your body to music in the past day?
 If not, jog to the length of an EDM song at your favorite tempo, or just dance
 around the room for the length of an upbeat song.
 
 ## Have you hugged a living being in the past two days?
-If not, do so. Don't be afraid to ask for hubs from friends or friends' pets.
+If not, do so. Don't be afraid to ask for hugs from friends or friends' pets.
 Most of them will enjoy the hug too.
 
 ## Have you sought out mentorship or guidance in the past few days?
