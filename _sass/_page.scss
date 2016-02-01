@@ -34,4 +34,23 @@
             padding-top: br(2);
         }
     }
+
+    &--header-link {
+        @extend .base--h2;
+        padding: br() 0 br(.25) 0;
+        overflow: auto;
+        display: block;
+    }
+
+    &--list-item {
+        @extend .list--item;
+        @extend %hoverUnderline;
+        transition: all 0.2s $timing-function;
+        display: inline-block;
+        margin-bottom: br(-3);
+
+        &:hover {
+            transform: translateX(25px);
+        }
+    }
 }

@@ -1,13 +1,19 @@
 ---
 layout: default
 title: Talks I've given
-list-items:
+talks:
     - name: Introduction to Git(hub)
       link: http://imdevan.github.io/intro-to-git/#/
+      date: January, 2016
+      color: blue
     - name: Publishing A Website With Github Pages
       link: http://imdevan.github.io/github-pages-talk/#/
+      date: November, 2015
+      color: seafoam
     - name: Design & Hackathons
       link: http://imdevan.github.io/hackingdesign/#/
+      date: October, 2015
+      color: salmon
 ---
 
 <main class="_full">
@@ -17,8 +23,13 @@ list-items:
     </h1>
     <div class="page--section">
         <ul class="list">
-            {% for item in page.list-items %}
-                <a href="{{ item.link }}" class="talk--link"><li class="talk--list-item">{{ item.name }}</li></a>
+            {% for talk in page.talks %}
+                <a href="{{ talk.link }}" class="page--header-link {{talk.color}}">
+                    <li class="page--list-item">{{ talk.name }}</li>
+                </a>
+                <time class="gray">
+                    {{talk.date}}
+                </time>
             {% endfor %}
         </ul>
     </div>

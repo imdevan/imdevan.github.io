@@ -11,12 +11,12 @@ title: Blog posts I've written
     <div class="page--section">
         <ul class="list">
             {% for post in site.categories.blog %}
-              <a  class="blog-post--link" href="{{post.url}}">
-                <li class="blog-post--list-item {{post.title-color}}">
+              <a  class="page--header-link" href="{{post.url}}">
+                <li class="page--list-item {{post.title-color}}">
                   {{post.title}}
               </li>
               </a>
-              <time class="blog-post--date">
+              <time class="gray">
                   {{post.date | date: '%B %-d, %Y' }}
               </time>
             {% endfor %}
