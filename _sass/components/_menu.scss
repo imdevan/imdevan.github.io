@@ -47,14 +47,21 @@ $menu-width: 25rem;
     }
     &--button {
         position: fixed;
+        padding: br(0.5);
         top: br(2);
         right: br(2);
         z-index: 2;
         cursor: pointer;
-        transition: fill $short $timing-function;
+        transition: fill $short $timing-function, 
+            background $short $timing-function,
+            border-radius $short $timing-function,
+            box-shadow $short $timing-function-2;
 
         &:hover{
             fill: $blue;
+            background: $white;
+            border-radius: 2px;
+            box-shadow: $base--box-shadow--small;
         }
     }
     &--close {
