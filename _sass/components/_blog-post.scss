@@ -2,17 +2,9 @@
 
     &--link {
         @extend .base--h2;
-        @extend .blue;
-        padding: $br 0;
+        padding: br() 0 br(.25) 0;
         overflow: auto;
         display: block;
-
-        &:nth-child(2n) {
-            @extend .salmon;
-        }
-        &:nth-child(3n) {
-            @extend .purple;
-        }
     }
 
     &--list-item {
@@ -20,9 +12,14 @@
         @extend %hoverUnderline;
         transition: all 0.2s $timing-function;
         display: inline-block;
+        margin-bottom: br(-3);
 
         &:hover {
             transform: translateX(25px);
         }
+    }
+
+    &--date {
+        color: $gray;
     }
 }

@@ -16,6 +16,9 @@ title: Blog posts I've written
                   {{post.title}}
               </li>
               </a>
+              <time class="blog-post--date">
+                  {{post.date | date: '%B %d, %Y' }}
+              </time>
             {% endfor %}
         </ul>
     </div>
