@@ -1,8 +1,8 @@
 var m, menu = {
 	vars: {
 		menu: document.querySelector('.menu'),
-		menuButton: document.querySelector('.menu--button'),
-		menuCloseButton: document.querySelector('.menu--close'),
+		menuButton: document.querySelector('.menu--button--OPEN'),
+		menuCloseButton: document.querySelector('.menu--button--CLOSE'),
 		container: document.querySelector('.menu--container'),
 		page: document.querySelector('.page')
 	},

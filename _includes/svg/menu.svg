@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg id="menu-button" class="menu--button" width="25px" height="17px" fill="#444444" viewBox="0 0 25 17" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg class="menu--button--OPEN" width="25px" height="17px" fill="#444444" viewBox="0 0 25 17" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <rect x="0" y="0" width="25" height="1"></rect>
     <rect x="0" y="8" width="25" height="1"></rect>
     <rect x="0" y="16" width="25" height="1"></rect>

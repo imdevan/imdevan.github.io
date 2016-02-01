@@ -35,6 +35,6 @@ style_mod: BASIC
 * Take those extra hours at work. It'll be worth it when you see your paycheck.
 * Clean your fucking room and make your bed you slob. It'll look much nice and you'll feel better having did it.
 * If you have to, make the first move. It's scary, but someone has to do it.
-* Take plenty of pictures. Of the sunset, your food, your friends, your dog, selfies. Everything. That way, later when you scroll through yor camera rooll, you'll remember everything about that day.
+* Take plenty of pictures. Of the sunset, your food, your friends, your dog, selfies. Everything. That way, later when you scroll through your camera roll, you'll remember everything about that day.
 
 forked from [http://imgur.com/xb7gHZ1](http://imgur.com/xb7gHZ1)
