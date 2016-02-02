@@ -10,7 +10,7 @@
         height: 30*$br;
         width: 40*$br;
 
-        @media screen and (max-width: 50*$br) {
+        @media screen and (max-width: $media-md) {
             width: 100%;
             height: 20*$br;
         }

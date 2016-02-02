@@ -1,5 +1,8 @@
 $max-width: 60%;
 $br: 1.38rem;
+$media-sm: 500px;
+$media-md: 700px;
+$media-lg: 1200px;
 
 ._full {
   max-width: $max-width;
@@ -20,7 +23,7 @@ $br: 1.38rem;
     width: 50%;
     margin-bottom: -1px;
 
-    @media (max-width: 700px){
+    @media (max-width: $media-md){
       width: 100%;
     }
 

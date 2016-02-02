@@ -23,14 +23,14 @@
       width: 100%;
     }
 
-    @media (max-width: $sm-view) {
+    @media (max-width: $media-md) {
         display: block;
         margin-bottom:  2 * $br;
     }
   }
 
   &--punctuation {
-    @media (max-width: $sm-view) {
+    @media (max-width: $media-md) {
       display: none;
     }
   }

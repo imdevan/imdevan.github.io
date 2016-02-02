@@ -56,6 +56,10 @@ $menu-width: 25rem;
         cursor: pointer;
         transition: fill $short $timing-function;
 
+        @media screen and (max-width: $media-md) {
+            top: br();
+            right: br();
+        }
         &--OPEN {
             @extend .menu--button;
             transition: fill $short $timing-function,
