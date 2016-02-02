@@ -30,15 +30,8 @@
             @extend .page--headline;
             @include ms(4);
             padding-top: 0;
-            margin-bottom: br(-1);
+            // margin-bottom: br(-1);
         }
-    }
-
-    &--header {
-        padding: {
-            top: br(12);
-            bottom: br(12);
-        };
     }
 
     &--header-link {

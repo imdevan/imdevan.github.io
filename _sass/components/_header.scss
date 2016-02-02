@@ -1,0 +1,9 @@
+.header {
+
+    height: 90vh;
+    &--body {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
