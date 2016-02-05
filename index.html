@@ -8,61 +8,69 @@ image: http://fillmurray.com/300/300
 projects:
     - name: Napkin
       color: purple
-      image: "../img/borders-with-keyboard.jpg"
       aspect: LARGE
-      iphone: true
       link: napkin
       tools:
         - Visual Design
         - UX Design
         - Agile Coaching
+      image:
+          link: "../img/borders-with-keyboard.jpg"
+          aspect: SMALL
     - name: Background for Inbox
-      color: seafoam
-      image: "../img/background-for-inbox.png"
+      color: blue
       link: background-for-inbox
       tools:
           - Chrome extension
           - Chrome storage api
           - Javascript
-    - name: Sign To Line
-      color: purple
-      image: "../img/sign-2-line.jpg"
-      link: sign-to-line
-      tools:
-          - Javascript
-          - Leap Motion
-    - name: Word Swap
-      color: salmon
-      image: "../img/word-swap.jpg"
-      link: word-swap
-      tools:
-          - Chrome extension
-          - Regex
-          - Javascript
+      image:
+          link: "../img/background-for-inbox.png"
     - name: Hola
-      color: blue
-      image: "../img/hola.jpg"
-      iphone: true
+      color: seafoam
       link: hola
       tools:
           - Node
           - Twilio
           - Translation api
+      image:
+          link: "../img/hola.jpg"
+          aspect: SMALL
+    - name: Word Swap
+      color: salmon
+      link: word-swap
+      tools:
+          - Chrome extension
+          - Regex
+          - Javascript
+      image:
+          link: "../img/word-swap.jpg"
     - name: Pebble Timer
-      color: seafoam
-      image: "../img/pebble.png"
+      color: blue
       iphone: true
       link: pebble-timer
       tools:
           - Pebble Cloud Environment
           - C
+      image:
+          link: "../img/pebble2.jpg"
+          aspect: EXTRA-SMALL
+    - name: Sign To Line
+      color: purple
+      link: sign-to-line
+      tools:
+          - Javascript
+          - Leap Motion
+      image:
+          link: "../img/sign-2-line.jpg"
     - name: PanDiversity
-      color: salmon
-      image: "../img/pandiversity.jpg"
+      color: seafoam
       link: pandiversity
       tools:
           - Chrome extension
           - Kimono api
+      image:
+          link: "../img/pandiversity.jpg"
 ---
 
 <section class="projects-page">
@@ -84,7 +92,7 @@ projects:
                 <div class="_project-list--item{% if project.aspect %}--{{project.aspect}}{% endif %}">
                     <div class="project {{project.color}}">
                         <div class="project--name">{{project.name}}</div>
-                        <img src="{{project.image}}" alt="" class="project--img{% if project.iphone %}--SMALL{% endif %}">
+                        <img src="{{project.image.link}}" alt="" class="project--img{% if project.image.aspect %}--{{project.image.aspect}}{% endif %}">
                         <div class="project--tools">
                             {% for tool in project.tools %}
                                 <div class="project--tool">{{tool}}</div>

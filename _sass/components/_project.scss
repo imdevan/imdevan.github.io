@@ -27,8 +27,14 @@
 
         &--SMALL {
             @extend .project--img;
-            box-shadow: $base--box-shadow;
             height: 60%;
+            width: auto;
+        }
+
+        &--EXTRA-SMALL {
+            @extend .project--img;
+            box-shadow: $base--box-shadow--medium;
+            height: 20%;
             width: auto;
         }
     }
