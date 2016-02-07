@@ -4,9 +4,9 @@ title: "Sign 2 Line"
 title-color: salmon
 ---
 
-<div class="band--CENTERED">
-    <div class="filler-image--LG">video or gif</div>
-</div>
+<p>
+    <img src="http://i.imgur.com/6BLjsvJ.gif" alt="" class="image">
+</p>
 
 Sign to line was created over a weekend at GeauxHack, a hackathon held at LSU
 in Baton Rouge Louisiana.
@@ -24,9 +24,9 @@ browser.
 
 While at the competition our team took home first place.
 
-<div class="band--CENTERED">
-    <div class="filler-image--MD">image of the project</div>
-</div>
+<p>
+    <img src="{{site.baseurl}}/img/sign-2-line.jpg" alt="" class="image">
+</p>
 
 <a href="https://github.com/imdevan/sign2line" class="base--a">
     <span class="project--external-link">

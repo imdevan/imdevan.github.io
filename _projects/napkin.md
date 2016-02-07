@@ -16,11 +16,9 @@ I've mostly helped with delivering design guidance, as well as helping the team 
 
 <a class="base--a" href="http://napkin.life">Napkin</a> is still a very young project, but I'm excited to see where the team takes it.
 
-
 <p>
     <img src="{{site.baseurl}}/img/img/napkin-with-borders.jpg" alt="" class="image--SM">
 </p>
-
 
 Although project is definitely very still in beta, feel free to
 <a  href="https://play.google.com/store/apps/details?id=life.napkin" class="base--a">
