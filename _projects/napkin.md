@@ -4,9 +4,11 @@ title: "Napkin"
 title-color: purple
 ---
 
+{% for i in (1..4) %}
 <div class="band--CENTERED">
-    <div class="filler-image--MD"></div>
+    <img class="image" src="{{site.baseurl}}/img/img/napkin-home-{{ i }}.jpg">
 </div>
+{% endfor %}
 
 Napkin is a project that I'm working on as with some friends in the austin area. On the project I've worn a few hats in the short amount of time that I've spent on the project.
 

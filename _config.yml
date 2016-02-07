@@ -19,7 +19,6 @@ paginate: 5
 # Style of permalinks
 permalink: /:categories/:title
 
-
 collections:
   projects:
     output: true
