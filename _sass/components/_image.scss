@@ -3,6 +3,7 @@
     background-size: cover;
     background-position: center;
     box-shadow: $base--box-shadow;
+    max-width: 100%;
 
     &--CENTERED {
         @extend .image;
@@ -25,6 +26,13 @@
     &--MD {
         @extend .image;
         width: $md-size;
+        height: auto;
+        max-width: 100%;
+    }
+
+    &--SM {
+        @extend .image;
+        width: $sm-size;
         height: auto;
         max-width: 100%;
     }

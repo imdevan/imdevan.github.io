@@ -4,9 +4,9 @@ title: "Background for Inbox"
 title-color: seafoam
 ---
 
-<div class="band--CENTERED">
-    <div class="filler-image--LG"></div>
-</div>
+<p>
+    <img src="{{site.baseurl}}/img/background-for-inbox.png" alt="" class="image">
+</p>
 
 The intent behind Background for Inbox was to add a touch of personal detail to
 an otherwise amazing
