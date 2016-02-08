@@ -5,7 +5,7 @@ title-color: seafoam
 ---
 
 <p>
-    <img src="{{site.baseurl}}/img/background-for-inbox.png" alt="" class="image">
+    <img src="{{site.url}}/img/background-for-inbox.png" alt="" class="image">
 </p>
 
 The intent behind Background for Inbox was to add a touch of personal detail to
