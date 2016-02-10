@@ -8,9 +8,8 @@ description: "Personal website of super awesome front end developer unicorn pers
 author: Devan Huapaya
 
 #url: "[http:// ]"
-# url: "http://imdevan.github.io"
+url: "http://imdevan.github.io"
 baseurl: "http://0.0.0.0:8080"
-url: "http://0.0.0.0:8080"
 
 markdown: kramdown
 

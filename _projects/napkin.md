@@ -6,7 +6,11 @@ title-color: purple
 
 {% for i in (1..4) %}
 <p>
-    <img class="image--SM" src="{{site.url}}/img/img/napkin-home-{{ i }}.jpg">
+    {% if jekyll.environment == "development" %}
+        <img class="image--SM" src="{{site.baseurl}}/img/img/napkin-home-{{ i }}.jpg">
+    {% else %}
+        <img class="image--SM" src="{{site.url}}/img/img/napkin-home-{{ i }}.jpg">
+    {% endif %}
 </p>
 {% endfor %}
 
