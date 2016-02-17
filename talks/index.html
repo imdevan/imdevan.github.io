@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Talks I've given
+sub-title: At universities, and hackathons, and such
 talks:
     - name: Introduction to Git(hub)
       link: http://imdevan.github.io/intro-to-git/#/
@@ -21,6 +22,10 @@ talks:
     <h1 class="page--headline salmon">
         {{ page.title }}
     </h1>
+    <p class="page--description gray">
+        {{page.sub-title}}
+    </p>
+
     <div class="page--section">
         <ul class="list">
             {% for talk in page.talks %}
