@@ -13,4 +13,9 @@
         <link rel="image_src" href="{{page.header_img}}" />
     {% endif %}
 
+    {% if jekyll.environment == "development" %}
+        <link rel="icon" type="image/png" href="{{site.baseurl}}/favicon.png">
+    {% else %}
+        <link rel="icon" type="image/png" href="{{site.url}}/favicon.png">
+    {% endif %}
 </head>
