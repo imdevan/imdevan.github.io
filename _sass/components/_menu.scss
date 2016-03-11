@@ -77,12 +77,16 @@ $menu-width: 25rem;
 
         &--CLOSE {
             @extend .menu--button;
-            transition: transform $short $timing-function-2;
+            transition: transform $short $timing-function;
 
             &:hover {
-                transform: scale(.9, .9);
+                transform: scale(.75, .75);
             }
-        }
+
+            &:active, &:focus {
+                transform: scale(1, 1);
+            }
+        }    
     }
 
     &--social-nav {

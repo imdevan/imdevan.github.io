@@ -14,16 +14,18 @@ baseurl: "http://0.0.0.0:8080"
 markdown: kramdown
 
 # Pagination variable for how many posts to show in a list
-paginate: 5
+paginate: 30
+post_dirs: false
+
 
 # Style of permalinks
-permalink: /:categories/:title
+permalink: /:categories/:title/
 
 collections:
   projects:
     output: true
     permalink: /projects/:path/
 
-gems: ['jekyll-sitemap']
+gems: ['jekyll-sitemap', 'jekyll-paginate']
 
 exclude: [node_modules, Gruntfile.js, package.json]
