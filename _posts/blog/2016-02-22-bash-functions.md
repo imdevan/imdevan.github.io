@@ -6,7 +6,8 @@ author: Devan Huapaya
 category: blog
 ---
 
-Turns Out Bash Functions are amazing.
+## Turns Out Bash Functions are amazing.
+The following list contains a bash function followed by a short description
 
 {% highlight ruby %}
 function mkd() {
