@@ -1,5 +1,5 @@
 ---
-layout: project-page
+layout: blog-article-mostly-empty
 title: "Pebble Timer"
 title-color: seafoam
 ---
