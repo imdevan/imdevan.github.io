@@ -1,3 +1,11 @@
+%project-link {
+    @extend %hoverUnderline;
+    display: inline-block;
+    .project:hover & {
+        &:after { width: 100%; }
+    }
+}
+
 .project {
     display: block;
     position: relative;
@@ -6,13 +14,10 @@
     overflow: none;
 
     &--name {
-        @extend %hoverUnderline;
-        display: inline-block;
+        @extend %project-link;
         font-size: 1.5rem;
         margin: 1rem;
-        .project:hover & {
-            &:after { width: 100%; }
-        }
+        z-index: 1;
     }
 
     &--img {
@@ -24,6 +29,7 @@
         width: 80%;
         height: auto;
         max-height: 100%;
+        z-index: 1;
 
         &--SMALL {
             @extend .project--img;
@@ -43,29 +49,66 @@
         position: absolute;
         bottom: 1.58rem;
         left: 1.58rem;
+        z-index: 1;
     }
 
     &--tool {
+        @extend %project-link;
         display: inline-block;
         margin-right: 1rem;
-        border-bottom: 3px solid;
+        // border-bottom: 3px solid;
     }
 
     &.seafoam {
         background: $seafoam;
         color: $white;
+        svg > * {
+            fill: darken($seafoam, 5%);
+            stroke: darken($seafoam, 5%);
+        }
     }
     &.salmon {
         background: $salmon;
         color: $white;
+        svg > * {
+            fill: darken($salmon, 5%);
+            stroke: darken($salmon, 5%);
+        }
     }
 
     &.purple {
         background: $purple;
         color: $white;
+        svg > * {
+            fill: darken($purple, 5%);
+            stroke: darken($purple, 5%);
+        }
     }
     &.blue {
         background: $blue;
         color: $white;
+        svg > * {
+            fill: darken($blue, 5%);
+            stroke: darken($blue, 5%);
+        }
+    }
+
+    svg {
+        position: absolute;
+        z-index: 0;
+        transform: scale(0);
+        width: 25%;
+        height: auto;
+        transition: transform $long $timing-function;
+
+        * {
+            fill: currentColor;
+        }
+    }
+
+    &:hover {
+        svg {
+            transform: scale(1);
+        }
     }
 }

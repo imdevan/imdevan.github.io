@@ -55,3 +55,48 @@ var m, menu = {
 };
 
 menu.init();
+
+var p, projectMenu = {
+    vars: {
+        projects: document.querySelectorAll('.project'),
+        shapes: document.querySelector('.shapes'),
+        canvas: document.createElement("CANVAS"),
+        ctx: can.getContext('2d'),
+        square: new Image(),
+        circle: new Image(),
+        triangle: new Image(),
+        star: new Image()
+    },
+    moveShapes: function (shapes) {
+        console.log(shapes.childNodes);
+    },
+    init: function() {
+        var that = this;
+        p = that.vars;
+        that.bindUI();
+        p.square.src = '../img/svg/square.svg';
+        p.circle.src = '../img/svg/circle.svg';
+        p.triangle.src = '../img/svg/triangle.svg';
+        p.star.src = '../img/svg/star.svg';
+        window.requestAnimationFrame(that.draw);
+    },
+    bindUI: function() {
+        var that = this;
+        [].forEach.call(p.projects, function(project) {
+            project.addEventListener('mouseover', function(e) {
+                this.appendChild(p.shapes);
+                that.moveShapes(p.shapes);
+            });
+        });
+        [].forEach.call(p.projects, function(project) {
+            project.addEventListener('mouseleave', function(e) {
+                this.removeChild(p.shapes);
+                that.stopShapes(p.shapes);
+            });
+        });
+    }
+}
+
+if(document.querySelectorAll('.project')) {
+    projectMenu.init();
+}
