@@ -1,7 +1,7 @@
 ---
 layout: blog-article-mostly-empty
 title: "PolyRhythm"
-title-color: seafoam
+title-color: salmon
 ---
 
 <a href="https://github.com/imdevan/polyrhythm" class="base--a">
