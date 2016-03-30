@@ -1,7 +1,7 @@
 ---
 layout: blog-article
 title: "27 Things To Keep in Mind"
-title-color: salmon
+title-color: seafoam
 author: Devan Huapaya
 category: blog
 style_mod: BASIC
