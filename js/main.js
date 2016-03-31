@@ -56,41 +56,76 @@ var m, menu = {
 
 menu.init();
 
+function rand(min,max)
+{
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
+window.requestAnimFrame = (function(){
+  return  window.requestAnimationFrame       ||
+          window.webkitRequestAnimationFrame ||
+          window.mozRequestAnimationFrame    ||
+          function( callback ){
+            window.setTimeout(callback, 1000 / 60);
+          };
+})();
+window.cancelRequestAnimFrame = ( function() {
+    return window.cancelAnimationFrame          ||
+        window.webkitCancelRequestAnimationFrame    ||
+        window.mozCancelRequestAnimationFrame       ||
+        window.oCancelRequestAnimationFrame     ||
+        window.msCancelRequestAnimationFrame        ||
+        clearTimeout
+} )();
+
 var p, projectMenu = {
     vars: {
         projects: document.querySelectorAll('.project'),
-        shapes: document.querySelector('.shapes'),
-        canvas: document.createElement("CANVAS"),
-        ctx: can.getContext('2d'),
-        square: new Image(),
-        circle: new Image(),
-        triangle: new Image(),
-        star: new Image()
+        shapeCanvas: document.querySelector('.shapes'),
+        shapeArray: [],
+        square: document.getElementById('square'),
+        circle: document.getElementById('circle'),
+        triangle: document.getElementById('triangle'),
+        star: document.getElementById('star')
+    },
+    stopShapes: function() {
+
+    },
+    initShapes: function(shapes, height, width) {
+
     },
     moveShapes: function (shapes) {
-        console.log(shapes.childNodes);
     },
     init: function() {
         var that = this;
         p = that.vars;
+        p.shapeArray = [{shape:p.square}, {shape: p.circle}, {shape: p.triangle}, {shape: p.star}];
         that.bindUI();
-        p.square.src = '../img/svg/square.svg';
-        p.circle.src = '../img/svg/circle.svg';
-        p.triangle.src = '../img/svg/triangle.svg';
-        p.star.src = '../img/svg/star.svg';
-        window.requestAnimationFrame(that.draw);
+        // window.requestAnimationFrame(that.draw);
     },
     bindUI: function() {
         var that = this;
         [].forEach.call(p.projects, function(project) {
-            project.addEventListener('mouseover', function(e) {
-                this.appendChild(p.shapes);
+            project.addEventListener('mouseenter', function(e) {
+                // height and width of paroject
+                var height = this.offsetHeight;
+                var width = this.offsetWidth;
+                // Set random position to to each shape
+                [].forEach.call(p.shapeArray, function(shape) {
+                    shape.rotation = rand(0, 359) + "deg";
+                    shape.rotationSpeed = rand(1,5);
+                    shape.speed = rand(1,5);
+                    shape.pos = {x: rand(0, width), y: rand(0, height)};
+                    shape.shape.style.transform = "rotate(" + shape.rotation +
+                        ") translate(" + shape.pos.x + "px, " + shape.pos.y + "px)";
+                    console.log(shape);
+                });
+                this.appendChild(p.shapeCanvas);
                 that.moveShapes(p.shapes);
             });
         });
         [].forEach.call(p.projects, function(project) {
             project.addEventListener('mouseleave', function(e) {
-                this.removeChild(p.shapes);
+                this.removeChild(p.shapeCanvas);
                 that.stopShapes(p.shapes);
             });
         });

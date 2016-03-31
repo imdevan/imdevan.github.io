@@ -81,6 +81,7 @@ projects:
       image:
           link: "../img/pandiversity.jpg"
 ---
+{% include _shapes.html %}
 <section class="projects-page">
     <div class="_full">
         <header class="header">
@@ -99,6 +100,7 @@ projects:
             <a href="/projects/{{project.link}}">
                 <div class="_project-list--item{% if project.aspect %}--{{project.aspect}}{% endif %}">
                     <div class="project {{project.color}}">
+                        {% include _shapes.html %}
                         <div class="project--name">{{project.name}}</div>
                         <img src="{{project.image.link}}" alt="" class="project--img{% if project.image.aspect %}--{{project.image.aspect}}{% endif %}">
                         <div class="project--tools">

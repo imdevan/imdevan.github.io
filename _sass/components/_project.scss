@@ -95,8 +95,7 @@
 
     svg {
         position: absolute;
-        z-index: 0;
-        transform: scale(0);
+        transform: rotate(0) translate(0, 0);
         width: 25%;
         height: auto;
         transition: transform $long $timing-function;
