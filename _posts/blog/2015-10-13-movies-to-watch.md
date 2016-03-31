@@ -12,7 +12,6 @@ style_mod: BASIC
 - 2010 (A Space Odyssey)
 - Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb
 - [Human the Movie](http://imgur.com/a/GPDue)
-- Fantastic Planet
 - [These animations](http://imgur.com/a/IudYc)
 - Barry Lyndon
 - Jodorowsky's Dune  
@@ -26,6 +25,7 @@ style_mod: BASIC
 - Annie Hall (1977)
 - The Deer Hunter (1978)
 - Platoon (1986) - really good war flic
+- <span class="gray">Fantastic Planet</span> - fantastic
 - <span class="gray">Her</span> - was only ok
 - <span class="gray">Chappie</span> - 🔑
 - <span class="gray">Edge of Tomorrow</span> - *terrible*
