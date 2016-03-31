@@ -11,7 +11,31 @@
     position: relative;
     width: 100%;
     height: 100%;
-    overflow: none;
+    overflow: hidden;
+
+    &:before, svg {
+        position: absolute;
+        display: block;
+        transition: transform $short $timing-function $short/2;
+        transform: rotate(45deg) scale(0);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-blend-mode: luminosity;
+        width: 500px;
+        height: 500px;
+        content: " ";
+
+        @media(min-width: 1000px) {
+            width: 500%;
+            height: 500%;
+        }
+    }
+
+    &:hover {
+        &:before, svg {
+            transform: rotate(45deg) scale(1);
+        }
+    }
 
     &--name {
         @extend %project-link;
@@ -62,49 +86,45 @@
     &.seafoam {
         background: $seafoam;
         color: $white;
-        svg > * {
-            fill: darken($seafoam, 5%);
-            stroke: darken($seafoam, 5%);
+        &:before {
+            background-color: darken($seafoam, 5%);
         }
     }
     &.salmon {
         background: $salmon;
         color: $white;
-        svg > * {
-            fill: darken($salmon, 5%);
-            stroke: darken($salmon, 5%);
+        &:before {
+            background-color: darken($salmon, 5%);
         }
     }
 
     &.purple {
         background: $purple;
         color: $white;
-        svg > * {
-            fill: darken($purple, 5%);
-            stroke: darken($purple, 5%);
+        &:before {
+            background-color: darken($purple, 5%);
         }
     }
     &.blue {
         background: $blue;
         color: $white;
-        svg > * {
-            fill: darken($blue, 5%);
-            stroke: darken($blue, 5%);
+        &:before {
+            background-color: darken($blue, 5%);
         }
     }
-
-    svg {
-        position: absolute;
-        z-index: 0;
-        transform: scale(0);
-        width: 25%;
-        height: auto;
-        transition: transform $long $timing-function;
-
-        * {
-            fill: currentColor;
-        }
-    }
+    //
+    // svg {
+    //     position: absolute;
+    //     z-index: 0;
+    //     transform: scale(0);
+    //     width: 25%;
+    //     height: auto;
+    //     transition: transform $long $timing-function;
+    //
+    //     * {
+    //         background: currentColor;
+    //     }
+    // }
 
     &:hover {
         svg {
