@@ -11,6 +11,11 @@ $blog-article--margin--CENTERED: br(2) auto br(4) auto;
     h3 { color: nth($color-list, $third); }
     h4 { color: nth($color-list, $fourth); }
 
+    .subtitle {
+        color: $gray;
+        font-size: ms();
+    }
+
     .highlight {
         border-color: nth($color-list, $first);
     }
