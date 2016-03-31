@@ -16,7 +16,7 @@
     &:before, svg {
         position: absolute;
         display: block;
-        transition: transform $short $timing-function $short/2;
+        transition: transform $short $timing-function;
         transform: rotate(45deg) scale(0);
         background-size: cover;
         background-repeat: no-repeat;
@@ -32,7 +32,8 @@
     }
 
     &:hover {
-        &:before, svg {
+        &:before{
+            transition: transform $short $timing-function $short/2;
             transform: rotate(45deg) scale(1);
         }
     }
