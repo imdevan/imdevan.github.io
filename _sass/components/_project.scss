@@ -78,10 +78,9 @@
     }
 
     &--tool {
-        @extend %project-link;
         display: inline-block;
         margin-right: 1rem;
-        // border-bottom: 3px solid;
+        border-bottom: 3px solid;
     }
 
     &.seafoam {
@@ -127,9 +126,9 @@
     //     }
     // }
 
-    &:hover {
-        svg {
-            transform: scale(1);
-        }
-    }
+    // &:hover {
+    //     svg {
+    //         transform: scale(1);
+    //     }
+    // }
 }
