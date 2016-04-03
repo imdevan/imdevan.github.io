@@ -4,9 +4,7 @@ title: "Word Swap"
 title-color: purple
 ---
 
-<div class="band--CENTERED">
-    <div class="filler-image--LG"></div>
-</div>
+<img src="{{site.baseurl}}/img/word-swap.jpg"/>
 
 <a href=" https://chrome.google.com/webstore/detail/word-swap/nanlalaelehhbhiemijidhcjdapfbmdn" class="base--a">
     <span class="project--external-link">
@@ -17,20 +15,13 @@ to set a pre-defined list of words in the options page for the extension, and wh
 the user goes to a webpage that contains any of the words they set, the word is
 replaced with another word that they chose.
 
-### The extension in action
-
-<div class="band--CENTERED">
-    <div class="filler-image--MD"></div>
-</div>
-
-<div class="band--CENTERED">
-    <div class="filler-image--MD"></div>
-</div>
+The extension injected javascript on the page to traverse all of the text on page
+load and swapped out any text that matched a particular pattern.
 
 <div class="band--CENTERED">
     <a href=" https://chrome.google.com/webstore/detail/word-swap/nanlalaelehhbhiemijidhcjdapfbmdn" class="base--a">
         <span class="project--external-link">
-            Get the app
+            Check it out on the webstore
         </span>
     </a>
 </div>
