@@ -1,7 +1,7 @@
 ---
 layout: blog-article
 title: "PanDiversity"
-title-color: salmon
+title-color: seafoam
 ---
 
 <img src="{{site.baseurl}}/img/pandiversity.jpg"/>
@@ -14,8 +14,10 @@ I created this project with a team of 4, on the project I created the front end
 architecture and set up Kimono's web scraping api to collect data from different
 websites such as Huffington Post, Harvard Business, and many more.
 
-<a href=" https://github.com/imdevan/div-hack-atx" class="base--a">
-    <span class="project--external-link">
-        Checkout the project on github
-    </span>
-</a>
+<div class="band--CENTERED">
+    <a href=" https://github.com/imdevan/div-hack-atx" class="base--a">
+        <span class="project--external-link">
+            Checkout the project on github
+        </span>
+    </a>
+</div>

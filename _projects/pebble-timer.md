@@ -1,7 +1,7 @@
 ---
 layout: blog-article-mostly-empty
 title: "Pebble Timer"
-title-color: seafoam
+title-color: blue
 ---
 
 <a href="https://github.com/imdevan/timr" class="base--a">

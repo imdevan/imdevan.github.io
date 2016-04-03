@@ -28,8 +28,10 @@ We used Socket.io for passing messages to and from the server in real time.
 My role on the project was to create the front end architecture and handle all
 messages sent to and from the client, as well as designing the user experience.
 
-<a href="https://github.com/imdevan/hola" class="base--a">
-    <span class="project--external-link">
-        Checkout the project on github
-    </span>
-</a>
+<div class="band--CENTERED">
+    <a href="https://github.com/imdevan/hola" class="base--a">
+        <span class="project--external-link">
+            Checkout the project on github
+        </span>
+    </a>
+</div>

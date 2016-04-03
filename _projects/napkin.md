@@ -25,6 +25,8 @@ I've mostly helped with delivering design guidance, as well as helping the team 
 </p>
 
 Although project is definitely very still in beta, feel free to
-<a  href="https://play.google.com/store/apps/details?id=life.napkin" class="base--a">
-    <span class="project--external-link">check out the beta</span>
-</a>, currently on the app store
+
+<div class="band--CENTERED">
+    <a  href="https://play.google.com/store/apps/details?id=life.napkin" class="base--a">
+        <span class="project--external-link">check out the beta</span>
+    </a>, currently on the app store</div>

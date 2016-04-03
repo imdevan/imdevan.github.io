@@ -1,7 +1,7 @@
 ---
 layout: project-page
 title: "Word Swap"
-title-color: purple
+title-color: salmon
 ---
 
 <img src="{{site.baseurl}}/img/word-swap.jpg"/>

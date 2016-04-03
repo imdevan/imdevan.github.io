@@ -1,7 +1,7 @@
 ---
 layout: project-page
 title: "Sign 2 Line"
-title-color: salmon
+title-color: purple
 ---
 
 <p>
@@ -27,9 +27,10 @@ While at the competition our team took home first place.
 <p>
     <img src="{{site.baseurl}}/img/sign-2-line.jpg" alt="" class="image">
 </p>
-
-<a href="https://github.com/imdevan/sign2line" class="base--a">
-    <span class="project--external-link">
-        Checkout the project on github
-    </span>
-</a>
+<div class="band--CENTERED">
+    <a href="https://github.com/imdevan/sign2line" class="base--a">
+        <span class="project--external-link">
+            Checkout the project on github
+        </span>
+    </a>
+</div>

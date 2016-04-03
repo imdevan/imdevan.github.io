@@ -1,7 +1,7 @@
 ---
 layout: project-page
 title: "Background for Inbox"
-title-color: seafoam
+title-color: blue
 ---
 
 <p>
