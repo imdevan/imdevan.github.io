@@ -25,6 +25,7 @@ style_mod: BASIC
 - Annie Hall (1977)
 - The Deer Hunter (1978)
 - Platoon (1986) - really good war flic
+- Heat
 - <span class="gray">Fantastic Planet</span> - fantastic
 - <span class="gray">Her</span> - was only ok
 - <span class="gray">Chappie</span> - 🔑
