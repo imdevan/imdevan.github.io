@@ -4,15 +4,13 @@ title: "Napkin"
 title-color: purple
 ---
 
-{% for i in (1..4) %}
 <p>
     {% if jekyll.environment == "development" %}
-        <img class="image--SM" src="{{site.baseurl}}/img/img/napkin-home-{{ i }}.jpg">
+        <img class="image--SM" src="{{site.baseurl}}/img/img/napkin-home-1.jpg">
     {% else %}
-        <img class="image--SM" src="{{site.url}}/img/img/napkin-home-{{ i }}.jpg">
+        <img class="image--SM" src="{{site.url}}/img/img/napkin-home-1.jpg">
     {% endif %}
 </p>
-{% endfor %}
 
 Napkin is a project that I'm working on as with some friends in the austin area. On the project I've worn a few hats in the short amount of time that I've spent on the project.
 
