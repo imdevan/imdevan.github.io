@@ -1,14 +1,11 @@
 ---
 layout: blog-article
-title: "The Confidence Gap: A Guide to Overcoming Fear and Self-Doubt"
-title-color: purple
+title: "<i>The Confidence Gap</i> by Russ Harris"
+title-color: salmon
 author: Devan Huapaya
 category: blog
 style_mod: BASIC
 ---
-#### By: Russ Harris
-This book was really good I highly recommend it. Definitely a solid 3.75 gaps out of 5.
-
 # Key take aways
 
 The major take away from this book was that action pre-seeds feeling. Don't
