@@ -6,7 +6,7 @@ title-color: purple
 
 <p>
     {% if jekyll.environment == "development" %}
-        <img class="image--SM" src="{{site.baseurl}}/img/img/napkin-home-1.jpg">
+        <img class="image--SM" src="/img/img/napkin-home-1.jpg">
     {% else %}
         <img class="image--SM" src="{{site.url}}/img/img/napkin-home-1.jpg">
     {% endif %}

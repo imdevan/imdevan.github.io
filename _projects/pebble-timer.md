@@ -4,7 +4,7 @@ title: "Pebble Timer"
 title-color: blue
 ---
 
-<img class="image--XS" src="{{site.baseurl}}/img/pebble2.jpg"/>
+<img class="image--XS" src="/img/pebble2.jpg"/>
 
 
 <a href="https://github.com/imdevan/timr" class="base--a">

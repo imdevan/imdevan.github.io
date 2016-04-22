@@ -25,7 +25,7 @@ browser.
 While at the competition our team took home first place.
 
 <p>
-    <img src="{{site.baseurl}}/img/sign-2-line.jpg" alt="" class="image">
+    <img src="/img/sign-2-line.jpg" alt="" class="image">
 </p>
 <div class="band--CENTERED">
     <a href="https://github.com/imdevan/sign2line" class="base--a">

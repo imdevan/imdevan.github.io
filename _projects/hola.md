@@ -4,7 +4,7 @@ title: "Hola"
 title-color: seafoam
 ---
 
-<img class="image--SM" src="{{site.baseurl}}/img/hola.jpg"/>
+<img class="image--SM" src="/img/hola.jpg"/>
 
 <a href="https://github.com/imdevan/hola" class="base--a">Hola</a> was created at <a href="http://mlh.io" class="base--a">MLH</a>'s first self hosted hackathon in Mountain View, California. The won 4th out of 100+ teams.
 

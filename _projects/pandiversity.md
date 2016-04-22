@@ -4,7 +4,7 @@ title: "PanDiversity"
 title-color: seafoam
 ---
 
-<img src="{{site.baseurl}}/img/pandiversity.jpg"/>
+<img src="/img/pandiversity.jpg"/>
 
 Pan diversity was created at a hackathon in Austin Texas to promote diversity, by
 providing users with an aggregated list of diversity in the news via a new tab
