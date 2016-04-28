@@ -38,7 +38,7 @@ For the longest time I was keeping these items in my backpocket book. However, I
 
 On my calander I have a meeting scheduled for every Sunday at 11am. In the description of this meeting I have a set of tasks to take care of.
 
-{% highlight ruby %}
+```bash
 Weekly review that consists of the following:
 
 - review back-pocket
@@ -61,7 +61,7 @@ Weekly review that consists of the following:
 - - Social
 - - Mental
 - - Mediation
-{% endhighlight %}
+```
 
 I don't always get to everything on the list, but I do make a solid college try.  
 If I don't get to the review on Sunday I'll move the item over on my calander until I get it done.

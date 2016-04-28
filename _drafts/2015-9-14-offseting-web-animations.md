@@ -12,7 +12,7 @@ style_mod: BASIC
 ### With Javascript
 
 
-{% highlight ruby %}
+```js
 var t = response.results.collection1;
 var i = 0;
 // Loop function isn't a for loop, because we wanted to add an intentional delay
@@ -20,7 +20,7 @@ function myLoop () {
     setTimeout(function () {
         // Property from the api call to the article list
         loadItemOnThePage(varItem);
-        
+
         //  increment the counter
         i++;
         // iterate the loop
@@ -31,4 +31,4 @@ function myLoop () {
     }, 50) // set the delay
 }
 myLoop();
-{% endhighlight %}
+```

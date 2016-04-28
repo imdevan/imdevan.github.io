@@ -9,7 +9,7 @@ style_mod: BASIC
 
 I created this little bash function for creating blog posts!
 
-{% highlight ruby %}
+``` shell
 # write <optional-file-title> <optional-post-title> <optional-color>
 function write() {
     date=`date +%Y-%m-%d`
@@ -26,7 +26,7 @@ function write() {
     echo ${header} > ${newPost}
     atom ${newPost}
 }
-{% endhighlight %}
+```
 
 - It uses `date=date +%Y-%m-%d` to get the date
 - `filePath` is the file path to where I have my personal portfolio

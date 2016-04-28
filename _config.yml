@@ -14,12 +14,12 @@ baseurl: "http://0.0.0.0:8080"
 markdown: kramdown
 
 kramdown:
-    input: GFM
+  input: GFM
+  syntax_highlighter: rouge
 
 # Pagination variable for how many posts to show in a list
 paginate: 30
 post_dirs: false
-
 
 # Style of permalinks
 permalink: /:categories/:title/

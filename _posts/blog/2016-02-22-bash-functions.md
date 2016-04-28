@@ -7,16 +7,23 @@ category: blog
 ---
 
 ## Turns Out Bash Functions are amazing.
-The following list contains a bash function followed by a short description
 
-{% highlight ruby %}
+<br>
+<br>
+
+<div class="center">Mkdir better</div>
+
+```bash
+# Creates a directory and then goes to it.
 function mkd() {
     mkdir -p "$@" && cd "$@"
 }
-{% endhighlight %}
-Creates a directory and then goes to it.
+```
 
-{% highlight ruby %}
+<div class="center">Lunch?</div>
+
+```bash
+# Randomly decides if now is a good time for lunch
 function lunch() {
     if (( $(( ( RANDOM % 10 )  + 1 )) > 5 )); then
          echo  "${bold}${green}Go to lunch! ✨${reset}"
@@ -24,55 +31,66 @@ function lunch() {
          echo  "${bold}${pink}Keep going! 💫${reset}";
     fi
 }
-{% endhighlight %}
-Lets me know if I should go to lunch or keep working if I can't decide... I'm pretty indecisive.
+```
 
-{% highlight ruby %}
+<div class="center">Choose</div>
+```bash
+# Picks from a random list of arguments
 function choose() {
     a=("$@")
     pick=("${a[RANDOM%${#a[@]}+1]}")
     echo "${bold}${green}${pick}! ✨${reset}";
 }
-{% endhighlight %}
-Picks from a list of arguments... Yep... more indecision.
+```
 
 # Git
-{% highlight ruby %}
+<div class="center">Improved pull request checkout</div>
+
+```bash
+# Gets pull request from upstream remote and check's it out
 function pr() {
     git fetch upstream pull/$@/head:pr-$@ &&
     git checkout pr-$@ &&
     git remote prune upstream;
 }
-{% endhighlight %}
-Pulls down pull request from upstream and creates branch for it.
+```
 
-{% highlight ruby %}
+<div class="center">Globed branch delete</div>
+```bash
+# Deletes branches that start with pr- or specified value,
 function prd() {
   git for-each-ref --format="%(refname:short)" refs/heads/${1:-pr-}\* | xargs git branch -D
 }
-{% endhighlight %}
-Deletes branches that start with pr- or specified value,
+```
 
-{% highlight ruby %}
+<div class="center">Git add, commit, push</div>
+
+```bash
+# Adds, attaches commit message, and pushes.
 function gap() {
     git add -A &&
     git commit -m $@ &&
     git push
 }
-{% endhighlight %}
-Adds, attaches commit message, and pushes.
+```
 
-{% highlight ruby %}
+<div class="center">Git add, commit, push, set upstream</div>
+
+```bash
+# Adds, attaches commit message, and pushes with --set-upstream
 function gaps() {
     UPSTREAM="$(git rev-parse --abbrev-ref HEAD)"
     git add -A &&
     git commit -m $@ &&
     git push --set-upstream ${UPSTREAM}
 }
-{% endhighlight %}
-Adds, attaches commit message, and pushes with --set-upstream
+```
 
-{% highlight ruby %}
+<div class="center">Russian roulette</div>
+
+```bash
+# Russian roulette with commits
+# 5% chance of deleting everything...
 function rulet() {
     if (( $(( ( RANDOM % 100 )  + 1 )) < 5 )); then
         git fetch upstream &&
@@ -84,10 +102,12 @@ function rulet() {
         git push
     fi
 }
-{% endhighlight %}
-Same as above, but with a 5% chance of deleting everything... It sounds crazy, but I think this encourages best practices. Kind of like Netflix's Choas Monkeys.
+```
 
-{% highlight ruby %}
+<div class="center">Open pull request</div>
+
+```bash
+# Opens specific pull request in browser, or all if not provided
 function opr() {
     if [ -z "$1" ]
         then
@@ -96,26 +116,32 @@ function opr() {
         open https://github.com/idmevan/imdevan.github.io/pull/$@
     fi
 }
-{% endhighlight %}
-Opens a pull request in browser. Replace my repo info with your project of course, if you want to use it.
+```
 
-{% highlight ruby %}
+<div class="center">l</div>
+
+```bash
+# Opens local host (at specific page if provided)
 function l() {
     open https://localhost:3000/$@
 }
-{% endhighlight %}
-Opens a pull req
+```
 
-{% highlight ruby %}
+<div class="center">Open Commit</div>
+
+```bash
+# Opens a commit
 function open-commit() {
     branch="$(git rev-parse --abbrev-ref HEAD)"
     commit="$(cat .git/refs/remotes/origin/${branch})"
     open https://github.com/imdevan/imdevan.github.io/commit/${commit}
 }
-{% endhighlight %}
-Opens commit inside of the current branch in a browser.
+```
 
-{% highlight ruby %}
+<div class="center">Side project</div>
+
+```bash
+# Open specific side project folder
 function side() {
     if [ -z "$1" ]
         then
@@ -124,5 +150,4 @@ function side() {
         cd ~/Documents/All\ Things\ Code/Side\ Stuff/$@
     fi
 }
-{% endhighlight %}
-Goes to my side projects on my computer, or specified side project.
+```

@@ -72,4 +72,100 @@ $blog-article--margin--CENTERED: br(2) auto br(4) auto;
         justify-content: center;
         align-items: center;
     }
+
+
+    // Code styles
+    .c, .c1 {
+      color: #999999;
+    }
+
+    .p {
+        color: #515151;
+    }
+
+    .s2 {
+      color: #99CC99;
+    }
+
+    .se {
+      color: #99CCCC;
+    }
+
+    .k, .nx {
+      color: #66CCCC;
+    }
+
+    .o {
+      color: #6699CC;
+    }
+
+    .nv {
+      color: #F2777A;
+    }
+
+    // Unused Tomorrow Night Eighties Styles from Atom
+    // .editor, .editor .gutter {
+    //   background-color: #2D2D2D;
+    //   color: #CCCCCC;
+    // }
+    //
+    // .editor.is-focused .cursor {
+    //   border-color: #CCCCCC;
+    // }
+    //
+    // .editor.is-focused .selection .region {
+    //   background-color: #515151;
+    // }
+    //
+    // .editor.is-focused .line-number.cursor-line-no-selection, .editor.is-focused .line.cursor-line {
+    //   background-color: #393939;
+    // }
+    //
+    // .keyword.operator.class, .constant.other, .source.php.embedded.line {
+    //   color: #CCCCCC;
+    // }
+    //
+    // .constant.numeric, .constant.language, .support.constant, .constant.character, .variable.parameter, .punctuation.section.embedded, .keyword.other.unit {
+    //   color: #F99157;
+    // }
+    //
+    // .entity.name.class, .entity.name.type.class, .support.type, .support.class {
+    //   color: #FFCC66;
+    // }
+    // .keyword, .storage, .storage.type, .entity.name.tag.css {
+    //   color: #CC99CC;
+    // }
+    //
+    // .invalid {
+    //   color: #CDCDCD;
+    //   background-color: #F2777A;
+    // }
+    //
+    //
+    // .invalid.deprecated {
+    //   color: #CDCDCD;
+    //   background-color: #CC99CC;
+    // }
+    //
+    // .markup.inserted.diff, .markup.deleted.diff, .meta.diff.header.to-file, .meta.diff.header.from-file {
+    //   color: #FFFFFF;
+    // }
+    //
+    // .markup.inserted.diff, .meta.diff.header.to-file {
+    //   color: #718c00;
+    // }
+    //
+    // .markup.deleted.diff, .meta.diff.header.from-file {
+    //   color: #c82829;
+    // }
+    //
+    // .meta.diff.header.from-file, .meta.diff.header.to-file {
+    //   color: #FFFFFF;
+    //   background-color: #4271ae;
+    // }
+    //
+    // .meta.diff.range {
+    //   font-style: italic;
+    //   color: #3e999f;
+    // }
 }

@@ -18,12 +18,12 @@ great for triggering `.wav` files in a web browser. [And its on npm!](https://ww
 Once I was able to find the proper documentation it could be used with two basic
 lines of code.
 
-{% highlight ruby %}
+```js
 // To register the sound
 createjs.Sound.registerSound(_sound.path, _id);
 // To play the sound
 createjs.Sound.play(_id);
-{% endhighlight %}
+```
 
 So far my work with this library has been this page:  
 [http://prh.herokuapp.com/](http://prh.herokuapp.com/)
