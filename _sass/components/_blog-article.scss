@@ -83,7 +83,7 @@ $blog-article--margin--CENTERED: br(2) auto br(4) auto;
         color: #515151;
     }
 
-    .s2 {
+    .s2, .s {
       color: #99CC99;
     }
 
@@ -91,7 +91,7 @@ $blog-article--margin--CENTERED: br(2) auto br(4) auto;
       color: #99CCCC;
     }
 
-    .k, .nx {
+    .k, .nx, .nt {
       color: #66CCCC;
     }
 
@@ -99,7 +99,7 @@ $blog-article--margin--CENTERED: br(2) auto br(4) auto;
       color: #6699CC;
     }
 
-    .nv {
+    .nv, .kd, .na {
       color: #F2777A;
     }
 
