@@ -24,8 +24,8 @@ style_mod: BASIC
 - One Flew Over the Cuckoo's Nest (1975)
 - Annie Hall (1977)
 - The Deer Hunter (1978)
-- Platoon (1986) - really good war flic
 - Heat
+- <span class="gray">Platoon (1986)</span> - really good war flic
 - <span class="gray">Fantastic Planet</span> - fantastic
 - <span class="gray">Her</span> - was only ok
 - <span class="gray">Chappie</span> - 🔑
