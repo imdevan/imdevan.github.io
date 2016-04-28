@@ -7,10 +7,7 @@ category: blog
 ---
 
 ## Turns Out Bash Functions are amazing.
-
 <br>
-<br>
-
 <div class="center">Mkdir better</div>
 
 ```bash
