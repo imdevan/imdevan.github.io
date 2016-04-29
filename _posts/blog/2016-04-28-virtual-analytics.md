@@ -23,7 +23,8 @@ Inside of virtual analytics make a request to a Google analytics page to collect
 the request data and pass it to Google Analytics.
 
 ```js
-var request = require("request");
+var request = require("request"),
+    url = require("url");
 
 var api = function (req, res) {
     // Make request to google analytics page and pipe response gif
@@ -41,17 +42,20 @@ api.getClientId = function (req) {
     return "auto";
 };
 
-api.getGoogleAnalyticsUrl = function (req) {
-    // regular expression to get google analitcs
+api.getGoogleAnalyticsUrl  = function (req) {
     // Create url to google analytics page
-    var gaUrl = "https://www.google-analytics.com/collect",
-        gaVersion = "?v=1",
-        gaTid = "&tid=" + "UA-XXXXXXXX-X",
-        gaType = "&t=pageview",
-        gaCid = "&cid=" + api.getClientId(req),
-        gaPage = "&dp=" + req.params.page;
-
-    return gaUrl + gaVersion + gaTid + gaCid + gaType + gaPage;
+    var gaUrl = url.format({
+        protocol: "https",
+        host: "www.google-analytics.com/collect",
+        query: {
+            "v":"1",
+            "tid": "UA-XXXXXXXX-X",
+            "cid": api.getClientId(req),
+            "t": "pageview",
+            "dp": req.params.page
+        }       
+    });
+    return gaUrl;
 };
 
 module.exports = api;

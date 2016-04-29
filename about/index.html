@@ -4,6 +4,7 @@ title: 🌟 Some more deets about myself 🌟
 title-color: purple
 sections:
     - header: Basically
+      slug: basically
       color: blue
       aspect: centered
       text:
@@ -11,21 +12,20 @@ sections:
     - image: http://i.imgur.com/e3hJFF0.jpg
       image-aspect: centered
     - header: Also
+      slug: also
       color: seafoam
       text:
         - I currently work at IBM Design, and live in Austin, TX.
         - I like building things, usually in a web-browser.
     - image: http://i.imgur.com/GSTdUmx.jpg
       image-aspect: full
-    - header: Life Goal
-      color: salmon
-      text:
-        - Be the Gordan Ramsey of software development.
     - header: Skills
+      slug: skills
       color: blue
       text:
         - Git/ Github, React.js, Riot.js, Jade, Sass, Grunt, Gulp, Handlebars, Jekyll, Unity (Google Cardboard and Oculus Rift exp), Sketch, Google Maps api, Slack api, Github api
     - header: Teaching Experience
+      slug: activities
       color: purple
       text:
         - <strong>Mentored at</strong> TamuHack (Texas A&M hackathon), Hack Texas (University of Texas Hackathon)
@@ -61,7 +61,7 @@ sections:
             {% endif %}
 
             {% if section.header %}
-            <h2 class="base--h2 {{ section.color }}">
+            <h2 id="{{ section.slug }}"class="base--h2 {{ section.color }}">
               {{ section.header }}
             </h2>
             {% endif %}
