@@ -1,13 +1,18 @@
 ---
 layout: blog-article
-title: Using Express and images for virtual page views
+title: Using Node.js and images to hack Google Analytics
 title-color: purple
 author: Devan Huapaya
 category: blog
 style_mod: BASIC
 ---
 
-Virtual pageviews can be collected when someone visits a website other than your
+Analytics are great, but how can you find out who is looking at content related
+to your site without adding javascript to that page?
+
+<span class="blue">The answer</span> gifs! :D
+
+Virtual page views can be collected when someone visits a website other than your
 own by using images and Express middleware.
 
 On your server listen to a route that includes middleware to see if they

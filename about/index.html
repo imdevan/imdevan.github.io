@@ -9,17 +9,23 @@ sections:
       aspect: centered
       text:
         - I like cats, I want to be your friend and work on cool stuff together.
-    - image: http://i.imgur.com/e3hJFF0.jpg
-      image-aspect: centered
     - header: Also
       slug: also
       color: seafoam
       text:
-        - I currently work at IBM Design, and live in Austin, TX.
+        - I currently work at IBM Design and live in Austin, TX. I work
+            as a front end developer on team Whitewater. We work to bring
+            the industry's best tools and practices together in order to help
+            IBMers be the most effective they can be. Our team makes it our
+            priority to find the best tools and practices being used in by top
+            tech companies and how they can be adopted by IBMers. We currently
+            provide Github, Slack, Safari Books Online, and murally to 1800+
+            IBM teams.
+        - Previously, I've worked at GE, the CGI group, and Texas A&M.
         - I like building things, usually in a web-browser.
     - image: http://i.imgur.com/GSTdUmx.jpg
       image-aspect: full
-    - header: Skills
+    - header: Skills & Technologies
       slug: skills
       color: blue
       text:
@@ -50,11 +56,8 @@ sections:
     <h1 class="about-page--headline {{ page.title-color }}">
         {{ page.title }}
     </h1>
-
     {% for section in page.sections %}
         <section class="about-page--section{% if section.aspect %}--{{ section.aspect | upcase }}{% endif %}">
-
-
             {% if section.image %}
                 <div class="image--{{ section.image-aspect | upcase }}"
                     style="background-image: url('{{ section.image }}')"></div>
