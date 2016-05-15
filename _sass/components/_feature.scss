@@ -1,0 +1,59 @@
+$feature-image-max-height: br(20);
+$feature-border: 2px solid rgba($black, .5);
+
+@mixin feature($val) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: br(3) auto br(4) auto;
+
+    @media(min-width: $media-md) {
+        flex-direction: row;
+        height: auto;
+    }
+}
+
+.feature{
+    &--LEFT {
+        @include feature(left);
+    }
+    &--RIGHT {
+        @include feature(right);
+    }
+    &--image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        & > img {
+            margin: 0 !important;
+            max-height: br(20);
+            border: $feature-border;
+            box-shadow: none !important;
+
+            @media(min-width: $media-md) {
+                height: auto;
+                border: none;
+                box-shadow: $base--box-shadow--md !important;
+            }
+        }
+    }
+    &--desc {
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: center;
+        box-sizing: border-box;
+        padding: br(0.5) 0 0 0;
+        width: 100%;
+        color: $gray;
+        text-align: center;
+
+        @media(min-width: $media-md) {
+            padding: 0 0 0 br(0.5);
+            text-align: left;
+        }
+    }
+}

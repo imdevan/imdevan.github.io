@@ -64,7 +64,7 @@
 
         &--EXTRA-SMALL {
             @extend .project--img;
-            box-shadow: $base--box-shadow--medium;
+            box-shadow: $base--box-shadow--md;
             height: 20%;
             width: auto;
         }

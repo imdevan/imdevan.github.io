@@ -25,6 +25,7 @@ style_mod: BASIC
 - Annie Hall (1977)
 - The Deer Hunter (1978)
 - Heat
+- <span class="gray">It's kind of a funny story</span> - great rom com about depression
 - <span class="gray">Platoon (1986)</span> - really good war flic
 - <span class="gray">Fantastic Planet</span> - fantastic
 - <span class="gray">Her</span> - was only ok

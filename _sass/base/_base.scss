@@ -1,10 +1,12 @@
 $br: 1.38rem;
 $base--box-shadow: 20px 20px 60px rgba(0,0,0,0.2), 30px 30px 80px rgba(0,0,0,0.1);
-$base--box-shadow--medium: 10px 10px 60px rgba(0,0,0,0.2), 20px 20px 80px rgba(0,0,0,0.1);
-$base--box-shadow--small : 0px 0px 2px rgba(0,0,0,0.2);
+$base--box-shadow--md: 10px 10px 60px rgba(0,0,0,0.2), 20px 20px 80px rgba(0,0,0,0.1);
+$base--box-shadow--sm: 5px 5px 30px rgba(0,0,0,0.2), 10px 10px 40px rgba(0,0,0,0.1);
+$base--box-shadow--xs : 0px 0px 2px rgba(0,0,0,0.2);
 $base--box-shadow--flipped: -20px 20px 60px rgba(0,0,0,0.2), -30px 30px 80px rgba(0,0,0,0.1);
 $base--bg: $white;
 $base--color: $black;
+
 
 @function br($val: 1) {
     @return $val * $br;

@@ -71,7 +71,7 @@ $menu-width: 25rem;
                 fill: $blue;
                 background: $white;
                 border-radius: 2px;
-                box-shadow: $base--box-shadow--small;
+                box-shadow: $base--box-shadow--sm;
             }
         }
 
@@ -86,7 +86,7 @@ $menu-width: 25rem;
             &:active, &:focus {
                 transform: scale(1, 1);
             }
-        }    
+        }
     }
 
     &--social-nav {

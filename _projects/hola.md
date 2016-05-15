@@ -15,7 +15,7 @@ whichever language they are trying to learn, and translating to and from their
 native language so that when they have converstions with their friends or family
 they can still practice learning anothe language.
 
-We used the (mymemory.translated.net)[mymemory.translated.net] translation
+We used the [MyMemory](mymemory.translated.net) translation
 service to translate between languages, which first checks community generated
 databases to see if a phrase has been translated by a human before defaulting to
 Google, and Bing's translation service under the hood.

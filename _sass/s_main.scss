@@ -1,7 +1,9 @@
 // compiled into s_main.css
+// !important used in somefiles to override markdown styles
 @import "base/all";
 @import "components/all";
 
+@import "components/feature";
 @import "section";
 @import "page";
 @import "about-page";
