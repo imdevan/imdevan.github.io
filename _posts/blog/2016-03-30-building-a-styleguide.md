@@ -9,7 +9,6 @@ style_mod: BASIC
 
 So, as it would turn out that building a style guide can be super stressful.
 
-
 On my team at IBM we have decided to build what would ultimately become a guide
 for anyone wanting to contribute front-end code to our application.
 

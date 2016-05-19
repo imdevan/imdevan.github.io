@@ -69,7 +69,7 @@ That can take a tool that lingers for days. Give yourself a break that area,
  entertainment.
 
 ## Have you waited a week?
-Some times our perception of life is skewed, and we can't even tell that
+Sometimes our perception of life is skewed, and we can't even tell that
 we're not thinking clearly, and there's no obvious external cause. It happens.
 Keep yourself going for a full week, whatever it takes, and see if you still
 feel the same way then.

@@ -33,7 +33,7 @@ function write() {
 - `header` is a default header for my blog posts
 - - Insert `title` and `color` if provided
 - `if [ -z "$1" ]` checks if there is a first argument
-- - If there isn't one a default file name will be given\
+- - If there isn't one a default filename will be given\
 - `newPost` is the file path + name of the file
 - Insert header into newPost
 - Open the new file with atom

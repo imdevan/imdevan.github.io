@@ -8,7 +8,7 @@ style_mod: BASIC
 ---
 # Key take aways
 
-The major take away from this book was that action pre-seeds feeling. Don't
+The major takeaway from this book was that action pre-seeds feeling. Don't
 wait to feel confident about something. Doing leads to confidence.
 
 Russ Harris also talks about allowing yourself to feel fear. Telling yourself you are not afraid,

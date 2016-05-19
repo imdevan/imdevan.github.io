@@ -12,7 +12,7 @@ This book was pretty darn good.
 I felt that this book read somewhat like an essay on *How to Make Friends and
 Influence People*. Which I didn't mind one bit. I thought that Leil Lowndes
 made valid points based on her work in human centered position as an entertainer,
-aboard a cruse ship and various other points in her life and studies she has performed.
+aboard a cruise ship and various other points in her life and studies she has performed.
 
 The book's full title is <a class="base--a" href="http://www.amazon.com/How-Talk-Anyone-Success-Relationships/dp/007141858X" target="_blank"><i>How to Talk to Anyone: 92 Little Tricks for Big
     Success in Relationships</i></a>, which is a bit ridiculous, but if you can look past
@@ -27,4 +27,4 @@ no one should ever take any one book as the source of truth.
 2. Intentionally practice being friendly, so that you are ready when you need to be
 3. Put yourself out there
 
-I would recomend this book 👍
+I would recommend this book 👍

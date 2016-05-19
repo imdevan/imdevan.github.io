@@ -40,7 +40,7 @@ style_mod: BASIC
 - <span class="gray">What We Do In The Shadows</span> - Awesome!
 - <span class="gray">Funny Games</span> - get's under your skin, but that's the point
 - <span class="gray">Halloween Town</span> - Awesome!
-- <span class="gray">Hair</span> - rreally good
+- <span class="gray">Hair</span> - really good
 - <span class="gray">The Perks of Being a Wallflower</span> - Awesome!
 - <span class="gray">El Mariachi</span> - bad ass
 - <span class="gray">Desperado</span> - bad ass
@@ -48,4 +48,4 @@ style_mod: BASIC
 - <span class="gray">A Brony Tale</span> - good documentary
 - <span class="gray">Jimmy and Judy</span> - super indie
 - <span class="gray">Chumscruber</span> - deep
-- <span class="gray">American Beautiy</span> - deep
+- <span class="gray">American Beauty</span> - deep
