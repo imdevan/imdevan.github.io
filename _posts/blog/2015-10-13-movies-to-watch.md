@@ -6,6 +6,7 @@ author: Devan Huapaya
 category: blog
 style_mod: BASIC
 ---
+- The Big Short
 - The Book of Mormon
 - [Robot Hindi movie](https://www.youtube.com/watch?v=6VVxOYtimBM)
 - How to Succeed in Business Without Really Trying
@@ -25,6 +26,7 @@ style_mod: BASIC
 - Annie Hall (1977)
 - The Deer Hunter (1978)
 - Heat
+- [Italian Spiderman](https://www.youtube.com/watch?v=Zen_zRmbKaM)
 - <span class="gray">It's kind of a funny story</span> - great rom com about depression
 - <span class="gray">Platoon (1986)</span> - really good war flic
 - <span class="gray">Fantastic Planet</span> - fantastic
