@@ -27,6 +27,7 @@ style_mod: BASIC
 - The Deer Hunter (1978)
 - Heat
 - [Italian Spiderman](https://www.youtube.com/watch?v=Zen_zRmbKaM)
+- St. Vincent (2014)
 - <span class="gray">It's kind of a funny story</span> - great rom com about depression
 - <span class="gray">Platoon (1986)</span> - really good war flic
 - <span class="gray">Fantastic Planet</span> - fantastic

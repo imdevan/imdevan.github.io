@@ -1,6 +1,6 @@
 ---
 layout: blog-article
-title: <i>Start With Why</i> - Simon Sinek
+title: <i>Start With Why</i> by Simon Sinek
 title-color: salmon
 author: Devan Huapaya
 category: blog
@@ -24,3 +24,5 @@ Basically,
 This is something that can be seen in some business. On my team we use the 5-why root cause analysis to find out where our team can make improvements.
 
 It is also great for personal analysis. I find that if I can answer myself "why?" before I make a decision than I tend to feel much more confident about my choices.
+
+[Start With Why](https://www.amazon.com/Start-Why-Leaders-Inspire-Everyone/dp/1591846447)
