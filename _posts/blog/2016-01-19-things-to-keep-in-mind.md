@@ -36,5 +36,10 @@ style_mod: BASIC
 * Can you do <i>it</i> now? Do it.
 * Re-read this blog entry occasionally
 * If you aren't tired, do your job until you are
+* DONT go looking for memes 😱
+* If it's 1 am am do whatever it is tomorrow morning. Get ready for sleep and prep breakfast for the morning so you can attack the task without worrying about the other stuff.
+* It's better to be divisive than indecisive
+* Begin all tasks with estimation. End all tasks with reflection.
+
 
 forked from [http://imgurcom/xb7gHZ1](http://imgurcom/xb7gHZ1)
