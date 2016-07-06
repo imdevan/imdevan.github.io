@@ -35,5 +35,6 @@ style_mod: BASIC
 * Take plenty of pictures Of the sunset, your food, your friends, your dog, selfies Everything That way, later when you scroll through your camera roll, you'll remember everything about that day
 * Can you do <i>it</i> now? Do it.
 * Re-read this blog entry occasionally
+* If you aren't tired, do your job until you are
 
 forked from [http://imgurcom/xb7gHZ1](http://imgurcom/xb7gHZ1)

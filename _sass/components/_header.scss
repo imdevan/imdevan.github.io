@@ -1,6 +1,11 @@
 .header {
 
     height: 90vh;
+
+    @media (max-width: $media-md){
+      height: 600px;
+    }
+
     &--body {
         position: relative;
         top: 50%;
