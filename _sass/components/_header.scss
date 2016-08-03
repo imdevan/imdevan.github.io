@@ -1,6 +1,6 @@
 .header {
-
     height: 90vh;
+    position: relative;
 
     @media (max-width: $media-md){
       height: 600px;

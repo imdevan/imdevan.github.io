@@ -41,7 +41,7 @@ $blog-article--margin--CENTERED: br(2) auto br(4) auto;
 
     h1 { margin-bottom: br(2); }
     h2 { @extend .base--h2; margin-bottom: 0; }
-    h3 { @extend .base--h3; margin-bottom: br(2);}
+    h3 { @extend .base--h3; margin-bottom: br(1); margin-top: br(2);}
 
     // p {
     //     font-size: 21px;
