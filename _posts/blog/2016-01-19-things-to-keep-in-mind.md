@@ -40,6 +40,6 @@ style_mod: BASIC
 * If it's 1 am am do whatever it is tomorrow morning. Get ready for sleep and prep breakfast for the morning so you can attack the task without worrying about the other stuff.
 * It's better to be divisive than indecisive
 * Begin all tasks with estimation. End all tasks with reflection.
-
+* Be cheap with time not money
 
 forked from [http://imgurcom/xb7gHZ1](http://imgurcom/xb7gHZ1)
