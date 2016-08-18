@@ -6,7 +6,9 @@ author: Devan Huapaya
 category: blog
 style_mod: BASIC
 ---
-- The Big Short
+
+# To See
+- Planes, Trains & Automobiles
 - The Book of Mormon
 - [Robot Hindi movie](https://www.youtube.com/watch?v=6VVxOYtimBM)
 - How to Succeed in Business Without Really Trying
@@ -21,13 +23,18 @@ style_mod: BASIC
 - People Places
 - [These Spoopy Films](http://imgur.com/a/PZbGG)
 - Persepolis
-- Dances with Wolves (1990)
-- One Flew Over the Cuckoo's Nest (1975)
-- Annie Hall (1977)
-- The Deer Hunter (1978)
+- Dances with Wolves <span class="gray">(1990)</span>
+- One Flew Over the Cuckoo's Nest <span class="gray">(1975)</span>
+- Annie Hall <span class="gray">(1977)</span>
+- The Deer Hunter <span class="gray">(1978)</span>
 - Heat
 - [Italian Spiderman](https://www.youtube.com/watch?v=Zen_zRmbKaM)
-- St. Vincent (2014)
+- St. Vincent <span class="gray">(2014)</span>
+
+
+
+# Seen
+- <span class="gray">The Big Short</span> - great, educational, spooky
 - <span class="gray">It's kind of a funny story</span> - great rom com about depression
 - <span class="gray">Platoon (1986)</span> - really good war flic
 - <span class="gray">Fantastic Planet</span> - fantastic
