@@ -1,5 +1,5 @@
 ---
-layout: project-page
+layout: blog-article
 title: "Hola"
 title-color: seafoam
 ---

@@ -1,5 +1,5 @@
 ---
-layout: project-page
+layout: blog-article
 title: "Word Swap"
 title-color: salmon
 ---

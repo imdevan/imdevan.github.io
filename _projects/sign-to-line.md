@@ -1,5 +1,5 @@
 ---
-layout: project-page
+layout: blog-article
 title: "Sign 2 Line"
 title-color: purple
 ---

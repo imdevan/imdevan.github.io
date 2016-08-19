@@ -1,5 +1,5 @@
 ---
-layout: project-page
+layout: blog-article
 title: "Background for Inbox"
 title-color: blue
 ---
