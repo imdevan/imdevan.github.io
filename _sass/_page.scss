@@ -1,7 +1,7 @@
 
 .page {
     @extend %fadein;
-    padding-bottom: br(10);
+    padding-bottom: br(5);
     opacity: 0;
     transition: transform $long $timing-function;
     &.open {
