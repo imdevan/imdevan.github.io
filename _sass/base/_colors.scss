@@ -13,3 +13,11 @@ $color-list: $blue $seafoam $salmon $purple;
 .salmon {color: $salmon;}
 .seafoam {color: $seafoam;}
 .gray {color: $gray;}
+
+$theme-colors: (
+    blue: $blue,
+    purple: $purple,
+    salmon: $salmon,
+    seafoam: $seafoam,
+    gray: $gray
+);

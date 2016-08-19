@@ -1,7 +1,13 @@
 $bg-white: $white;
 
 .bg {
-    &--white {
-        background-color: $white;
+    @each $profile, $bgcolor in $theme-colors {
+        &--#{$profile} {
+            background-color: $bgcolor;
+            &:focus,
+            &:hover {
+                background-color: $bgcolor;
+            }
+        }
     }
 }
