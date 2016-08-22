@@ -8,7 +8,6 @@ style_mod: BASIC
 ---
 
 * Always have a water bottle in your car
-* Get something new where you go to eat often, not just your usual
 * Make a budget for yourself
 * But don't forget to give yourself some play money
 * Always round up on how much things cost so you have money left over
@@ -41,5 +40,5 @@ style_mod: BASIC
 * It's better to be divisive than indecisive
 * Begin all tasks with estimation. End all tasks with reflection.
 * Be cheap with time not money
+* When you look up and see someone else looking back say Hi!
 
-forked from [http://imgurcom/xb7gHZ1](http://imgurcom/xb7gHZ1)
