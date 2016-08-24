@@ -3,15 +3,19 @@ layout: default
 title: Talks I've given
 sub-title: At universities, and hackathons, and such
 talks:
-    - name: Introduction to Git(hub)
+    - title: Shell Script Fundamentals
+      link: https://slides.com/devanhuapaya/bash/fullscreen
+      date: August, 2016
+      color: purple
+    - title: Introduction to Git(hub)
       link: http://imdevan.github.io/intro-to-git/#/
       date: January, 2016
       color: blue
-    - name: Publishing A Website With Github Pages
+    - title: Publishing A Website With Github Pages
       link: http://imdevan.github.io/github-pages-talk/#/
       date: November, 2015
       color: seafoam
-    - name: Design & Hackathons
+    - title: Design & Hackathons
       link: http://imdevan.github.io/hackingdesign/#/
       date: October, 2015
       color: salmon
@@ -30,7 +34,7 @@ talks:
         <ul class="list">
             {% for talk in page.talks %}
                 <a href="{{ talk.link }}" class="page--header-link {{talk.color}}">
-                    <li class="page--list-item">{{ talk.name }}</li>
+                    <li class="page--list-item">{{ talk.title }}</li>
                 </a>
                 <time class="gray">
                     {{talk.date}}
