@@ -1,21 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-{% include common/_head.html %}
-<body ontouchstart="">
+{% include header.html %}
 
-    {% include common/_navigation.html %}
-    <div class="page">
-        {{ content }}
-    </div>
+<main role="main">
+  {{ content }}
+</main>
 
-    {% include _footer.html %}
-
-    {% include common/_google_analytics.html %}
-
-    {% if jekyll.environment == "development" %}
-        <script type="text/javascript" src="{{site.baseurl}}/js/main.js"></script>
-    {% else %}
-        <script type="text/javascript" src="{{site.url}}/js/main.js"></script>
-    {% endif %}
-</body>
-</html>
+{% include footer.html %}

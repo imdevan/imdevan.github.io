@@ -1,0 +1,19 @@
+$shadows: (
+  sm: 7px 7px 14px rgba(color(black), 0.2),
+  md: 12px 12px 24px rgba(color(black), 0.2),
+  lg: 24px 24px 48px rgba(color(black), 0.2),
+);
+
+$box-shadow-namespace: "shadow" !default;
+
+.#{$box-shadow-namespace} {
+  @each $size, $shadow in $shadows {
+    &-#{$size} {
+      box-shadow: $shadow;
+    }
+  }
+}
+
+@function shadow($size) {
+  @return map-get($shadows, $size);
+}

@@ -1,0 +1,22 @@
+body {
+  font-family: "Open Sans", Ariel;
+  color: color(text-dark);
+  font-size: 21px;
+  line-height: 1.25;
+}
+
+$typography-namespace: "text" !default;
+
+.#{$typography-namespace} {
+  &--center {
+    text-align: center;
+  }
+
+  &--light {
+    color: color(text-light);
+  }
+
+  &--code {
+    font-family: 'Roboto Mono', monospace;
+  }
+}

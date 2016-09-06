@@ -4,27 +4,15 @@ title: Blog posts I've written
 sub-title: Code, book reviews, personal thoughts on workflow and motivation
 ---
 
-<!-- sub-title: About unicorns and other things on my mind -->
-<main class="_full">
-    <h1 class="page--headline seafoam">
-        {{ page.title }}
-    </h1>
-    <p class="page--description gray">
-        {{page.sub-title}}
-    </p>
-
-    <div class="page--section">
-        <ul class="list">
-            {% for post in site.categories.blog %}
-              <a  class="page--header-link" href="{{post.url}}">
-                <li class="page--list-item {{post.title-color}}">
-                  {{post.title}}
-              </li>
-              </a>
-              <time class="gray">
-                  {{post.date | date: '%B %-d, %Y' }}
-              </time>
-            {% endfor %}
-        </ul>
-    </div>
-</main>
+<h1 class="text--title">{{ page.title }}</h1>
+<h5 class="text--sub-title">{{page.sub-title}}</h5>
+<ul>
+  {% for post in site.categories.blog %}
+  <a href="{{ post.url | prepend:site.baseurl }}">
+    <li>
+        <h3>{{post.title}}</h3>
+        <time>{{post.date | date: '%B %-d, %Y' }}</time>
+    </li>
+  </a>
+  {% endfor %}
+</ul>

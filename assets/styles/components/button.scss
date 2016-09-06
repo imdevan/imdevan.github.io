@@ -1,0 +1,10 @@
+$button-namespace: "button" !default;
+
+.#{$button-namespace} {
+    &--light {
+        background: color(background-light);
+        color: color(text-dark);
+
+        cursor: pointer;
+    }
+}

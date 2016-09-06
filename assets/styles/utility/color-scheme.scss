@@ -1,0 +1,41 @@
+$colors: (
+    black: #333,
+    white: #fff,
+    blue: #9df,
+    green: #DEEF8A,
+    red: #f2777a,
+    light-gray: #ddd,
+    darkd-gray: dark-gray,
+);
+
+$color-scheme: (
+    text-dark: map-get($colors, black),
+    text-light: map-get($colors, white),
+    text-button: map-get($colors, white),
+    default-link: map-get($colors, red),
+    background-neutral:map-get($colors, light-gray),
+    background-dark: map-get($colors, dark-gray),
+    background-light: map-get($colors, white),
+    background-button: map-get($colors, blue),
+    background-button-hover: map-get($colors, black),
+);
+
+@function color($color) {
+  // Default to color-scheme color
+  @if map-has-key($color-scheme, $color) {
+    @return map-get($color-scheme, $color);
+  }
+
+  // Otherwise check primary colors
+  @return map-get($colors, $color);
+}
+
+$background-namespace: "bg" !default;
+
+.#{$background-namespace} {
+  @each $color, $value in $colors {
+    &--#{$color} {
+      background: map-get($colors,$color);
+    }
+  }
+}

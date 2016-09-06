@@ -1,0 +1,31 @@
+$padding-namespace: "p" !default;
+$padding-verticle: "py" !default;
+$padding-top: "pt" !default;
+$padding-list: "p-list__item" !default;
+$padding-bottom: "pb" !default;
+$padding-sizes: 1, 2, 4, 5, 10;
+
+.#{$padding-verticle} {
+  @each $size in $padding-sizes {
+    &-#{$size} {
+      padding-top: rem($size);
+      padding-bottom: rem($size);
+    }
+  }
+}
+
+.#{$padding-top} {
+  @each $size in $padding-sizes {
+    &-#{$size} {
+      padding-top: rem($size);
+    }
+  }
+}
+
+.#{$padding-bottom} {
+  @each $size in $padding-sizes {
+    &-#{$size} {
+      padding-bottom: rem($size);
+    }
+  }
+}

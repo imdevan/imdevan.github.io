@@ -1,21 +1,20 @@
-# This will be the first part of the title tag for your site <title> site.name + page.title </title>
-name: Devan Huapaya
+# Site Config
 
-# Populates the meta description for the site. Should be under 150 characters for best SEO purposes.
-description: "Personal website of super awesome front end developer unicorn person, Devannnnn Huapaya!"
+name: "SpeedDial"
+description: A menu bar app to help you work with your mac, faster.
+baseurl: "/terminalogy"
+url: https://speeddial.xyz
+gems: ['jekyll-sitemap', 'jekyll-paginate', 'kramdown', 'rouge']
 
-# Owner (organization or individual) of site content
-author: Devan Huapaya
 
-#url: "[http:// ]"
-url: "http://imdevan.github.io"
-baseurl: "http://0.0.0.0:8080"
-
+# Markdown settings
 markdown: kramdown
 
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+
+highlighter: rouge
 
 # Pagination variable for how many posts to show in a list
 paginate: 30
@@ -24,11 +23,20 @@ post_dirs: false
 # Style of permalinks
 permalink: /:categories/:title/
 
+
+# In/excludes
+include: [".htaccess"]
+exclude: ["node_modules", "gulpfile.js", "Gemfile", "Gemfile.lock", ".jekyll-metadata", "commit-hook.sh", "package.json", "local_config.yml"]
+
+# Plugins
+assets:
+  digest: true
+  cache: false
+  sources:
+    - "assets/css"
+    - "images"
+
+# Read and Output Collections
 collections:
-    projects:
-        output: true
-        permalink: /projects/:path/
-
-gems: ['jekyll-sitemap', 'jekyll-paginate']
-
-exclude: [node_modules, Gruntfile.js, package.json]
+  commands:
+    output: false

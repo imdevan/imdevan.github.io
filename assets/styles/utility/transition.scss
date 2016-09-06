@@ -1,0 +1,14 @@
+$speed: (
+  slow: 3s,
+  base: 1s,
+  fast: .25s,
+  faster: .25s,
+);
+
+$easing: (
+  out: ease-out,
+);
+
+@function transition($spd, $ease) {
+  @return map-get($speed, $spd) map-get($easing, $ease);
+}

@@ -1,8 +1,16 @@
-# frozen_string_literal: true
-# A sample Gemfile
 source "https://rubygems.org"
 
-# gem "rails"
 gem "jekyll"
-gem "jekyll-paginate"
-gem "jekyll-sitemap"
+
+group :jekyll_plugins do
+  gem "jekyll-sitemap"
+  gem "jekyll-assets"
+  gem "jekyll-paginate"
+end
+
+gem "facets"
+gem "rouge"
+gem "kramdown"
+gem "sass"
+gem "typogruby"
+gem "uglifier"

@@ -1,6 +1,14 @@
-- text: Speeddial
-  color: blue
-- text: Hire Me
-  color: seafoam
-- text: Most recent post
-  color: purple
+features:
+  - title: Speeddial
+    caption: |
+      Be as efficent as possible when youre working to be as free as possible
+      when youre not.
+  - title: Hire Me
+    caption: 	|
+      You can hire me if you need a website, an original landing page, a logo,
+      dynamic web components, or if you want help figuring out your digital
+      artistic direction.
+  - title: Latest Post
+    caption: |
+      A developer's terminal is a powerful tool. It is used for downloading
+      modules, compiling code, running test scripts, this is my setup.

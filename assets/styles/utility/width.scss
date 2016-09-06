@@ -1,0 +1,9 @@
+$width-namespace: "w" !default;
+$max-width-namespace: "mw" !default;
+
+.#{$max-width-namespace} {
+  &--95-90 {
+    max-width: 900px;
+    width: 95%;
+  }
+}
