@@ -1,0 +1,17 @@
+$half-bleed-namespace: "half-bleed" !default;
+
+.#{$half-bleed-namespace} {
+  @each $size, $size-val in $sizes {
+    &-#{$size} {
+      position: relative;
+
+      &__bg {
+        height: $size-val/2;
+      }
+      &__image {
+        height: $size-val/2;
+        transform: translateY(50%);
+      }
+    }
+  }
+}

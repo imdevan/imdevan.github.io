@@ -1,0 +1,38 @@
+$flex-namespace: "flex" !default;
+$flex-sizes: 1, 2, 3;
+
+.#{$flex-namespace} {
+  display: flex;
+
+  &--row-md {
+    flex-direction: column;
+
+    @include screen(md) {
+      flex-direction: row;
+    }
+  }
+
+  &__box {
+    @each $size in $flex-sizes {
+      &-#{$size} {
+        flex: $size;
+      }
+    }
+
+    &--gutter {
+      margin-bottom: 1em;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      @include screen(md) {
+        margin-right: 1em;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

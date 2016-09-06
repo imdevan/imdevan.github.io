@@ -1,0 +1,41 @@
+$margin-namespace: "m" !default;
+$margin-directions: (
+  l: left
+);
+$margin-sizes: (
+  sm: 1em,
+  md: 3em,
+  lg: 5em,
+);
+
+.#{$margin-namespace} {
+  &--auto {
+    margin: auto;
+  }
+
+  &l-md-sm {
+    margin-left: 0;
+
+    @include screen(md) {
+      margin-left: map-get($margin-sizes, sm);
+    }
+  }
+
+  &t {
+    &-xs-sm {
+      margin-top: map-get($margin-sizes, sm);
+    }
+
+    &-md-0 {
+      @include screen(md) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &b {
+    &-md {
+      margin-bottom: map-get($margin-sizes, md);
+    }
+  }
+}
