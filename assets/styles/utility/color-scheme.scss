@@ -4,14 +4,15 @@ $colors: (
     blue: #9df,
     green: #DEEF8A,
     red: #f2777a,
-    light-gray: #ddd,
-    darkd-gray: dark-gray,
+    light-gray: #eee,
+    dark-gray: #ccc,
 );
 
 $color-scheme: (
     text-dark: map-get($colors, black),
     text-light: map-get($colors, white),
     text-button: map-get($colors, white),
+    text-accent: map-get($colors, red),
     default-link: map-get($colors, red),
     background-neutral:map-get($colors, light-gray),
     background-dark: map-get($colors, dark-gray),
