@@ -3,16 +3,21 @@ layout: default
 title: Blog posts I've written
 sub-title: Code, book reviews, personal thoughts on workflow and motivation
 ---
-
-<h1 class="text--title">{{ page.title }}</h1>
-<h5 class="text--sub-title">{{page.sub-title}}</h5>
-<ul>
-  {% for post in site.categories.blog %}
-  <a href="{{ post.url | prepend:site.baseurl }}">
-    <li>
-        <h3>{{post.title}}</h3>
-        <time>{{post.date | date: '%B %-d, %Y' }}</time>
-    </li>
-  </a>
-  {% endfor %}
-</ul>
+<header class="mw--95-90 m--auto">
+  <h1 class="text--title">{{ page.title }}</h1>
+  <h5 class="text--sub-title">{{page.sub-title}}</h5>
+</header>
+<main class="py--10">
+  <ul>
+    {% for post in site.categories.blog %}
+    <a href="{{ post.url | prepend:site.baseurl }}">
+      <li>
+        <section class="mw--95-90 m--auto text--{{post.color}}">
+            <h3>{{post.title}}</h3>
+            <time>{{post.date | date: '%B %-d, %Y' }}</time>
+        </section>
+      </li>
+    </a>
+    {% endfor %}
+  </ul>
+</main>

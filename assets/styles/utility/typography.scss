@@ -4,7 +4,15 @@ body {
   font-size: 21px;
   line-height: 1.25;
 }
+a {
+  text-decoration: none;
+  color: color(text--accent);
 
+  &:focus,
+  &:visited {
+    color: color(text--accent);
+  }
+}
 $typography-namespace: "text" !default;
 
 .#{$typography-namespace} {

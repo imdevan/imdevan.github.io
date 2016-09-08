@@ -1,7 +1,7 @@
 ---
 layout: markdown
 title: "Design and Style for Markdown"
-title-color: salmon
+color: salmon
 author: Devan Huapaya
 category: blog
 style_mod: BASIC
