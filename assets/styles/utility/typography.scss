@@ -1,3 +1,4 @@
+// Base text reset
 body {
   font-family: "Open Sans", Ariel;
   color: color(text-dark);
@@ -5,6 +6,16 @@ body {
   line-height: 1.25;
 }
 
+// Link reset
+a {
+  text-decoration: none;
+  color: color(text--accent);
+
+  &:focus,
+  &:visited {
+    color: color(text--accent);
+  }
+}
 $typography-namespace: "text" !default;
 
 .#{$typography-namespace} {
