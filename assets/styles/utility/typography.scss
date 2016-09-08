@@ -33,6 +33,11 @@ $typography-namespace: "text" !default;
         font-family: 'Roboto Mono', monospace;
     }
 
+    &--highlight {
+        font-family: 'Dancing Script', cursive;
+        font-size: 2em;
+    }
+
     &-hover--light {
         &:hover {
             color: color(text-light);

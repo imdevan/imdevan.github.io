@@ -7,6 +7,17 @@ $markdown-namespace: "markdown" !default;
   width: 95%;
   max-width: 900px;
 
+  ul {
+      list-style-type: disc;
+      padding-left: 1em;
+
+      li {
+          &:not(first-child) {
+              margin-top: 1em;
+          }
+      }
+  }
+
   a {
     color: color(default-link);
   }
@@ -61,6 +72,7 @@ $markdown-namespace: "markdown" !default;
           padding-left: 1em;
       }
   }
+
   blockquote {
     margin: 0;
 
@@ -78,6 +90,11 @@ $markdown-namespace: "markdown" !default;
         padding-left: 1em;
         padding-right: 1em;
         display: inline-block;
+    }
+
+    &.center {
+        display: table;
+        margin: auto;
     }
   }
 
@@ -102,7 +119,6 @@ $markdown-namespace: "markdown" !default;
       background: color(background-neutral);
       border-radius: 3px;
       color: color(text-accent);
-      border: 1px solid color(dark-gray);
     }
   }
 
