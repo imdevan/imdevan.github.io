@@ -19,4 +19,15 @@ $typography-namespace: "text" !default;
   &--code {
     font-family: 'Roboto Mono', monospace;
   }
+
+  @each $color, $color-val in $colors  {
+    &--#{$color} {
+      color: $color-val;
+
+      &:active,
+      &:focus {
+        color: $color-val;
+      }
+    }
+  }
 }

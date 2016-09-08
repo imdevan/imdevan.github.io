@@ -6,6 +6,7 @@ $margin-sizes: (
   sm: 1em,
   md: 3em,
   lg: 5em,
+  auto: auto,
 );
 
 .#{$margin-namespace} {

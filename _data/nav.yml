@@ -1,0 +1,13 @@
+navitems:
+  - label: Twitter
+    link: http://twitter.com/devanipsum
+    color: blue
+  - label: Blog
+    link: blog
+    color: green
+  - label: Portfolio
+    link: portfolio
+    color: red
+  - label: Hire Me
+    link: hire-me
+    color: salmon

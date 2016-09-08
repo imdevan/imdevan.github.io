@@ -11,10 +11,16 @@ $markdown-namespace: "markdown" !default;
     color: color(default-link);
   }
 
-  img {
+  .img {
     margin: auto;
     max-width: 100%;
     box-shadow: shadow(lg);
+    margin-top: map-get($margin-sizes, sm);
+    margin-bottom: map-get($margin-sizes, lg);
+    margin-left: map-get($margin-sizes, auto);
+    margin-right: map-get($margin-sizes, auto);
+
+
 
     @include screen(md) {
         max-width: 80%;

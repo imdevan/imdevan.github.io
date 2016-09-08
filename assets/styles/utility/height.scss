@@ -1,0 +1,11 @@
+$height-namespace: "h" !default;
+
+.#{$height-namespace} {
+  &--600-90 {
+    height: 600px;
+
+    @include screen(md) {
+      height: 90vh;
+    }
+  }
+}
