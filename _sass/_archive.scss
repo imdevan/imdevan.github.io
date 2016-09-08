@@ -1,7 +1,0 @@
-._archive{
-	clear: both;
-	@include grid-span(8, 3);
-	.expanded{
-		@include grid-span(12);
-	}
-}
