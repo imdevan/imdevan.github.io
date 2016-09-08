@@ -65,6 +65,7 @@ gulp.task('serve', ['local-build', 'styles', 'scripts', 'images'], function() {
     gulp.watch(['**/*.md'].concat(ignore), ['local-build']);
     gulp.watch(['assets/js/**/*.js'].concat(ignore), ['scripts']);
     gulp.watch(['**/*.html'].concat(ignore), ['local-build']);
+    gulp.watch(['**/*.yml'].concat(ignore), ['local-build']);
     gulp.watch('_site/**/*.*').on('change', browserSync.reload);
 });
 

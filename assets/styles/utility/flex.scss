@@ -12,6 +12,15 @@ $flex-sizes: 1, 2, 3;
     }
   }
 
+  &--center {
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--space-around {
+    justify-content: space-around;
+  }
+
   &__box {
     @each $size in $flex-sizes {
       &-#{$size} {

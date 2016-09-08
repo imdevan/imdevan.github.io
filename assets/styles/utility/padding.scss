@@ -3,7 +3,20 @@ $padding-verticle: "py" !default;
 $padding-top: "pt" !default;
 $padding-list: "p-list__item" !default;
 $padding-bottom: "pb" !default;
-$padding-sizes: 1, 2, 4, 5, 10;
+$padding-sizes: 1, 2, 4, 5, 10, 15, 20;
+
+.#{$padding-namespace} {
+  &-md {
+    &--reset {
+      @include screen(md){
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+      };
+    }
+  }
+}
 
 .#{$padding-verticle} {
   @each $size in $padding-sizes {
@@ -18,6 +31,14 @@ $padding-sizes: 1, 2, 4, 5, 10;
   @each $size in $padding-sizes {
     &-#{$size} {
       padding-top: rem($size);
+    }
+  }
+}
+
+.#{$padding-bottom} {
+  @each $size in $padding-sizes {
+    &-#{$size} {
+      padding-bottom: rem($size);
     }
   }
 }

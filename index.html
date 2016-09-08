@@ -3,5 +3,17 @@ layout: default
 nav-item: true
 order: 1
 ---
-
-<h1 class="text--code text--center py-10">Hi, I'm Devan</h1>
+<header class="text--center py-15">
+  <h1 class="text--code text--center">Hi, I'm Devan</h1>
+  <nav class="nav flex flex--space-around w--95-90">
+    {% for navitem in site.data.nav.navitems  %}
+      <a href="{{navitem.link}}" class="flex flex--center text--{{navitem.color}}">
+        {{navitem.label}}
+      </a>
+    {% endfor %}
+  </nav>
+  <p class="highlight">
+    I'm a freelance developer working from Dallas TX.
+    I'm looking for exciting projects, so get in touch ;)
+  </p>
+</header>
