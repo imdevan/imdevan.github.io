@@ -1,5 +1,5 @@
 ---
-layout: markdown
+layout: blog-article
 title: "Design and Style for Markdown"
 color: salmon
 author: Devan Huapaya
@@ -7,15 +7,11 @@ category: blog
 style_mod: BASIC
 ---
 
-# {{page.title}}
-
-## Library
-
 Design and style of this website :)
 {: .br}
 
 ## Headers
-{: .text--center .mb-md}
+{: .underline }
 
 # H1
 
@@ -33,16 +29,21 @@ paragraph
 {: .br}
 
 ## Links
-{: .text--center .mb-md}
+{: .underline }
+
 [link](http://google.com)
 {: .br}
 
 ## Lists
-{: .text--center .mb-md}
+{: .underline }
+
+### ul
 
 - list
 - list
 - list
+
+### ol
 
 1. list
 2. list
@@ -51,7 +52,8 @@ paragraph
 
 
 ## Code
-{: .text--center .mb-md}
+{: .underline }
+
 {% highlight bash %}
 echo "code"
 {% endhighlight %}
@@ -60,7 +62,7 @@ echo "code"
 {: .br}
 
 ## Checkboxes
-{: .text--center .mb-md}
+{: .underline }
 
 <input type="checkbox">  checkbox  
 <input type="checkbox" checked> checkedbox
@@ -68,29 +70,36 @@ echo "code"
 
 
 ## Quotes
-{: .text--center .mb-md}
+{: .underline }
 
-> block quote  
+> Design guides are absolutely the illist  
 {: .center }
 
-Justin T
+John Ive
 {: .br .text--highlight .text--center}
 
 ## Images
-{: .text--center .mb-md}
-![gras](/assets/images/cat.jpg)
-{: .text--center}
+{: .underline }
 
+![gras](/assets/images/cat.jpg)
+{: .text--center .br}
+
+## Buttons
+{: .underline }
 
 <button>call to action</button>
-{: .text--center}
+{: .text--center .br}
+
+## Footnotes
+{: .underline }
 
 This is a text with a
 footnote[^1].
-
+{: .br}
 [^1]: And here is the definition.
 
-#### List with links
+## List with links
+{: .underline }
 
 - [Reference](http://google.com)
 - [Reference](http://google.com)

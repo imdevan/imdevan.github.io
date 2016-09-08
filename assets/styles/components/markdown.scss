@@ -74,12 +74,10 @@ $markdown-namespace: "markdown" !default;
   }
 
   blockquote {
-    margin: 0;
-
     border-left: 3px solid color(red);
     padding-left: .4em;
     padding-right: .4em;
-
+    fon-size: 1.5em;
     box-shadow: shadow(lg);
 
     code {
@@ -124,5 +122,13 @@ $markdown-namespace: "markdown" !default;
 
   code {
       font-family: 'Roboto Mono', monospace;
+  }
+
+  .underline {
+      border-bottom: 3px solid currentColor;
+  }
+
+  .footnotes {
+      margin-top: map-get($margin-sizes, lg);
   }
 }
