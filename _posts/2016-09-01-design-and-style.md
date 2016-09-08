@@ -71,10 +71,10 @@ echo "code"
 {: .text--center .mb-md}
 
 > block quote  
-{: .m--auto }
+{: .center }
 
 Justin T
-{: .br}
+{: .br .text--highlight .text--center}
 
 ## Images
 {: .text--center .mb-md}
