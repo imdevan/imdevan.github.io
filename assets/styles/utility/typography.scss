@@ -1,59 +1,53 @@
-<<<<<<< HEAD
 // Base text reset
-=======
->>>>>>> 03ceb2eb3b52b868893b0d89a1c5dcd69337a60a
+$body-font: "Open Sans", Ariel;
 body {
-  font-family: "Open Sans", Ariel;
-  color: color(text-dark);
-  font-size: 21px;
-  line-height: 1.25;
+    font-family: $body-font;
+    color: color(text-dark);
+    font-size: 21px;
+    line-height: 1.25;
 }
-<<<<<<< HEAD
 
 // Link reset
-=======
->>>>>>> 03ceb2eb3b52b868893b0d89a1c5dcd69337a60a
 a {
-  text-decoration: none;
-  color: color(text--accent);
-
-  &:focus,
-  &:visited {
+    text-decoration: none;
     color: color(text--accent);
-  }
+
+    &:focus,
+    &:visited {
+        color: color(text--accent);
+    }
 }
+
 $typography-namespace: "text" !default;
 
 .#{$typography-namespace} {
-  &--center {
-    text-align: center;
-  }
-
-  &--light {
-    color: color(text-light);
-  }
-
-  &--code {
-    font-family: 'Roboto Mono', monospace;
-  }
-
-<<<<<<< HEAD
-  &-hover--light {
-    &:hover {
-      color: color(text-light);
+    &--center {
+        text-align: center;
     }
-  }
 
-=======
->>>>>>> 03ceb2eb3b52b868893b0d89a1c5dcd69337a60a
-  @each $color, $color-val in $colors  {
-    &--#{$color} {
-      color: $color-val;
-
-      &:active,
-      &:focus {
-        color: $color-val;
-      }
+    &--light {
+        color: color(text-light);
     }
-  }
+
+    &--code {
+        font-family: 'Roboto Mono', monospace;
+    }
+
+    &-hover--light {
+        &:hover {
+            color: color(text-light);
+        }
+    }
+
+    @each $color, $color-val in $colors  {
+        &--#{$color} {
+            color: $color-val;
+
+            &:visited,
+            &:active,
+            &:focus {
+                color: $color-val;
+            }
+        }
+    }
 }
