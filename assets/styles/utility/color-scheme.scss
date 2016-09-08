@@ -37,12 +37,16 @@ $background-namespace: "bg" !default;
 .#{$background-namespace} {
   @each $color, $value in $colors {
     &--#{$color} {
+<<<<<<< HEAD
       background: $value;
     }
     &-hover--#{$color} {
       &:hover {
         background: $value;
       }
+=======
+      background: map-get($colors,$color);
+>>>>>>> 03ceb2eb3b52b868893b0d89a1c5dcd69337a60a
     }
   }
 }

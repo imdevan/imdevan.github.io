@@ -1,12 +1,18 @@
+<<<<<<< HEAD
 // Base text reset
+=======
+>>>>>>> 03ceb2eb3b52b868893b0d89a1c5dcd69337a60a
 body {
   font-family: "Open Sans", Ariel;
   color: color(text-dark);
   font-size: 21px;
   line-height: 1.25;
 }
+<<<<<<< HEAD
 
 // Link reset
+=======
+>>>>>>> 03ceb2eb3b52b868893b0d89a1c5dcd69337a60a
 a {
   text-decoration: none;
   color: color(text--accent);
@@ -31,12 +37,15 @@ $typography-namespace: "text" !default;
     font-family: 'Roboto Mono', monospace;
   }
 
+<<<<<<< HEAD
   &-hover--light {
     &:hover {
       color: color(text-light);
     }
   }
 
+=======
+>>>>>>> 03ceb2eb3b52b868893b0d89a1c5dcd69337a60a
   @each $color, $color-val in $colors  {
     &--#{$color} {
       color: $color-val;

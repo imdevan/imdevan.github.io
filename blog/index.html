@@ -10,9 +10,15 @@ sub-title: Code, book reviews, personal thoughts on workflow and motivation
 <main class="py--10">
   <ul>
     {% for post in site.categories.blog %}
+<<<<<<< HEAD
     <a href="{{ post.url | prepend:site.baseurl }}" >
       <li class="text--{{post.color}} text-hover--light bg-hover--{{post.color}} py-5 trans-all--fast-in-out">
         <section class="mw--95-90 m--auto ">
+=======
+    <a href="{{ post.url | prepend:site.baseurl }}">
+      <li>
+        <section class="mw--95-90 m--auto text--{{post.color}}">
+>>>>>>> 03ceb2eb3b52b868893b0d89a1c5dcd69337a60a
             <h3>{{post.title}}</h3>
             <time>{{post.date | date: '%B %-d, %Y' }}</time>
         </section>
