@@ -20,8 +20,6 @@ $markdown-namespace: "markdown" !default;
     margin-left: map-get($margin-sizes, auto);
     margin-right: map-get($margin-sizes, auto);
 
-
-
     @include screen(md) {
         max-width: 80%;
     }
@@ -49,11 +47,9 @@ $markdown-namespace: "markdown" !default;
     margin-bottom: map-get($margin-sizes, lg);
   }
 
-  figure,
-  blockquote {
+  figure {
     margin: 0;
     margin-bottom: map-get($margin-sizes, md);
-
     overflow-x: scroll;
     font-size: 1rem;
     border-left: 3px solid color(red);
@@ -62,6 +58,21 @@ $markdown-namespace: "markdown" !default;
 
     @include screen(md) {
         padding-left: 1em;
+    }
+  }
+
+  blockquote {
+    margin: auto;
+    font-size: 1rem;
+    border-left: 3px solid color(red);
+    padding-left: .4em;
+    box-shadow: shadow(lg);
+    width: 100%;
+    display: inline-block;
+
+    @include screen(md) {
+      padding: 1em;
+      width: auto;
     }
   }
 

@@ -70,9 +70,10 @@ echo "code"
 ## Quotes
 {: .text--center .mb-md}
 
-> block quote
+> block quote  
+{: .m--auto }
 
-Inline "quotes" haha
+Justin T
 {: .br}
 
 ## Images
