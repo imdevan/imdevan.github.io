@@ -1,7 +1,7 @@
 ---
 layout: blog-article
 title: "<i>The Confidence Gap</i> by Russ Harris"
-title-color: salmon
+color: salmon
 author: Devan Huapaya
 category: blog
 style_mod: BASIC

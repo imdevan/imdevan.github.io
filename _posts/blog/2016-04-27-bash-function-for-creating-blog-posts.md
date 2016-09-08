@@ -1,7 +1,7 @@
 ---
 layout: blog-article
 title: "Bash Function for Creating Blog Posts"
-title-color: seafoam
+color: seafoam
 author: Devan Huapaya
 category: blog
 style_mod: BASIC
@@ -14,7 +14,7 @@ I created this little bash function for creating blog posts!
 function write() {
     date=`date +%Y-%m-%d`
     filePath="/Users/devanhuapaya/Documents/All Things Code/Personal Portfolio/_posts/blog/"
-    header="---\nlayout: blog-article \ntitle: ${2} \ntitle-color: ${3}\nauthor: Devan Huapaya \ncategory: blog \nstyle_mod: BASIC \n---"
+    header="---\nlayout: blog-article \ntitle: ${2} \ncolor: ${3}\nauthor: Devan Huapaya \ncategory: blog \nstyle_mod: BASIC \n---"
     if [ -z "$1" ]
         then
             uniqId=$(uuidgen)

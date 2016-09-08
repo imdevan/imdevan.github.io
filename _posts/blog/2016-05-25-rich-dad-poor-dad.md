@@ -1,7 +1,7 @@
 ---
 layout: blog-article
 title: <i>Rich Dad Poor Dad</i> by Robert Kiyosaki
-title-color: blue
+color: blue
 author: Devan Huapaya
 category: draft
 style_mod: BASIC

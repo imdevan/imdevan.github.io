@@ -1,7 +1,7 @@
 ---
 layout: blog-article
 title: What do Entrepreneurs Write About?
-title-color: blue
+color: blue
 author: Devsn Huapaya
 category: draft 
 style_mod: BASIC

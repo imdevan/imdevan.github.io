@@ -1,7 +1,7 @@
 ---
 layout: blog-article
 title: Proposed Improvements to Google's Webpage
-title-color: seafoam
+color: seafoam
 author: Devsn Huapaya
 category: draft
 style_mod: BASIC

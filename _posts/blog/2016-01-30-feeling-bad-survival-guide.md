@@ -1,7 +1,7 @@
 ---
 layout: blog-article
 title: "Feeling Bad Survival Guide"
-title-color: purple
+color: purple
 author: Devan Huapaya
 category: blog
 style_mod: BASIC

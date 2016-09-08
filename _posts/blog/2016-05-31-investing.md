@@ -1,7 +1,7 @@
 ---
 layout: blog-article
 title: Investing
-title-color: blue
+color: blue
 author: Devan Huapaya
 category: draft
 style_mod: BASIC

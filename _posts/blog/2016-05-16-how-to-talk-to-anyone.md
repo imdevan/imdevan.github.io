@@ -1,7 +1,7 @@
 ---
 layout: blog-article
 title: <i>How to Talk to Anyone</i> by Leil Lowndes
-title-color: salmon
+color: salmon
 author: Devan Huapaya
 category: blog
 style_mod: BASIC

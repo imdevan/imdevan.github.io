@@ -1,7 +1,7 @@
 ---
 layout: blog-article
 title:  <i>Soft Skills for Software Developers</i>
-title-color: seafoam
+color: seafoam
 author: Devan Huapaya
 category: draft
 style_mod: BASIC

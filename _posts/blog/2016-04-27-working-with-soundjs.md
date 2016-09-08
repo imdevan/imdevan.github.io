@@ -1,7 +1,7 @@
 ---
 layout: blog-article
 title: "Working with Sound.js"
-title-color: blue
+color: blue
 author: Devan Huapaya
 category: blog
 style_mod: BASIC

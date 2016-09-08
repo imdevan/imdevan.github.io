@@ -1,7 +1,7 @@
 ---
 layout: blog-article
 title: <i>Start With Why</i> by Simon Sinek
-title-color: salmon
+color: salmon
 author: Devan Huapaya
 category: blog
 style_mod: BASIC

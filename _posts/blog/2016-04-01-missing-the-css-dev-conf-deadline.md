@@ -1,7 +1,7 @@
 ---
 layout: blog-article
 title: "Missing the CSS Dev Conf Submission Deadline"
-title-color: purple
+color: purple
 author: Devan Huapaya
 category: draft
 style_mod: BASIC

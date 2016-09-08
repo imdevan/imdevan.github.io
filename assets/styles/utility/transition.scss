@@ -6,20 +6,14 @@ $speed: (
 );
 
 $easing: (
-  out: ease-out,
-<<<<<<< HEAD
-  in-out: ease-in-out,
-=======
->>>>>>> 03ceb2eb3b52b868893b0d89a1c5dcd69337a60a
+    out: ease-out,
+    in-out: ease-in-out,
 );
 
 @function transition($spd, $ease) {
-  @return map-get($speed, $spd) map-get($easing, $ease);
+    @return map-get($speed, $spd) map-get($easing, $ease);
 }
-<<<<<<< HEAD
 
 .trans-all--fast-in-out {
-  transition: all transition(fast, in-out);
+    transition: all transition(fast, in-out);
 }
-=======
->>>>>>> 03ceb2eb3b52b868893b0d89a1c5dcd69337a60a

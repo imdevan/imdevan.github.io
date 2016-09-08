@@ -1,7 +1,7 @@
 ---
 layout: blog-article
 title: Growing Pains
-title-color: purple
+color: purple
 author: Devan Huapaya
 category: draft
 style_mod: BASIC

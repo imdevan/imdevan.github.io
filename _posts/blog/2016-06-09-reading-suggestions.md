@@ -1,7 +1,7 @@
 ---
 layout: blog-article
 title: Reading Suggestions June 2016
-title-color: purple
+color: purple
 author: Devan Huapaya
 category: blog
 style_mod: BASIC

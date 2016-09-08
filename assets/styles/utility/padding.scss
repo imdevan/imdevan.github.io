@@ -3,7 +3,7 @@ $padding-verticle: "py" !default;
 $padding-top: "pt" !default;
 $padding-list: "p-list__item" !default;
 $padding-bottom: "pb" !default;
-$padding-sizes: 1, 2, 4, 5, 10, 15, 20;
+$padding-sizes: 1, 2, 3, 4, 5, 10, 15, 20;
 
 .#{$padding-namespace} {
   &-md {

@@ -1,7 +1,7 @@
 ---
 layout: blog-article
 title: "Building a Style-Guide"
-title-color: purple
+color: purple
 author: Devan Huapaya
 category: draft
 style_mod: BASIC

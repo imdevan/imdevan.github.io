@@ -1,7 +1,7 @@
 ---
 layout: blog-article-mostly-empty
 title: "Angular Template"
-title-color: blue
+color: blue
 author: Devan Huapaya
 category: blog
 style_mod: BASIC

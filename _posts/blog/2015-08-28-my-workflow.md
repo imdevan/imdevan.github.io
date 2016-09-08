@@ -1,7 +1,7 @@
 ---
 layout: blog-article
 title: "My Everything Workflow"
-title-color: blue
+color: blue
 author: Devan Huapaya
 category: blog
 style_mod: BASIC

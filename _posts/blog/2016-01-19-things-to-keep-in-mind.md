@@ -1,7 +1,7 @@
 ---
 layout: blog-article
 title: "Things To Keep in Mind"
-title-color: seafoam
+color: seafoam
 author: Devan Huapaya
 category: blog
 style_mod: BASIC
