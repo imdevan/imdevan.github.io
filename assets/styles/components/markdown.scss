@@ -52,13 +52,26 @@ $markdown-namespace: "markdown" !default;
   figure,
   blockquote {
     margin: 0;
+    margin-bottom: map-get($margin-sizes, md);
+
     overflow-x: scroll;
+    font-size: 1rem;
     border-left: 3px solid color(red);
     padding-left: .4em;
     box-shadow: shadow(lg);
 
     @include screen(md) {
         padding-left: 1em;
+    }
+  }
+
+  p {
+    //   inline code
+    code {
+      background: color(background-neutral);
+      border-radius: 3px;
+      color: color(text-accent);
+      border: 1px solid color(dark-gray);
     }
   }
 
