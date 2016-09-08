@@ -31,6 +31,12 @@ $typography-namespace: "text" !default;
     font-family: 'Roboto Mono', monospace;
   }
 
+  &-hover--light {
+    &:hover {
+      color: color(text-light);
+    }
+  }
+
   @each $color, $color-val in $colors  {
     &--#{$color} {
       color: $color-val;

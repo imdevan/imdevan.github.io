@@ -7,8 +7,13 @@ $speed: (
 
 $easing: (
   out: ease-out,
+  in-out: ease-in-out,
 );
 
 @function transition($spd, $ease) {
   @return map-get($speed, $spd) map-get($easing, $ease);
+}
+
+.trans-all--fast-in-out {
+  transition: all transition(fast, in-out);
 }
