@@ -41,6 +41,7 @@ $flex-sizes: 1, 2, 3;
 
       @include screen(md) {
         margin-right: 1em;
+        margin-bottom: 0;
 
         &:last-of-type {
           margin-right: 0;

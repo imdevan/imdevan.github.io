@@ -1,13 +1,13 @@
-		<!-- Footer -->
+        <!-- Footer -->
 		<footer class="bg--dark text--light" role="contentinfo">
 
 			<!-- Featured content -->
 			<div class="flex flex--row-md mw--95-90 m--auto pt-5">
 				{% for feature in site.data.footer.features %}
-					<div class="flex__box-1 flex__box--gutter">
-						<h3>{{ feature.title }}</h3>
-						{{ feature.caption }}
-					</div>
+					<a href="{{feature.link}}" class="flex__box-1 flex__box--gutter p-1 text--light  trans-all--fast-in-out">
+					        <h3>{{ feature.title }}</h3>
+					        {{ feature.caption }}
+                    </a>
 				{% endfor %}
 			</div>
 

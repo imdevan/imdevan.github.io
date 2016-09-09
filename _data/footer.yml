@@ -1,10 +1,10 @@
 features:
   - title: HackDFW
-    caption: |
-      I'm currently working to bring a really awesome hackathon to Dallas.
+    link: http://hackdfw.com
+    caption: I'm currently working to bring a really awesome hackathon to Dallas.
   - title: Hire Me
-    caption: 	|
-      I create digital experiences that have form and purpose.
+    link: /hire-me
+    caption: I create digital experiences that have form and purpose.
   - title: Latest Post
-    caption: |
-      Looking for something to read? 
+    link: /blog/
+    caption: Looking for something to read?

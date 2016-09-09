@@ -69,6 +69,12 @@ $typography-namespace: "text" !default;
         }
     }
 
+    &-hover--dark {
+        &:hover {
+            color: color(text-dark);
+        }
+    }
+
     @each $color, $color-val in $colors  {
         &--#{$color} {
             color: $color-val;

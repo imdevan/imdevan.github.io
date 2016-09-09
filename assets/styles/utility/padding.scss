@@ -27,6 +27,14 @@ $padding-sizes: 1, 2, 3, 4, 5, 10, 15, 20;
   }
 }
 
+.#{$padding-namespace} {
+  @each $size in $padding-sizes {
+    &-#{$size} {
+      padding: rem($size);
+    }
+  }
+}
+
 .#{$padding-top} {
   @each $size in $padding-sizes {
     &-#{$size} {
