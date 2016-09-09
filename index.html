@@ -1,10 +1,14 @@
 ---
 layout: default
 nav-item: true
+title: Hi, I'm Devan
+subtitle: |
+    I'm a freelance developer working from Dallas TX.
+    I'm looking for exciting projects, so get in touch ;)
 order: 1
 ---
 <header class="text--center py-15">
-  <h1 class="text--code text--center">Hi, I'm Devan</h1>
+  <h1 class="text--code text--center">{{page.title}}</h1>
   <nav class="nav flex flex--space-around mw--95-90 m--auto">
     {% for navitem in site.data.nav.navitems  %}
       <a href="{{navitem.link}}" class="flex flex--center text--{{navitem.color}}">
@@ -13,7 +17,6 @@ order: 1
     {% endfor %}
   </nav>
   <p class="highlight highlight--center">
-    I'm a freelance developer working from Dallas TX.
-    I'm looking for exciting projects, so get in touch ;)
+    {{page.subtitle}}
   </p>
 </header>

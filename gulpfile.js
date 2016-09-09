@@ -66,7 +66,7 @@ gulp.task('serve', ['local-build', 'styles', 'scripts', 'images'], function() {
     gulp.watch(['assets/js/**/*.js'].concat(ignore), ['scripts']);
     gulp.watch(['**/*.html'].concat(ignore), ['local-build']);
     gulp.watch(['**/*.yml'].concat(ignore), ['local-build']);
-    gulp.watch('_site/**/*.*').on('change', browserSync.reload);
+    gulp.watch('_site/**/*.html').on('change', browserSync.reload);
 });
 
 // Gulp: Run styles, local-build, and serve
