@@ -7,10 +7,32 @@ body {
     line-height: 1.25;
 }
 
+%hoverUnderline {
+    position: relative;
+
+    &:after{
+        content: "";
+        transition: width transition(fast, cubic);
+        position: absolute;
+        bottom: -0.25rem;
+        height: 0.15rem;
+        width: 0;
+        background: currentColor;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &:hover:after{
+        width: 100%;
+    }
+}
+
+
 // Link reset
 a {
     text-decoration: none;
     color: color(text--accent);
+    @extend %hoverUnderline;
 
     &:focus,
     &:visited {

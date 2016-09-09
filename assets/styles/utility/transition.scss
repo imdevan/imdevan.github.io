@@ -1,13 +1,15 @@
 $speed: (
   slow: 3s,
   base: 1s,
-  fast: .25s,
-  faster: .25s,
+  fast: .3s,
+  faster: .15s,
 );
 
 $easing: (
     out: ease-out,
     in-out: ease-in-out,
+    cubic: cubic-bezier(0,1.22,1,1),
+    cubic2: cubic-bezier(0,0,.26,.93),
 );
 
 @function transition($spd, $ease) {
