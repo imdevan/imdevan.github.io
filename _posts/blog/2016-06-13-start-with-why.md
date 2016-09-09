@@ -5,6 +5,7 @@ color: salmon
 author: Devan Huapaya
 category: blog
 style_mod: BASIC
+type: 📘
 ---
 
 A summary of this book:

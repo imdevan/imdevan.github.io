@@ -5,6 +5,7 @@ color: blue
 author: Devan Huapaya
 category: draft
 style_mod: BASIC
+type: 💰
 ---
 
 ## Books Books Books!

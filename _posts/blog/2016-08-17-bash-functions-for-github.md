@@ -5,6 +5,7 @@ color: seafoam
 author: Devan Huapaya
 category: blog
 style_mod: BASIC
+type: 💻
 ---
 
 <script src="https://gist.github.com/imdevan/7d7b460efe2e1482bad255a764bf90ac.js"></script>

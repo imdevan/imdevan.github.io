@@ -5,6 +5,7 @@ color: seafoam
 author: Devan Huapaya
 category: draft
 style_mod: BASIC
+type: 📙
 ---
 
 This book drove me down a spiral of consuming as much literrature as I can about
@@ -49,4 +50,3 @@ The Power of Positive Thinking - book
 - Thinking Rich - Nepolean Hil
 - Pyscho Cybernetics
 - Put yourself in situations where you probably will fail
-    

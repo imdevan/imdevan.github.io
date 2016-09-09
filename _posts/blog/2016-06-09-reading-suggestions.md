@@ -5,6 +5,7 @@ color: purple
 author: Devan Huapaya
 category: blog
 style_mod: BASIC
+type: 📚
 ---
 
 These past couple of months I've ~~read~~ listened to a lot of audio books. Here's a list

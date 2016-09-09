@@ -1,10 +1,11 @@
 ---
 layout: blog-article
-title: Working with Plumbus
+title: Working with Swift
 color: blue
 author: Devan Huapaya
 category: blog
 style_mod: BASIC
+type: 🖥
 ---
 
 So I'm working on a swift app, and so far the experience has been awful.
