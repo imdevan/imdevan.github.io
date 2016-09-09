@@ -3,6 +3,7 @@ layout: blog-article
 title: "Design and Style for Markdown"
 color: salmon
 author: Devan Huapaya
+type: 📝
 category: blog
 style_mod: BASIC
 ---

@@ -17,6 +17,10 @@ $flex-sizes: 1, 2, 3;
     align-items: center;
   }
 
+  &--flag {
+      align-items: center;
+  }
+
   &--space-around {
     justify-content: space-around;
   }

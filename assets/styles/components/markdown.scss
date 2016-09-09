@@ -131,4 +131,10 @@ $markdown-namespace: "markdown" !default;
   .footnotes {
       margin-top: map-get($margin-sizes, lg);
   }
+
+  iframe {
+      display: block;
+      margin: auto;
+      box-shadow: shadow(lg);
+  }
 }

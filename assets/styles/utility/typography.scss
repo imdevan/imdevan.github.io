@@ -50,6 +50,10 @@ $typography-namespace: "text" !default;
         color: color(text-light);
     }
 
+    &--lg {
+        font-size: 2em;
+    }
+
     &--code {
         font-family: 'Roboto Mono', monospace;
     }

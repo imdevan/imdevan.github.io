@@ -3,11 +3,16 @@ $margin-directions: (
   l: left
 );
 $margin-sizes: (
+  0: 0,
   sm: 1em,
   md: 3em,
   lg: 5em,
   auto: auto,
 );
+
+@mixin margin($direction, $value) {
+    margin-#{$direction}: $value;
+}
 
 .#{$margin-namespace} {
   &--auto {
@@ -23,18 +28,16 @@ $margin-sizes: (
   }
 
   &t {
-    &-xs-sm {
-      margin-top: map-get($margin-sizes, sm);
+    @each $size, $val in $margin-sizes {
+        &-#{$size} {
+            @include margin("top", $val)
+        }
     }
 
     &-md-0 {
       @include screen(md) {
         margin-top: 0;
       }
-    }
-
-    &-0 {
-        margin-top: 0;
     }
   }
 
