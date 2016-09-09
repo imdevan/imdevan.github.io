@@ -15,15 +15,16 @@ body {
 @import "utility/sizes";
 @import "utility/color-scheme";
 @import "utility/transition";
+@import "utility/shadow";
 
 // Functional styles
 @import "utility/typography";
+@import "utility/selection";
 @import "utility/flex";
 @import "utility/width";
 @import "utility/height";
 @import "utility/margin";
 @import "utility/padding";
-@import "utility/box-shadow";
 
 // Components
 @import "components/markdown";
