@@ -25,39 +25,39 @@ type: 📺
 - People Places
 - [These Spoopy Films](http://imgur.com/a/PZbGG)
 - Persepolis
-- Dances with Wolves <span class="gray">(1990)</span>
-- One Flew Over the Cuckoo's Nest <span class="gray">(1975)</span>
-- Annie Hall <span class="gray">(1977)</span>
-- The Deer Hunter <span class="gray">(1978)</span>
+- Dances with Wolves <span class="text--gray">(1990)</span>
+- One Flew Over the Cuckoo's Nest <span class="text--gray">(1975)</span>
+- Annie Hall <span class="text--gray">(1977)</span>
+- The Deer Hunter <span class="text--gray">(1978)</span>
 - Heat
 - [Italian Spiderman](https://www.youtube.com/watch?v=Zen_zRmbKaM)
-- St. Vincent <span class="gray">(2014)</span>
+- St. Vincent <span class="text--gray">(2014)</span>
 
 
 
 # Seen
-- <span class="gray">The Big Short</span> - great, educational, spooky
-- <span class="gray">It's kind of a funny story</span> - great rom com about depression
-- <span class="gray">Platoon (1986)</span> - really good war flic
-- <span class="gray">Fantastic Planet</span> - fantastic
-- <span class="gray">Her</span> - was only ok
-- <span class="gray">Chappie</span> - 🔑
-- <span class="gray">Edge of Tomorrow</span> - *terrible*
-- <span class="gray">Star Ship Troopers</span> - *book infinity times better*
-- <span class="gray">John Wick</span> - terrible
-- <span class="gray">Gravity</span> - good!
-- <span class="gray">2010: A Space Odyssey</span> - *book infinity times better*
-- <span class="gray">Interstellar</span> - Awesome!
-- <span class="gray">Somebody Up There Likes Me</span> - I don't really remember it
-- <span class="gray">What We Do In The Shadows</span> - Awesome!
-- <span class="gray">Funny Games</span> - get's under your skin, but that's the point
-- <span class="gray">Halloween Town</span> - Awesome!
-- <span class="gray">Hair</span> - really good
-- <span class="gray">The Perks of Being a Wallflower</span> - Awesome!
-- <span class="gray">El Mariachi</span> - bad ass
-- <span class="gray">Desperado</span> - bad ass
-- <span class="gray">Once Upon A Time In Mexico</span> - badd ass
-- <span class="gray">A Brony Tale</span> - good documentary
-- <span class="gray">Jimmy and Judy</span> - super indie
-- <span class="gray">Chumscruber</span> - deep
-- <span class="gray">American Beauty</span> - deep
+- <span class="text--gray">The Big Short</span> - great, educational, spooky
+- <span class="text--gray">It's kind of a funny story</span> - great rom com about depression
+- <span class="text--gray">Platoon (1986)</span> - really good war flic
+- <span class="text--gray">Fantastic Planet</span> - fantastic
+- <span class="text--gray">Her</span> - was only ok
+- <span class="text--gray">Chappie</span> - 🔑
+- <span class="text--gray">Edge of Tomorrow</span> - *terrible*
+- <span class="text--gray">Star Ship Troopers</span> - *book infinity times better*
+- <span class="text--gray">John Wick</span> - terrible
+- <span class="text--gray">Gravity</span> - good!
+- <span class="text--gray">2010: A Space Odyssey</span> - *book infinity times better*
+- <span class="text--gray">Interstellar</span> - Awesome!
+- <span class="text--gray">Somebody Up There Likes Me</span> - I don't really remember it
+- <span class="text--gray">What We Do In The Shadows</span> - Awesome!
+- <span class="text--gray">Funny Games</span> - get's under your skin, but that's the point
+- <span class="text--gray">Halloween Town</span> - Awesome!
+- <span class="text--gray">Hair</span> - really good
+- <span class="text--gray">The Perks of Being a Wallflower</span> - Awesome!
+- <span class="text--gray">El Mariachi</span> - bad ass
+- <span class="text--gray">Desperado</span> - bad ass
+- <span class="text--gray">Once Upon A Time In Mexico</span> - badd ass
+- <span class="text--gray">A Brony Tale</span> - good documentary
+- <span class="text--gray">Jimmy and Judy</span> - super indie
+- <span class="text--gray">Chumscruber</span> - deep
+- <span class="text--gray">American Beauty</span> - deep
