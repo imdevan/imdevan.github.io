@@ -11,6 +11,8 @@ style_mod: BASIC
 Design and style of this website :)
 {: .br}
 
+**Note:** I've been using `{: .br}` for breaks in section gaps.
+
 ## Headers
 {: .underline }
 
@@ -60,6 +62,11 @@ echo "code"
 {% endhighlight %}
 
 `echo code`
+
+**Note:** `{: .br}` doesn't work immediately following a `endhighlight`
+ so I'm using in instances where a codeblock is the last bit of a section.
+
+Also, apprently you can't put ruby tags inside of inline blocks :/
 {: .br}
 
 ## Checkboxes
