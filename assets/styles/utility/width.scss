@@ -3,7 +3,6 @@ $max-width-namespace: "mw" !default;
 
 .#{$max-width-namespace} {
   &--95-90 {
-    @debug "here";    
     width: 95%;
     max-width: 900px;
   }
