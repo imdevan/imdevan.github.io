@@ -28,23 +28,17 @@ If you are interested in working with me, drop me a line at
 Here are some things that some nice people have said
 {: .highlight .highlight--center}
 
->
-    Devan was fantastic to work with and was able to  
-    help me build exactly what I wanted help with.
+> Devan was fantastic to work with and was able to  
+  help me build exactly what I wanted help with.<br><br>
+  <span>~ Hania, Arbor Family Medical</span>
+{: .br}
 
-Hania, Arbor Family Medical
-{: .mb-md}
+> Devan was super awesome to work with,  
+  he is a great developer and a delight to the team.<br><br>
+  <span>~ <a href="twitter.com/">Matthew Paul, IBM Design</a></span>
+{: .br}
 
->
-    Devan was super awesome to work with,  
-    he is a great developer and a delight to the team.
-
-Matthew Paul, IBM Design
-{: .mb-md}
-
->
-    We were able to build our system in two weeks.  
-    Devan is a fantastic developer who was great to work with.
-
-Jesse Moon, IBM Design
-{: .mb-md}
+> We were able to build our system in two weeks.  
+  Devan is a fantastic developer who was great to work with.<br><br>
+  <span>~ <a href="twitter.com/">Jesse Moon, IBM Design</a></span>
+{: .br}

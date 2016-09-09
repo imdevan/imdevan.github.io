@@ -97,18 +97,22 @@ $markdown-namespace: "markdown" !default;
   }
 
   blockquote {
-    margin: auto;
-    font-size: 1rem;
     border-left: 3px solid color(red);
-    padding-left: .4em;
-    box-shadow: shadow(lg);
-    width: 100%;
-    display: inline-block;
+    border-radius: 0 5px 5px 0;
+    position: relative;
+    font-size: 18px;
+    padding: 30px 60px;
+    color: rgba(0,0,0,0.6);
 
-    @include screen(md) {
-      padding: 1em;
-      width: auto;
-    }
+      &::after {
+        position: absolute;
+        left: 10px;
+        top: 15px;
+        content: '“';
+        font-size: 60px;
+        font-family: "Times New Roman", serif;
+        color: rgba(0,0,0,0.3);
+      }
   }
 
   p {
