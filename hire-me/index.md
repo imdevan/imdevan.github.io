@@ -7,15 +7,19 @@ order: 3
 
 
 ![](http://imdevan.com/img/me.jpg)
-{: .br .text--center}
+{: .pt-5 .text--center}
+
+Hi, I'm Devan!
+{: .br}
 
  I make websites.
- {: .highlight .highlight--center}
+{: .text--center .br}
 
  You can hire me if you need a website,
  an original landing page,
  a logo, dynamic web components, or
  if you want help figuring out your digital artistic direction.
+{: .text--center .text--light .bg--blue .p-2 .br}
 
 If you are interested in working with me, drop me a line at
  [huapayadevan@gmail.com](mailto:huapayadevan@gmail.com)
@@ -25,9 +29,6 @@ If you are interested in working with me, drop me a line at
 {: .br}
 
 
-Here are some things that some nice people have said
-{: .highlight .highlight--center}
-
 > Devan was fantastic to work with and was able to  
   help me build exactly what I wanted help with.<br><br>
   <span>~ Hania, Arbor Family Medical</span>
@@ -36,9 +37,9 @@ Here are some things that some nice people have said
 > Devan was super awesome to work with,  
   he is a great developer and a delight to the team.<br><br>
   <span>~ <a href="twitter.com/">Matthew Paul, IBM Design</a></span>
-{: .br}
+{: .br .blockquote--right}
 
 > We were able to build our system in two weeks.  
   Devan is a fantastic developer who was great to work with.<br><br>
-  <span>~ <a href="twitter.com/">Jesse Moon, IBM Design</a></span>
+  <span>~ <a href="twitter.com/">Quinn Manly, IBM Design</a></span>
 {: .br}

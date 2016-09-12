@@ -74,45 +74,10 @@ $markdown-namespace: "markdown" !default;
   }
 
   blockquote {
-    border-left: 3px solid color(red);
-    padding-left: .4em;
-    padding-right: .4em;
-    fon-size: 1.5em;
-    box-shadow: shadow(lg);
-
-    code {
-        font-family: $body-font;
-    }
-
-    @include screen(md) {
-        padding-left: 1em;
-        padding-right: 1em;
-        display: inline-block;
-    }
-
-    &.center {
-        display: table;
-        margin: auto;
-    }
+    @extend .blockquote
   }
 
   blockquote {
-    border-left: 3px solid color(red);
-    border-radius: 0 5px 5px 0;
-    position: relative;
-    font-size: 18px;
-    padding: 30px 60px;
-    color: rgba(0,0,0,0.6);
-
-      &::after {
-        position: absolute;
-        left: 10px;
-        top: 15px;
-        content: '“';
-        font-size: 60px;
-        font-family: "Times New Roman", serif;
-        color: rgba(0,0,0,0.3);
-      }
   }
 
   p {

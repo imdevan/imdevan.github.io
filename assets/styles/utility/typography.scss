@@ -46,8 +46,8 @@ $typography-namespace: "text" !default;
         text-align: center;
     }
 
-    &--light {
-        color: color(text-light);
+    &--right {
+        text-align: right;
     }
 
     &--lg {
@@ -67,6 +67,10 @@ $typography-namespace: "text" !default;
         &:hover {
             color: color(text-light);
         }
+    }
+
+    &--light {
+        color: color(text-light);
     }
 
     &-hover--dark {
