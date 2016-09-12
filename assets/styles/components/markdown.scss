@@ -26,8 +26,6 @@ $markdown-namespace: "markdown" !default;
     margin: auto;
     max-width: 100%;
     box-shadow: shadow(lg);
-    margin-top: map-get($margin-sizes, sm);
-    margin-bottom: map-get($margin-sizes, lg);
     margin-left: map-get($margin-sizes, auto);
     margin-right: map-get($margin-sizes, auto);
 
@@ -45,12 +43,26 @@ $markdown-namespace: "markdown" !default;
     border: none;
     background: color(background-button);
     color: color(text-button);
-    transition: transform transition(fast, out);
+    transition: all transition(fastest, cubic);
     font-size: 1.2em;
-    transform: scale(1);
+    cursor: pointer;
+    width: 100%;
+
+    @include screen(md) {
+        width: auto;
+    }
+    // Defaults
+    transform: translateY(0);
+    box-shadow: shadow(sm);
 
     &:hover {
-      transform: scale(1.15);
+      transform: translateY(-1.5px);
+      box-shadow: shadow(md);
+    }
+
+    &:active {
+    transform: translateY(0);
+    box-shadow: shadow(sm);
     }
   }
 
@@ -65,7 +77,6 @@ $markdown-namespace: "markdown" !default;
       margin: 0;
       border-left: 3px solid color(red);
       padding-left: .4em;
-      margin-top: map-get($margin-sizes, md);
       margin-bottom: map-get($margin-sizes, md);
       box-shadow: shadow(lg);
 

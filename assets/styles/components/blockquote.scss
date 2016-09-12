@@ -2,6 +2,7 @@ $blockquote-border: 3px solid color(text-accent);
 
 .blockquote {
     margin: 0;
+    margin-top: map-get($margin-sizes, sm);
     position: relative;
     box-shadow: shadow(lg);
     color: rgba(0,0,0,0.6);

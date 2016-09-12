@@ -23,7 +23,7 @@ $color-scheme: (
     background-neutral:map-get($colors, light-gray),
     background-dark: map-get($colors, dark-gray),
     background-light: map-get($colors, white),
-    background-button: map-get($colors, blue),
+    background-button: map-get($colors, red),
     background-button-hover: map-get($colors, black),
 );
 
