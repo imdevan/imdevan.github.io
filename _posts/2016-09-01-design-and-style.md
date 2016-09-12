@@ -117,7 +117,7 @@ echo "code"
 
 `echo code`
 
-**Note:** `{: .br}` doesn't work immediately following a `endhighlight`
+**Note:** `{: .br}` doesn't work immediately following an `endhighlight`
  so I'm using in instances where a codeblock is the last bit of a section.
 
 Also, apprently you can't put ruby tags inside of inline blocks :/
