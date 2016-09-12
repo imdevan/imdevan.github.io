@@ -4,7 +4,12 @@ name: "SpeedDial"
 description: A menu bar app to help you work with your mac, faster.
 baseurl: "/terminalogy"
 url: https://speeddial.xyz
-gems: ['jekyll-sitemap', 'jekyll-paginate', 'kramdown', 'rouge']
+gems:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - kramdown
+  - rouge
+  - jekyll-time-to-read
 
 
 # Markdown settings
