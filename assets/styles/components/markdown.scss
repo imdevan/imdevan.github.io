@@ -65,6 +65,7 @@ $markdown-namespace: "markdown" !default;
       margin: 0;
       border-left: 3px solid color(red);
       padding-left: .4em;
+      margin-top: map-get($margin-sizes, md);
       margin-bottom: map-get($margin-sizes, md);
       box-shadow: shadow(lg);
 
@@ -75,9 +76,6 @@ $markdown-namespace: "markdown" !default;
 
   blockquote {
     @extend .blockquote
-  }
-
-  blockquote {
   }
 
   p {

@@ -8,10 +8,60 @@ category: blog
 style_mod: BASIC
 ---
 
-Design and style of this website :)
+For my personal site, the one you're on currently. I thought it would be a good
+idea to start with a basic style sheet for this website because I really wanted
+it to have a strong blogging component, and if I can get down the styling for my
+typography, as well as basic page layouts[^1] than I could derive a feel for how I would
+want to style the rest of my project.
+
+[^1]: Layouts in this case refer to a format for managing images floating, having text next to images
+in more than one fashion, and aligning text.  
+
+My master plan didn't pan out quite as well as I would have liked, but I did notice that
+creating this Style/Bare-bones-css[^2] guide, I learned some useful things for creating
+blog posts that leveraged components of the functional css I'm using on the rest of my project.
+
+[^2]: Styling just the tags (e.g h1, p, img)
+
+What you see following is an existing and always updating reference for how I'm styling
+(at a minimum the typography, buttons, images, quotes, and code) the experience that is
+this website.
 {: .br}
 
-**Note:** I've been using `{: .br}` for breaks in section gaps.
+## Some things I learned
+With [Jekyll](http://lmgtfy.com/?q=Jekyll)  using the [kramdown](http://lmgtfy.com/?q=kramdown) the way that you can add classes ontop of the default tags that markdown generates you can use the format
+
+{% highlight ruby %}
+Spooky ghost!
+{: .text--center .text--blue .text--lg}
+{% endhighlight %}
+
+👇
+{: .text--center .text--lg }
+
+👇
+{: .text--center .text--lg }
+
+👇
+{: .text--center .text--lg }
+
+Spooky ghost!
+{: .text--center .text--purple .text--lg .br}
+
+**Note:** I am using `{: .br}` for breaks in section gaps.
+{: .br}
+
+I learned that foot notes are really easy to make using `[^<num>]` and can look pretty cool
+
+{% highlight ruby %}
+...layouts[^1].
+<!-- Leave a blank line or double space after first line -->
+[^1]: Layouts in this case refer to
+{% endhighlight %}
+
+I don't know if I have perfect use for it just yet, but it's a nice util to know.
+[#UTT](https://twitter.com/hashtag/utt)
+{: .br}
 
 ## Headers
 {: .underline }
@@ -102,9 +152,10 @@ John Ive
 {: .underline }
 
 This is a text with a
-footnote[^1].
+footnote[^3].
+
+[^3]: And here is the definition.
 {: .br}
-[^1]: And here is the definition.
 
 ## List with links
 {: .underline }
