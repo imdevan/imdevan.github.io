@@ -42,8 +42,10 @@ $margin-sizes: (
   }
 
   &b {
-    &-md {
-      margin-bottom: map-get($margin-sizes, md);
+    @each $size, $val in $margin-sizes {
+        &-#{$size} {
+            @include margin("top", $val)
+        }
     }
   }
 }
