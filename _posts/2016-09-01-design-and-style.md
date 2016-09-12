@@ -32,6 +32,7 @@ look and feel, and how to do anything in markdown.
 
 ## Some things I learned
 With [Jekyll](http://lmgtfy.com/?q=Jekyll)  using the [kramdown](http://lmgtfy.com/?q=kramdown) the way that you can add classes ontop of the default tags that markdown generates you can use the format
+`{: .class-0 .class-1 .class-2}`. You can't use html tags though, so <s>{: p}</s> is no good. 🙅
 
 {% highlight ruby %}
 Spooky ghost!
