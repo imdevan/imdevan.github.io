@@ -5,9 +5,9 @@ navitems:
   - label: Blog
     link: blog
     color: green
-  - label: Portfolio
-    link: portfolio
-    color: red
   - label: Hire Me
-    link: hire-me
-    color: salmon
+    link: about
+    color: red
+  - label: About Me
+    link: about
+    color: red

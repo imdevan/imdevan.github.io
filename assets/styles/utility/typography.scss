@@ -73,6 +73,10 @@ $typography-namespace: "text" !default;
         color: color(text-light);
     }
 
+    &--accent {
+        color: color(text-accent);
+    }
+
     &-hover--dark {
         &:hover {
             color: color(text-dark);

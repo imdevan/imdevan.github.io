@@ -40,7 +40,7 @@ helper.uploadStream = (opts, done) => {
             Key: opts.Key
         }
     });
-
+dd
     s3obj.upload({Body: opts.Body}).send(done);
 };
 {% endhighlight %}
