@@ -6,8 +6,8 @@ navitems:
     link: blog
     color: green
   - label: Hire Me
-    link: about
-    color: red
+    link: hire-me
+    color: purple
   - label: About Me
     link: about
     color: red

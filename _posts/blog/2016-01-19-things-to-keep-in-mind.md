@@ -7,6 +7,8 @@ category: blog
 style_mod: BASIC
 ---
 
+# Remember,
+
 * Always have a water bottle in your car
 * Make a budget for yourself
 * But don't forget to give yourself some play money
@@ -41,4 +43,3 @@ style_mod: BASIC
 * Begin all tasks with estimation. End all tasks with reflection.
 * Be cheap with time not money
 * When you look up and see someone else looking back say Hi!
-

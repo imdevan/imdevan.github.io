@@ -3,7 +3,7 @@ layout: blog-article
 title: "My Everything Workflow"
 color: blue
 author: Devan Huapaya
-category: blog
+category: draft
 style_mod: BASIC
 ---
 
