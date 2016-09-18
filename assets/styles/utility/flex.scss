@@ -25,6 +25,10 @@ $flex-sizes: 1, 2, 3;
     justify-content: space-around;
   }
 
+  &--space-between {
+    justify-content: space-between;
+  }
+
   &__box {
     @each $size in $flex-sizes {
       &-#{$size} {
