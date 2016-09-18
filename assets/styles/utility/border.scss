@@ -1,0 +1,17 @@
+$border-namespace: "b" !default;
+$border-radius-namespace: "r" !default;
+$border-radius-sizes: (
+    round: 50%,
+    5: 5px,
+    10: 10px,
+);
+
+.#{$border-namespace} {
+    &#{$border-radius-namespace} {
+        @each $border-radius, $border-radius-val in $border-radius-sizes {
+            &--#{$border-radius} {
+                border-radius: $border-radius-val
+            }
+        }
+    }
+}

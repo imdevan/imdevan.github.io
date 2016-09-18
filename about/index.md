@@ -1,9 +1,14 @@
 ---
 layout: markdown
-title: 🌟 Some more deets about myself 🌟
+title: About Me
 color: red
 slug: about-me
 ---
+
+![me](/assets/images/me.jpg){: .br--5}
+{: .text--center}
+Devan Huapaya • Ren Fest 2015
+{: .text--center .text--gray .text--code .br}
 
 ## Basically
 I like cats, I want to be your friend and work on cool stuff together.

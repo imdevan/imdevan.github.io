@@ -1,31 +1,29 @@
-        <!-- Footer -->
-		<footer class="bg--dark text--light" role="contentinfo">
+    <!-- Footer -->
+	<footer class="bg--dark text--light" role="contentinfo">
 
-			<!-- Featured content -->
-			<div class="flex flex--row-md mw--95-90 m--auto pt-5">
-				{% for feature in site.data.footer.features %}
-					<a href="{{feature.link}}" class="flex__box-1 flex__box--gutter p-1 text--light  trans-all--fast-in-out">
-					        <h3>{{ feature.title }}</h3>
-					        {{ feature.caption }}
-                    </a>
-				{% endfor %}
-			</div>
+		<!-- Featured content -->
+		<div class="flex flex--md-row mw--95-90 m--auto pt-5">
+			{% for feature in site.data.footer.features %}
+				<a href="{{feature.link}}" class="flex__box-1 flex__box--gutter p-1 text--light  trans-all--fast-in-out">
+				        <h3>{{ feature.title }}</h3>
+				        {{ feature.caption }}
+                </a>
+			{% endfor %}
+		</div>
 
-			<!-- Email form -->
-			<div class="mw--95-90 m--auto pt-5 text--center">
-				<a class="text--light" href="mailto:huapayadevan@gmail.com">huapayadevan@gmail.com</a>
-			</div>
+		<!-- Email form -->
+		<div class="mw--95-90 m--auto pt-5 text--center">
+			<a class="text--light" href="mailto:huapayadevan@gmail.com">huapayadevan@gmail.com</a>
+		</div>
 
-			<!-- Salutation -->
-			<div class="mw--95-90 m--auto py-5">
-				Thanks for visiting my site, <br>
-				<a target="_blank" class="text--light" href="http://twitter.com/devanipsum">
-					Devan
-				</a>
-			</div>
-		</footer>
-
-    <script src="./assets/js/index.js" type="text/javascript"></script>
+		<!-- Salutation -->
+		<div class="mw--95-90 m--auto py-5">
+			Thanks for visiting my site, <br>
+			<a target="_blank" class="text--light" href="http://twitter.com/devanipsum">
+				Devan
+			</a>
+		</div>
+	</footer>
 </body>
 
 </html>

@@ -5,10 +5,22 @@ slug: blog
 color: seafoam
 ---
 
-<ul>
+<div class="mb-md text--gray mw--95-60">
+    <p>
+        A blog that is mostly about things I want to remember, books I thought
+        were interesting, lossly catorgorized by emoji.
+    </p>
+</div>
+
+<ul class="p--reset">
 {% for post in site.categories.blog %}
-  <li class="mw--95-90 m--auto">
-    <h3 class="">
+{% if site.categories.blog.first.url == post.url %}
+    <li class="mt-0">
+      <h3 class="mt-0">
+{% else %}
+    <li>
+      <h3>
+{% endif %}
         <a {% if post.redirect %}target="_blank"{% endif %}
             href="{% if post.redirect %}{{post.redirect}}
                 {% else %}{{ post.url | prepend:site.baseurl }}{% endif %}"

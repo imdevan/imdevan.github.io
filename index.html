@@ -2,13 +2,15 @@
 layout: default
 nav-item: true
 title: Hi, I'm Devan
+color: blue
 subtitle: |
     I'm a front end developer in Austin TX.
     This is my 🍕 of the internet.
 ---
+
 <header class="text--center py-15">
-  <h1 class="text--code text--center">{{page.title}}</h1>
-  <nav class="nav flex flex--space-around py-3 mw--95-90 m--auto">
+  <h1 class="text--code text--center mt-0">{{page.title}}</h1>
+  <nav class="nav flex flex--space-around pt-2 pb-3 mw--95-90 m--auto">
     {% for navitem in site.data.nav.navitems  %}
       <a href="{{navitem.link}}" class="flex flex--center text--{{navitem.color}}">
         {{navitem.label}}

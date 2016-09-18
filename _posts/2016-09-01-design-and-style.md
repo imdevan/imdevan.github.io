@@ -1,6 +1,6 @@
 ---
 layout: blog-article
-title: "Design and Style for Markdown"
+title: "Design and Style"
 color: salmon
 author: Devan Huapaya
 type: 📝
@@ -8,14 +8,16 @@ category: blog
 style_mod: BASIC
 ---
 
-For my personal site, <span class="text--gray">the one you're on currently</span>. I thought it would be a good
-idea to start with a basic style sheet for this website because I really wanted
-it to have a strong blogging component, and if I can get down the styling for my
-typography, as well as basic page layouts[^1] than I could derive a feel for how I would
-want to style the rest of my project.
+This page is one part retrospective, one part living documentation.
+{: .text--gray}
 
-[^1]: |
-    Layouts in this case refer to a format for managing images floating,
+For my personal site, I thought it would be a good
+idea to start with a basic style sheet because I really wanted
+it to have a strong blogging component. I thought that if I could get down the
+styling for the typography, as well as basic page layouts[^1], as they would live in blog articles, than I could derive a feel for non-article pages.
+
+[^1]:
+    Layouts in this context refer to a format for managing images,
     having text next to images in more than one fashion, and aligning text.  
 
 My master plan didn't pan out quite as well as I would have liked, but I did notice that
@@ -31,8 +33,16 @@ look and feel, and how to do anything in markdown.
 {: .br}
 
 ## Some things I learned
-With [Jekyll](http://lmgtfy.com/?q=Jekyll)  using the [kramdown](http://lmgtfy.com/?q=kramdown) the way that you can add classes ontop of the default tags that markdown generates you can use the format
-`{: .class-0 .class-1 .class-2}`. You can't use html tags though, so <s>{: p}</s> is no good. 🙅
+
+### More classes
+With [Jekyll](http://lmgtfy.com/?q=Jekyll) using
+[kramdown](http://lmgtfy.com/?q=kramdown) the way that you can add classes in
+addition default tags that markdown generates by using the format
+`{: .class-0 .class-1 .class-2}`.
+
+You can also add classes and tags using the traditional html such as
+`<strong class="text--purple">but</strong>`,
+<strong class="text--purple">but</strong> you can't add html classes like `{: strong}` to things.
 
 {% highlight ruby %}
 Spooky ghost!
@@ -55,7 +65,12 @@ Spooky ghost!
 And `{: .text--center}` for any centered text or images.
 {: .br}
 
-I learned that foot notes are really easy to make using `[^<num>]` and can look pretty cool
+### Foot notes!?
+
+I learned that foot notes[^3] are really easy to make using `[^<num>]` and can look
+pretty cool. Althought, I have yet to determine if they are useful.
+
+[^3]: So far they seem useful, but also a chore to keep organized
 
 {% highlight ruby %}
 ...layouts[^1].
@@ -159,10 +174,10 @@ Money cat
 {: .underline }
 
 This is a text with a
-footnote[^3].
-
-[^3]: And here is the definition.
+footnote[^4].
 {: .br}
+
+[^4]: And here is the definition.
 
 ## List with links
 {: .underline }

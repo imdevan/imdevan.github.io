@@ -1,4 +1,4 @@
-$sizes: (
+$scren-sizes: (
   xs: 0px,
   sm: 200px,
   md: 500px,
@@ -8,7 +8,7 @@ $sizes: (
 );
 
 @function size($size) {
-  @return map-get($sizes, $size);
+  @return map-get($scren-sizes, $size);
 }
 
 @mixin screen($size) {

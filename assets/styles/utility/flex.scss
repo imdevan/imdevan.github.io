@@ -4,11 +4,19 @@ $flex-sizes: 1, 2, 3;
 .#{$flex-namespace} {
   display: flex;
 
-  &--row-md {
+  &--md-row {
     flex-direction: column;
 
     @include screen(md) {
       flex-direction: row;
+    }
+
+    &-rev {
+      flex-direction: column;
+
+      @include screen(md) {
+        flex-direction: row-reverse; 
+      }
     }
   }
 
@@ -33,6 +41,11 @@ $flex-sizes: 1, 2, 3;
     @each $size in $flex-sizes {
       &-#{$size} {
         flex: $size;
+      }
+      &-md-#{$size} {
+        @include screen(md) {
+          flex: $size;
+        }
       }
     }
 

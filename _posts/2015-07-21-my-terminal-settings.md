@@ -1,0 +1,78 @@
+---
+layout: blog-article  
+title: "My Terminal Settings"
+color: blue
+author: Devan Huapaya
+category: blog
+type: 💻
+style_mod: BASIC
+---
+A developer's terminal is a powerful tool. It is used for downloading modules, compiling code, running test scripts, and is ridiculously more efficient than a graphic user interface when used correctly.
+
+All operating systems come with some form of terminal installed, but you can download other terminals. For instance, I use iTerm 2 as my terminal because I like the amount of fine grained customization that it allows for. This is mostly a style thing (for me).
+
+All terminals have a shell (the thing that runs the commands and stuff - official definition). Most terminals come with a shell called Bash installed. On my terminal I have installed a special flavor of Zsh called "Oh My Zsh!"
+
+"Oh My Zsh!" Does a bunch of really awesome things. But the best thing about zsh is that it allows for writing alias, shortcut commands that can be set to any other command that you want to. Other do this as well, but I found the way that zsh does it to be really easy. 	
+
+Without further ado,
+{: .br}
+
+## Downloads
+Here are the links for the terminal stuff I have set up on my comp  
+- [iTerm 2 downloaded from here](https://www.iterm2.com)  
+- [Zsh downloaded from here](http://ohmyz.sh)  
+- [Documentation](https://github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet)  
+{: .br}
+
+
+## Colors  
+
+Here are the colors for the terminal stuff I have set up on my comp
+{: .mb-sm}
+
+![](http://i.imgur.com/cDaaWzt.png){: .img}
+
+## Aliases  
+Here are the sweet sweet alias for the terminal stuff I have set up on my comp.
+
+In order to access the files to put these bad boys you can open in the text editor of your choice a file that is located at <code>~/.zshrc</code> by default.
+
+
+{% highlight bash %}
+alias fb="open https://www.facebook.com"
+alias og="open http://github.com/imdevan"
+alias ogp="open http://github.com/imdevan/imdevan.github.io"
+alias off="sudo shutdown -h now"
+alias ig="cd ~/Documents/All\ Things\ Code/imdevan.github.io/ && gulp"
+
+# A, B, C, D...
+alias a="git add -A"
+alias c="clear"
+alias d="cd ~/Downloads"
+alias e="open http://inbox.google.com"
+alias g="gulp"
+alias i="cd ~/Documents/All\ Things\ Code/imdevan.github.io/ "
+alias j="jekyll serve --watch"
+alias m="touch"
+alias n="npm start"
+alias o="open"
+alias p="cd ~/Documents/All\ Things\ Code/Project\ Whitewater/paddle"
+alias r="cd ~/Documents/All\ Things\ Code/Side\ Stuff/IBM\ Community\ Radio"
+alias t="gulp test"
+alias z="subl ~/.zshrc"
+
+# git commands
+alias ga="git add -A"
+alias gc="git commit -m"
+# gp already = "git push"
+alias gl="git log -1"
+
+alias starwars="telnet towel.blinkenlights.nl"
+{% endhighlight %}{: .br}
+
+
+## Zsh Plugins  
+{% highlight bash %}
+plugins=(git dirhistory sublime web-search copydir copyfile cp dirpresist nvm brew themes)
+{% endhighlight %}

@@ -1,0 +1,40 @@
+$background-namespace: "bg" !default;
+
+.#{$background-namespace} {
+    &--dark {
+        background: color(background-dark);
+    }
+
+    &--neutral {
+        background: color(background-neutral);
+    }
+
+    // TODO: implement this in js on header nav
+    &--hover-rainbow {
+        @keyframes rainbow {
+            0% {background: map-get($rainbow, red);}
+            16.67% {background: map-get($rainbow, blue);}
+            33.33% {background: map-get($rainbow, salmon);}
+            50% {background: map-get($rainbow, green);}
+            66.67% {background: map-get($rainbow, purple);}
+            83.33% {background: map-get($rainbow, seafoam);}
+            100% {background: map-get($rainbow, red);}
+       }
+
+        &:hover {
+            animation: rainbow 2s infinite; /* IE 10+, Fx 29+ */
+        }
+    }
+
+    @each $color, $value in $colors {
+        &--#{$color} {
+            background: $value;
+        }
+
+        &-hover--#{$color} {
+            &:hover {
+                background: $value;
+            }
+        }
+    }
+}

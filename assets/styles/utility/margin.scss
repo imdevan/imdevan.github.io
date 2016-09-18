@@ -5,8 +5,9 @@ $margin-directions: (
 $margin-sizes: (
   0: 0,
   sm: 1em,
-  md: 3em,
-  lg: 5em,
+  md: 2em,
+  lg: 3em,
+  xl: 5em,
   auto: auto,
 );
 
@@ -44,7 +45,7 @@ $margin-sizes: (
   &b {
     @each $size, $val in $margin-sizes {
         &-#{$size} {
-            @include margin("top", $val)
+            @include margin("bottom", $val)
         }
     }
   }
