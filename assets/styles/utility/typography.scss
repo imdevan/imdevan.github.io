@@ -30,13 +30,18 @@ body {
 // Link reset
 a {
     text-decoration: none;
-    color: color(text--accent);
+    // color: color(text-accent);
+    color: currentColor;
     @extend %hoverUnderline;
 
     &:focus,
     &:visited {
         color: color(text--accent);
     }
+}
+
+h1, h3 {
+    font-weight: normal;
 }
 
 $typography-namespace: "text" !default;
@@ -83,9 +88,14 @@ $typography-namespace: "text" !default;
         }
     }
 
+    &--shadow {
+        text-shadow: shadow(sm);
+    }
+
     @each $color, $color-val in $colors  {
         &--#{$color} {
-            color: $color-val;
+            // Important added to override .markdown a style
+            color: $color-val !important;
 
             &:visited,
             &:active,

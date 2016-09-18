@@ -1,16 +1,9 @@
 ---
 layout: markdown
 title: 🌟 Some more deets about myself 🌟
-color: blue
-order: 3
+color: red
+slug: about-me
 ---
-
-
-# {{page.title}}
-{: .text--center .text--blue .pb-5}
-
-![me](/assets/images/me.jpg)
-{: .text--center .pb-5}
 
 ## Basically
 I like cats, I want to be your friend and work on cool stuff together.

@@ -1,16 +1,10 @@
 ---
 layout: markdown
 title: Hire Me
+slug: hire-me
+color: purple
 nav-item: true
-order: 3
 ---
-
-
-![](http://imdevan.com/img/me.jpg)
-{: .pt-5 .text--center}
-
-Picture of me taking a picture at a hackathon
-{: .text--gray .text--center .br}
 
 <span class="text--accent">Hi, I'm Devan!</span> A digital product engineer based in Austin, TX.
 

@@ -1,9 +1,10 @@
 # Site Config
 
-name: "SpeedDial"
+name: "imdevan"
 description: A menu bar app to help you work with your mac, faster.
-baseurl: "/terminalogy"
-url: https://speeddial.xyz
+baseurl: "/"
+url: https://imdevan.com
+slug: imdevan
 gems:
   - jekyll-sitemap
   - jekyll-paginate

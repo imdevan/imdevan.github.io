@@ -11,6 +11,13 @@ $box-shadow-namespace: "shadow" !default;
     &-#{$size} {
       box-shadow: $shadow;
     }
+
+
+    &--hover-#{$size} {
+      &:hover {
+          box-shadow: $shadow;
+      }
+    }
   }
 }
 

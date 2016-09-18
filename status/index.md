@@ -2,7 +2,6 @@
 layout: default
 title: About
 nav-item: true
-order: 3
 ---
 
 # Status
@@ -23,4 +22,4 @@ Status update for rebuild of imdevan.github.io
     - [ ] Fix li styling
     - [ ] Fix primary & secondary links and buttons
     - [ ] Add light links and buttons for dark backgrounds
-    - [ ] Lighten the footer to dark-gray 
+    - [ ] Lighten the footer to dark-gray
