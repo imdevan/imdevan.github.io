@@ -30,7 +30,7 @@ What you see following is an existing and always updating reference for how I'm 
 (at a minimum the typography, buttons, images, quotes, and code) the experience that is
 this website. So far I think it's been useful for being documentation on how the site should
 look and feel, and how to do anything in markdown.
-{: .br}
+{: .s}
 
 ## Some things I learned
 
@@ -43,7 +43,7 @@ addition default tags that markdown generates by using the format
 You can also add classes and tags using the traditional HTML such as
 `<strong class="text--purple">but</strong>`,
 <strong class="text--purple">but</strong> you can't add HTML tags using this syntax though, so things like `{: strong}` won't work.
-{: .br}
+{: .s}
 
 Here is an example of using this Kramdown feature.
 {% highlight ruby %}
@@ -63,9 +63,9 @@ Spooky ghost!
 Spooky ghost!
 {: .text--center .text--purple .text--lg}
 
-**Note:** I am using `{: .br}` for breaks in section gaps throughout this page.
+**Note:** I am using `{: .s}` for breaks in section gaps throughout this page.
 And `{: .text--center}` for any centered text or images.
-{: .br}
+{: .s}
 
 ### Footnotes!?
 
@@ -82,7 +82,7 @@ pretty cool. Although, I have yet to determine if they are useful.
 
 I don't know if I have perfect use for it just yet, but it's a nice util to know.
 [#UTT](https://twitter.com/hashtag/utt)
-{: .br}
+{: .s}
 
 ### Vertical alignment
 
@@ -124,14 +124,15 @@ The following is a living style guide for this blog.
 
 ###### H6
 
+
 paragraph
-{: .br}
+{: .s}
 
 ## Links
 {: .underline }
 
 [link](http://google.com)
-{: .br}
+{: .s}
 
 ## Lists
 {: .underline }
@@ -147,7 +148,7 @@ paragraph
 1. list
 2. list
 3. list
-{: .br}
+{: .s}
 
 
 ## Code
@@ -159,18 +160,18 @@ echo "code"
 
 `echo code`
 
-**Note:** `{: .br}` doesn't work immediately following an `endhighlight`
+**Note:** `{: .s}` doesn't work immediately following an `endhighlight`
  so I've had to make an exception to add
 
 Also, apprently you can't put ruby tags inside of inline blocks :/
-{: .br}
+{: .s}
 
 ## Checkboxes
 {: .underline }
 
 <input type="checkbox">  checkbox  
 <input type="checkbox" checked> checkedbox
-{: .br}
+{: .s}
 
 
 ## Quotes
@@ -180,7 +181,7 @@ Also, apprently you can't put ruby tags inside of inline blocks :/
 {: .center }
 
 John Ive
-{: .br .text--highlight .text--center}
+{: .s .text--highlight .text--center}
 
 ## Images
 {: .underline }
@@ -189,20 +190,20 @@ John Ive
 {: .text--center}
 
 Money cat
-{: .text--center .text--gray .br}
+{: .text--center .text--gray .s}
 
 ## Buttons
 {: .underline }
 
 <button>call to action</button>
-{: .text--center .br}
+{: .text--center .s}
 
 ## Footnotes
 {: .underline }
 
 This is a text with a
 footnote[^4].
-{: .br}
+{: .s}
 
 [^4]: And here is the definition.
 

@@ -42,7 +42,7 @@ If you are interested in working with me, drop me a line at
 > Devan was fantastic to work with and was able to  
   help me build exactly what I wanted help with.<br><br>
   <span>~ Hania, Arbor Family Medical</span>
-{: .br}
+{: .pb}
 
 > Devan was super awesome to work with,  
   he is a great developer and a delight to the team.<br><br>
@@ -52,4 +52,4 @@ If you are interested in working with me, drop me a line at
 > We were able to build our system in two weeks.  
   Devan is a fantastic developer who was great to work with.<br><br>
   <span>~ <a href="twitter.com/">Quinn Manly, IBM Design</a></span>
-{: .br}
+{: .pb}

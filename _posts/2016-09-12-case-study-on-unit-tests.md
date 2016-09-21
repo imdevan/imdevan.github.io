@@ -72,7 +72,7 @@ successful run, and it will return an error otherwise.
 
 From the above code we derive that there are 3 possible cases that needed to be
 tested.
-{: .br}
+{: .s}
 
 ## Test cases
 
@@ -109,7 +109,7 @@ it("can catch missing body param", done => {
     });
 });
 {% endhighlight %}
-{: .mt-lg}
+{: .st}
 
 ### 2. Down Stream Errors
 
@@ -145,7 +145,7 @@ it("can handle an error thrown by aws", done => {
     });
 });
 {% endhighlight %}
-{: .mt-lg}
+{: .st}
 
 ### 3. Everything Works! 😀
 {% highlight js %}
@@ -176,10 +176,10 @@ it("can successfully upload stream", done => {
     });
 });
 {% endhighlight %}
-{: .mt-lg}
+{: .st}
 
 
-## In conclusion
+## In Conclusion
 
 That's the minimal thought process that should probably go into creating unit
 tests for node.

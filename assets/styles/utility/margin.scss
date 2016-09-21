@@ -4,10 +4,10 @@ $margin-directions: (
 );
 $margin-sizes: (
   0: 0,
-  sm: 1em,
-  md: 2em,
-  lg: 3em,
-  xl: 5em,
+  sm: rem(1),
+  md: rem(2),
+  lg: rem(3),
+  xl: rem(5),
   auto: auto,
 );
 

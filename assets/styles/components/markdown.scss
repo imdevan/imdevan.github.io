@@ -69,8 +69,12 @@ $markdown-namespace: "markdown" !default;
     }
   }
 
-  .br {
-    margin-bottom: map-get($margin-sizes, lg);
+  .s {
+    padding-bottom: map-get($margin-sizes, lg);
+
+    &t {
+        padding-top: map-get($margin-sizes, lg);
+    }
   }
 
   figure {

@@ -16,14 +16,14 @@ All terminals have a shell (the thing that runs the commands and stuff - officia
 "Oh My Zsh!" Does a bunch of really awesome things. But the best thing about zsh is that it allows for writing alias, shortcut commands that can be set to any other command that you want to. Other do this as well, but I found the way that zsh does it to be really easy. 	
 
 Without further ado,
-{: .br}
+{: .pb}
 
 ## Downloads
 Here are the links for the terminal stuff I have set up on my comp  
 - [iTerm 2 downloaded from here](https://www.iterm2.com)  
 - [Zsh downloaded from here](http://ohmyz.sh)  
 - [Documentation](https://github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet)  
-{: .br}
+{: .pb}
 
 
 ## Colors  
@@ -32,7 +32,7 @@ Here are the colors for the terminal stuff I have set up on my comp
 {: .mb-sm}
 
 ![](http://i.imgur.com/cDaaWzt.png)
-{: .text--center}
+{: .pb}
 
 ## Aliases  
 Here are the sweet sweet alias for the terminal stuff I have set up on my comp.
@@ -70,9 +70,9 @@ alias gc="git commit -m"
 alias gl="git log -1"
 
 alias starwars="telnet towel.blinkenlights.nl"
-{% endhighlight %}{: .br}
+{% endhighlight %}
 
-
+{: .st}
 ## Zsh Plugins  
 {% highlight bash %}
 plugins=(git dirhistory sublime web-search copydir copyfile cp dirpresist nvm brew themes)
