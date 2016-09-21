@@ -18,6 +18,10 @@ $box-shadow-namespace: "shadow" !default;
           box-shadow: $shadow;
       }
     }
+
+    &--inverted-#{$size} {
+      box-shadow: inset $shadow;
+    }
   }
 }
 

@@ -1,23 +1,15 @@
 ---
-layout: default
+layout: home-page
 nav-item: true
 title: Hi, I'm Devan
 color: blue
-subtitle: |
-    I'm a front end developer in Austin TX.
-    This is my 🍕 of the internet.
 ---
 
-<header class="text--center py-15">
+<header class="text--center text--rainbow text--shadow h--600-90 flex flex--center flex--column">
   <h1 class="text--code text--center mt-0">{{page.title}}</h1>
-  <nav class="nav flex flex--space-around pt-2 pb-3 mw--95-90 m--auto">
-    {% for navitem in site.data.nav.navitems  %}
-      <a href="{{navitem.link}}" class="flex flex--center text--{{navitem.color}}">
-        {{navitem.label}}
-      </a>
-    {% endfor %}
-  </nav>
-  <p class="highlight highlight--center">
-    {{page.subtitle}}
+
+  <p class="flex flex--center">
+      I'm a front end developer in Austin TX.
+      This is my <span class="text--lg">&nbsp;🍕&nbsp;</span> of the internet.
   </p>
 </header>

@@ -12,14 +12,11 @@ Status update for rebuild of imdevan.github.io
 
 - [x] Status page
 - [x] Build script
-- [ ] Design-guide
-  - [ ] Typography
+- [x] Design-guide
+  - [x] Typography
   - [ ] components
-    - [ ] Half-bleed images
-    - [ ] Remove padding from figure on mobile, add back on desktop (probably)
-    - [ ] Add line numbers and copy to clipboard
-    - [ ] Inputs should be 100% wide on mobile
-    - [ ] Fix li styling
-    - [ ] Fix primary & secondary links and buttons
-    - [ ] Add light links and buttons for dark backgrounds
-    - [ ] Lighten the footer to dark-gray
+    - [ ] Half-bleed / background images
+    - [x] Remove padding from figure on mobile, add back on desktop (probably)
+    - [s] Lighten the footer to dark-gray
+  - [ ] Add styles for code highlights
+- [ ] Add copy past for current breadcrumb

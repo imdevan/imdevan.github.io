@@ -24,7 +24,7 @@ My master plan didn't pan out quite as well as I would have liked, but I did not
 creating this Style/Bare-bones-css[^2] guide, I learned some useful things for creating
 blog posts that leveraged components of the functional css I'm using on the rest of my project.
 
-[^2]: Styling just the tags (e.g h1, p, img)
+[^2]: Styling just HTML tags (e.g. h1, p, img)
 
 What you see following is an existing and always updating reference for how I'm styling
 (at a minimum the typography, buttons, images, quotes, and code) the experience that is
@@ -36,14 +36,16 @@ look and feel, and how to do anything in markdown.
 
 ### More classes
 With [Jekyll](http://lmgtfy.com/?q=Jekyll) using
-[kramdown](http://lmgtfy.com/?q=kramdown) the way that you can add classes in
+[Kramdown](http://lmgtfy.com/?q=kramdown) the way that you can add classes in
 addition default tags that markdown generates by using the format
 `{: .class-0 .class-1 .class-2}`.
 
-You can also add classes and tags using the traditional html such as
+You can also add classes and tags using the traditional HTML such as
 `<strong class="text--purple">but</strong>`,
-<strong class="text--purple">but</strong> you can't add html classes like `{: strong}` to things.
+<strong class="text--purple">but</strong> you can't add HTML tags using this syntax though, so things like `{: strong}` won't work.
+{: .br}
 
+Here is an example of using this Kramdown feature.
 {% highlight ruby %}
 Spooky ghost!
 {: .text--center .text--purple .text--lg}
@@ -65,10 +67,10 @@ Spooky ghost!
 And `{: .text--center}` for any centered text or images.
 {: .br}
 
-### Foot notes!?
+### Footnotes!?
 
-I learned that foot notes[^3] are really easy to make using `[^<num>]` and can look
-pretty cool. Althought, I have yet to determine if they are useful.
+I learned that footnotes[^3] are really easy to make using `[^<num>]` and can look
+pretty cool. Although, I have yet to determine if they are useful.
 
 [^3]: So far they seem useful, but also a chore to keep organized
 
@@ -81,6 +83,31 @@ pretty cool. Althought, I have yet to determine if they are useful.
 I don't know if I have perfect use for it just yet, but it's a nice util to know.
 [#UTT](https://twitter.com/hashtag/utt)
 {: .br}
+
+### Vertical alignment
+
+At the time of write this, I am using `{: .s}` (for section)
+for places where there is a gap between sections, such as the spacing between the footnotes section and here.
+
+For reasons unknown to me, I `endhighlight` does
+not like to be followed by a `{: .s}`, for those instances I
+Have taken to using `{: .sa}` (for section--alt).
+
+{% highlight css %}
+.s { margin-bottom: 3em; }
+.sa { margin-top: 3em; }
+
+// In my Sass
+.s {
+    margin: margin(bottom, lg);
+    &a {
+        margin: margin(top, lg);
+    }
+}
+{% endhighlight %}
+
+The following is a living style guide for this blog.
+{: .pt-10 .pb-2}
 
 ## Headers
 {: .underline }
@@ -133,7 +160,7 @@ echo "code"
 `echo code`
 
 **Note:** `{: .br}` doesn't work immediately following an `endhighlight`
- so I'm using in instances where a codeblock is the last bit of a section.
+ so I've had to make an exception to add
 
 Also, apprently you can't put ruby tags inside of inline blocks :/
 {: .br}

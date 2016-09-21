@@ -1,0 +1,7 @@
+$position-namespace: "pos" !default;
+
+.#{$position-namespace} {
+    &--relative {
+        position: relative;
+    }
+}

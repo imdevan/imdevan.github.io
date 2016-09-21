@@ -1,5 +1,6 @@
 // Base text reset
 $body-font: "Open Sans", Ariel;
+
 body {
     font-family: $body-font;
     color: color(text-dark);
@@ -103,5 +104,19 @@ $typography-namespace: "text" !default;
                 color: $color-val;
             }
         }
+    }
+
+    &--rainbow {
+        @keyframes rainbow {
+            0% {color: map-get($rainbow, blue);}
+            16.67% {color: map-get($rainbow, red);}
+            33.33% {color: map-get($rainbow, salmon);}
+            50% {color: map-get($rainbow, green);}
+            66.67% {color: map-get($rainbow, purple);}
+            83.33% {color: map-get($rainbow, seafoam);}
+            100% {color: map-get($rainbow, blue);}
+       }
+
+        animation: rainbow 3s infinite; /* IE 10+, Fx 29+ */
     }
 }
