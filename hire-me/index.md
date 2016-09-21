@@ -6,7 +6,7 @@ color: purple
 nav-item: true
 ---
 
-<div class="flex flex--flag flex--space-between flex--md-row-rev pt-2 pb-5" >
+<div class="flex flex--flag flex--space-between flex--md-row-rev pt-2 s" >
     <div class="flex__box-1 text--center">
         <img src="/assets/images/me_looking_up.png" alt="" class="br--5 mw--80-45">
     </div>

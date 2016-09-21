@@ -12,7 +12,7 @@ Devan Huapaya • Ren Fest 2015
 
 ## Basically
 I like cats, I want to be your friend and work on cool stuff together.
-{: .pb}
+{: .s}
 
 ## Also
 I currently work at [IBM Design](http://www.ibm.com/design/) and live in
@@ -25,7 +25,7 @@ to 1900+ IBM teams.
 Previously, I've worked at GE, the CGI group, and Texas A&M.
 
 I like building things, usually in a web-browser.
-{: .pb}
+{: .s}
 
 ## Skills & Technologies
 Loosely ordered by proficiency
@@ -50,7 +50,7 @@ Loosely ordered by proficiency
 <strong class="text--blue">Object oriented languages</strong> Python, Java, C/C++, C#
 
 <strong class="text--blue">Other cool stuff</strong> Unity (Google Cardboard and Oculus Rift exp), Createjs suite, Socket.io
-{: .pb}
+{: .s}
 
 ## Teaching Experience
 
@@ -59,20 +59,20 @@ Loosely ordered by proficiency
 <strong class="text--blue">Delivered talks on</strong> Intro to git and github, Publishing websites on Github Pages, and Design at Hackathons
 
 <strong class="text--blue">Tutoring</strong> on web development in the Austin area
-{: .pb}
+{: .s}
 
 ## Technical Experience
 
 <strong class="text--blue">Lots</strong> of hackathons!
 
 <strong class="text--blue">Interned at</strong> GE Oil and Gas (doing it management stuff), Interned at a small dev shop (CGI Group), Currently work at IBM Design.
-{: .pb}
+{: .s}
 
 ## Interest in Giving workshops?
 
 Yes!
 
 I'm interested in giving talks on anything from my skills section, as well as professional development.
-{: .pb}
+{: .s}
 
 ## Thanks for you time! <strong class="text--blue">You're great!</strong>
