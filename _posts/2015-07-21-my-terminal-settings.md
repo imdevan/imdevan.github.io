@@ -31,7 +31,8 @@ Here are the links for the terminal stuff I have set up on my comp
 Here are the colors for the terminal stuff I have set up on my comp
 {: .mb-sm}
 
-![](http://i.imgur.com/cDaaWzt.png){: .img}
+![](http://i.imgur.com/cDaaWzt.png)
+{: .text--center}
 
 ## Aliases  
 Here are the sweet sweet alias for the terminal stuff I have set up on my comp.
