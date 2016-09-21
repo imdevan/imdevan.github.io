@@ -91,17 +91,19 @@ for places where there is a gap between sections, such as the spacing between th
 
 For reasons unknown to me, I `endhighlight` does
 not like to be followed by a `{: .s}`, for those instances I
-Have taken to using `{: .sa}` (for section--alt).
+Have taken to using `{: .st}` (for section-ending--top).
 
-{% highlight css %}
-.s { margin-bottom: 3em; }
-.sa { margin-top: 3em; }
+Blockquote also has problems with `{: .s}`, so I use `{: .st}` for thsoe as well.
+
+{% highlight scss %}
+.s { padding-bottom: 3em; }
+.st { padding-top: 3em; }
 
 // In my Sass
 .s {
-    margin: margin(bottom, lg);
-    &a {
-        margin: margin(top, lg);
+    @include padding(bottom, lg);
+    &t {
+        @include padding(top, lg);
     }
 }
 {% endhighlight %}
@@ -173,16 +175,15 @@ Also, apprently you can't put ruby tags inside of inline blocks :/
 <input type="checkbox" checked> checkedbox
 {: .s}
 
-
 ## Quotes
 {: .underline }
 
-> Design guides are absolutely the illist  
-{: .center }
+>
+Velociraptor (meaning "swift seizer" in Latin) is a genus of dromaeosaurid theropod dinosaur that lived approximately 75 to 71 million years ago during the later part of the Cretaceous Period.  
+<br>
+[~ Wikipedia](https://www.wikipedia.org/en/Velociraptor)
 
-John Ive
-{: .s .text--highlight .text--center}
-
+{: .st}
 ## Images
 {: .underline }
 
