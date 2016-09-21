@@ -1,7 +1,9 @@
 # Site Config
 
 name: "imdevan"
-description: A menu bar app to help you work with your mac, faster.
+description: >
+    Need help building your million dollar idea? Devan Huapaya, is
+    a freelance developer from Austin, TX who can help you.
 baseurl: "/"
 url: https://imdevan.com
 slug: imdevan
