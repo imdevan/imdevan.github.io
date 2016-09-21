@@ -10,11 +10,7 @@ slug: about-me
 Devan Huapaya • Ren Fest 2015
 {: .text--center .text--gray .text--code .br}
 
-## Basically
-I like cats, I want to be your friend and work on cool stuff together.
-{: .s}
-
-## Also
+## Hi, I'm Devan
 I currently work at [IBM Design](http://www.ibm.com/design/) and live in
 Austin, TX. I work as a [front end developer](http://i.imgur.com/bA3Rn7E.gif)
 on project Whitewater. My team makes it our priority to find the best tools
