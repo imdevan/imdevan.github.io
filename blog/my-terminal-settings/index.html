@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang=en>
+	<meta charset="utf-8"/>
+	<title>My Terminal Settings</title>
+	<meta name="viewport" content="initial-scale=1" />
+	<meta name="p:domain_verify" content="73bb9724cf18cc4f5f5d8e8553eeb2ff"/>
+
+	<meta property="og:title" content="My Terminal Settings"/>
+	<meta property="og:site_name" content="imdevan"/>
+	<meta property="og:description" content="Need help building your million dollar idea? Devan Huapaya, is a freelance developer from Austin, TX who can help you.
+"/>
+	<meta property="og:url" content="/blog/my-terminal-settings/"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto+Mono|Dancing+Script" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+	<link rel="shortcut icon" href="/favicon.png"/>
+
+	<body>
+
+<header class="text--code bg--blue">
+    <div class="flex flex--verticle-center mw--95-90 m--auto">
+        <h3 class="text--light text--shadow">
+            ~ <a href="/" >imdevan</a>
+            
+                / <a href="/blog" >blog</a>
+            
+            / <a href="/blog/my-terminal-settings/" data="copy">my-terminal-settings</a>
+        </h3>
+    </div>
+</header>
+
+
+<main role="main" class="bg--white">
+  <div class="markdown pt-5 pb-10">
+    <!-- Page Title -->
+    <h1>My Terminal Settings</h1>
+    <time class="text--gray">
+        July 21, 2015
+        
+          •&nbsp;2 minutes
+        
+    </time>
+
+    <!-- Page content -->
+    <div class="pt-5 ">
+        <p>A developer’s terminal is a powerful tool. It is used for downloading modules, compiling code, running test scripts, and is ridiculously more efficient than a graphic user interface when used&nbsp;correctly.</p>
+
+<p>All operating systems come with some form of terminal installed, but you can download other terminals. For instance, I use iTerm 2 as my terminal because I like the amount of fine grained customization that it allows for. This is mostly a style thing (for&nbsp;me).</p>
+
+<p>All terminals have a shell (the thing that runs the commands and stuff - official definition). Most terminals come with a shell called Bash installed. On my terminal I have installed a special flavor of Zsh called “Oh My&nbsp;Zsh!”</p>
+
+<p>“Oh My Zsh!” Does a bunch of really awesome things. But the best thing about zsh is that it allows for writing alias, shortcut commands that can be set to any other command that you want to. Other do this as well, but I found the way that zsh does it to be really&nbsp;easy.</p>
+
+<p class="pb">Without further&nbsp;ado,</p>
+
+<h2 id="downloads">Downloads</h2>
+<p class="pb">Here are the links for the terminal stuff I have set up on my comp<br />
+- <a href="https://www.iterm2.com">iTerm 2 downloaded from here</a><br />
+- <a href="http://ohmyz.sh">Zsh downloaded from here</a><br />
+- <a href="https://github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet">Documentation</a></p>
+
+<h2 id="colors">Colors</h2>
+
+<p class="mb-sm">Here are the colors for the terminal stuff I have set up on my&nbsp;comp</p>
+
+<p class="pb"><img src="http://i.imgur.com/cDaaWzt.png" alt="" /></p>
+
+<h2 id="aliases">Aliases</h2>
+<p>Here are the sweet sweet alias for the terminal stuff I have set up on my&nbsp;comp.</p>
+
+<p>In order to access the files to put these bad boys you can open in the text editor of your choice a file that is located at <code>~/.zshrc</code> by&nbsp;default.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">alias </span><span class="nv">fb</span><span class="o">=</span><span class="s2">"open https://www.facebook.com"</span>
+<span class="nb">alias </span><span class="nv">og</span><span class="o">=</span><span class="s2">"open http://github.com/imdevan"</span>
+<span class="nb">alias </span><span class="nv">ogp</span><span class="o">=</span><span class="s2">"open http://github.com/imdevan/imdevan.github.io"</span>
+<span class="nb">alias </span><span class="nv">off</span><span class="o">=</span><span class="s2">"sudo shutdown -h now"</span>
+<span class="nb">alias </span><span class="nv">ig</span><span class="o">=</span><span class="s2">"cd ~/Documents/All</span><span class="se">\ </span><span class="s2">Things</span><span class="se">\ </span><span class="s2">Code/imdevan.github.io/ &amp;&amp; gulp"</span>
+
+<span class="c"># A, B, C, D...</span>
+<span class="nb">alias </span><span class="nv">a</span><span class="o">=</span><span class="s2">"git add -A"</span>
+<span class="nb">alias </span><span class="nv">c</span><span class="o">=</span><span class="s2">"clear"</span>
+<span class="nb">alias </span><span class="nv">d</span><span class="o">=</span><span class="s2">"cd ~/Downloads"</span>
+<span class="nb">alias </span><span class="nv">e</span><span class="o">=</span><span class="s2">"open http://inbox.google.com"</span>
+<span class="nb">alias </span><span class="nv">g</span><span class="o">=</span><span class="s2">"gulp"</span>
+<span class="nb">alias </span><span class="nv">i</span><span class="o">=</span><span class="s2">"cd ~/Documents/All</span><span class="se">\ </span><span class="s2">Things</span><span class="se">\ </span><span class="s2">Code/imdevan.github.io/ "</span>
+<span class="nb">alias </span><span class="nv">j</span><span class="o">=</span><span class="s2">"jekyll serve --watch"</span>
+<span class="nb">alias </span><span class="nv">m</span><span class="o">=</span><span class="s2">"touch"</span>
+<span class="nb">alias </span><span class="nv">n</span><span class="o">=</span><span class="s2">"npm start"</span>
+<span class="nb">alias </span><span class="nv">o</span><span class="o">=</span><span class="s2">"open"</span>
+<span class="nb">alias </span><span class="nv">p</span><span class="o">=</span><span class="s2">"cd ~/Documents/All</span><span class="se">\ </span><span class="s2">Things</span><span class="se">\ </span><span class="s2">Code/Project</span><span class="se">\ </span><span class="s2">Whitewater/paddle"</span>
+<span class="nb">alias </span><span class="nv">r</span><span class="o">=</span><span class="s2">"cd ~/Documents/All</span><span class="se">\ </span><span class="s2">Things</span><span class="se">\ </span><span class="s2">Code/Side</span><span class="se">\ </span><span class="s2">Stuff/IBM</span><span class="se">\ </span><span class="s2">Community</span><span class="se">\ </span><span class="s2">Radio"</span>
+<span class="nb">alias </span><span class="nv">t</span><span class="o">=</span><span class="s2">"gulp test"</span>
+<span class="nb">alias </span><span class="nv">z</span><span class="o">=</span><span class="s2">"subl ~/.zshrc"</span>
+
+<span class="c"># git commands</span>
+<span class="nb">alias </span><span class="nv">ga</span><span class="o">=</span><span class="s2">"git add -A"</span>
+<span class="nb">alias </span><span class="nv">gc</span><span class="o">=</span><span class="s2">"git commit -m"</span>
+<span class="c"># gp already = "git push"</span>
+<span class="nb">alias </span><span class="nv">gl</span><span class="o">=</span><span class="s2">"git log -1"</span>
+
+<span class="nb">alias </span><span class="nv">starwars</span><span class="o">=</span><span class="s2">"telnet towel.blinkenlights.nl"</span></code></pre></figure>
+
+<h2 class="st" id="zsh-plugins">Zsh&nbsp;Plugins</h2>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">plugins</span><span class="o">=(</span>git dirhistory sublime web-search copydir copyfile cp dirpresist nvm brew themes<span class="o">)</span></code></pre></figure>
+
+
+    </div>
+
+    <!-- Author link -->
+    <div class="text--center st">
+        by <a href="https://twitter.com/devanIpsum">Devan</a>
+    </div>
+    <!-- Twitter share 😉 -->
+    <div class="text--center mt-sm">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-via="devanIpsum" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+  </div>
+</main>
+
+    <!-- Footer -->
+	<footer class="bg--dark text--light shadow--inverted-lg" role="contentinfo">
+
+		<!-- Featured content -->
+		<div class="flex flex--md-row mw--95-90 m--auto pt-5">
+			
+				<a href="http://hackdfw.com" class="flex__box-1 flex__box--gutter p-1 text--light  trans-all--fast-in-out">
+				        <h3>HackDFW</h3>
+				        I'm currently working to bring a really awesome hackathon to Dallas.
+                </a>
+			
+				<a href="/hire-me" class="flex__box-1 flex__box--gutter p-1 text--light  trans-all--fast-in-out">
+				        <h3>Hire Me</h3>
+				        I create digital experiences that have form and purpose.
+                </a>
+			
+				<a href="/blog/" class="flex__box-1 flex__box--gutter p-1 text--light  trans-all--fast-in-out">
+				        <h3>Latest Post</h3>
+				        Looking for something to read?
+                </a>
+			
+		</div>
+
+		<!-- Email form -->
+		<div class="mw--95-90 m--auto pt-5 text--center">
+			<a class="text--light" href="mailto:huapayadevan@gmail.com">huapayadevan@gmail.com</a>
+		</div>
+
+		<!-- Salutation -->
+		<div class="mw--95-90 m--auto py-5">
+			Thanks for visiting my site, <br>
+			<a target="_blank" class="text--light" href="http://twitter.com/devanipsum">
+				Devan
+			</a>
+		</div>
+	</footer>
+</body>
+
+</html>
+

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang=en>
 	<meta charset="utf-8"/>
-	<title>About</title>
+	<title>Vim Settings</title>
 	<meta name="viewport" content="initial-scale=1" />
 	<meta name="p:domain_verify" content="73bb9724cf18cc4f5f5d8e8553eeb2ff"/>
 
-	<meta property="og:title" content="About"/>
+	<meta property="og:title" content="Vim Settings"/>
 	<meta property="og:site_name" content="imdevan"/>
 	<meta property="og:description" content="Need help building your million dollar idea? Devan Huapaya, is a freelance developer from Austin, TX who can help you.
 "/>
-	<meta property="og:url" content="/status/"/>
+	<meta property="og:url" content="/blog/vim/"/>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto+Mono|Dancing+Script" rel="stylesheet">
 	<link rel="stylesheet" href="/assets/css/style.css">
@@ -18,43 +18,79 @@
 
 	<body>
 
-<header class="text--code bg--">
+<header class="text--code bg--salmon">
     <div class="flex flex--verticle-center mw--95-90 m--auto">
         <h3 class="text--light text--shadow">
             ~ <a href="/" >imdevan</a>
             
-            / <a href="/status/" data="copy"></a>
+                / <a href="/blog" >blog</a>
+            
+            / <a href="/blog/vim/" data="copy">vim</a>
         </h3>
     </div>
 </header>
 
 
 <main role="main" class="bg--white">
-    <h1 id="status">Status</h1>
+  <div class="markdown pt-5 pb-10">
+    <!-- Page Title -->
+    <h1>Vim Settings</h1>
+    <time class="text--gray">
+        March 22, 2016
+        
+          •&nbsp;Less than 1 minute
+        
+    </time>
 
-<p>Status update for rebuild of&nbsp;imdevan.github.io</p>
+    <!-- Page content -->
+    <div class="pt-5 ">
+        <p><a href="https://github.com/imdevan/dotfiles/blob/master/.vimrc">My vim config file</a><br />
+<a href="http://vimdoc.sourceforge.net/htmldoc/options.html">vim docs</a><br />
+<a href="http://bencrowder.net/files/vim-fu/">This really useful&nbsp;chart</a></p>
 
-<p><strong>Things to&nbsp;add</strong></p>
+<h3 id="living-document-of-useful-to-me-vim-notes">Living document of useful (to me) vim&nbsp;notes</h3>
+
+<h2 id="nerdtree">NerdTree</h2>
+
+<p>Open a&nbsp;menu</p>
 
 <ul>
-  <li>[x] Status&nbsp;page</li>
-  <li>[x] Build&nbsp;script</li>
-  <li>[x]&nbsp;Design-guide
-    <ul>
-      <li>[x]&nbsp;Typography</li>
-      <li>[ ]&nbsp;components
-        <ul>
-          <li>[ ] Half-bleed / background&nbsp;images</li>
-          <li>[x] Remove padding from figure on mobile, add back on desktop&nbsp;(probably)</li>
-          <li>[s] Lighten the footer to&nbsp;dark-gray</li>
-        </ul>
-      </li>
-      <li>[ ] Add styles for code&nbsp;highlights</li>
-    </ul>
-  </li>
-  <li>[ ] Add copy past for current&nbsp;breadcrumb</li>
+  <li><code>:NERDTree</code></li>
 </ul>
 
+<p>When NerdTree is&nbsp;open</p>
+
+<ul>
+  <li>click on folder/file to&nbsp;open</li>
+  <li><code>m</code> to open&nbsp;nerdtree-menu</li>
+  <li><code>a</code> to add a new&nbsp;file</li>
+</ul>
+
+<h2 id="plugins">Plugins</h2>
+<p>Vim is shit without plugins<br />
+Vim is golden with&nbsp;plugins</p>
+
+<h2 id="other-vim-commands">Other vim&nbsp;commands</h2>
+
+<p><code>
+:w - save
+:x - save and close
+u - undo
+v - select
+:vs - vertical split
+</code></p>
+
+    </div>
+
+    <!-- Author link -->
+    <div class="text--center st">
+        by <a href="https://twitter.com/devanIpsum">Devan</a>
+    </div>
+    <!-- Twitter share 😉 -->
+    <div class="text--center mt-sm">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-via="devanIpsum" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+  </div>
 </main>
 
     <!-- Footer -->

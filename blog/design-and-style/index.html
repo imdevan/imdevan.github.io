@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang=en>
+	<meta charset="utf-8"/>
+	<title>Design and Style</title>
+	<meta name="viewport" content="initial-scale=1" />
+	<meta name="p:domain_verify" content="73bb9724cf18cc4f5f5d8e8553eeb2ff"/>
+
+	<meta property="og:title" content="Design and Style"/>
+	<meta property="og:site_name" content="imdevan"/>
+	<meta property="og:description" content="Need help building your million dollar idea? Devan Huapaya, is a freelance developer from Austin, TX who can help you.
+"/>
+	<meta property="og:url" content="/blog/design-and-style/"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto+Mono|Dancing+Script" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+	<link rel="shortcut icon" href="/favicon.png"/>
+
+	<body>
+
+<header class="text--code bg--salmon">
+    <div class="flex flex--verticle-center mw--95-90 m--auto">
+        <h3 class="text--light text--shadow">
+            ~ <a href="/" >imdevan</a>
+            
+                / <a href="/blog" >blog</a>
+            
+            / <a href="/blog/design-and-style/" data="copy">design-and-style</a>
+        </h3>
+    </div>
+</header>
+
+
+<main role="main" class="bg--white">
+  <div class="markdown pt-5 pb-10">
+    <!-- Page Title -->
+    <h1>Design and Style</h1>
+    <time class="text--gray">
+        September 1, 2016
+        
+          •&nbsp;4 minutes
+        
+    </time>
+
+    <!-- Page content -->
+    <div class="pt-5 ">
+        <h2 class="underline" id="prologue">Prologue</h2>
+
+<p class="text--gray">This page is one part retrospective, one part living&nbsp;documentation.</p>
+
+<p>For my personal site, I thought it would be a&nbsp;good
+idea to start with a basic style sheet because I really&nbsp;wanted
+it to have a strong blogging component. I thought that if I could get down&nbsp;the
+styling for the typography, as well as basic page layouts<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>, as they would live in blog articles, than I could derive a feel for non-article&nbsp;pages.</p>
+
+<p>My master plan didn’t pan out quite as well as I would have liked, but I did notice&nbsp;that
+creating this Style/Bare-bones-css<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup> guide, I learned some useful things for&nbsp;creating
+blog posts that leveraged components of the functional css I’m using on the rest of my&nbsp;project.</p>
+
+<p class="s">What you see following is an existing and always updating reference for how I’m&nbsp;styling
+(at a minimum the typography, buttons, images, quotes, and code) the experience that&nbsp;is
+this website. So far I think it’s been useful for being documentation on how the site&nbsp;should
+look and feel, and how to do anything in&nbsp;markdown.</p>
+
+<h3 id="technical-specification">Technical&nbsp;specification</h3>
+<p>This website is made with With <a href="https://jekyllrb.com/">Jekyll</a>, a&nbsp;static
+website generator written in Ruby that plays well&nbsp;with
+<a href="https://pages.github.com/">Github Pages</a>. It&nbsp;uses
+<a href="http://kramdown.gettalong.org/">Kramdown</a> as the engine to compile&nbsp;markdown.</p>
+
+<p class="s">This page is generated using Jekyll and the markdown is written using&nbsp;Kramdown.</p>
+
+<h2 class="underline" id="some-things-i-learned">Some things I&nbsp;learned</h2>
+
+<h3 id="adding-classes-in-kramdown">Adding classes in&nbsp;Kramdown</h3>
+<p>With <a href="https://jekyllrb.com/">Jekyll</a>&nbsp;using
+<a href="http://kramdown.gettalong.org/">Kramdown</a> the way that you can add classes&nbsp;in
+addition default tags that markdown generates by using the&nbsp;format
+<code>{: .class-0 .class-1 .class-2}</code>.</p>
+
+<p class="s">You can also add classes and tags using the traditional <span class="caps">HTML</span> such&nbsp;as
+<code>&lt;strong class="text--purple"&gt;but&lt;/strong&gt;</code>,
+<strong class="text--purple">but</strong> you can’t add <span class="caps">HTML</span> tags using this syntax though, so things like <code>{: strong}</code> won’t&nbsp;work.</p>
+
+<p>Here is an example of using this Kramdown&nbsp;feature.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Spooky</span> <span class="n">ghost!</span>
+<span class="p">{:</span> <span class="p">.</span><span class="nf">text</span><span class="o">--</span><span class="n">center</span> <span class="p">.</span><span class="nf">text</span><span class="o">--</span><span class="n">purple</span> <span class="p">.</span><span class="nf">text</span><span class="o">--</span><span class="n">lg</span><span class="p">}</span></code></pre></figure>
+
+<p class="text--center text--lg">👇</p>
+
+<p class="text--center text--lg">👇</p>
+
+<p class="text--center text--lg">👇</p>
+
+<p class="text--center text--purple text--lg">Spooky&nbsp;ghost!</p>
+
+<p class="s"><strong>Note:</strong> I am using <code>{: .s}</code> for breaks in section gaps throughout this&nbsp;page.
+And <code>{: .text--center}</code> for any centered text or&nbsp;images.</p>
+
+<h3 id="footnotes">Footnotes!?</h3>
+
+<p>I learned that footnotes<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup> are really easy to make using <code>[^&lt;num&gt;]</code> and can&nbsp;look
+pretty cool. Although, I have yet to determine if they are&nbsp;useful.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">.</span><span class="nf">.</span><span class="p">.</span><span class="nf">layouts</span><span class="p">[</span><span class="o">^</span><span class="mi">1</span><span class="p">].</span>
+<span class="nf">&lt;</span><span class="o">!--</span> <span class="no">Leave</span> <span class="n">a</span> <span class="n">blank</span> <span class="n">line</span> <span class="n">or</span> <span class="n">double</span> <span class="n">space</span> <span class="n">after</span> <span class="n">first</span> <span class="n">line</span> <span class="o">--&gt;</span>
+<span class="p">[</span><span class="o">^</span><span class="mi">1</span><span class="p">]:</span> <span class="no">Layouts</span> <span class="k">in</span> <span class="n">this</span> <span class="k">case</span> <span class="n">refer</span> <span class="n">to</span></code></pre></figure>
+
+<p class="s">I don’t know if I have perfect use for it just yet, but it’s a nice util to&nbsp;know.
+<a href="https://twitter.com/hashtag/utt">#<span class="caps">UTT</span></a></p>
+
+<h3 id="vertical-alignment">Vertical&nbsp;alignment</h3>
+
+<p>At the time of write this, I am using <code>{: .s}</code> (for&nbsp;section)
+for places where there is a gap between sections, such as the spacing between the footnotes section and&nbsp;here.</p>
+
+<p>For reasons unknown to me, I <code>endhighlight</code>&nbsp;does
+not like to be followed by a <code>{: .s}</code>, for those instances&nbsp;I
+Have taken to using <code>{: .st}</code> (for&nbsp;section-ending–top).</p>
+
+<p>Blockquote also has problems with <code>{: .s}</code>, so I use <code>{: .st}</code> for thsoe as&nbsp;well.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.s</span> <span class="p">{</span> <span class="nl">padding-bottom</span><span class="p">:</span> <span class="m">3em</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.st</span> <span class="p">{</span> <span class="nl">padding-top</span><span class="p">:</span> <span class="m">3em</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="c1">// In my Sass
+</span><span class="nc">.s</span> <span class="p">{</span>
+    <span class="k">@include</span> <span class="nd">padding</span><span class="p">(</span><span class="nb">bottom</span><span class="o">,</span> <span class="n">lg</span><span class="p">);</span>
+    <span class="k">&amp;</span><span class="nt">t</span> <span class="p">{</span>
+        <span class="k">@include</span> <span class="nd">padding</span><span class="p">(</span><span class="nb">top</span><span class="o">,</span> <span class="n">lg</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p class="pt-10 s">The following is a living style guide for this&nbsp;blog.</p>
+
+<h2 class="underline" id="headers">Headers</h2>
+
+<h1 id="h1"><span class="caps">H1</span></h1>
+
+<h2 id="h2"><span class="caps">H2</span></h2>
+
+<h3 id="h3"><span class="caps">H3</span></h3>
+
+<h4 id="h4"><span class="caps">H4</span></h4>
+
+<h5 id="h5"><span class="caps">H5</span></h5>
+
+<h6 id="h6"><span class="caps">H6</span></h6>
+
+<p class="s">paragraph</p>
+
+<h2 class="underline" id="links">Links</h2>
+
+<p class="s"><a href="http://google.com">link</a></p>
+
+<h2 class="underline" id="lists">Lists</h2>
+
+<h3 id="ul">ul</h3>
+
+<ul>
+  <li>list</li>
+  <li>list</li>
+  <li>list</li>
+</ul>
+
+<h3 id="ol">ol</h3>
+
+<ol class="s">
+  <li>list</li>
+  <li>list</li>
+  <li>list</li>
+</ol>
+
+<h2 class="underline" id="code">Code</h2>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">"code"</span></code></pre></figure>
+
+<p class="s"><code>echo code</code></p>
+
+<h2 class="underline" id="checkboxes">Checkboxes</h2>
+
+<p class="s"><input type="checkbox" />  checkbox<br />
+<input type="checkbox" checked="" /> checkedbox</p>
+
+<h2 class="underline" id="quotes">Quotes</h2>
+
+<blockquote>
+
+  <p>Velociraptor (meaning “swift seizer” in Latin) is a genus of dromaeosaurid theropod dinosaur that lived approximately 75 to 71 million years ago during the later part of the Cretaceous Period.<br />
+<br />
+<a href="https://www.wikipedia.org/en/Velociraptor">~&nbsp;Wikipedia</a></p>
+</blockquote>
+
+<h2 class="st underline" id="images">Images</h2>
+
+<p class="text--center"><img src="/assets/images/cat.jpg" alt="gras" /></p>
+
+<p class="text--center text--gray s">Money&nbsp;cat</p>
+
+<h2 class="underline" id="buttons">Buttons</h2>
+
+<p class="text--center s"><button>call to action</button></p>
+
+<h2 class="underline" id="footnotes-1">Footnotes</h2>
+
+<p class="s">This is a text with&nbsp;a
+footnote<sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>.</p>
+
+<h2 class="underline" id="list-with-links">List with&nbsp;links</h2>
+
+<ul class="s">
+  <li><a href="http://google.com">Reference</a></li>
+  <li><a href="http://google.com">Reference</a></li>
+  <li><a href="http://google.com">Reference</a></li>
+  <li><a href="http://google.com">Reference</a></li>
+</ul>
+
+<h2 class="underline" id="here-are-the-footnotes">Here are the&nbsp;footnotes</h2>
+
+<p>Footnotes are rendered at the bottom of the page by Jekyll, no special&nbsp;treatment
+needed.</p>
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+
+      <p>Layouts in this context refer to a format for managing&nbsp;images,
+having text next to images in more than one fashion, and aligning text. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Styling just <span class="caps">HTML</span> tags (e.g. h1, p, img) <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>So far they seem useful, but also a chore to keep organized <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>And here is the definition. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+    </div>
+
+    <!-- Author link -->
+    <div class="text--center st">
+        by <a href="https://twitter.com/devanIpsum">Devan</a>
+    </div>
+    <!-- Twitter share 😉 -->
+    <div class="text--center mt-sm">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-via="devanIpsum" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+  </div>
+</main>
+
+    <!-- Footer -->
+	<footer class="bg--dark text--light shadow--inverted-lg" role="contentinfo">
+
+		<!-- Featured content -->
+		<div class="flex flex--md-row mw--95-90 m--auto pt-5">
+			
+				<a href="http://hackdfw.com" class="flex__box-1 flex__box--gutter p-1 text--light  trans-all--fast-in-out">
+				        <h3>HackDFW</h3>
+				        I'm currently working to bring a really awesome hackathon to Dallas.
+                </a>
+			
+				<a href="/hire-me" class="flex__box-1 flex__box--gutter p-1 text--light  trans-all--fast-in-out">
+				        <h3>Hire Me</h3>
+				        I create digital experiences that have form and purpose.
+                </a>
+			
+				<a href="/blog/" class="flex__box-1 flex__box--gutter p-1 text--light  trans-all--fast-in-out">
+				        <h3>Latest Post</h3>
+				        Looking for something to read?
+                </a>
+			
+		</div>
+
+		<!-- Email form -->
+		<div class="mw--95-90 m--auto pt-5 text--center">
+			<a class="text--light" href="mailto:huapayadevan@gmail.com">huapayadevan@gmail.com</a>
+		</div>
+
+		<!-- Salutation -->
+		<div class="mw--95-90 m--auto py-5">
+			Thanks for visiting my site, <br>
+			<a target="_blank" class="text--light" href="http://twitter.com/devanipsum">
+				Devan
+			</a>
+		</div>
+	</footer>
+</body>
+
+</html>
+

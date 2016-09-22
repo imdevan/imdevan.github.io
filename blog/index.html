@@ -1,11 +1,38 @@
----
-layout: markdown
-title: Blog posts I've written
-slug: blog
-color: seafoam
----
+<!DOCTYPE html>
+<html lang=en>
+	<meta charset="utf-8"/>
+	<title>Blog posts I've written</title>
+	<meta name="viewport" content="initial-scale=1" />
+	<meta name="p:domain_verify" content="73bb9724cf18cc4f5f5d8e8553eeb2ff"/>
 
-<div class="mb-md text--gray mw--95-60">
+	<meta property="og:title" content="Blog posts I've written"/>
+	<meta property="og:site_name" content="imdevan"/>
+	<meta property="og:description" content="Need help building your million dollar idea? Devan Huapaya, is a freelance developer from Austin, TX who can help you.
+"/>
+	<meta property="og:url" content="/blog/"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto+Mono|Dancing+Script" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+	<link rel="shortcut icon" href="/favicon.png"/>
+
+	<body>
+
+<header class="text--code bg--seafoam">
+    <div class="flex flex--verticle-center mw--95-90 m--auto">
+        <h3 class="text--light text--shadow">
+            ~ <a href="/" >imdevan</a>
+            
+            / <a href="/blog/" data="copy">blog</a>
+        </h3>
+    </div>
+</header>
+
+
+<main role="main" class="bg--white">
+    <div class="center mw-80-80">
+        <div class="markdown pt-3 pb-10">
+            <div class="mb-md text--gray mw--95-60">
     <p>
         A blog that is mostly about things I want to remember, books I thought
         were interesting, lossly catorgorized by emoji.
@@ -13,28 +40,335 @@ color: seafoam
 </div>
 
 <ul class="p--reset">
-{% for post in site.categories.blog %}
-{% if site.categories.blog.first.url == post.url %}
+
+
     <li class="mt-0">
       <h3 class="mt-0">
-{% else %}
-    <li>
-      <h3>
-{% endif %}
-        <a {% if post.redirect %}target="_blank"{% endif %}
-            href="{% if post.redirect %}{{post.redirect}}
-                {% else %}{{ post.url | prepend:site.baseurl }}{% endif %}"
-            class="text--{{post.color}}" >
-                {{post.title}}
+
+        <a 
+            href="//blog/design-and-style/"
+            class="text--salmon" >
+                Design and Style
         </a>
     </h3>
     <div class="flex flex--flag text--gray text--code">
-        {% if post.type %}
-            <span class="">{{post.type}}</span>&nbsp;&nbsp;
-        {% endif %}
+        
+            <span class="">📝</span>&nbsp;&nbsp;
+        
 
-        <time>{{post.date | date: '%B %-d, %Y' }}</time>
+        <time>September 1, 2016</time>
     </div>
   </li>
-{% endfor %}
+
+
+    <li>
+      <h3>
+
+        <a 
+            href="//blog/intro-to-dotfiles/"
+            class="text--blue" >
+                Intro to Dotfiles
+        </a>
+    </h3>
+    <div class="flex flex--flag text--gray text--code">
+        
+            <span class="">💁</span>&nbsp;&nbsp;
+        
+
+        <time>August 30, 2016</time>
+    </div>
+  </li>
+
+
+    <li>
+      <h3>
+
+        <a 
+            href="//blog/bash-functions-for-github/"
+            class="text--seafoam" >
+                Bash Functions For Github
+        </a>
+    </h3>
+    <div class="flex flex--flag text--gray text--code">
+        
+            <span class="">💻</span>&nbsp;&nbsp;
+        
+
+        <time>August 17, 2016</time>
+    </div>
+  </li>
+
+
+    <li>
+      <h3>
+
+        <a 
+            href="//blog/movies-to-watch/"
+            class="text--salmon" >
+                Movies to Watch 🔥
+        </a>
+    </h3>
+    <div class="flex flex--flag text--gray text--code">
+        
+            <span class="">📺</span>&nbsp;&nbsp;
+        
+
+        <time>August 15, 2016</time>
+    </div>
+  </li>
+
+
+    <li>
+      <h3>
+
+        <a 
+            href="//blog/working-with-swift/"
+            class="text--blue" >
+                Working with Swift
+        </a>
+    </h3>
+    <div class="flex flex--flag text--gray text--code">
+        
+            <span class="">🖥</span>&nbsp;&nbsp;
+        
+
+        <time>August 3, 2016</time>
+    </div>
+  </li>
+
+
+    <li>
+      <h3>
+
+        <a 
+            href="//blog/start-with-why/"
+            class="text--salmon" >
+                <i>Start With Why</i> by Simon Sinek
+        </a>
+    </h3>
+    <div class="flex flex--flag text--gray text--code">
+        
+            <span class="">📘</span>&nbsp;&nbsp;
+        
+
+        <time>June 13, 2016</time>
+    </div>
+  </li>
+
+
+    <li>
+      <h3>
+
+        <a 
+            href="//blog/reading-suggestions/"
+            class="text--purple" >
+                Reading Suggestions June 2016
+        </a>
+    </h3>
+    <div class="flex flex--flag text--gray text--code">
+        
+            <span class="">📚</span>&nbsp;&nbsp;
+        
+
+        <time>June 9, 2016</time>
+    </div>
+  </li>
+
+
+    <li>
+      <h3>
+
+        <a 
+            href="//blog/thrive/"
+            class="text--seafoam" >
+                <i>Thrive</i> by Arianna Huffington
+        </a>
+    </h3>
+    <div class="flex flex--flag text--gray text--code">
+        
+            <span class="">📖</span>&nbsp;&nbsp;
+        
+
+        <time>May 19, 2016</time>
+    </div>
+  </li>
+
+
+    <li>
+      <h3>
+
+        <a 
+            href="//blog/how-to-talk-to-anyone/"
+            class="text--salmon" >
+                <i>How to Talk to Anyone</i> by Leil Lowndes
+        </a>
+    </h3>
+    <div class="flex flex--flag text--gray text--code">
+        
+            <span class="">📗</span>&nbsp;&nbsp;
+        
+
+        <time>May 16, 2016</time>
+    </div>
+  </li>
+
+
+    <li>
+      <h3>
+
+        <a 
+            href="//blog/working-with-soundjs/"
+            class="text--blue" >
+                Working with Sound.js
+        </a>
+    </h3>
+    <div class="flex flex--flag text--gray text--code">
+        
+            <span class="">💻</span>&nbsp;&nbsp;
+        
+
+        <time>April 27, 2016</time>
+    </div>
+  </li>
+
+
+    <li>
+      <h3>
+
+        <a 
+            href="//blog/the-confidence-gap/"
+            class="text--salmon" >
+                <i>The Confidence Gap</i> by Russ Harris
+        </a>
+    </h3>
+    <div class="flex flex--flag text--gray text--code">
+        
+            <span class="">📕</span>&nbsp;&nbsp;
+        
+
+        <time>April 20, 2016</time>
+    </div>
+  </li>
+
+
+    <li>
+      <h3>
+
+        <a 
+            href="//blog/elon-musk/"
+            class="text--purple" >
+                <i>Elon Musk</i> by Ashlee Vance
+        </a>
+    </h3>
+    <div class="flex flex--flag text--gray text--code">
+        
+            <span class="">📙</span>&nbsp;&nbsp;
+        
+
+        <time>April 7, 2016</time>
+    </div>
+  </li>
+
+
+    <li>
+      <h3>
+
+        <a 
+            href="//blog/vim/"
+            class="text--salmon" >
+                Vim Settings
+        </a>
+    </h3>
+    <div class="flex flex--flag text--gray text--code">
+        
+            <span class="">💻</span>&nbsp;&nbsp;
+        
+
+        <time>March 22, 2016</time>
+    </div>
+  </li>
+
+
+    <li>
+      <h3>
+
+        <a 
+            href="//blog/bash-functions/"
+            class="text--seafoam" >
+                Bash Functions
+        </a>
+    </h3>
+    <div class="flex flex--flag text--gray text--code">
+        
+            <span class="">💻</span>&nbsp;&nbsp;
+        
+
+        <time>February 22, 2016</time>
+    </div>
+  </li>
+
+
+    <li>
+      <h3>
+
+        <a 
+            href="//blog/my-terminal-settings/"
+            class="text--blue" >
+                My Terminal Settings
+        </a>
+    </h3>
+    <div class="flex flex--flag text--gray text--code">
+        
+            <span class="">💻</span>&nbsp;&nbsp;
+        
+
+        <time>July 21, 2015</time>
+    </div>
+  </li>
+
 </ul>
+
+        </div>
+    </div>
+</main>
+
+    <!-- Footer -->
+	<footer class="bg--dark text--light shadow--inverted-lg" role="contentinfo">
+
+		<!-- Featured content -->
+		<div class="flex flex--md-row mw--95-90 m--auto pt-5">
+			
+				<a href="http://hackdfw.com" class="flex__box-1 flex__box--gutter p-1 text--light  trans-all--fast-in-out">
+				        <h3>HackDFW</h3>
+				        I'm currently working to bring a really awesome hackathon to Dallas.
+                </a>
+			
+				<a href="/hire-me" class="flex__box-1 flex__box--gutter p-1 text--light  trans-all--fast-in-out">
+				        <h3>Hire Me</h3>
+				        I create digital experiences that have form and purpose.
+                </a>
+			
+				<a href="/blog/" class="flex__box-1 flex__box--gutter p-1 text--light  trans-all--fast-in-out">
+				        <h3>Latest Post</h3>
+				        Looking for something to read?
+                </a>
+			
+		</div>
+
+		<!-- Email form -->
+		<div class="mw--95-90 m--auto pt-5 text--center">
+			<a class="text--light" href="mailto:huapayadevan@gmail.com">huapayadevan@gmail.com</a>
+		</div>
+
+		<!-- Salutation -->
+		<div class="mw--95-90 m--auto py-5">
+			Thanks for visiting my site, <br>
+			<a target="_blank" class="text--light" href="http://twitter.com/devanipsum">
+				Devan
+			</a>
+		</div>
+	</footer>
+</body>
+
+</html>
+

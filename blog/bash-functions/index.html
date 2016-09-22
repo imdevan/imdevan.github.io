@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang=en>
+	<meta charset="utf-8"/>
+	<title>Bash Functions</title>
+	<meta name="viewport" content="initial-scale=1" />
+	<meta name="p:domain_verify" content="73bb9724cf18cc4f5f5d8e8553eeb2ff"/>
+
+	<meta property="og:title" content="Bash Functions"/>
+	<meta property="og:site_name" content="imdevan"/>
+	<meta property="og:description" content="Need help building your million dollar idea? Devan Huapaya, is a freelance developer from Austin, TX who can help you.
+"/>
+	<meta property="og:url" content="/blog/bash-functions/"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto+Mono|Dancing+Script" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+	<link rel="shortcut icon" href="/favicon.png"/>
+
+	<body>
+
+<header class="text--code bg--seafoam">
+    <div class="flex flex--verticle-center mw--95-90 m--auto">
+        <h3 class="text--light text--shadow">
+            ~ <a href="/" >imdevan</a>
+            
+                / <a href="/blog" >blog</a>
+            
+            / <a href="/blog/bash-functions/" data="copy">bash-functions</a>
+        </h3>
+    </div>
+</header>
+
+
+<main role="main" class="bg--white">
+  <div class="markdown pt-5 pb-10">
+    <!-- Page Title -->
+    <h1>Bash Functions</h1>
+    <time class="text--gray">
+        February 22, 2016
+        
+          •&nbsp;3 minutes
+        
+    </time>
+
+    <!-- Page content -->
+    <div class="pt-5 ">
+        <h2 id="turns-out-bash-functions-are-amazing">Turns Out Bash Functions are&nbsp;amazing.</h2>
+<p><br /></p>
+<div class="center">Mkdir better</div>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Creates a directory and then goes to it.</span>
+<span class="k">function </span>mkd<span class="o">()</span> <span class="o">{</span>
+    mkdir -p <span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span> <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span>
+<span class="o">}</span></code></pre></figure>
+
+<div class="center">Lunch?</div>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Randomly decides if now is a good time for lunch</span>
+<span class="k">function </span>lunch<span class="o">()</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">((</span> <span class="k">$((</span> <span class="o">(</span> RANDOM <span class="o">%</span> <span class="m">10</span> <span class="o">)</span>  <span class="o">+</span> <span class="m">1</span> <span class="k">))</span> &gt; 5 <span class="o">))</span>; <span class="k">then
+         </span><span class="nb">echo</span>  <span class="s2">"</span><span class="k">${</span><span class="nv">bold</span><span class="k">}${</span><span class="nv">green</span><span class="k">}</span><span class="s2">Go to lunch! ✨</span><span class="k">${</span><span class="nv">reset</span><span class="k">}</span><span class="s2">"</span>
+    <span class="k">else
+         </span><span class="nb">echo</span>  <span class="s2">"</span><span class="k">${</span><span class="nv">bold</span><span class="k">}${</span><span class="nv">pink</span><span class="k">}</span><span class="s2">Keep going! 💫</span><span class="k">${</span><span class="nv">reset</span><span class="k">}</span><span class="s2">"</span>;
+    <span class="k">fi</span>
+<span class="o">}</span></code></pre></figure>
+
+<div class="center">Choose</div>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Picks from a random list of arguments</span>
+<span class="k">function </span>choose<span class="o">()</span> <span class="o">{</span>
+    <span class="nv">a</span><span class="o">=(</span><span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span><span class="o">)</span>
+    <span class="nv">pick</span><span class="o">=(</span><span class="s2">"</span><span class="k">${</span><span class="nv">a</span><span class="p">[RANDOM%</span><span class="k">${#</span><span class="nv">a</span><span class="p">[@]</span><span class="k">}</span><span class="p">+1]</span><span class="k">}</span><span class="s2">"</span><span class="o">)</span>
+    <span class="nb">echo</span> <span class="s2">"</span><span class="k">${</span><span class="nv">bold</span><span class="k">}${</span><span class="nv">green</span><span class="k">}${</span><span class="nv">pick</span><span class="k">}</span><span class="s2">! ✨</span><span class="k">${</span><span class="nv">reset</span><span class="k">}</span><span class="s2">"</span>;
+<span class="o">}</span></code></pre></figure>
+
+<h1 class="mt-lg" id="git">Git</h1>
+<div class="center">Improved pull request checkout</div>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Gets pull request from upstream remote and check's it out</span>
+<span class="k">function </span>pr<span class="o">()</span> <span class="o">{</span>
+    git fetch upstream pull/<span class="nv">$@</span>/head:pr-<span class="nv">$@</span> <span class="o">&amp;&amp;</span>
+    git checkout pr-<span class="nv">$@</span> <span class="o">&amp;&amp;</span>
+    git remote prune upstream;
+<span class="o">}</span></code></pre></figure>
+
+<div class="center">Globed branch delete</div>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Deletes branches that start with pr- or specified value,</span>
+<span class="k">function </span>prd<span class="o">()</span> <span class="o">{</span>
+  git <span class="k">for</span>-each-ref --format<span class="o">=</span><span class="s2">"%(refname:short)"</span> refs/heads/<span class="k">${</span><span class="nv">1</span><span class="k">:-</span><span class="nv">pr</span><span class="p">-</span><span class="k">}</span><span class="se">\*</span> | xargs git branch -D
+<span class="o">}</span></code></pre></figure>
+
+<div class="center">Git add, commit, push</div>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Adds, attaches commit message, and pushes.</span>
+<span class="k">function </span>gap<span class="o">()</span> <span class="o">{</span>
+    git add -A <span class="o">&amp;&amp;</span>
+    git commit -m <span class="nv">$@</span> <span class="o">&amp;&amp;</span>
+    git push
+<span class="o">}</span></code></pre></figure>
+
+<div class="center">Git add, commit, push, set upstream</div>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Adds, attaches commit message, and pushes with --set-upstream</span>
+<span class="k">function </span>gaps<span class="o">()</span> <span class="o">{</span>
+    <span class="nv">UPSTREAM</span><span class="o">=</span><span class="s2">"</span><span class="k">$(</span>git rev-parse --abbrev-ref HEAD<span class="k">)</span><span class="s2">"</span>
+    git add -A <span class="o">&amp;&amp;</span>
+    git commit -m <span class="nv">$@</span> <span class="o">&amp;&amp;</span>
+    git push --set-upstream <span class="k">${</span><span class="nv">UPSTREAM</span><span class="k">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<div class="center">Russian roulette</div>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Russian roulette with commits</span>
+<span class="c"># 5% chance of deleting everything...</span>
+<span class="k">function </span>rulet<span class="o">()</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">((</span> <span class="k">$((</span> <span class="o">(</span> RANDOM <span class="o">%</span> <span class="m">100</span> <span class="o">)</span>  <span class="o">+</span> <span class="m">1</span> <span class="k">))</span> &lt; 5 <span class="o">))</span>; <span class="k">then
+        </span>git fetch upstream <span class="o">&amp;&amp;</span>
+        git reset --hard upstream/master <span class="o">&amp;&amp;</span>
+        git push origin master --force
+    <span class="k">else
+        </span>git add -A <span class="o">&amp;&amp;</span>
+        git commit -m <span class="nv">$@</span> <span class="o">&amp;&amp;</span>
+        git push
+    <span class="k">fi</span>
+<span class="o">}</span></code></pre></figure>
+
+<div class="center">Open pull request</div>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Opens specific pull request in browser, or all if not provided</span>
+<span class="k">function </span>opr<span class="o">()</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">[</span> -z <span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span> <span class="o">]</span>
+        <span class="k">then
+            </span>open https://github.com/idmevan/imdevan.github.io/pulls
+    <span class="k">else
+        </span>open https://github.com/idmevan/imdevan.github.io/pull/<span class="nv">$@</span>
+    <span class="k">fi</span>
+<span class="o">}</span></code></pre></figure>
+
+<div class="center">l</div>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Opens local host (at specific page if provided)</span>
+<span class="k">function </span>l<span class="o">()</span> <span class="o">{</span>
+    open https://localhost:3000/<span class="nv">$@</span>
+<span class="o">}</span></code></pre></figure>
+
+<div class="center">Open Commit</div>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Opens a commit</span>
+<span class="k">function </span>open-commit<span class="o">()</span> <span class="o">{</span>
+    <span class="nv">branch</span><span class="o">=</span><span class="s2">"</span><span class="k">$(</span>git rev-parse --abbrev-ref HEAD<span class="k">)</span><span class="s2">"</span>
+    <span class="nv">commit</span><span class="o">=</span><span class="s2">"</span><span class="k">$(</span>cat .git/refs/remotes/origin/<span class="k">${</span><span class="nv">branch</span><span class="k">})</span><span class="s2">"</span>
+    open https://github.com/imdevan/imdevan.github.io/commit/<span class="k">${</span><span class="nv">commit</span><span class="k">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<div class="center">Side project</div>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Open specific side project folder</span>
+<span class="k">function </span>side<span class="o">()</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">[</span> -z <span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span> <span class="o">]</span>
+        <span class="k">then
+            </span><span class="nb">cd</span> ~/Documents/All<span class="se">\ </span>Things<span class="se">\ </span>Code/Side<span class="se">\ </span>Stuff
+    <span class="k">else
+        </span><span class="nb">cd</span> ~/Documents/All<span class="se">\ </span>Things<span class="se">\ </span>Code/Side<span class="se">\ </span>Stuff/<span class="nv">$@</span>
+    <span class="k">fi</span>
+<span class="o">}</span></code></pre></figure>
+
+
+    </div>
+
+    <!-- Author link -->
+    <div class="text--center st">
+        by <a href="https://twitter.com/devanIpsum">Devan</a>
+    </div>
+    <!-- Twitter share 😉 -->
+    <div class="text--center mt-sm">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-via="devanIpsum" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+  </div>
+</main>
+
+    <!-- Footer -->
+	<footer class="bg--dark text--light shadow--inverted-lg" role="contentinfo">
+
+		<!-- Featured content -->
+		<div class="flex flex--md-row mw--95-90 m--auto pt-5">
+			
+				<a href="http://hackdfw.com" class="flex__box-1 flex__box--gutter p-1 text--light  trans-all--fast-in-out">
+				        <h3>HackDFW</h3>
+				        I'm currently working to bring a really awesome hackathon to Dallas.
+                </a>
+			
+				<a href="/hire-me" class="flex__box-1 flex__box--gutter p-1 text--light  trans-all--fast-in-out">
+				        <h3>Hire Me</h3>
+				        I create digital experiences that have form and purpose.
+                </a>
+			
+				<a href="/blog/" class="flex__box-1 flex__box--gutter p-1 text--light  trans-all--fast-in-out">
+				        <h3>Latest Post</h3>
+				        Looking for something to read?
+                </a>
+			
+		</div>
+
+		<!-- Email form -->
+		<div class="mw--95-90 m--auto pt-5 text--center">
+			<a class="text--light" href="mailto:huapayadevan@gmail.com">huapayadevan@gmail.com</a>
+		</div>
+
+		<!-- Salutation -->
+		<div class="mw--95-90 m--auto py-5">
+			Thanks for visiting my site, <br>
+			<a target="_blank" class="text--light" href="http://twitter.com/devanipsum">
+				Devan
+			</a>
+		</div>
+	</footer>
+</body>
+
+</html>
+
