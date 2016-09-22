@@ -8,6 +8,9 @@ category: blog
 style_mod: BASIC
 ---
 
+## Prologue
+{: .underline }
+
 This page is one part retrospective, one part living documentation.
 {: .text--gray}
 
@@ -32,11 +35,21 @@ this website. So far I think it's been useful for being documentation on how the
 look and feel, and how to do anything in markdown.
 {: .s}
 
-## Some things I learned
+### Technical specification
+This website is made with With [Jekyll](https://jekyllrb.com/), a static
+website generator written in Ruby that plays well with
+[Github Pages](https://pages.github.com/). It uses
+[Kramdown](http://kramdown.gettalong.org/) as the engine to compile markdown.
 
-### More classes
-With [Jekyll](http://lmgtfy.com/?q=Jekyll) using
-[Kramdown](http://lmgtfy.com/?q=kramdown) the way that you can add classes in
+This page is generated using Jekyll and the markdown is written using Kramdown.
+{: .s}
+
+## Some things I learned
+{: .underline }
+
+### Adding classes in Kramdown
+With [Jekyll](https://jekyllrb.com/) using
+[Kramdown](http://kramdown.gettalong.org/) the way that you can add classes in
 addition default tags that markdown generates by using the format
 `{: .class-0 .class-1 .class-2}`.
 
@@ -109,7 +122,7 @@ Blockquote also has problems with `{: .s}`, so I use `{: .st}` for thsoe as well
 {% endhighlight %}
 
 The following is a living style guide for this blog.
-{: .pt-10 .pb-2}
+{: .pt-10 .s}
 
 ## Headers
 {: .underline }
@@ -125,7 +138,6 @@ The following is a living style guide for this blog.
 ##### H5
 
 ###### H6
-
 
 paragraph
 {: .s}
@@ -161,11 +173,6 @@ echo "code"
 {% endhighlight %}
 
 `echo code`
-
-**Note:** `{: .s}` doesn't work immediately following an `endhighlight`
- so I've had to make an exception to add
-
-Also, apprently you can't put ruby tags inside of inline blocks :/
 {: .s}
 
 ## Checkboxes
@@ -215,3 +222,10 @@ footnote[^4].
 - [Reference](http://google.com)
 - [Reference](http://google.com)
 - [Reference](http://google.com)
+{: .s}
+
+## Here are the footnotes
+{: .underline}
+
+Footnotes are rendered at the bottom of the page by Jekyll, no special treatment
+needed.
