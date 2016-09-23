@@ -47,14 +47,8 @@ $margin-sizes: (
 
   &b {
     @each $size, $val in $margin-sizes {
-        &--#{$size} {
+        &-#{$size} {
             @include margin("bottom", $val)
-
-            &-md {
-              @include screen(md) {
-                margin-top: 0;
-              }
-            }
         }
     }
   }

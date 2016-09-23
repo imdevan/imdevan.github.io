@@ -26,6 +26,7 @@ $markdown-namespace: "markdown" !default;
   }
 
   img {
+    margin: auto;
     max-width: 100%;
     box-shadow: shadow(lg);
     margin-left: map-get($margin-sizes, auto);

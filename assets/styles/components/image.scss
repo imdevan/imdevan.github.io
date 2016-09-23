@@ -1,0 +1,9 @@
+$image-namespace: "img" !default;
+
+.#{$image-namespace} {
+  @each $size, $size-val in $sizes {
+    &-#{$size} {
+      width: $size-val;      
+    }
+  }
+}
