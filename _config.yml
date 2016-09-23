@@ -4,7 +4,7 @@ name: "imdevan"
 description: >
     Need help building your million dollar idea? Devan Huapaya, is
     a freelance developer from Austin, TX who can help you.
-baseurl: "/"
+baseurl: "https://imdevan.com"
 url: https://imdevan.com
 slug: imdevan
 gems:
