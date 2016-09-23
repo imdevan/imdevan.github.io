@@ -78,7 +78,7 @@ gulp.task('jekyll-build', shell.task(['bundle exec jekyll build']));
 // Deploy _site to gh-pages
 gulp.task('deploy-gh-pages', ['jekyll-build'], function () {
   return gulp.src('./_site/**/*')
-    .pipe(deploy())
+    .pipe(deploy({branch: "master"}))
 });
 
 // Gulp Deploy: Run jekyll-build, and deploy-gh-pages
