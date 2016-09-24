@@ -70,10 +70,10 @@ $markdown-namespace: "markdown" !default;
   }
 
   .s {
-    padding-bottom: map-get($margin-sizes, lg);
+    @extend .mb--lg;
 
     &t {
-        padding-top: map-get($margin-sizes, lg);
+        @extend .mt--lg;
     }
   }
 

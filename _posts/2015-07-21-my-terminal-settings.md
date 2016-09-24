@@ -29,7 +29,6 @@ Here are the links for the terminal stuff I have set up on my comp
 ## Colors  
 
 Here are the colors for the terminal stuff I have set up on my comp
-{: .mb-sm}
 
 ![](http://i.imgur.com/cDaaWzt.png)
 {: .pb}
