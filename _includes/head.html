@@ -16,8 +16,6 @@
 
 	<link rel="shortcut icon" href="/favicon.png"/>
 
-    <meta name="theme-color" content="white" />
-
     {% for item in site.data.theme-colors %}
         {% if page.color contains item.color %}
             <meta name="theme-color" content="{{item.hex}}" />
