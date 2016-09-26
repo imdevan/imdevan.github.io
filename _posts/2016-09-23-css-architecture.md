@@ -6,13 +6,24 @@ author: Devan Huapaya
 type: 🔑
 category: blog
 style_mod: BASIC
+warning: 🔑 Work in progress 🐱 Feedback welcome ♥️
 ---
 
 ## Introduction
 
-This month I rebuilt the site that you're reading. I wanted to be able to build
-design guide first, and I also wanted to emphasis re-usable pieces that I could
-use everywhere.
+This past month, I rebuilt the site that you're reading. When building the site,
+I wanted to be able to have a a finite set of styles for typography,
+vertical and horizontal spacing/layout, block quotes, and code. That way I could
+put all of the important parts together, and come back when I have time to add
+fancy things, like a [colorful address bar](/blog/colorful-address-bar-on-mobile/).
+
+The reason for those 5 is that I knew the website was going to have a heavy
+blogging component and that I was going to be using markdown for writing blog
+posts. A lot of Typography can be done without needing andy custom styles,
+blockquotes, and code could also go without needing any custom styles.
+
+Once I had those things down the remaining parts of the website would be
+either dynamic components, like a menu or parallax scrolling.
 
 The result ended up being some modification of [bem](http://getbem.com/) style
 naming with some augmentation.
@@ -22,13 +33,56 @@ naming with some augmentation.
 
 ### Components
 
+For my css architecture I refer to components as anything with more than two html
+parts or doesn't affect more than one property.
+
 `.block__element--modifier-state`
 
-`block` refers
+`block` refers to the outer most html peice for example if I need to create a
+special layout that would be easier to make using flexbox. The outer class is
+`.flex`, the inner html block will be called `.flex__box` and if the boxes
+need to be different sizes `.flex__box--md`, if the box is only that size during
+a partiular sizing of the screen we can use `.flex__box--md-md` which
+means that the `.flex__box` object will have a `md` size on a medium viewport.
 
-This style is very similar to `bem`, the only variation that I have is that
-I think there are various statest that must be considered. For example,
-how do you handle a button that is different?
+The sass for generating the above flex style can be found [here](https://github.com/imdevan/imdevan.github.io/blob/a-new-hope/assets/styles/components/code.scss)
+
+{% highlight scss %}
+$flex-namespace: "flex" !default;
+$flex-gutter: 1em !default;
+$flex-screen-sizes: md;
+$flex-sizes: (
+  sm: 1,
+  md: 2,
+);
+
+
+.#{$flex-namespace} {
+    display: flex;
+
+    &__box {
+        @each $size, $val in $flex-sizes {
+            @each $screen in $flex-screen-sizes {
+                &--#{$size} {
+                    flex: $val;
+                }
+                &--#{$size}-#{$screen} {
+                    @include screen($screen) {
+                        flex: $val;
+                    }
+                }
+            }
+        }
+    }
+}
+{% endhighlight %}
+
+&__
+{: .hide .s}
+
+This style is very similar to `bem`, but I did not think that bem
+accounts for state. For example, how do you handle a button that is different
+sizes or inline vs. not-inline on different viewports?
 
 I have very few components, at time of writing I have 4 things in the components
 directory of my sass styles. `blockquote, code, list, and markdown`.
@@ -38,7 +92,7 @@ directory of my sass styles. `blockquote, code, list, and markdown`.
 
 `.utility--modifier-state`
 
-Utilities are the bulk of my styles. Utilities are essentially functaional
+Utilities are the bulk of my styles. Utilities are essentially functional
 styles that can be used anywhere to style anything. The intent behind utilities
 is to be able to re-use styles in as many places as possible.
 

@@ -1,10 +1,15 @@
 $flex-namespace: "flex" !default;
-$flex-sizes: 1, 2, 3;
+$flex-gutter: 1em !default;
+$flex-screen-sizes: md;
+$flex-sizes: (
+  sm: 1,
+  md: 2,
+);
 
 .#{$flex-namespace} {
   display: flex;
 
-  &--md-row {
+  &--row-md {
     flex-direction: column;
 
     @include screen(md) {
@@ -46,26 +51,28 @@ $flex-sizes: 1, 2, 3;
   }
 
   &__box {
-    @each $size in $flex-sizes {
-      &-#{$size} {
-        flex: $size;
-      }
-      &-md-#{$size} {
-        @include screen(md) {
-          flex: $size;
+    @each $size, $val in $flex-sizes {
+        @each $screen in $flex-screen-sizes {
+            &--#{$size} {
+                 flex: $val;
+            }
+            &--#{$size}-#{$screen} {
+                @include screen($screen) {
+                    flex: $val;
+                }
+            }
         }
-      }
     }
 
     &--gutter {
-      margin-bottom: 1em;
+      margin-bottom: $flex-gutter;
 
       &:last-of-type {
         margin-bottom: 0;
       }
 
       @include screen(md) {
-        margin-right: 1em;
+        margin-right: $flex-gutter;
         margin-bottom: 0;
 
         &:last-of-type {

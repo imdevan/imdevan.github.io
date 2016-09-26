@@ -16,6 +16,7 @@ body {
 @import "utility/color-scheme";
 @import "utility/transition";
 @import "utility/shadow";
+@import "utility/hide";
 
 // Functional styles
 @import "utility/background";
@@ -34,3 +35,4 @@ body {
 @import "components/list";
 @import "components/code";
 @import "components/markdown";
+@import "components/icon";

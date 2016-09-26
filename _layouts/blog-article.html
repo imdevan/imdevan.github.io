@@ -12,6 +12,13 @@
         {% endunless %}
     </time>
 
+    <!-- Page Title -->
+    <h1 class="text--gray">
+        {% if page.warning %}
+          {{page.warning}}
+        {% endif %}
+    </h1>
+
     <!-- Page content -->
     <div class="pt-5 ">
         {{ content }}

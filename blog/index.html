@@ -5,12 +5,10 @@ slug: blog
 color: seafoam
 ---
 
-<div class="mb-md text--gray mw--95-60">
-    <p>
-        A blog that is mostly about things I want to remember, books I thought
-        were interesting, lossly catorgorized by emoji.
-    </p>
-</div>
+<p class="mw--95-60 text--gray s">
+    A blog that is mostly about things I want to remember, books I thought
+    were interesting, lossly catorgorized by emoji.
+</p>
 
 <ul class="p--reset">
 {% for post in site.categories.blog %}
@@ -30,7 +28,7 @@ color: seafoam
     </h3>
     <div class="flex flex--flag text--gray text--code">
         {% if post.type %}
-            <span class="">{{post.type}}</span>&nbsp;&nbsp;
+            <span class="icon">{{post.type}}</span>&nbsp;&nbsp;
         {% endif %}
 
         <time>{{post.date | date: '%B %-d, %Y' }}</time>
