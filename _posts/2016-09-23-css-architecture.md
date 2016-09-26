@@ -78,8 +78,9 @@ $flex-sizes: (
 {% endhighlight %}
 
 &__
-{: .hide .s}
+{: .hide}
 
+{: .st}
 This style is very similar to `bem`, but I did not think that bem
 accounts for state. For example, how do you handle a button that is different
 sizes or inline vs. not-inline on different viewports?
