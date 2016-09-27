@@ -8,7 +8,7 @@ $box-shadow-namespace: "shadow" !default;
 
 .#{$box-shadow-namespace} {
   @each $size, $shadow in $shadows {
-    &-#{$size} {
+    &--#{$size} {
       box-shadow: $shadow;
     }
 

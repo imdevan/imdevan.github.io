@@ -9,14 +9,14 @@ $flex-sizes: (
 .#{$flex-namespace} {
   display: flex;
 
-  &--row-md {
+  &--row {
     flex-direction: column;
 
     @include screen(md) {
       flex-direction: row;
     }
 
-    &-rev {
+    &-rev-md {
       flex-direction: column;
 
       @include screen(md) {

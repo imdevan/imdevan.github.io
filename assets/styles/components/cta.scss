@@ -1,0 +1,18 @@
+.cta {
+    @extend .text--no-underline;
+    @extend .text--center;
+    @extend .br--md;
+    @extend .p--md;
+
+    display: block;
+    position: relative;
+    color: color(text-dark) !important;
+    transition: all transition(fast, cubic);
+    border: 2px  solid color(gray);
+
+    &:hover {
+        @extend .shadow--md;
+        text-shadow: none;
+        transform: translateY(-0.25rem);
+    }
+}

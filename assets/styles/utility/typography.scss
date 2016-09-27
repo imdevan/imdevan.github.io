@@ -54,6 +54,12 @@ $typography-namespace: "text" !default;
 
     &--right {
         text-align: right;
+
+        &-md {
+            @include screen(md) {
+                text-align: right;
+            }
+        }
     }
 
     &--lg {
@@ -81,6 +87,12 @@ $typography-namespace: "text" !default;
 
     &--accent {
         color: color(text-accent);
+    }
+
+    &--no-underline {
+        &:after{
+            content: none;
+        }
     }
 
     &-hover--dark {
