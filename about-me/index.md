@@ -14,9 +14,9 @@ Devan Huapaya • Ren Fest 2015
 I currently work at [IBM Design](http://www.ibm.com/design/) and live in
 Austin, TX. I work as a [front end developer](http://i.imgur.com/bA3Rn7E.gif)
 on project Whitewater. My team makes it our priority to find the best tools
-and practices being used in by top tech companies and how they can be adopted
+and practices being used in by top tech companies and learn how they can be adopted
 by IBMers. We currently provide Github, Slack, Safari Books Online, and Mural
-to 1900+ IBM teams.
+to 2200+ IBM teams.
 
 Previously, I've worked at GE, the CGI group, and Texas A&M.
 
