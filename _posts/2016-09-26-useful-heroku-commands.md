@@ -8,7 +8,7 @@ category: blog
 style_mod: BASIC
 ---
 
-## Log into your Heroku locally
+## Log into your Heroku app locally
 
 You need to run this to do anything with the Heroku remote server.
 
