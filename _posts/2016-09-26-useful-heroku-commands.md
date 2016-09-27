@@ -21,9 +21,11 @@ You don't need to login if you are trying to deploy and you have the Heroku app
 listening to one of your git branches. More info [below](#deploying-to-heroku).
 
 {: .st}
-## Start your app locally
+## Test your app locally
 
-To locally start all of the process types that are defined in your Procfile
+Heroku allows you to test how your app will be run on Heroku's servers, locally.
+To start all of the process types that are defined in your Procfile, in your
+local environment
 {% highlight bash %}
 heroku local
 {% endhighlight %}
@@ -45,9 +47,10 @@ web: gulp start
 {% endhighlight %}
 
 {: .st}
-## Setting Node environment variable
+## Setting environment variables
 
-To locally start all of the process types that are defined in your Procfile
+This example shows how to set `NODE_ENV`, replace `NODE_ENV` with whatever
+variable you want to set
 {% highlight bash %}
 heroku config:set NODE_ENV=production
 {% endhighlight %}
@@ -55,12 +58,12 @@ heroku config:set NODE_ENV=production
 {: .st}
 ## Deploying to heroku
 
-This images shows a Heroku app that is connected to a Github.com repository.
+This image shows a Heroku app that is connected to a Github repository.
 The Heroku app is set to deploy automatically when the master branch of the
-Github repo is updated. So that when someone runs `git push` on the master branch
+Github repo is updated. When someone runs `git push` on the master branch
 Heroku will build the app, and replace the current instance with the new one.
 
-![](http://i.imgur.com/htUL2FS.png){: .shadow--none}
+![Heroku + Github setup](http://i.imgur.com/htUL2FS.png){: .shadow--none}
 {: .text--center}
 
 This can also cause the Heroku app will break if you push bad code into master,
