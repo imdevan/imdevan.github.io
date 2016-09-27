@@ -12,29 +12,26 @@
 			{% endfor %}
 		</div>
 
-		<!-- Email form -->
-		<div class="mw--95-90 m--auto pt--xl text--center">
-			<a class="text--light" href="mailto:huapayadevan@gmail.com">huapayadevan@gmail.com</a>
-		</div>
-
 		<!-- Feedback request -->
-		<div class="mw--95-90 m--auto pt--lg">
-            <p class="m--auto">
+		<div class="mw--95-90 m--auto pt--xl">
+            <p class="text--center">
                 <a class="typeform-share link" href="https://imdevan.typeform.com/to/k1LIHJ" data-mode="1" target="_blank">
-                    This site is a work in progress,&nbsp;What do you think?
+                    This site is a work in progress,&nbsp;what do you think?
                 </a>
-                <script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()</script>
             </p>
 		</div>
 
 		<!-- Salutation -->
 		<div class="mw--95-90 m--auto py--xl">
-			Thanks for visiting my site, <br>
+			Thanks for visiting, <br>
 			<a target="_blank" class="text--light" href="http://twitter.com/devanipsum">
 				Devan
 			</a>
 		</div>
 	</footer>
+
+    {% include scripts/typeform.html %}
+    {% include scripts/google_analytics.html %}
 </body>
 
 </html>
