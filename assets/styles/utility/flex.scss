@@ -9,24 +9,8 @@ $flex-sizes: (
 .#{$flex-namespace} {
   display: flex;
 
-  &--row {
-    flex-direction: column;
-
-    @include screen(md) {
-      flex-direction: row;
-    }
-
-    &-rev-md {
-      flex-direction: column;
-
-      @include screen(md) {
-        flex-direction: row-reverse;
-      }
-    }
-  }
-
   &--column {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   &--center {
@@ -48,6 +32,22 @@ $flex-sizes: (
 
   &--space-between {
     justify-content: space-between;
+  }
+
+  &--row {
+    flex-direction: row;
+
+    &-md {
+        @include screen(md) {
+          flex-direction: row;
+        }
+    }
+
+    &-rev-md {
+      @include screen(md) {
+        flex-direction: row-reverse;
+      }
+    }
   }
 
   &__box {

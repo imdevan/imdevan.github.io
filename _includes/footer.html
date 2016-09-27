@@ -3,7 +3,7 @@
 
 
 		<!-- Featured content -->
-		<div class="flex flex--row-md mw--95-90 m--auto pt--lg">
+		<div class="flex flex--column flex--row-md mw--95-90 m--auto pt--lg">
 			{% for feature in site.data.footer.features %}
 				<a href="{{feature.link}}" class="flex__box--sm flex__box--gutter p--sm text--light  trans-all--fast-in-out">
 				        <h3>{{ feature.title }}</h3>
@@ -18,7 +18,7 @@
 		</div>
 
 		<!-- Feedback request -->
-		<div class="flex flex--row-md mw--95-90 m--auto pt--lg">
+		<div class="mw--95-90 m--auto pt--lg">
             <p class="m--auto">
                 <a class="typeform-share link" href="https://imdevan.typeform.com/to/k1LIHJ" data-mode="1" target="_blank">
                     This site is a work in progress,&nbsp;What do you think?
