@@ -8,7 +8,7 @@ category: blog
 style_mod: BASIC
 ---
 
-### Login to Heroku locally
+## Log into your Heroku locally
 
 You need to run this to do anything with the Heroku remote server.
 
@@ -21,7 +21,7 @@ You don't need to login if you are trying to deploy and you have the Heroku app
 listening to one of your git branches. More info [below](#deploying-to-heroku).
 
 {: .st}
-### Start your app locally
+## Start your app locally
 
 To locally start all of the process types that are defined in your Procfile
 {% highlight bash %}
@@ -45,7 +45,7 @@ web: gulp start
 {% endhighlight %}
 
 {: .st}
-### Setting Node environment variable
+## Setting Node environment variable
 
 To locally start all of the process types that are defined in your Procfile
 {% highlight bash %}
@@ -53,20 +53,30 @@ heroku config:set NODE_ENV=production
 {% endhighlight %}
 
 {: .st}
-### Deploying to heroku
+## Deploying to heroku
 
-If you look at the images below the code, the way that I have my app set up on
-Heroku, deploy is set to the master branch of my github repository for the
-once this is set up, I can run git push up to the origin remote and Heroku will
-automatically take care of deploying a new instances of the app
+This images shows a Heroku app that is connected to a Github.com repository.
+The Heroku app is set to deploy automatically when the master branch of the
+Github repo is updated. So that when someone runs `git push` on the master branch
+Heroku will build the app, and replace the current instance with the new one.
+
+![](http://i.imgur.com/htUL2FS.png){: .shadow--none}
+{: .text--center}
+
+This can also cause the Heroku app will break if you push bad code into master,
+and that's why we practice good practices such as unit testing, and integration
+testing. 🙂
+
+When you have your Heroku app paired with a Github repository you can run the
+following to deploy
 
 {% highlight bash %}
-git push origin/master
+git push
 {% endhighlight %}
 
 {: .st}
 **Or** if you want to deploy from the
-command line w/o connecting Heroku to your app you can run.
+command line w/o connecting your Heroku app to a Github repo you can run.
 {% highlight bash %}
 # Create new Heroku remote
 heroku create
@@ -75,6 +85,9 @@ git push heroku master
 {% endhighlight %}
 
 {: .st}
+This will generate a new heroku app and deploy to it.
+{: .s}
+
 ## View Heroku logs
 
 {% highlight bash %}

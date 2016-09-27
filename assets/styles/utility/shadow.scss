@@ -23,6 +23,11 @@ $box-shadow-namespace: "shadow" !default;
       box-shadow: inset $shadow;
     }
   }
+
+  // important to override markdown img
+  &--none {
+      box-shadow: none !important;
+  }
 }
 
 @function shadow($size) {
