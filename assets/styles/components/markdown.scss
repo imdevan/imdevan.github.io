@@ -119,7 +119,8 @@ $markdown-namespace: "markdown" !default;
 
   iframe {
       display: block;
-      margin: auto;
       box-shadow: shadow(lg);
+      margin-left: auto;
+      margin-right: auto;
   }
 }
