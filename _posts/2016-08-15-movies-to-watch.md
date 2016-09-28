@@ -9,7 +9,7 @@ type: 📺
 ---
 
 # To See
-- Russian Garudians of the Galaxy http://imgur.com/gallery/FILrUqs
+- [Russian Guardians of the Galaxy](http://imgur.com/gallery/FILrUqs)
 - Planes, Trains & Automobiles
 - The Book of Mormon
 - [Robot Hindi movie](https://www.youtube.com/watch?v=6VVxOYtimBM)
@@ -33,7 +33,8 @@ type: 📺
 - [Italian Spiderman](https://www.youtube.com/watch?v=Zen_zRmbKaM)
 - St. Vincent <span class="text--gray">(2014)</span>
 
-
+### Shows
+- Over the Garden Wall
 
 # Seen
 - <span class="text--gray">The Big Short</span> - great, educational, spooky
