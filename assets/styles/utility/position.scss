@@ -4,4 +4,10 @@ $position-namespace: "pos" !default;
     &--relative {
         position: relative;
     }
+    &--absolute {
+        position: absolute;
+    }
+    &--bottom {
+        bottom: 0;
+    }
 }

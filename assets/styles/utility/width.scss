@@ -1,6 +1,7 @@
 $width-namespace: "w" !default;
 $max-width-namespace: "mw" !default;
 
+.#{$width-namespace},
 .#{$max-width-namespace} {
   &--95-90 {
     width: 95%;
