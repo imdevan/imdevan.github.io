@@ -27,18 +27,19 @@ $markdown-namespace: "markdown" !default;
 
   img {
     margin: auto;
-    max-width: 100%;
     box-shadow: shadow(lg);
     margin-left: map-get($margin-sizes, auto);
     margin-right: map-get($margin-sizes, auto);
-
-    @include screen(md) {
-        max-width: 80%;
-    }
-
-    @include screen(lg) {
-        max-width: 70%;
-    }
+    //
+    // max-width: 100%;
+    //
+    // @include screen(md) {
+    //     max-width: 80%;
+    // }
+    //
+    // @include screen(lg) {
+    //     max-width: 70%;
+    // }
   }
 
   button {

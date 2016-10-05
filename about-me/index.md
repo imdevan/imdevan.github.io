@@ -5,9 +5,9 @@ color: red
 slug: about-me
 ---
 
-![me](/assets/images/me.jpg){: .br--5}
+![me](http://i.imgur.com/t8SqgPw.jpg){: .br--md .img--square-sm} 
 {: .text--center}
-Devan Huapaya • Ren Fest 2015
+Devan Huapaya • <a href="http://tamuhack.com" class="text--gray">TAMU Hack 2016</a>
 {: .text--center .text--gray .text--code .br}
 
 ## Hi, I'm Devan
@@ -70,5 +70,8 @@ Yes!
 
 I'm interested in giving talks on anything from my skills section, as well as professional development.
 {: .s}
+
+Favorite emoji: 🙏
+
 
 ## Thanks for you time! <strong class="text--blue">You're great!</strong>

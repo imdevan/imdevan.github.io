@@ -6,9 +6,9 @@ color: purple
 nav-item: true
 ---
 
-<div class="flex flex--flag flex--space-between flex--row-rev-md pt--md s">
+<div class="flex flex--flag flex--space-between flex--column flex--row-rev-md pt--md s">
     <div class="flex__box--sm text--center text--right-md pb--md p--reset-md">
-        <img src="/assets/images/me_looking_up.png" alt="" class="br--md mw--80-45">
+        <img src="http://i.imgur.com/e3hJFF0.jpg" alt="" class="br--md mw--80-45">
     </div>
     <div class="flex__box--md">
         <p>
