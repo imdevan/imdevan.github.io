@@ -1,7 +1,7 @@
 .show {
     &--md {
         @include screen(md) {
-            display: initial;
+            display: block;
         }
     }
 }
