@@ -47,21 +47,42 @@ h1, h3 {
 
 $typography-namespace: "text" !default;
 
+$text-sizes: (
+    lg: 2em,
+    xl: 3em
+);
+
+@function text($s){
+    @return map-get($text-sizes, $s);
+};
+
 .#{$typography-namespace} {
+    @each $size, $size-val in $text-sizes  {
+        &--#{$size}{
+            font-size: $size-val
+        }
+    }
+
     &--center {
         text-align: center;
     }
 
     &--right {
         text-align: right;
-    }
 
-    &--lg {
-        font-size: 2em;
+        &-md {
+            @include screen(md) {
+                text-align: right;
+            }
+        }
     }
 
     &--code {
         font-family: 'Roboto Mono', monospace;
+    }
+
+    &--lora {
+        font-family: 'Lora', serif;
     }
 
     &--highlight {
@@ -81,6 +102,12 @@ $typography-namespace: "text" !default;
 
     &--accent {
         color: color(text-accent);
+    }
+
+    &--no-underline {
+        &:after{
+            content: none;
+        }
     }
 
     &-hover--dark {

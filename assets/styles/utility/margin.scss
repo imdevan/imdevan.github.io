@@ -1,19 +1,19 @@
 $margin-namespace: "m" !default;
-$margin-directions: (
-  l: left
-);
+
 $margin-sizes: (
   0: 0,
   sm: rem(1),
   md: rem(2),
   lg: rem(3),
   xl: rem(5),
+  xxl: rem(10),
   auto: auto,
 );
 
-@mixin margin($direction, $value) {
-    margin-#{$direction}: $value;
-}
+$margin-directions: (
+  top: "t",
+  bottom: "b"
+);
 
 .#{$margin-namespace} {
   &--auto {
@@ -22,34 +22,20 @@ $margin-sizes: (
     margin-left: auto;
     margin-right: auto;
   }
-
-  &l-md-sm {
+  &--0 {
+    margin-top: 0;
+    margin-bottom: 0;
     margin-left: 0;
-
-    @include screen(md) {
-      margin-left: map-get($margin-sizes, sm);
-    }
+    margin-right: 0;
   }
 
-  &t {
-    @each $size, $val in $margin-sizes {
-        &-#{$size} {
-            @include margin("top", $val)
+  @each $direction, $direction-namespace in $margin-directions {
+    &#{$direction-namespace} {
+      @each $size, $val in $margin-sizes {
+        &--#{$size} {
+          margin-#{$direction}: $val;
         }
-    }
-
-    &-md-0 {
-      @include screen(md) {
-        margin-top: 0;
       }
-    }
-  }
-
-  &b {
-    @each $size, $val in $margin-sizes {
-        &-#{$size} {
-            @include margin("bottom", $val)
-        }
     }
   }
 }

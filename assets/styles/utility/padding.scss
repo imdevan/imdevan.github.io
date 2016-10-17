@@ -1,67 +1,55 @@
 $padding-namespace: "p" !default;
 $padding-verticle: "py" !default;
-$padding-top: "pt" !default;
-$padding-list: "p-list__item" !default;
-$padding-bottom: "pb" !default;
-$padding-sizes: 1, 2, 3, 4, 5, 10, 15, 20;
+
+$padding-directions: (
+    top: "t",
+    bottom: "b",
+);
+
+$padding-sizes: (
+  0: 0,
+  sm: rem(1),
+  md: rem(2),
+  lg: rem(3),
+  xl: rem(5),
+  xxl: rem(10),
+);
 
 .#{$padding-namespace} {
+  @each $size, $size-val in $padding-sizes {
+    &--#{$size} {
+      padding: $size-val;
+    }
+
+    @each $direction, $dir-namespace in $padding-directions {
+      &#{$dir-namespace}--#{$size} {
+        padding-#{$direction}: $size-val;
+      }
+    }
+  }
+
   &--reset {
     padding-top: 0px !important;
     padding-bottom: 0px !important;
     padding-left: 0px !important;
     padding-right: 0px !important;
-  }
 
-  &-md {
-    &--reset {
-      @include screen(md){
+    &-md {
+      @include screen(md) {
         padding-top: 0px;
         padding-bottom: 0px;
         padding-left: 0px;
         padding-right: 0px;
-      };
+      }
     }
   }
 }
 
 .#{$padding-verticle} {
-  @each $size in $padding-sizes {
-    &-#{$size} {
-      padding-top: rem($size);
-      padding-bottom: rem($size);
-    }
-  }
-}
-
-.#{$padding-namespace} {
-  @each $size in $padding-sizes {
-    &-#{$size} {
-      padding: rem($size);
-    }
-  }
-}
-
-.#{$padding-top} {
-  @each $size in $padding-sizes {
-    &-#{$size} {
-      padding-top: rem($size);
-    }
-  }
-}
-
-.#{$padding-bottom} {
-  @each $size in $padding-sizes {
-    &-#{$size} {
-      padding-bottom: rem($size);
-    }
-  }
-}
-
-.#{$padding-bottom} {
-  @each $size in $padding-sizes {
-    &-#{$size} {
-      padding-bottom: rem($size);
+  @each $size, $size-val in $padding-sizes {
+    &--#{$size} {
+      padding-top: $size-val;
+      padding-bottom: $size-val;
     }
   }
 }

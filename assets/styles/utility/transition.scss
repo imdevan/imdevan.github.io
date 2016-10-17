@@ -4,6 +4,7 @@ $speed: (
   fast: .3s,
   faster: .15s,
   fastest: .1s,
+  light: 0s,
 );
 
 $easing: (
@@ -13,8 +14,8 @@ $easing: (
     cubic2: cubic-bezier(0,0,.26,.93),
 );
 
-@function transition($spd, $ease) {
-    @return map-get($speed, $spd) map-get($easing, $ease);
+@function transition($spd, $ease,  $delay: light) {
+    @return map-get($speed, $spd) map-get($easing, $ease) map-get($speed, $delay);
 }
 
 .trans-all--fast-in-out {

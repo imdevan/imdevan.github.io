@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+	<meta charset="utf-8"/>
+	<title>Building a usable CSS architecture</title>
+	<meta name="viewport" content="initial-scale=1" />
+	<meta name="p:domain_verify" content="73bb9724cf18cc4f5f5d8e8553eeb2ff"/>
+
+	<meta property="og:title" content="Building a usable CSS architecture"/>
+	<meta property="og:site_name" content="imdevan"/>
+	<meta property="og:description" content="Need help building your million dollar idea? Devan Huapaya, is a freelance developer from Austin, TX who can help you.
+"/>
+	<meta property="og:url" content="/blog/css-architecture/"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Lora|Roboto+Mono|Dancing+Script" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+	<link rel="shortcut icon" href="/favicon.png"/>
+
+    <!-- 
+        
+            <meta name="theme-color" content="#2BB7A3" />
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+     -->
+    <meta name="theme-color" content="#444444" />
+
+</head>
+	<body>
+
+<div  id="menu-bar" class="menu__bar">
+    <a id="home-button" class="menu__button icon icon--lg shadow-blue--sm" href="/">
+        <svg width="100%" height="100%" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>This one?</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-45 -3872)" figma:type="canvas">
+<mask id="mask0_alpha" mask-type="alpha">
+<path d="M 45 3872L 445 3872L 445 4272L 45 4272L 45 3872Z" fill="#FFFFFF"/>
+</mask>
+<g id="This one?" style="mix-blend-mode:normal;" mask="url(#mask0_alpha)" figma:type="frame">
+<path d="M 45 3872L 445 3872L 445 4272L 45 4272L 45 3872Z" fill="#FFFFFF"/>
+<g id="Rectangle" style="mix-blend-mode:normal;" figma:type="rounded-rectangle">
+<use xlink:href="#path0_fill" transform="matrix(-0.707107 -0.707107 0.707107 -0.707107 45 4272)" fill="url(#paint0_linear)" style="mix-blend-mode:normal;"/>
+</g>
+<g id="Rectangle" style="mix-blend-mode:normal;" figma:type="rounded-rectangle">
+<use xlink:href="#path1_fill" transform="matrix(0.707107 0.707107 -0.707107 0.707107 445.343 3872)" fill="url(#paint1_linear)" style="mix-blend-mode:normal;"/>
+</g>
+<g id="Group" style="mix-blend-mode:normal;" figma:type="frame">
+<g id="D" style="mix-blend-mode:normal;" filter="url(#filter0_d)" figma:type="text">
+<use xlink:href="#path2_fill" transform="translate(45.5 3864)" fill="#FFFFFF" style="mix-blend-mode:normal;"/>
+</g>
+<g id="Rectangle 2" style="mix-blend-mode:normal;" figma:type="rounded-rectangle">
+<use xlink:href="#path3_fill" transform="translate(173 3973)" fill="#FFFFFF" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_d" filterUnits="userSpaceOnUse" x="108" y="3912" width="288" height="337" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<desc>type="dropShadow" x="0" y="4" size="25" spread="0" color="0,0,0,0.25" blend="normal"</desc>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
+<feOffset dx="0" dy="4"/>
+<feGaussianBlur stdDeviation="12.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.73191e-14 565.685 -282.843 3.46382e-14 282.843 -3.46382e-14)">
+<stop offset="0" stop-color="#ED5EB2"/>
+<stop offset="1" stop-color="#F2994A"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.73043e-14 565.928 -282.6 3.46531e-14 282.6 -3.46531e-14)">
+<stop offset="0" stop-color="#9B51E0"/>
+<stop offset="1" stop-color="#56CCF2"/>
+</linearGradient>
+<path id="path0_fill" d="M 0 0L 282.843 0L 282.843 565.685L 0 565.685L 0 0Z"/>
+<path id="path1_fill" d="M 0 0L 282.6 0L 282.6 565.928L 0 565.928L 0 0Z"/>
+<path id="path2_fill" d="M 324.805 209.668C 324.805 256.673 311.393 292.676 284.57 317.676C 257.878 342.676 219.271 355.176 168.75 355.176L 87.8906 355.176L 87.8906 69.6289L 177.539 69.6289C 224.154 69.6289 260.352 81.9336 286.133 106.543C 311.914 131.152 324.805 165.527 324.805 209.668ZM 261.914 211.23C 261.914 149.902 234.831 119.238 180.664 119.238L 148.438 119.238L 148.438 305.176L 174.414 305.176C 232.747 305.176 261.914 273.861 261.914 211.23Z"/>
+<path id="path3_fill" d="M 0 0L 145 0L 145 198L 0 198L 0 0Z"/>
+</defs>
+</svg>
+
+    </a>
+
+    <label id="menu-button" class="menu__button icon icon--lg shadow-black--sm">
+        <span class="menu__hamburger menu__hamburger-1"></span>
+        <span class="menu__hamburger menu__hamburger-2"></span>
+        <span class="menu__hamburger menu__hamburger-3"></span>
+    </label>
+</div>
+
+<div id="menu-container" class="menu__container bg--blue pos--absolute" >
+    <nav class="menu__body ">
+            
+                <h1 class="p--sm m--0">
+                    <a href="http://twitter.com/devanipsum " class="menu__list-item">
+                        Twitter
+                    </a>
+                </h1>
+            
+                <h1 class="p--sm m--0">
+                    <a href="/blog " class="menu__list-item">
+                        Blog
+                    </a>
+                </h1>
+            
+                <h1 class="p--sm m--0">
+                    <a href="/hire-me " class="menu__list-item">
+                        Hire Me
+                    </a>
+                </h1>
+            
+                <h1 class="p--sm m--0">
+                    <a href="/about-me " class="menu__list-item">
+                        About Me
+                    </a>
+                </h1>
+            
+        </nav>
+        <nav class="menu__footer">
+            
+                <a href="http://twitter.com/devanipsum " class="menu__list-item">
+                    Twitter
+                </a>
+            
+                <a href="http://github.com/imdevan " class="menu__list-item">
+                    Github
+                </a>
+            
+                <a href="hire-me " class="menu__list-item">
+                    Contact
+                </a>
+            
+        </nav>
+</div>
+
+
+<main role="main" class="bg--white">
+    <header class="article-header bg--green pb--xxl text--light">
+        <div class="mw--95-90 m--auto pt--xxl">
+            <h1 >Building a usable CSS architecture</h1>
+
+            <time class="text--light">
+                September 23, 2016
+                
+                  •&nbsp;7 minutes
+                
+            </time>
+        </div>
+    </header>
+
+  <div class="markdown pb--sm">
+    <h1 class="text--gray">
+        
+    </h1>
+
+    <!-- Page content -->
+    <div class="pt--xl">
+        <h2 id="introduction">Introduction</h2>
+
+<p>This past month, I rebuilt the site that you’re reading. When building the&nbsp;site,
+I wanted to be able to have a a finite set of styles for&nbsp;typography,
+vertical and horizontal spacing/layout, block quotes, and code. That way I&nbsp;could
+put all of the important parts together, and come back when I have time to&nbsp;add
+fancy things, like a <a href="/blog/colorful-address-bar-on-mobile/">colorful address bar</a>.</p>
+
+<p>The reason for those 5 is that I knew the website was going to have a&nbsp;heavy
+blogging component and that I was going to be using markdown for writing&nbsp;blog
+posts. A lot of Typography can be done without needing andy custom&nbsp;styles,
+blockquotes, and code could also go without needing any custom&nbsp;styles.</p>
+
+<p>Once I had those things down the remaining parts of the website would&nbsp;be
+either dynamic components, like a menu or parallax&nbsp;scrolling.</p>
+
+<p class="s">The result ended up being some modification of <a href="http://getbem.com/">bem</a>&nbsp;style
+naming with some&nbsp;augmentation.</p>
+
+<h2 id="naming-convention">Naming&nbsp;convention</h2>
+
+<h3 id="components">Components</h3>
+
+<p>For my css architecture I refer to components as anything with more than two&nbsp;html
+parts or doesn’t affect more than one&nbsp;property.</p>
+
+<p><code>.block__element--modifier-state</code></p>
+
+<p><code>block</code> refers to the outer most html peice for example if I need to create&nbsp;a
+special layout that would be easier to make using flexbox. The outer class&nbsp;is
+<code>.flex</code>, the inner html block will be called <code>.flex__box</code> and if the&nbsp;boxes
+need to be different sizes <code>.flex__box--md</code>, if the box is only that size&nbsp;during
+a partiular sizing of the screen we can use <code>.flex__box--md-md</code>&nbsp;which
+means that the <code>.flex__box</code> object will have a <code>md</code> size on a medium&nbsp;viewport.</p>
+
+<p>The sass for generating the above flex style can be found <a href="https://github.com/imdevan/imdevan.github.io/blob/a-new-hope/assets/styles/components/code.scss">here</a></p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$flex-namespace</span><span class="p">:</span> <span class="s2">"flex"</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+<span class="nv">$flex-gutter</span><span class="p">:</span> <span class="m">1em</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+<span class="nv">$flex-screen-sizes</span><span class="p">:</span> <span class="n">md</span><span class="p">;</span>
+<span class="nv">$flex-sizes</span><span class="p">:</span> <span class="p">(</span>
+  <span class="n">sm</span><span class="o">:</span> <span class="m">1</span><span class="o">,</span>
+  <span class="n">md</span><span class="o">:</span> <span class="m">2</span><span class="o">,</span>
+<span class="p">);</span>
+
+
+<span class="nc">.</span><span class="si">#{</span><span class="nv">$flex-namespace</span><span class="si">}</span> <span class="p">{</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+
+    <span class="k">&amp;</span><span class="nt">__box</span> <span class="p">{</span>
+        <span class="k">@each</span> <span class="nv">$size</span><span class="o">,</span> <span class="nv">$val</span> <span class="n">in</span> <span class="nv">$flex-sizes</span> <span class="p">{</span>
+            <span class="k">@each</span> <span class="nv">$screen</span> <span class="n">in</span> <span class="nv">$flex-screen-sizes</span> <span class="p">{</span>
+                <span class="k">&amp;</span><span class="nt">--</span><span class="si">#{</span><span class="nv">$size</span><span class="si">}</span> <span class="p">{</span>
+                    <span class="nl">flex</span><span class="p">:</span> <span class="nv">$val</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="k">&amp;</span><span class="nt">--</span><span class="si">#{</span><span class="nv">$size</span><span class="si">}</span><span class="nt">-</span><span class="si">#{</span><span class="nv">$screen</span><span class="si">}</span> <span class="p">{</span>
+                    <span class="k">@include</span> <span class="nd">screen</span><span class="p">(</span><span class="nv">$screen</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="nl">flex</span><span class="p">:</span> <span class="nv">$val</span><span class="p">;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p class="hide">&amp;__</p>
+
+<p class="st">This style is very similar to <code>bem</code>, but I did not think that&nbsp;bem
+accounts for state. For example, how do you handle a button that is&nbsp;different
+sizes or inline vs. not-inline on different&nbsp;viewports?</p>
+
+<p class="s">I have very few components, at time of writing I have 4 things in the&nbsp;components
+directory of my sass styles.&nbsp;<code>blockquote, code, list, and markdown</code>.</p>
+
+<h3 id="utilities">Utilities</h3>
+
+<p><code>.utility--modifier-state</code></p>
+
+<p>Utilities are the bulk of my styles. Utilities are essentially&nbsp;functional
+styles that can be used anywhere to style anything. The intent behind&nbsp;utilities
+is to be able to re-use styles in as many places as&nbsp;possible.</p>
+
+<p><code>utility</code> refers to the utility style that is being applied. The utilities&nbsp;I
+use the most are <code>text</code>, <code>margin</code>, and&nbsp;<code>padding</code>.</p>
+
+<p>For most of my utilities I refer to some kind of short hand, so that I can&nbsp;save
+myself some typing. (e.g. <code>text</code>, <code>margin</code>, and <code>padding</code> become <code>t</code>, <code>m</code>,&nbsp;and
+    <code>p</code>);</p>
+
+<p class="s"><code>state</code> depending on the utility <code>state</code> can refer either to a utility that&nbsp;has
+a <code>hover</code> state or which screen size that states take effect&nbsp;<code>md, lg, xl, etc</code></p>
+
+<h2 id="tee-shirt-sizes-">Tee Shirt Sizes&nbsp;👕</h2>
+
+<p>For places where sizing is needed (e.g. <code>margin--xs-md</code>) I use tee shirt&nbsp;sizes.
+This is something that I picked up&nbsp;from
+<a href="https://twitter.com/matthewcpaul">@matthewcpaul</a>, and find that it&nbsp;helps
+drastically reduce the complexity of having to deal with different sized&nbsp;objects
+and spacing on my web&nbsp;page.</p>
+
+<p>This is my sass code using&nbsp;maps</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$margin-sizes</span><span class="p">:</span> <span class="p">(</span>
+  <span class="m">0</span><span class="o">:</span> <span class="m">0</span><span class="o">,</span>
+  <span class="n">sm</span><span class="o">:</span> <span class="nf">rem</span><span class="p">(</span><span class="m">1</span><span class="p">)</span><span class="o">,</span>
+  <span class="n">md</span><span class="o">:</span> <span class="nf">rem</span><span class="p">(</span><span class="m">2</span><span class="p">)</span><span class="o">,</span>
+  <span class="n">lg</span><span class="o">:</span> <span class="nf">rem</span><span class="p">(</span><span class="m">3</span><span class="p">)</span><span class="o">,</span>
+  <span class="n">xl</span><span class="o">:</span> <span class="nf">rem</span><span class="p">(</span><span class="m">5</span><span class="p">)</span><span class="o">,</span>
+  <span class="nb">auto</span><span class="o">:</span> <span class="nb">auto</span>
+<span class="p">);</span></code></pre></figure>
+
+<h2 class="st" id="whos-on-first">Who’s on&nbsp;first?</h2>
+
+<p><strong>You’re application doesn’t have to be mobile first</strong>, but&nbsp;you
+should pick a direction. If you decide to build desktop first that’s&nbsp;fine.</p>
+
+<p class="s">I did however, build my style architecture to be mobile first in that the&nbsp;default
+styles exist on the smallest viewports and if variations are needed for&nbsp;larger
+viewports then I specify&nbsp;them.</p>
+
+<h2 id="build-as-needed">Build as&nbsp;needed</h2>
+
+<p>For my build practices when it comes to styles is to not build or generate&nbsp;them
+unless they are needed. In the case of margins. There are also variations&nbsp;from
+just the <code>margin</code> css property. There is also  <code>margin-top</code>,&nbsp;<code>margin-bottom</code>,
+<code>margin-left</code>,  and <code>margin-right</code>. I try to think of all of these as&nbsp;different
+properties that share the same sizes. So my shorthand for each is different,&nbsp;but
+they share the same <code>$margin-sizes</code> referenced above. Right now on my site I&nbsp;only
+use <code>margin-top</code>, <code>margin-bottom</code>. So my <code>margins.scss</code> file looks like&nbsp;this.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$margin-namespace</span><span class="p">:</span> <span class="s2">"m"</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+
+<span class="nv">$margin-sizes</span><span class="p">:</span> <span class="p">(</span>
+  <span class="m">0</span><span class="o">:</span> <span class="m">0</span><span class="o">,</span>
+  <span class="n">sm</span><span class="o">:</span> <span class="nf">rem</span><span class="p">(</span><span class="m">1</span><span class="p">)</span><span class="o">,</span>
+  <span class="n">md</span><span class="o">:</span> <span class="nf">rem</span><span class="p">(</span><span class="m">2</span><span class="p">)</span><span class="o">,</span>
+  <span class="n">lg</span><span class="o">:</span> <span class="nf">rem</span><span class="p">(</span><span class="m">3</span><span class="p">)</span><span class="o">,</span>
+  <span class="n">xl</span><span class="o">:</span> <span class="nf">rem</span><span class="p">(</span><span class="m">5</span><span class="p">)</span><span class="o">,</span>
+  <span class="nb">auto</span><span class="o">:</span> <span class="nb">auto</span>
+<span class="p">);</span>
+
+<span class="nv">$margin-directions</span><span class="p">:</span> <span class="p">(</span>
+  <span class="nb">top</span><span class="o">:</span> <span class="s2">"t"</span><span class="o">,</span>
+  <span class="nb">bottom</span><span class="o">:</span> <span class="s2">"b"</span>
+<span class="p">);</span>
+
+<span class="nc">.</span><span class="si">#{</span><span class="nv">$margin-namespace</span><span class="si">}</span> <span class="p">{</span>
+  <span class="k">&amp;</span><span class="nt">--auto</span> <span class="p">{</span>
+    <span class="nl">margin-top</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+    <span class="nl">margin-bottom</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+    <span class="nl">margin-left</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+    <span class="nl">margin-right</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">@each</span> <span class="nv">$direction</span><span class="o">,</span> <span class="nv">$direction-namespace</span> <span class="n">in</span> <span class="nv">$margin-directions</span> <span class="p">{</span>
+    <span class="k">&amp;</span><span class="si">#{</span><span class="nv">$direction-namespace</span><span class="si">}</span> <span class="p">{</span>
+      <span class="k">@each</span> <span class="nv">$size</span><span class="o">,</span> <span class="nv">$val</span> <span class="n">in</span> <span class="nv">$margin-sizes</span> <span class="p">{</span>
+        <span class="k">&amp;</span><span class="nt">--</span><span class="si">#{</span><span class="nv">$size</span><span class="si">}</span> <span class="p">{</span>
+          <span class="nt">margin-</span><span class="si">#{</span><span class="nv">$direction</span><span class="si">}</span><span class="nd">:</span> <span class="err">$</span><span class="nt">val</span><span class="p">;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h2 class="st" id="lean-on-sass-when-possible">Lean on Sass when&nbsp;possible</h2>
+<p>You can see that the above code doesn’t look at all like traditional css.&nbsp;If
+you’re not using <a href="http://sass-lang.com/">Sass</a>, I <span class="caps">HIGHLY</span> recommend learning&nbsp;how
+to do so. As it allows me to expand my styles easily while&nbsp;mataintaining
+readability. For example in the above code you can&nbsp;see</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$margin-namespace</span><span class="p">:</span> <span class="s2">"m"</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+
+<span class="nv">$margin-directions</span><span class="p">:</span> <span class="p">(</span>
+  <span class="nb">top</span><span class="o">:</span> <span class="s2">"t"</span><span class="o">,</span>
+  <span class="nb">bottom</span><span class="o">:</span> <span class="s2">"b"</span>
+<span class="p">);</span></code></pre></figure>
+
+<p class="st">Now you can see that if I needed to handle left or right margins I could do&nbsp;so
+by adding left or right to the&nbsp;map.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$margin-namespace</span><span class="p">:</span> <span class="s2">"m"</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+
+<span class="nv">$margin-directions</span><span class="p">:</span> <span class="p">(</span>
+  <span class="nb">top</span><span class="o">:</span> <span class="s2">"t"</span><span class="o">,</span>
+  <span class="nb">bottom</span><span class="o">:</span> <span class="s2">"b"</span><span class="o">,</span>
+  <span class="nb">right</span><span class="o">:</span> <span class="s2">"r"</span><span class="o">,</span>
+  <span class="nb">left</span><span class="o">:</span> <span class="s2">"l"</span>
+<span class="p">);</span></code></pre></figure>
+
+<h2 class="st" id="future-plans">Future&nbsp;plans</h2>
+
+<p class="s">Right now this isn’t published as a library, but I will mostly do so once I&nbsp;have
+my styles set up in a way that is perfect for me and is modular enough&nbsp;to
+be consumed as needed. That way when I or whoever uses the styles don’t have&nbsp;to
+bring all of them in at once and bloat an otherwise lightweight&nbsp;webpage.</p>
+
+<h2 id="references">References</h2>
+<ul class="s">
+  <li><a href="http://getbem.com/">Bem Official&nbsp;website</a></li>
+  <li><a href="http://csswizardry.com/2015/03/immutable-css/">Immutable&nbsp;css</a></li>
+  <li><a href="http://eng.wealthfront.com/2013/08/20/functional-css-fcss/">Wealfront functional&nbsp;css</a></li>
+  <li><a href="http://tachyons.io/">Tachyons</a></li>
+  <li><a href="https://blog.colepeters.com/building-and-shipping-functional-css/">A blog by cole&nbsp;peters</a></li>
+  <li><a href="https://github.com/stubbornella/oocss"><span class="caps">OOCSS</span></a></li>
+  <li><a href="https://smacss.com/"><span class="caps">SMACSS</span></a></li>
+  <li><a href="http://acss.io/">Atomic&nbsp;css</a></li>
+  <li><a href="http://bradfrost.com/blog/post/atomic-web-design/">Atomic design - Brad&nbsp;Frost</a></li>
+  <li><a href="http://patternlab.io/">Pattern&nbsp;lab</a></li>
+</ul>
+<p>Thanks for reading. If you found this useful, or if you like cats 🐱, let me&nbsp;know
+by tweeting it!&nbsp;♥️</p>
+
+    </div>
+
+    <!-- Author link -->
+    <div class="text--center pt--xl">
+        by <a href="https://twitter.com/devanIpsum">Devan</a>
+    </div>
+    <!-- Twitter share 😉 -->
+    <div class="text--center mt--sm mb--xxl">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-via="devanIpsum" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+  </div>
+</main>
+
+    <!-- Footer -->
+	<footer class="bg--dark text--light shadow--inverted-lg" role="contentinfo">
+		<!-- Featured content -->
+		<div class="flex flex--column flex--row-md mw--95-90 m--auto pt--lg">
+			
+				<a href="http://hackdfw.com" class="flex__box--sm flex__box--gutter p--sm text--light  trans-all--fast-in-out">
+				        <h3>HackDFW</h3>
+				        I'm currently working to bring a really awesome hackathon to Dallas.
+                </a>
+			
+				<a href="/hire-me" class="flex__box--sm flex__box--gutter p--sm text--light  trans-all--fast-in-out">
+				        <h3>Hire Me</h3>
+				        I create digital experiences that have form and purpose.
+                </a>
+			
+				<a href="/blog/" class="flex__box--sm flex__box--gutter p--sm text--light  trans-all--fast-in-out">
+				        <h3>Latest Post</h3>
+				        Looking for something to read?
+                </a>
+			
+		</div>
+
+		<!-- Feedback request -->
+		<div class="mw--95-90 m--auto pt--xl">
+            <p class="text--center">
+                <a class="typeform-share link" href="https://imdevan.typeform.com/to/k1LIHJ" data-mode="1" target="_blank">
+                    This site is a work in progress,&nbsp;what do you think?
+                </a>
+            </p>
+		</div>
+
+		<!-- Salutation -->
+		<div class="mw--95-90 m--auto py--xl">
+			Thanks for visiting, <br>
+			<a target="_blank" class="text--light" href="http://twitter.com/devanipsum">
+				Devan
+			</a>
+		</div>
+	</footer>
+
+    <script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()</script>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66125476-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+    <script src="/assets/js/snap.min.js"></script>
+<script src="/assets/js/menu.js"></script>
+
+</body>
+
+</html>
+

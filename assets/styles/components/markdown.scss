@@ -27,18 +27,10 @@ $markdown-namespace: "markdown" !default;
 
   img {
     margin: auto;
-    max-width: 100%;
     box-shadow: shadow(lg);
     margin-left: map-get($margin-sizes, auto);
     margin-right: map-get($margin-sizes, auto);
-
-    @include screen(md) {
-        max-width: 80%;
-    }
-
-    @include screen(lg) {
-        max-width: 70%;
-    }
+    max-width: 100%;
   }
 
   button {
@@ -70,10 +62,10 @@ $markdown-namespace: "markdown" !default;
   }
 
   .s {
-    padding-bottom: map-get($margin-sizes, lg);
+    @extend .mb--lg;
 
     &t {
-        padding-top: map-get($margin-sizes, lg);
+        @extend .mt--lg;
     }
   }
 
@@ -119,7 +111,8 @@ $markdown-namespace: "markdown" !default;
 
   iframe {
       display: block;
-      margin: auto;
       box-shadow: shadow(lg);
+      margin-left: auto;
+      margin-right: auto;
   }
 }
