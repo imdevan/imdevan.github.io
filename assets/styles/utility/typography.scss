@@ -47,7 +47,21 @@ h1, h3 {
 
 $typography-namespace: "text" !default;
 
+$text-sizes: (
+    lg: 2em
+);
+
+@function text($s){
+    @return map-get($text-sizes, $s);
+};
+
 .#{$typography-namespace} {
+    @each $size, $size-val in $text-sizes  {
+        &--#{$size}{
+            font-size: $size-val
+        }
+    }
+
     &--center {
         text-align: center;
     }
@@ -60,10 +74,6 @@ $typography-namespace: "text" !default;
                 text-align: right;
             }
         }
-    }
-
-    &--lg {
-        font-size: 2em;
     }
 
     &--code {

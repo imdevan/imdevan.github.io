@@ -7,6 +7,11 @@ $max-width-namespace: "mw" !default;
     max-width: 900px;
   }
 
+  &--80-90 {
+    width: 80%;
+    max-width: 900px;
+  }
+
   &--95-60 {
     width: 95%;
     max-width: 600px;

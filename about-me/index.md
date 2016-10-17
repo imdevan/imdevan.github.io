@@ -5,7 +5,7 @@ color: red
 slug: about-me
 ---
 
-![me](http://i.imgur.com/t8SqgPw.jpg){: .br--md .img--square-sm} 
+![me](http://i.imgur.com/t8SqgPw.jpg){: .br--md .img--square-sm}
 {: .text--center}
 Devan Huapaya • <a href="http://tamuhack.com" class="text--gray">TAMU Hack 2016</a>
 {: .text--center .text--gray .text--code .br}
@@ -71,7 +71,9 @@ Yes!
 I'm interested in giving talks on anything from my skills section, as well as professional development.
 {: .s}
 
-Favorite emoji: 🙏
+## Favorite emoji
+🙏
+{: .text--lg}
 
 
 ## Thanks for you time! <strong class="text--blue">You're great!</strong>

@@ -40,7 +40,7 @@ gulp.task('styles', function() {
 
 // Compile SCSS into CSS & auto-inject into browsers
 gulp.task('scripts', function() {
-  return gulp.src('./assets/js/index.js')
+  return gulp.src('./assets/js/**.js')
   .pipe(gulp.dest('./_site/assets/js'))
   .pipe(browserSync.stream());
 });

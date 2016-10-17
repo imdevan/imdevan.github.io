@@ -16,6 +16,10 @@ $flex-sizes: (
   &--center {
     justify-content: center;
     align-items: center;
+
+    &-y {
+      justify-content: center;
+    }
   }
 
   &--flag {
