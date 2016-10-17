@@ -15,16 +15,12 @@ Devan Huapaya • <a href="http://tamuhack.com" class="text--gray">TAMU Hack 201
     <h1> Hi, I'm Devan</h1>
 </header>
 
-I currently work at [IBM Design](http://www.ibm.com/design/) and live in
-Austin, TX. I work as a [front end developer](http://i.imgur.com/bA3Rn7E.gif)
-on project Whitewater. My team makes it our priority to find the best tools
-and practices being used in by top tech companies and learn how they can be adopted
-by IBMers. We currently provide Github, Slack, Safari Books Online, and Mural
+I believe in making things that help people.
+{: .s}
+
+I'm a software engineer for hire in Plano, TX. Previously at IBM as a [front end developer](http://i.imgur.com/bA3Rn7E.gif)
+on project Whitewater. Where I brought tools and practices with Github, Slack, Safari Books Online, and Mural
 to 2200+ IBM teams.
-
-Previously, I've worked at GE, the CGI group, and Texas A&M.
-
-I like building things, usually in a web-browser.
 {: .s}
 
 ## Skills & Technologies

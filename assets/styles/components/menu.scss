@@ -16,11 +16,19 @@
         }
     }
     &__button {
-        @extend .bg--white;
         cursor: pointer;
-        transition: all transition(base, cubic);
+        transition: all transition(fast, cubic);
         transform: translate(0%,0%);
+        background: color(white);
 
+        &:hover {
+            background: color(text-dark);
+
+            .menu__hamburger {
+                background: color(white);
+                @extend .shadow-purple--sm;
+            }
+        }
         &.open {
             .menu__hamburger {
                 &-1{
@@ -51,7 +59,7 @@
           left:50%;
           margin-left:-$width/2;
           margin-top:-$height/2;
-          transition: transform transition(fast, cubic);
+          transition: all transition(fast, cubic);
 
           &-1{
               transform:translate3d(0,-$hamburger-spacing,0);

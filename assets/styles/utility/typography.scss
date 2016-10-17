@@ -48,7 +48,8 @@ h1, h3 {
 $typography-namespace: "text" !default;
 
 $text-sizes: (
-    lg: 2em
+    lg: 2em,
+    xl: 3em
 );
 
 @function text($s){

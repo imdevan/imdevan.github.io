@@ -6,7 +6,6 @@ author: Devan Huapaya
 type: 🔑
 category: blog
 style_mod: BASIC
-warning: 🔑 Work in progress 🐱 Feedback welcome ♥️
 ---
 
 ## Introduction

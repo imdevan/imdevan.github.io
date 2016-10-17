@@ -4,9 +4,14 @@ $icon-sizes: (
 );
 
 .icon {
+    @extend .text--no-underline;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
+    &:hover {
+        @extend .shadow-purple--sm;
+    }
 
     @each $size, $size-val in $icon-sizes {
         &--#{$size} {

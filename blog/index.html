@@ -4,14 +4,13 @@ title: Blog
 slug: blog
 color: seafoam
 ---
-<header class="text--lg pt--sm">
-    <h1>{{page.title}}</h1>
+<header class="pb--xl">
+    <h1 class="pt--xl text--xl">{{page.title}}</h1>
+    <p class="mw--95-60 text--gray s">
+        A blog that is mostly about things I want to remember, books I thought
+        were interesting, lossly catorgorized by emoji.
+    </p>
 </header>
-
-<p class="mw--95-60 text--gray s">
-    A blog that is mostly about things I want to remember, books I thought
-    were interesting, lossly catorgorized by emoji.
-</p>
 
 <ul class="p--reset">
 {% for post in site.categories.blog %}
