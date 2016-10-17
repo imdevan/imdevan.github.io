@@ -1,13 +1,9 @@
 navitems:
-  - label: Twitter
-    link: http://twitter.com/devanipsum
-    color: blue
   - label: Blog
     link: /blog
-    color: green
+  - label: Portfolio
+    link: /portfolio
   - label: Hire Me
     link: /hire-me
-    color: purple
   - label: About Me
     link: /about-me
-    color: red

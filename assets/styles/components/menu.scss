@@ -6,7 +6,7 @@
         @extend .pos--fixed;
         @extend .pos--fixed-highest;
         @extend .pos--top-center;
-        @extend .mw--95-90;
+        @extend .mw--95-95;
         @extend .pt--md;
 
         &.close {
@@ -16,6 +16,7 @@
         }
     }
     &__button {
+        @extend .shadow-black--sm;
         cursor: pointer;
         transition: all transition(fast, cubic);
         transform: translate(0%,0%);

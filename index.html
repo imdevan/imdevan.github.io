@@ -3,28 +3,16 @@ layout: home-page
 nav-item: true
 title: Hi, I'm Devan
 color: blue
-nav-list:
-    - label: Blog
-      link: blog
-    - label: Hire Me
-      link: hire-me
-    - label: About Me
-      link: about-me
 ---
 
 
 <main class="pos--relative" role="main">
-    <header class="text--code" style="position: absolute; width: 100%;">
-        <h3 class="flex flex--verticle-center flex--no-wrap mw--95-90 m--auto">
-            {% for item in nav-list %}
-                <a class="flex__box-sm" href="{{item.link}}"><h3>{{item.label}}</h3></a>
-            {% endfor %}
-        </h3>
-    </header>
-
     <section class="flex flex--column flex--center-y
                     h--600-80  mw--95-90 m--auto">
-      <h1 class="text--lora mt-0 text--lg">{{page.title}}</h1>
+
+      <span class="text--lg text--lora">
+          <h1>{{page.title}}</h1>
+      </span>
 
       <p>
           I'm an engineer for hire in Dallas, Texas.
