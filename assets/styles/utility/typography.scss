@@ -80,6 +80,10 @@ $text-sizes: (
         font-family: 'Roboto Mono', monospace;
     }
 
+    &--lora {
+        font-family: 'Lora', serif;
+    }
+
     &--highlight {
         font-family: 'Dancing Script', cursive;
         font-size: 2em;

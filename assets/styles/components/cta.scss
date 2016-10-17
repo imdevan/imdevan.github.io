@@ -1,18 +1,23 @@
 .cta {
     @extend .text--no-underline;
-    @extend .text--center;
-    @extend .br--md;
+    @extend .text--code;
+    @extend .text--gray;
     @extend .p--md;
+    @extend .shadow--md;
 
     display: block;
     position: relative;
     color: color(text-dark) !important;
     transition: all transition(fast, cubic);
     border: 2px  solid color(gray);
+    z-index: 0;
+    background: color(white);
 
     &:hover {
-        @extend .shadow--md;
+        @extend .shadow--lg;
+        z-index: 2;
+
         text-shadow: none;
-        transform: translateY(-0.25rem);
+        transform: translateY(-0.25rem) scale(1.1);
     }
 }

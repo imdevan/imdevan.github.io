@@ -22,6 +22,11 @@ $max-width-namespace: "mw" !default;
     max-width: 450px;
   }
 
+  &--100-45 {
+    width: 100%;
+    max-width: 450px;
+  }
+
 }
 
 .w {

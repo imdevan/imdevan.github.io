@@ -6,43 +6,38 @@ color: purple
 nav-item: true
 ---
 
-<div class="flex flex--flag flex--space-between flex--column flex--row-rev-md pt--xl s">
-    <div class="flex__box--sm text--center text--right-md pb--md p--reset-md">
-        <img src="http://i.imgur.com/e3hJFF0.jpg" alt="" class="br--md mw--80-45">
+<div class="flex flex--flag flex--space-between flex--column flex--row-rev-md pt--xxl pb--xl s">
+    <div class="flex__box--md text--center text--right-md pb--md p--reset-md">
+        <img src="http://i.imgur.com/tuAeTfJ.png" alt="" class="mw--100-45">
     </div>
-    <div class="flex__box--md">
-        <p>
-            <span class="text--accent">Hi, I'm Devan!</span> A digital product engineer based in Austin, TX.
-        </p>
-
-        <p>
-            I mainly specialize in designing user interface architecture and rapid prototyping. For the web, usually. Crafting brilliant user experiences and stand-out products is what I'm truly passionate about.
-        </p>
+    <div class="flex__box--md text--lg text--lora">
+        <h1>Let's Rock</h1>
     </div>
 </div>
 
-<a class="typeform-share link cta s"
-    href="https://imdevan.typeform.com/to/DJyZhU"
-    data-mode="1">
-    You can hire me if you need a website,
-    an original landing page,
-    a logo, dynamic web components, or
-    if you want help figuring out your digital artistic direction.
-</a>
+<section class="flex flex--center mw--80-45 m--auto pb--xl">
+    <a class="typeform-share link cta flex__box--md"
+        href="https://imdevan.typeform.com/to/DJyZhU"
+        data-mode="1">
+        <h2>website</h2>
+        <h2>Dynamic Web components</h2>
+        <h2>Building Products on the web</h2>
+        <button>hire me</button>
+    </a>
 
-<a class="typeform-share link cta s"
-    href="https://imdevan.typeform.com/to/OKghBi"
-    data-mode="1">
-    I also offer services in tutoring, if you are just learning how to program,
-    or are interested in picking up web-development for your business or hobby.
-</a>
+    <a class="typeform-share link cta flex__box--md"
+        href="https://imdevan.typeform.com/to/OKghBi"
+        data-mode="1">
+        <h2>Turtoring</h2>
+        <h2>1:1 Mentorship</h2>
+        <h2>Coding HTML, Sass, & Javascript</h2>
+        <h2>Building Products on the web 👈🏽</h2>
+        <button>tutoring</button>
+    </a>
+</section>
 
-If you are interested in working together, drop me a line at
- [huapayadevan@gmail.com](mailto:huapayadevan@gmail.com)
-
- If you would like to know more about my background,
- [that can be found here](/about-me)
-{: .s}
+ [More info on my background](/about-me)
+{: .text--lg .text--lora .pb--xl}
 
 
 > Devan was fantastic to work with and was able to  
