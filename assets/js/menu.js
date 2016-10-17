@@ -53,7 +53,7 @@ var m, menu = {
                 console.log("open");
             }
             last = current;
-        }, 50);
+        }, 250);
     },
     init: function() {
         m = this.elms;

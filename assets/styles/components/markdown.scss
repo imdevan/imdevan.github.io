@@ -30,16 +30,7 @@ $markdown-namespace: "markdown" !default;
     box-shadow: shadow(lg);
     margin-left: map-get($margin-sizes, auto);
     margin-right: map-get($margin-sizes, auto);
-    //
-    // max-width: 100%;
-    //
-    // @include screen(md) {
-    //     max-width: 80%;
-    // }
-    //
-    // @include screen(lg) {
-    //     max-width: 70%;
-    // }
+    max-width: 100%;
   }
 
   button {

@@ -15,6 +15,11 @@ $position-z-indexes: (
     &--absolute {
         position: absolute;
     }
+    &--center {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
     &--top-center {
         top: 0;

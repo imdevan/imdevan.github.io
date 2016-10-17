@@ -1,23 +1,14 @@
 .cta {
     @extend .text--no-underline;
-    @extend .text--code;
-    @extend .text--gray;
-    @extend .p--md;
-    @extend .shadow--md;
-
-    display: block;
-    position: relative;
-    color: color(text-dark) !important;
-    transition: all transition(fast, cubic);
-    border: 2px  solid color(gray);
-    z-index: 0;
-    background: color(white);
+    @extend .p--lg;
+    @extend .pos--center;
+    display: inline-block;
+    color: color(white) !important;
+    background: linear-gradient(to top right, color(purple), color(blue));
+    transition: all transition(slow, cubic);
 
     &:hover {
-        @extend .shadow--lg;
-        z-index: 2;
-
-        text-shadow: none;
-        transform: translateY(-0.25rem) scale(1.1);
+        transform: translateY(-.5rem) translateX(-50%);
+        @extend .shadow-purple--lg;
     }
 }
