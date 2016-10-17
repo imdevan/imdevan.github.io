@@ -9,7 +9,8 @@ var m, menu = {
     elms: {
         button: gei('menu-button'),
         container: gei('menu-container'),
-        navList: qsa('menu__list-item')
+        navList: qsa('menu__list-item'),
+        bar: gei('menu-bar')
     },
     addEvents: function() {
         var ths = this;
@@ -29,6 +30,9 @@ var m, menu = {
                 ths.close();
             }
         };
+    },
+    manageScroll: function() {
+
     },
     init: function() {
         m = this.elms;

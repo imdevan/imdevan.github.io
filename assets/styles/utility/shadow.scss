@@ -1,26 +1,41 @@
-$shadows: (
-  sm: 7px 7px 14px rgba(color(black), 0.2),
-  md: 6px 6px 24px rgba(color(black), 0.2),
-  lg: 12px 12px 48px rgba(color(black), 0.2),
-);
-
 $box-shadow-namespace: "shadow" !default;
 
-.#{$box-shadow-namespace} {
-  @each $size, $shadow in $shadows {
-    &--#{$size} {
-      box-shadow: $shadow;
+$shadow-sizes: (
+  sm: 7px 7px 14px,
+  md: 6px 6px 24px,
+  lg: 12px 12px 48px
+);
+
+$shadow-colors: (
+    black: rgba(color(black), 0.2),
+    blue: rgba(color(blue), 0.2)
+);
+
+@mixin set-shadow($_size, $_shadow, $_color: map-get($shadow-colors, black)) {
+    &--#{$_size} {
+      box-shadow: $_shadow $_color;
     }
 
 
-    &--hover-#{$size} {
+    &--hover-#{$_size} {
       &:hover {
-          box-shadow: $shadow;
+          box-shadow: $_shadow $_color;
       }
     }
 
-    &--inverted-#{$size} {
-      box-shadow: inset $shadow;
+    &--inverted-#{$_size} {
+      box-shadow: inset $_shadow $_color;
+    }
+}
+
+.#{$box-shadow-namespace} {
+  @each $size, $shadow in $shadow-sizes {
+    @include set-shadow($size, $shadow, map-get($shadow-colors, black));
+
+    @each $color, $color-val in $shadow-colors {
+        &-#{$color} {
+            @include set-shadow($size, $shadow, $color-val);
+        }
     }
   }
 
@@ -30,6 +45,6 @@ $box-shadow-namespace: "shadow" !default;
   }
 }
 
-@function shadow($size) {
-  @return map-get($shadows, $size);
+@function shadow($size, $color: black) {
+  @return map-get($shadow-sizes, $size) map-get($shadow-colors, $color);
 }

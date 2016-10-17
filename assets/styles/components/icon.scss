@@ -1,5 +1,21 @@
+$icon-sizes: (
+    md: 36px,
+    lg: 54px,
+);
+
 .icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
+    @each $size, $size-val in $icon-sizes {
+        &--#{$size} {
+            width: $size-val;
+            height: $size-val;
+        }
+    }
+
+    &--float {
+        z-index: 4;
+    }
 }

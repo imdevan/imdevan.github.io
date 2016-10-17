@@ -5,7 +5,7 @@ color: red
 slug: about-me
 ---
 
-![me](http://i.imgur.com/t8SqgPw.jpg){: .br--md .img--square-sm}
+![me](http://i.imgur.com/0ieHv84.png){: .br--md .img--square-sm}
 {: .text--center}
 Devan Huapaya • <a href="http://tamuhack.com" class="text--gray">TAMU Hack 2016</a>
 {: .text--center .text--gray .text--code .br}

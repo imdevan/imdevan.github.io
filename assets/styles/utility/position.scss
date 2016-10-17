@@ -1,4 +1,12 @@
 $position-namespace: "pos" !default;
+$position-z-indexes: (
+    inset: -1,
+    base: 0,
+    flat: 1,
+    high: 2,
+    higher: 3,
+    highest: 4,
+);
 
 .#{$position-namespace} {
     &--relative {
@@ -6,5 +14,20 @@ $position-namespace: "pos" !default;
     }
     &--absolute {
         position: absolute;
+    }
+
+    &--top-center {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &--fixed {
+        position: fixed;
+        @each $z, $z-val in $position-z-indexes {
+            &-#{$z} {
+                z-index: $z-val;
+            }
+        }
     }
 }

@@ -2,30 +2,11 @@
     &__button {
         @extend .flex;
         @extend .flex--center;
-        @extend .p--md;
         @extend .bg--white;
-        @extend .shadow--sm;
 
         cursor: pointer;
-        top: 0;
-        right: 0;
-        z-index: 4;
-        position: fixed;
         transition: all transition(fast, cubic);
-        transform: translate(-50%, 50%) scale(.8);
-
-        @include screen(md) {
-            transform: translate(-50%, 50%);
-        }
-
-        &:hover {
-            @extend .shadow--lg;
-            transform: translate(-50%, 50%) scale(1.15);
-
-            @include screen(md) {
-                transform: translate(-50%, 50%) scale(1.15);
-            }
-        }
+        transform: translate(0%,0%);
 
         &.open {
             .menu__hamburger {

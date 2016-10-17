@@ -3,11 +3,11 @@ navitems:
     link: http://twitter.com/devanipsum
     color: blue
   - label: Blog
-    link: blog
+    link: /blog
     color: green
   - label: Hire Me
-    link: hire-me
+    link: /hire-me
     color: purple
   - label: About Me
-    link: about
+    link: /about-me
     color: red
