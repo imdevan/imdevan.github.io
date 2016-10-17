@@ -7,10 +7,14 @@ slug: about-me
 
 ![me](http://i.imgur.com/0ieHv84.png){: .br--md .img--square-sm}
 {: .text--center}
+
 Devan Huapaya • <a href="http://tamuhack.com" class="text--gray">TAMU Hack 2016</a>
 {: .text--center .text--gray .text--code .br}
 
-## Hi, I'm Devan
+<header class="text--lg text--lora pt--sm">
+    <h1> Hi, I'm Devan</h1>
+</header>
+
 I currently work at [IBM Design](http://www.ibm.com/design/) and live in
 Austin, TX. I work as a [front end developer](http://i.imgur.com/bA3Rn7E.gif)
 on project Whitewater. My team makes it our priority to find the best tools
