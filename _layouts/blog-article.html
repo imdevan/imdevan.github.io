@@ -2,17 +2,20 @@
 {% include menu.html %}
 
 <main role="main" class="bg--white">
-  <div class="markdown pt--xl pb--sm">
-    <!-- Page Title -->
-    <h1>{{page.title}}</h1>
-    <time class="text--gray">
-        {{page.date | date: '%B %-d, %Y' }}
-        {% unless page.hide-time %}
-          •&nbsp;{{ content | reading_time_as_i }}
-        {% endunless %}
-    </time>
+    <header class="article-header bg--{{page.color}} pb--xl text--light">
+        <div class="mw--95-90 m--auto pt--xl">
+            <h1 >{{page.title}}</h1>
 
-    <!-- Page Title -->
+            <time class="text--light">
+                {{page.date | date: '%B %-d, %Y' }}
+                {% unless page.hide-time %}
+                  •&nbsp;{{ content | reading_time_as_i }}
+                {% endunless %}
+            </time>
+        </div>
+    </header>
+
+  <div class="markdown pb--sm">
     <h1 class="text--gray">
         {% if page.warning %}
           {{page.warning}}
