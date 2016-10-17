@@ -10,14 +10,16 @@ var m, menu = {
         button: gei('menu-button'),
         container: gei('menu-container'),
         navList: qsa('menu__list-item'),
-        bar: gei('menu-bar')
+        bar: gei('menu-bar'),
+        isOpen: function() {
+            return this.button.classList.contains('open');
+        }
     },
     addEvents: function() {
         var ths = this;
         m.button.addEventListener('click', function() {
             ths.toggle();
         });
-
         document.onkeydown = function(evt) {
             evt = evt || window.event;
             var isEscape = false;
@@ -26,17 +28,37 @@ var m, menu = {
             } else {
                 isEscape = (evt.keyCode == 27);
             }
+
             if (isEscape) {
                 ths.close();
             }
         };
     },
-    manageScroll: function() {
+    initScroll: function() {
+        var ths = this
+            last = 0,
+            current = 0;
 
+        window.setInterval(function() {
+            current = document.body.scrollTop;
+
+            if (current === last || m.isOpen()){
+                return;
+            }
+            else if(current > last ){
+                m.bar.classList.add('close');
+                console.log("close");
+            } else {
+                m.bar.classList.remove('close');
+                console.log("open");
+            }
+            last = current;
+        }, 50);
     },
     init: function() {
         m = this.elms;
         this.addEvents();
+        this.initScroll();
     },
     open: function () {
         m.button.classList.add('open');
@@ -47,14 +69,13 @@ var m, menu = {
         m.container.classList.remove('open');
     },
     toggle: function() {
-        console.log("this", this);
-        var ths = this,
-            open = m.button.classList.contains('open');
-            if(open) {
-                 ths.close();
-            } else {
-                ths.open();
-            }
+        var ths = this;
+
+        if(m.isOpen()) {
+             ths.close();
+        } else {
+            ths.open();
+        }
     }
 }
 

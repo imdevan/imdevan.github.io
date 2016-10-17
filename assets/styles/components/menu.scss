@@ -1,11 +1,24 @@
 .menu {
-    &__button {
+    &__bar {
         @extend .flex;
         @extend .flex--center;
-        @extend .bg--white;
+        @extend .flex--space-between;
+        @extend .pos--fixed;
+        @extend .pos--fixed-highest;
+        @extend .pos--top-center;
+        @extend .mw--95-90;
+        @extend .pt--md;
 
+        &.close {
+            .icon {
+                transform: translateY(-200%);
+            }
+        }
+    }
+    &__button {
+        @extend .bg--white;
         cursor: pointer;
-        transition: all transition(fast, cubic);
+        transition: all transition(base, cubic);
         transform: translate(0%,0%);
 
         &.open {
