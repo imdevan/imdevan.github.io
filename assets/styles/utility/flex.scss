@@ -1,10 +1,28 @@
 $flex-namespace: "flex" !default;
 $flex-gutter: 1em !default;
+$flex-gutter-lg: $flex-gutter*1.5 !default;
 $flex-screen-sizes: md;
 $flex-sizes: (
   sm: 1,
   md: 2,
 );
+
+@mixin gutter($size) {
+    margin-bottom: $size;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    @include screen(md) {
+      margin-right: $size;
+      margin-bottom: 0;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+}
 
 .#{$flex-namespace} {
   display: flex;
@@ -69,20 +87,10 @@ $flex-sizes: (
     }
 
     &--gutter {
-      margin-bottom: $flex-gutter;
-
-      &:last-of-type {
-        margin-bottom: 0;
-      }
-
-      @include screen(md) {
-        margin-right: $flex-gutter;
-        margin-bottom: 0;
-
-        &:last-of-type {
-          margin-right: 0;
+        @include gutter($flex-gutter);
+        &-lg {
+            @include gutter($flex-gutter-lg);
         }
-      }
     }
   }
 }
