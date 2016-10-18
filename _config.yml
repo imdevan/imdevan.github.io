@@ -46,5 +46,6 @@ assets:
 
 # Read and Output Collections
 collections:
-  commands:
-    output: false
+  projects:
+    output: true
+    permalink: /portfolio/:path/
