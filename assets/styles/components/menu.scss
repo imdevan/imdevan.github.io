@@ -21,6 +21,9 @@
         transition: all transition(fast, cubic);
         transform: translate(0%,0%);
         background: color(white);
+        &.top {
+            @extend .shadow--reset;
+        }
 
         &:hover {
             background: color(text-dark);

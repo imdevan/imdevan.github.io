@@ -63,7 +63,7 @@ The Heroku app is set to deploy automatically when the master branch of the
 Github repo is updated. When someone runs `git push` on the master branch
 Heroku will build the app, and replace the current instance with the new one.
 
-![Heroku + Github setup](http://i.imgur.com/htUL2FS.png){: .shadow--none}
+![Heroku + Github setup](http://i.imgur.com/htUL2FS.png){: .shadow--reset}
 {: .text--center}
 
 This can also cause the Heroku app will break if you push bad code into master,

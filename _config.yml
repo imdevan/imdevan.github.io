@@ -48,4 +48,4 @@ assets:
 collections:
   projects:
     output: true
-    permalink: /portfolio/:path/
+    permalink: /portfolio/:title/
