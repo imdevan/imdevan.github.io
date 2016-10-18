@@ -9,8 +9,8 @@ var m, menu = {
     elms: {
         button: gei('menu-button'),
         container: gei('menu-container'),
-        navList: qsa('menu__list-item'),
         bar: gei('menu-bar'),
+        navButtons: qsa('.menu__button'),
         isOpen: function() {
             return this.button.classList.contains('open');
         }
@@ -42,6 +42,13 @@ var m, menu = {
         window.setInterval(function() {
             current = document.body.scrollTop;
 
+            if (current === 0){
+                m.navButtons[0].classList.add('top');
+                m.navButtons[1].classList.add('top');
+            } else {
+                m.navButtons[0].classList.remove('top');
+                m.navButtons[1].classList.remove('top');
+            }
             if (current === last || m.isOpen()){
                 return;
             }

@@ -2,15 +2,15 @@
 <html lang=en>
 <head>
 	<meta charset="utf-8"/>
-	<title>My Terminal Settings</title>
+	<title>Hola</title>
 	<meta name="viewport" content="initial-scale=1" />
 	<meta name="p:domain_verify" content="73bb9724cf18cc4f5f5d8e8553eeb2ff"/>
 
-	<meta property="og:title" content="My Terminal Settings"/>
+	<meta property="og:title" content="Hola"/>
 	<meta property="og:site_name" content="imdevan"/>
 	<meta property="og:description" content="Need help building your million dollar idea? Devan Huapaya, is a freelance developer from Austin, TX who can help you.
 "/>
-	<meta property="og:url" content="/blog/my-terminal-settings/"/>
+	<meta property="og:url" content="/portfolio/2016-01-03-hola/"/>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Lora|Roboto+Mono|Dancing+Script" rel="stylesheet">
 	<link rel="stylesheet" href="/assets/css/style.css">
@@ -21,13 +21,13 @@
         
     
         
-    
+            <meta name="theme-color" content="#2BB7A3" />
         
     
         
     
         
-            <meta name="theme-color" content="#50C0E1" />
+    
         
     
         
@@ -148,14 +148,14 @@
 
 
 <main role="main" class="bg--white">
-    <header class="article-header bg--blue pb--xxl text--light">
+    <header class="article-header bg--seafoam pb--xxl text--light">
         <div class="mw--95-90 m--auto pt--xxl">
-            <h1 >My Terminal Settings</h1>
+            <h1 >Hola</h1>
 
             <time class="text--light">
-                July 21, 2015
+                January 3, 2016
                 
-                  •&nbsp;2 minutes
+                  •&nbsp;1 minute
                 
             </time>
         </div>
@@ -168,67 +168,37 @@
 
     <!-- Page content -->
     <div class="pt--xl">
-        <p>A developer’s terminal is a powerful tool. It is used for downloading modules, compiling code, running test scripts, and is ridiculously more efficient than a graphic user interface when used&nbsp;correctly.</p>
+        <p><img class="image--SM" src="/img/hola.jpg" /></p>
 
-<p>All operating systems come with some form of terminal installed, but you can download other terminals. For instance, I use iTerm 2 as my terminal because I like the amount of fine grained customization that it allows for. This is mostly a style thing (for&nbsp;me).</p>
+<p><a href="https://github.com/imdevan/hola" class="base--a">Hola</a> was created at <a href="http://mlh.io" class="base--a"><span class="caps">MLH</span></a>’s first self hosted hackathon in Mountain View, California. The won 4th out of 100+&nbsp;teams.</p>
 
-<p>All terminals have a shell (the thing that runs the commands and stuff - official definition). Most terminals come with a shell called Bash installed. On my terminal I have installed a special flavor of Zsh called “Oh My&nbsp;Zsh!”</p>
+<p>The intent behind the app was to enable people to be able to learn a language even if no one one else in their social circle was able to speak that language. We were able to successfully implement a working prototype with several different languages, such as Spanish, French, and&nbsp;German.</p>
 
-<p>“Oh My Zsh!” Does a bunch of really awesome things. But the best thing about zsh is that it allows for writing alias, shortcut commands that can be set to any other command that you want to. Other do this as well, but I found the way that zsh does it to be really&nbsp;easy.</p>
+<p>The way that the app worked was by having the user write and receive messages&nbsp;in
+whichever language they are trying to learn, and translating to and from&nbsp;their
+native language so that when they have converstions with their friends or&nbsp;family
+they can still practice learning anothe&nbsp;language.</p>
 
-<p class="pb">Without further&nbsp;ado,</p>
+<p>We used the <a href="mymemory.translated.net">MyMemory</a>&nbsp;translation
+service to translate between languages, which first checks community&nbsp;generated
+databases to see if a phrase has been translated by a human before defaulting&nbsp;to
+Google, and Bing’s translation service under the&nbsp;hood.</p>
 
-<h2 id="downloads">Downloads</h2>
-<p class="pb">Here are the links for the terminal stuff I have set up on my comp<br />
-- <a href="https://www.iterm2.com">iTerm 2 downloaded from here</a><br />
-- <a href="http://ohmyz.sh">Zsh downloaded from here</a><br />
-- <a href="https://github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet">Documentation</a></p>
+<p>We used the Twilio real-time messaging api to send and receive messages&nbsp;between
+users and their&nbsp;contacts.</p>
 
-<h2 id="colors">Colors</h2>
+<p>We used Socket.io for passing messages to and from the server in real&nbsp;time.</p>
 
-<p>Here are the colors for the terminal stuff I have set up on my&nbsp;comp</p>
+<p>My role on the project was to create the front end architecture and handle&nbsp;all
+messages sent to and from the client, as well as designing the user&nbsp;experience.</p>
 
-<p class="pb"><img src="http://i.imgur.com/cDaaWzt.png" alt="" /></p>
-
-<h2 id="aliases">Aliases</h2>
-<p>Here are the sweet sweet alias for the terminal stuff I have set up on my&nbsp;comp.</p>
-
-<p>In order to access the files to put these bad boys you can open in the text editor of your choice a file that is located at <code>~/.zshrc</code> by&nbsp;default.</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">alias </span><span class="nv">fb</span><span class="o">=</span><span class="s2">"open https://www.facebook.com"</span>
-<span class="nb">alias </span><span class="nv">og</span><span class="o">=</span><span class="s2">"open http://github.com/imdevan"</span>
-<span class="nb">alias </span><span class="nv">ogp</span><span class="o">=</span><span class="s2">"open http://github.com/imdevan/imdevan.github.io"</span>
-<span class="nb">alias </span><span class="nv">off</span><span class="o">=</span><span class="s2">"sudo shutdown -h now"</span>
-<span class="nb">alias </span><span class="nv">ig</span><span class="o">=</span><span class="s2">"cd ~/Documents/All</span><span class="se">\ </span><span class="s2">Things</span><span class="se">\ </span><span class="s2">Code/imdevan.github.io/ &amp;&amp; gulp"</span>
-
-<span class="c"># A, B, C, D...</span>
-<span class="nb">alias </span><span class="nv">a</span><span class="o">=</span><span class="s2">"git add -A"</span>
-<span class="nb">alias </span><span class="nv">c</span><span class="o">=</span><span class="s2">"clear"</span>
-<span class="nb">alias </span><span class="nv">d</span><span class="o">=</span><span class="s2">"cd ~/Downloads"</span>
-<span class="nb">alias </span><span class="nv">e</span><span class="o">=</span><span class="s2">"open http://inbox.google.com"</span>
-<span class="nb">alias </span><span class="nv">g</span><span class="o">=</span><span class="s2">"gulp"</span>
-<span class="nb">alias </span><span class="nv">i</span><span class="o">=</span><span class="s2">"cd ~/Documents/All</span><span class="se">\ </span><span class="s2">Things</span><span class="se">\ </span><span class="s2">Code/imdevan.github.io/ "</span>
-<span class="nb">alias </span><span class="nv">j</span><span class="o">=</span><span class="s2">"jekyll serve --watch"</span>
-<span class="nb">alias </span><span class="nv">m</span><span class="o">=</span><span class="s2">"touch"</span>
-<span class="nb">alias </span><span class="nv">n</span><span class="o">=</span><span class="s2">"npm start"</span>
-<span class="nb">alias </span><span class="nv">o</span><span class="o">=</span><span class="s2">"open"</span>
-<span class="nb">alias </span><span class="nv">p</span><span class="o">=</span><span class="s2">"cd ~/Documents/All</span><span class="se">\ </span><span class="s2">Things</span><span class="se">\ </span><span class="s2">Code/Project</span><span class="se">\ </span><span class="s2">Whitewater/paddle"</span>
-<span class="nb">alias </span><span class="nv">r</span><span class="o">=</span><span class="s2">"cd ~/Documents/All</span><span class="se">\ </span><span class="s2">Things</span><span class="se">\ </span><span class="s2">Code/Side</span><span class="se">\ </span><span class="s2">Stuff/IBM</span><span class="se">\ </span><span class="s2">Community</span><span class="se">\ </span><span class="s2">Radio"</span>
-<span class="nb">alias </span><span class="nv">t</span><span class="o">=</span><span class="s2">"gulp test"</span>
-<span class="nb">alias </span><span class="nv">z</span><span class="o">=</span><span class="s2">"subl ~/.zshrc"</span>
-
-<span class="c"># git commands</span>
-<span class="nb">alias </span><span class="nv">ga</span><span class="o">=</span><span class="s2">"git add -A"</span>
-<span class="nb">alias </span><span class="nv">gc</span><span class="o">=</span><span class="s2">"git commit -m"</span>
-<span class="c"># gp already = "git push"</span>
-<span class="nb">alias </span><span class="nv">gl</span><span class="o">=</span><span class="s2">"git log -1"</span>
-
-<span class="nb">alias </span><span class="nv">starwars</span><span class="o">=</span><span class="s2">"telnet towel.blinkenlights.nl"</span></code></pre></figure>
-
-<h2 class="st" id="zsh-plugins">Zsh&nbsp;Plugins</h2>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">plugins</span><span class="o">=(</span>git dirhistory sublime web-search copydir copyfile cp dirpresist nvm brew themes<span class="o">)</span></code></pre></figure>
-
+<div class="band--CENTERED">
+    <a href="https://github.com/imdevan/hola" class="base--a">
+        <span class="project--external-link">
+            Checkout the project on&nbsp;github
+        </span>
+    </a>
+</div>
 
     </div>
 
