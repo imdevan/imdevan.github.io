@@ -2,6 +2,9 @@
 layout: blog-article
 title: "PolyRhythm"
 title-color: salmon
+color: salmon
+logo:
+    img: http://i.imgur.com/3pZr809.jpg
 ---
 <img src="../../img/polyrhythm.jpg"/>
 

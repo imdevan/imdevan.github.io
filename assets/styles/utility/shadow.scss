@@ -42,7 +42,7 @@ $shadow-colors: (
   }
 
   // important to override markdown img
-  &--none {
+  &--reset {
       box-shadow: none !important;
   }
 }
