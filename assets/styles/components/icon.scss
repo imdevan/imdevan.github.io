@@ -21,6 +21,6 @@ $icon-sizes: (
     }
 
     &--float {
-        z-index: 4;
+        z-index: map-get($position-z-indexes, highest);
     }
 }

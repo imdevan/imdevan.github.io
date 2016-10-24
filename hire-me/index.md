@@ -19,9 +19,9 @@ nav-item: true
     <div class="text--code flex__box--md">
         <h2>Development</h2>
         <section class="text--gray pb--xl">
-            <p>Website</p>
-            <p>Dynamic web components</p>
-            <p>Building products on the web</p>
+            <p>Sass Architecture</p>
+            <p>React components</p>
+            <p>Node servers with Express or Koa</p>
         </section>
         <section class="pb--lg p--reset-md">
             <a class="typeform-share link cta"
@@ -35,7 +35,7 @@ nav-item: true
         <section class="text--gray pb--xl">
             <p>1:1 Mentorship</p>
             <p>Coding HTML, Sass, & Javascript</p>
-            <p>Building Products on the web 👈🏽</p>
+            <p>React and Node</p>
         </section>
 
         <a class="typeform-share link cta"

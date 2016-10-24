@@ -7,72 +7,86 @@ category: blog
 type: 💻
 style_mod: BASIC
 ---
-A developer's terminal is a powerful tool. It is used for downloading modules, compiling code, running test scripts, and is ridiculously more efficient than a graphic user interface when used correctly.
 
-All operating systems come with some form of terminal installed, but you can download other terminals. For instance, I use iTerm 2 as my terminal because I like the amount of fine grained customization that it allows for. This is mostly a style thing (for me).
+For the past year I've been developing web applications with Node on OSX.
 
-All terminals have a shell (the thing that runs the commands and stuff - official definition). Most terminals come with a shell called Bash installed. On my terminal I have installed a special flavor of Zsh called "Oh My Zsh!"
+Once since leaving IBM I am working on a Yoga 2 Pro with Ubuntu installed.
 
-"Oh My Zsh!" Does a bunch of really awesome things. But the best thing about zsh is that it allows for writing alias, shortcut commands that can be set to any other command that you want to. Other do this as well, but I found the way that zsh does it to be really easy. 	
+The terminal application I use is [Hyper Term](https://hyper.is/). My editor of
+choice is [Atom](http://atom.io). I do like using Vim and will likely have a follow up
+article on vim settings.
+{: .s}
 
-Without further ado,
-{: .pb}
+
+## Atom
+
+Atom is a text editor made using Github's [Electron](http://electron.atom.io/),
+which was originally made for Atom and has since been adopted to be used with
+lots of applications. The reason I originally switched to Atom from Sublime text
+was because I could drag and drop between folders. I've stuck with it because
+I like the plugin ecosystem, and that it has a package manager very similar to
+npm, [apm](https://github.com/atom/apm).
+
+### Atom Plugins
+
+- [editor config](https://atom.io/packages/editorconfig)
+- [emmet](https://atom.io/packages/emmet)
+- [merge-conflicts](https://atom.io/packages/merge-conflicts)
+
+### Atom Theme
+
+- One Dark *UI Theme*
+- One Dark *Syntax Theme*
+
+# Zsh
+
+[Zsh](http://ohmyz.sh/) is a shell that is very similar to bash. You see a common
+trend here, but the reason I like zsh is because of its plugin ecosystem.
+
+These are the plugins that I use.
+
+### Zsh Plugins
+
+- git
+- dirhistory
+- sublime
+- web-search
+- copyfile
+- copydir
+- cp
+- dirpresist
+- nvm
+- brew
+- themes
+
+### Zsh Theme
+
+- wezm
+
+
+## Hyper Plugins
+
+- hypercwd
+- hyperterm-summon
+- hyperline
+- hyperterm-blink
+- htyt
+- hyperterm-atom-dark *Theme*
 
 ## Downloads
+
 Here are the links for the terminal stuff I have set up on my comp  
-- [iTerm 2 downloaded from here](https://www.iterm2.com)  
-- [Zsh downloaded from here](http://ohmyz.sh)  
+
+- [Atom](https://atom.io/)  
+- [Hyperterm](https://hyper.is)  
+- [Zsh](http://ohmyz.sh)  
 - [Documentation](https://github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet)  
-{: .pb}
+{: .s}
 
+## Dotfiles  
 
-## Colors  
+I started playing with [dotfiles](https://dotfiles.github.io/) a few
+months ago. The result has been a handy tool box that I can clone into any
+environment.
 
-Here are the colors for the terminal stuff I have set up on my comp
-
-![](http://i.imgur.com/cDaaWzt.png)
-{: .pb}
-
-## Aliases  
-Here are the sweet sweet alias for the terminal stuff I have set up on my comp.
-
-In order to access the files to put these bad boys you can open in the text editor of your choice a file that is located at <code>~/.zshrc</code> by default.
-
-
-{% highlight bash %}
-alias fb="open https://www.facebook.com"
-alias og="open http://github.com/imdevan"
-alias ogp="open http://github.com/imdevan/imdevan.github.io"
-alias off="sudo shutdown -h now"
-alias ig="cd ~/Documents/All\ Things\ Code/imdevan.github.io/ && gulp"
-
-# A, B, C, D...
-alias a="git add -A"
-alias c="clear"
-alias d="cd ~/Downloads"
-alias e="open http://inbox.google.com"
-alias g="gulp"
-alias i="cd ~/Documents/All\ Things\ Code/imdevan.github.io/ "
-alias j="jekyll serve --watch"
-alias m="touch"
-alias n="npm start"
-alias o="open"
-alias p="cd ~/Documents/All\ Things\ Code/Project\ Whitewater/paddle"
-alias r="cd ~/Documents/All\ Things\ Code/Side\ Stuff/IBM\ Community\ Radio"
-alias t="gulp test"
-alias z="subl ~/.zshrc"
-
-# git commands
-alias ga="git add -A"
-alias gc="git commit -m"
-# gp already = "git push"
-alias gl="git log -1"
-
-alias starwars="telnet towel.blinkenlights.nl"
-{% endhighlight %}
-
-{: .st}
-## Zsh Plugins  
-{% highlight bash %}
-plugins=(git dirhistory sublime web-search copydir copyfile cp dirpresist nvm brew themes)
-{% endhighlight %}
+My dotfiles can be found [here](https://github.com/imdevan/dotfiles).
