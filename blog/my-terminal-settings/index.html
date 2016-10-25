@@ -149,7 +149,7 @@
             <time class="text--light">
                 July 21, 2015
                 
-                  •&nbsp;2 minutes
+                  •&nbsp;1 minute
                 
             </time>
         </div>
@@ -162,77 +162,116 @@
 
     <!-- Page content -->
     <div class="pt--xl">
-        <p>A developer’s terminal is a powerful tool. It is used for downloading modules, compiling code, running test scripts, and is ridiculously more efficient than a graphic user interface when used&nbsp;correctly.</p>
+        <p>For the past year I’ve been developing web applications with Node on&nbsp;<span class="caps">OSX.</span></p>
 
-<p>All operating systems come with some form of terminal installed, but you can download other terminals. For instance, I use iTerm 2 as my terminal because I like the amount of fine grained customization that it allows for. This is mostly a style thing (for&nbsp;me).</p>
+<p>Once since leaving <span class="caps">IBM</span> I am working on a Yoga 2 Pro with Ubuntu&nbsp;installed.</p>
 
-<p>All terminals have a shell (the thing that runs the commands and stuff - official definition). Most terminals come with a shell called Bash installed. On my terminal I have installed a special flavor of Zsh called “Oh My&nbsp;Zsh!”</p>
+<p class="s">The terminal application I use is <a href="https://hyper.is/">Hyper Term</a>. My editor&nbsp;of
+choice is <a href="http://atom.io">Atom</a>. I do like using Vim and will likely have a follow&nbsp;up
+article on vim&nbsp;settings.</p>
 
-<p>“Oh My Zsh!” Does a bunch of really awesome things. But the best thing about zsh is that it allows for writing alias, shortcut commands that can be set to any other command that you want to. Other do this as well, but I found the way that zsh does it to be really&nbsp;easy.</p>
+<h2 id="atom">Atom</h2>
 
-<p class="pb">Without further&nbsp;ado,</p>
+<p>Atom is a text editor made using Github’s <a href="http://electron.atom.io/">Electron</a>,
+which was originally made for Atom and has since been adopted to be used&nbsp;with
+lots of applications. The reason I originally switched to Atom from Sublime&nbsp;text
+was because I could drag and drop between folders. I’ve stuck with it&nbsp;because
+I like the plugin ecosystem, and that it has a package manager very similar&nbsp;to
+npm, <a href="https://github.com/atom/apm">apm</a>.</p>
+
+<h3 id="atom-plugins">Atom&nbsp;Plugins</h3>
+
+<ul>
+  <li><a href="https://atom.io/packages/editorconfig">editor&nbsp;config</a></li>
+  <li><a href="https://atom.io/packages/emmet">emmet</a></li>
+  <li><a href="https://atom.io/packages/merge-conflicts">merge-conflicts</a></li>
+</ul>
+
+<h3 id="atom-theme">Atom&nbsp;Theme</h3>
+
+<ul>
+  <li>One Dark <em><span class="caps">UI</span>&nbsp;Theme</em></li>
+  <li>One Dark <em>Syntax&nbsp;Theme</em></li>
+</ul>
+
+<h1 id="zsh">Zsh</h1>
+
+<p><a href="http://ohmyz.sh/">Zsh</a> is a shell that is very similar to bash. You see a&nbsp;common
+trend here, but the reason I like zsh is because of its plugin&nbsp;ecosystem.</p>
+
+<p>These are the plugins that I&nbsp;use.</p>
+
+<h3 id="zsh-plugins">Zsh&nbsp;Plugins</h3>
+
+<ul>
+  <li>git</li>
+  <li>dirhistory</li>
+  <li>sublime</li>
+  <li>web-search</li>
+  <li>copyfile</li>
+  <li>copydir</li>
+  <li>cp</li>
+  <li>dirpresist</li>
+  <li>nvm</li>
+  <li>brew</li>
+  <li>themes</li>
+</ul>
+
+<h3 id="zsh-theme">Zsh&nbsp;Theme</h3>
+
+<ul>
+  <li>wezm</li>
+</ul>
+
+<h2 id="hyper-plugins">Hyper&nbsp;Plugins</h2>
+
+<ul>
+  <li>hypercwd</li>
+  <li>hyperterm-summon</li>
+  <li>hyperline</li>
+  <li>hyperterm-blink</li>
+  <li>htyt</li>
+  <li>hyperterm-atom-dark <em>Theme</em></li>
+</ul>
 
 <h2 id="downloads">Downloads</h2>
-<p class="pb">Here are the links for the terminal stuff I have set up on my comp<br />
-- <a href="https://www.iterm2.com">iTerm 2 downloaded from here</a><br />
-- <a href="http://ohmyz.sh">Zsh downloaded from here</a><br />
-- <a href="https://github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet">Documentation</a></p>
 
-<h2 id="colors">Colors</h2>
+<p>Here are the links for the terminal stuff I have set up on my&nbsp;comp</p>
 
-<p>Here are the colors for the terminal stuff I have set up on my&nbsp;comp</p>
+<ul class="s">
+  <li><a href="https://atom.io/">Atom</a></li>
+  <li><a href="https://hyper.is">Hyperterm</a></li>
+  <li><a href="http://ohmyz.sh">Zsh</a></li>
+  <li><a href="https://github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet">Documentation</a></li>
+</ul>
 
-<p class="pb"><img src="http://i.imgur.com/cDaaWzt.png" alt="" /></p>
+<h2 id="dotfiles">Dotfiles</h2>
 
-<h2 id="aliases">Aliases</h2>
-<p>Here are the sweet sweet alias for the terminal stuff I have set up on my&nbsp;comp.</p>
+<p>I started playing with <a href="https://dotfiles.github.io/">dotfiles</a> a&nbsp;few
+months ago. The result has been a handy tool box that I can clone into&nbsp;any
+environment.</p>
 
-<p>In order to access the files to put these bad boys you can open in the text editor of your choice a file that is located at <code>~/.zshrc</code> by&nbsp;default.</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">alias </span><span class="nv">fb</span><span class="o">=</span><span class="s2">"open https://www.facebook.com"</span>
-<span class="nb">alias </span><span class="nv">og</span><span class="o">=</span><span class="s2">"open http://github.com/imdevan"</span>
-<span class="nb">alias </span><span class="nv">ogp</span><span class="o">=</span><span class="s2">"open http://github.com/imdevan/imdevan.github.io"</span>
-<span class="nb">alias </span><span class="nv">off</span><span class="o">=</span><span class="s2">"sudo shutdown -h now"</span>
-<span class="nb">alias </span><span class="nv">ig</span><span class="o">=</span><span class="s2">"cd ~/Documents/All</span><span class="se">\ </span><span class="s2">Things</span><span class="se">\ </span><span class="s2">Code/imdevan.github.io/ &amp;&amp; gulp"</span>
-
-<span class="c"># A, B, C, D...</span>
-<span class="nb">alias </span><span class="nv">a</span><span class="o">=</span><span class="s2">"git add -A"</span>
-<span class="nb">alias </span><span class="nv">c</span><span class="o">=</span><span class="s2">"clear"</span>
-<span class="nb">alias </span><span class="nv">d</span><span class="o">=</span><span class="s2">"cd ~/Downloads"</span>
-<span class="nb">alias </span><span class="nv">e</span><span class="o">=</span><span class="s2">"open http://inbox.google.com"</span>
-<span class="nb">alias </span><span class="nv">g</span><span class="o">=</span><span class="s2">"gulp"</span>
-<span class="nb">alias </span><span class="nv">i</span><span class="o">=</span><span class="s2">"cd ~/Documents/All</span><span class="se">\ </span><span class="s2">Things</span><span class="se">\ </span><span class="s2">Code/imdevan.github.io/ "</span>
-<span class="nb">alias </span><span class="nv">j</span><span class="o">=</span><span class="s2">"jekyll serve --watch"</span>
-<span class="nb">alias </span><span class="nv">m</span><span class="o">=</span><span class="s2">"touch"</span>
-<span class="nb">alias </span><span class="nv">n</span><span class="o">=</span><span class="s2">"npm start"</span>
-<span class="nb">alias </span><span class="nv">o</span><span class="o">=</span><span class="s2">"open"</span>
-<span class="nb">alias </span><span class="nv">p</span><span class="o">=</span><span class="s2">"cd ~/Documents/All</span><span class="se">\ </span><span class="s2">Things</span><span class="se">\ </span><span class="s2">Code/Project</span><span class="se">\ </span><span class="s2">Whitewater/paddle"</span>
-<span class="nb">alias </span><span class="nv">r</span><span class="o">=</span><span class="s2">"cd ~/Documents/All</span><span class="se">\ </span><span class="s2">Things</span><span class="se">\ </span><span class="s2">Code/Side</span><span class="se">\ </span><span class="s2">Stuff/IBM</span><span class="se">\ </span><span class="s2">Community</span><span class="se">\ </span><span class="s2">Radio"</span>
-<span class="nb">alias </span><span class="nv">t</span><span class="o">=</span><span class="s2">"gulp test"</span>
-<span class="nb">alias </span><span class="nv">z</span><span class="o">=</span><span class="s2">"subl ~/.zshrc"</span>
-
-<span class="c"># git commands</span>
-<span class="nb">alias </span><span class="nv">ga</span><span class="o">=</span><span class="s2">"git add -A"</span>
-<span class="nb">alias </span><span class="nv">gc</span><span class="o">=</span><span class="s2">"git commit -m"</span>
-<span class="c"># gp already = "git push"</span>
-<span class="nb">alias </span><span class="nv">gl</span><span class="o">=</span><span class="s2">"git log -1"</span>
-
-<span class="nb">alias </span><span class="nv">starwars</span><span class="o">=</span><span class="s2">"telnet towel.blinkenlights.nl"</span></code></pre></figure>
-
-<h2 class="st" id="zsh-plugins">Zsh&nbsp;Plugins</h2>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">plugins</span><span class="o">=(</span>git dirhistory sublime web-search copydir copyfile cp dirpresist nvm brew themes<span class="o">)</span></code></pre></figure>
-
+<p>My dotfiles can be found <a href="https://github.com/imdevan/dotfiles">here</a>.</p>
 
     </div>
 
     <!-- Author link -->
-    <div class="text--center pt--xl">
-        by <a href="https://twitter.com/devanIpsum">Devan</a>
-    </div>
     <!-- Twitter share 😉 -->
-    <div class="text--center mt--sm mb--xxl">
-        <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-via="devanIpsum" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <div class="text--center text--lora py--xxl flex">
+        <div class="flex__box--sm flex__box--gutter">
+
+        
+    </div>
+
+        <div class="flex__box--sm flex__box--gutter flex flex--space-between">
+         |
+        <a href="https://twitter.com/home?status=My Terminal Settings%20http://imdevan.com//blog/my-terminal-settings/%20via%20@devanIpsum" class="twitter-share-button" data-size="large" data-via="devanIpsum" data-show-count="false">Tweet This</a> |
+    </div>
+
+    <div class="flex__box--sm flex__box--gutter">
+            
+                <a class="next" href="/blog/bash-functions/">Bash Functions &raquo;</a>
+            </div>
     </div>
   </div>
 </main>

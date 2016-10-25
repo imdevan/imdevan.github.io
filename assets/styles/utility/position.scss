@@ -4,8 +4,8 @@ $position-z-indexes: (
     base: 0,
     flat: 1,
     high: 2,
-    higher: 3,
-    highest: 4,
+    higher: 999,
+    highest: 1000,
 );
 
 .#{$position-namespace} {
