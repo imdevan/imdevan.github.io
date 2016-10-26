@@ -1,6 +1,8 @@
 navitems:
   - label: Blog
     link: /blog
+  - label: Portfolio
+    link: /portfolio
   - label: Hire Me
     link: /hire-me
   - label: About Me
