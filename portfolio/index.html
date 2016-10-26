@@ -7,7 +7,7 @@ color: seafoam
 <header class="pb--xl">
     <h1 class="pt--xl text--xl text--lora">{{page.title}}</h1>
 </header>
-<section class="pb--xl">
+<section class="pb--xxl">
     <ul class="p--reset flex flex--column flex--row-md">
     {% assign projects = site.projects | sort: 'date' %}
     {% for project in projects %}
@@ -20,7 +20,7 @@ color: seafoam
                     <img class="shadow--reset w--100" src="{{project.logo.img}}" alt="">
                 {% endif %}
                 <p class="p--md">
-                        {{project.title}}
+                    {{project.title}}
                 </p>
             </li>
         </a>
