@@ -11,7 +11,7 @@ logo:
 ---
 
 
-<a href="http://prh.herokuapp.com/about">PolyRhythm</a> is a project started at the SXSW Music Hackathon in Austin, Texas. The purpose of the app is to create a way for people to generate visualizations for live performances and perform them in real time using instruments that they are already familiar with.
+[PolyRhythm](https://github.com/imdevan/polyrhythm) is a project started at the SXSW Music Hackathon in Austin, Texas. The purpose of the app is to create a way for people to generate visualizations for live performances and perform them in real time using instruments that they are already familiar with.
 
 My role on the project was to set up the front-end architecture and create animations.
 
