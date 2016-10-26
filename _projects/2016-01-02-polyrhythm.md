@@ -1,12 +1,15 @@
 ---
-layout: blog-article
+layout: project
 title: "PolyRhythm"
 title-color: salmon
 color: salmon
+link:
+  label: View on Github
+  href: https://github.com/imdevan/polyrhythm
 logo:
     img: http://i.imgur.com/3pZr809.jpg
 ---
-<img src="../../img/polyrhythm.jpg"/>
+
 
 <a href="http://prh.herokuapp.com/about">PolyRhythm</a> is a project started at the SXSW Music Hackathon in Austin, Texas. The purpose of the app is to create a way for people to generate visualizations for live performances and perform them in real time using instruments that they are already familiar with.
 
@@ -21,13 +24,3 @@ The app uses Socket.io to to pick up input from the performers phone or even ano
 We are planning on finishing up the project and releasing it as a website or chrome web-app.
 
 We are constantly adding improvements to the app, bellow is a clip of the app taking in input from Ableton itself, showcasing that this can also be programmed to work with dj sets and not just being triggered by a performer hitting a button.
-
-<img src="../../img/pr-ableton-gif.gif"/>
-
-<div class="band--CENTERED">
-    <a href="https://github.com/imdevan/polyrhythm" class="base--a">
-        <span class="project--external-link">
-            Checkout the project on github
-        </span>
-    </a>
-</div>
