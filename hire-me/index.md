@@ -19,9 +19,9 @@ nav-item: true
     <div class="text--code flex__box--md">
         <h2>Development</h2>
         <section class="text--gray pb--xl">
-            <p>Sass Architecture</p>
-            <p>React components</p>
-            <p>Node servers with Express or Koa</p>
+            <p>Websites</p>
+            <p>Dynamic Web Apps</p>
+            <p>Improvements and Audits</p>
         </section>
         <section class="pb--lg p--reset-md">
             <a class="typeform-share link cta"
