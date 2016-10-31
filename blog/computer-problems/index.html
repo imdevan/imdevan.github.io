@@ -2,16 +2,15 @@
 <html lang=en>
 <head>
 	<meta charset="utf-8"/>
-	<title><i>Start With Why</i> by Simon Sinek</title>
+	<title>How to style react apps</title>
 	<meta name="viewport" content="initial-scale=1" />
 	<meta name="p:domain_verify" content="73bb9724cf18cc4f5f5d8e8553eeb2ff"/>
 
-	<meta property="og:title" content="<i>Start With Why</i> by Simon Sinek"/>
-	<meta property="og:image" content="<i>Start With Why</i> by Simon Sinek"/>
-	<meta property="og:site_name" content="http://i.imgur.com/vkFkFqk.png"/>
-	<meta property="og:description" content="I'm a freelance developer. I write javascript and build things for the internet.
+	<meta property="og:title" content="How to style react apps"/>
+	<meta property="og:site_name" content="imdevan"/>
+	<meta property="og:description" content="Need help building your million dollar idea? Devan Huapaya, is a freelance developer from Austin, TX who can help you.
 "/>
-	<meta property="og:url" content="/blog/start-with-why/"/>
+	<meta property="og:url" content="/blog/computer-problems/"/>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Lora|Roboto+Mono|Dancing+Script" rel="stylesheet">
 	<link rel="stylesheet" href="/assets/css/style.css">
@@ -20,11 +19,11 @@
 
     <!-- 
         
-    
+            <meta name="theme-color" content="#2BB7A3" />
         
     
         
-            <meta name="theme-color" content="#F77F79" />
+    
         
     
         
@@ -149,14 +148,14 @@
 
 
 <main role="main" class="bg--white">
-    <header class="article-header bg--salmon pb--xxl text--light">
+    <header class="article-header bg--green pb--xxl text--light">
         <div class="mw--95-90 m--auto pt--xxl">
-            <h1 ><i>Start With Why</i> by Simon Sinek</h1>
+            <h1 >How to style react apps</h1>
 
             <time class="text--light">
-                June 13, 2016
+                October 28, 2016
                 
-                  •&nbsp;1 minute
+                  •&nbsp;Less than 1 minute
                 
             </time>
         </div>
@@ -169,25 +168,44 @@
 
     <!-- Page content -->
     <div class="pt--xl">
-        <p>A summary of this&nbsp;book:</p>
+        <p>So I’m building an app. I have thee logo, I have a vague idea of the&nbsp;desig.</p>
 
-<p class="text--highlight text--center">Know why you are doing&nbsp;things</p>
+<p>I have a ton of paper sketches and I’m the only person on the project.&nbsp;I’m
+comfortable designing in browser for this&nbsp;project.</p>
 
-<p>I enjoyed reading this book, but yes that is the key takeaway. Even though it is completely obvious, it is definitely a well written reminder to always to take time to think about your&nbsp;decisions.</p>
+<p>The project has 4&nbsp;views</p>
 
-<p>Simon Sinok suggests, and I agree that for any choice you make you should be able to answer the question “Why?” The answer doesn’t have to be the wisest one. The answer that is most closely aligned with your values, whatever they are, is the choice that will make you the&nbsp;happiest.</p>
+<ol>
+  <li>Gradient with&nbsp;image</li>
+  <li>Gradient without&nbsp;image</li>
+  <li>No Gradient&nbsp;present</li>
+  <li>Info&nbsp;Pages</li>
+</ol>
 
-<p>Simon also goes on to highlight several companies and stories in which they did or did not feel in regards to staying aligned with that their core values over&nbsp;time.</p>
+<p>There will be user information stored (other than&nbsp;analytics).</p>
 
-<p>Basically,</p>
+<h2 id="in-line-styling">In-line&nbsp;styling</h2>
 
-<p class="text--highlight text--center">Start with&nbsp;“Why?”</p>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">styles</span><span class="o">=</span><span class="p">{</span>
+  <span class="na">container</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">border</span><span class="p">:</span> <span class="s1">'1px solid blue'</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="na">button</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">background</span><span class="p">:</span> <span class="s1">'5890ff'</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">};</span>
 
-<p>This is something that can be seen in some business. On my team we use the 5-why root cause analysis to find out where our team can make&nbsp;improvements.</p>
+<span class="o">&lt;</span><span class="nx">div</span> <span class="nx">style</span><span class="o">=</span><span class="s2">"{styles.container}"</span></code></pre></figure>
 
-<p>It is also great for personal analysis. I find that if I can answer myself “why?” before I make a decision than I tend to feel much more confident about my&nbsp;choices.</p>
+<h2 id="global-styles">Global&nbsp;styles</h2>
 
-<p><a href="https://www.amazon.com/Start-Why-Leaders-Inspire-Everyone/dp/1591846447">Start With&nbsp;Why</a></p>
+<h2 id="using-a-framework">Using a&nbsp;framework?</h2>
+
+<h3 id="needs-to-have">Needs to&nbsp;have</h3>
+
+<h3 id="should-i-make-my-own">Should I make my&nbsp;own?</h3>
+
+<h2 id="moving-forward">Moving&nbsp;forward</h2>
 
     </div>
 
@@ -197,18 +215,16 @@
         <div class="flex__box--sm flex__box--gutter">
 
         
-            <a class="prev" href="/blog/reading-suggestions/">&laquo; Reading Suggestions June 2016</a>
+            <a class="prev" href="/blog/going-freelance/">&laquo; Going Freelance</a>
         
     </div>
 
         <div class="flex__box--sm flex__box--gutter flex flex--space-between">
          |
-        <a href="https://twitter.com/home?status=<i>Start With Why</i> by Simon Sinek%20http://imdevan.com//blog/start-with-why/%20via%20@devanIpsum" class="twitter-share-button" data-size="large" data-via="devanIpsum" data-show-count="false">Tweet This</a> |
+        <a href="https://twitter.com/home?status=How to style react apps%20http://imdevan.com//blog/computer-problems/%20via%20@devanIpsum" class="twitter-share-button" data-size="large" data-via="devanIpsum" data-show-count="false">Tweet This</a> |
     </div>
 
     <div class="flex__box--sm flex__box--gutter">
-            
-                <a class="next" href="/blog/working-with-swift/">Working with Swift &raquo;</a>
             </div>
     </div>
   </div>
