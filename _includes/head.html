@@ -7,8 +7,9 @@
 	<meta name="p:domain_verify" content="73bb9724cf18cc4f5f5d8e8553eeb2ff"/>
 
 	<meta property="og:title" content="{{ page.title }}"/>
-	<meta property="og:site_name" content="{{ site.name }}"/>
-	<meta property="og:description" content="{{ site.description | strip_html }}"/>
+	<meta property="og:image" content="{{ page.title }}"/>
+	<meta property="og:site_name" content="{% if page.image %}{{ page.image }}{% else %}{{ site.image | strip_html }}{% endif %}"/>
+	<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description | strip_html }}{% endif %}"/>
 	<meta property="og:url" content="{{ page.url }}"/>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Lora|Roboto+Mono|Dancing+Script" rel="stylesheet">
