@@ -15,4 +15,17 @@ $height-namespace: "h" !default;
       height: 80vh;
     }
   }
+  &--600-100 {
+    height: 600px;
+
+    @include screen(md) {
+      height: 100vh;
+    }
+  }
+}
+
+.mh {
+  &--600 {
+    min-height: 600px;
+  }
 }
