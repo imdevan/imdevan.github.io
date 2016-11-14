@@ -1,10 +1,11 @@
-<ul class="o-nav__list">
-	{% assign pages = site.pages | sort:"order" %}
-	{% for p in pages %}
-		{% if p.nav-item == true %}
-			<li class="o-nav__list-item" >
-				<a {% if p.url == page.url %}class="o-nav__link active"{% else %}class="o-nav__link"{% endif %} href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
-			</li>
-		{% endif %}
-	{% endfor %}
-</ul>
+<nav class="w--100  flex flex--space-between flex--flag border-bottom--sm-gray">
+	<a href="/" class="text--no-underline flex">{% include svg/sm-logo.svg %}</a>
+
+	<ul class="flex flex--space-around text--code w--600-90">
+		{% for p in site.data.nav.navitems %}
+				<li class="px--sm">
+					<a {% if p.url == page.url %}class="active"{% else %}class=""{% endif %} href="{{ p.url | prepend: site.baseurl }}">{{ p.label }}</a>
+				</li>
+			{% endfor %}
+	</ul>
+</nav>

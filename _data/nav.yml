@@ -1,9 +1,12 @@
 navitems:
   - label: Blog
-    link: /blog
+    url: /blog
   - label: Portfolio
-    link: /portfolio
+    url: /portfolio
   - label: Hire Me
-    link: /hire-me
+    url: /hire-me
   - label: About Me
-    link: /about-me
+    url: /about-me
+home:
+  - label: home
+    url: /

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: with-nav
 title: About
 nav-item: true
 ---
