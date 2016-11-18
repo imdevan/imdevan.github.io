@@ -3,10 +3,10 @@ navitems:
     url: /blog
   - label: Portfolio
     url: /portfolio
-  - label: Hire Me
-    url: /hire-me
-  - label: About Me
-    url: /about-me
+  - label: Hire
+    url: /hire
+  - label: About
+    url: /about
 home:
   - label: home
     url: /
