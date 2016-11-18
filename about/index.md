@@ -6,7 +6,7 @@ slug: about-me
 ---
 
 ![me](http://i.imgur.com/0ieHv84.png){: .br--md .img--square-sm}
-{: .text--center}
+{: .text--center .pt--xxl}
 
 Devan Huapaya • <a href="http://tamuhack.com" class="text--gray">TAMU Hack 2016</a>
 {: .text--center .text--gray .text--code .br}
