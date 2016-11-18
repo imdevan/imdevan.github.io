@@ -1,8 +1,7 @@
-- link: https://www.linkedin.com/in/devanhuapaya
-  icon: linkedin
-- link: https://twitter.com/devanipsum
-  icon: twitter
-- link: https://github.com/imdevan
-  icon: github
-- link: mailto:huapayadevan@gmail.com
-  icon: email
+navitems:
+  - link: https://www.linkedin.com/in/devanhuapaya
+    label: linkedin
+  - link: https://twitter.com/devanipsum
+    label: twitter
+  - link: https://github.com/imdevan
+    label: github

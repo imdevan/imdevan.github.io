@@ -1,6 +1,14 @@
     <!-- Footer -->
-	<footer class="text--light border-top--xs-gray" role="contentinfo">
-		<div class="flex flex--space-between flex--row-md mw--95-95 m--auto pt--lg">
+	<footer class="border-top--xs-gray">
+		<div class="flex flex--space-between flex--flag mw--95-95 m--auto">
+      <a href="http://twitter.com/devanipsum">Devan Huapaya</a>
 
+      <div class="flex flex--space-between">
+        {% for social in site.data.social.navitems %}
+          <div class="p--sm">
+            <a target="_blank" href="{{social.link}}">{{social.label}}</a>
+          </div>
+        {% endfor %}
+      </div>
 		</div>
   </footer>
