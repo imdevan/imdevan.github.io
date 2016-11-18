@@ -23,7 +23,7 @@ body {
         transform: translateX(-50%);
     }
 
-    &:hover:after{
+    &:hover:after, &.active:after{
         width: 100%;
     }
 }

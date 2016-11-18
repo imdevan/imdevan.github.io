@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang=en>
+  
 <head>
 	<meta charset="utf-8"/>
 	<title>About Me</title>
@@ -40,11 +41,11 @@
     <meta name="theme-color" content="#444444" />
 
 </head>
-	<body>
 
-<div  id="menu-bar" class="menu__bar">
-    <a id="home-button" class="menu__button top icon icon--lg" href="/">
-        <svg width="100%" height="100%" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+  <body>
+    <nav class="flex flex--center pos--fixed pos--fixed-highest w--100 border-bottom--xs-gray bg--white onTop" data-top-nav="container">
+	<div class="flex flex--space-between flex--flag flex--column flex--row-md py--xs mw--95-95" data-top-nav="nav">
+		<a href="/" class="flex text--no-underline" data-top-nav="icon"><svg width="50px" height="50px" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
 <title>This one?</title>
 <desc>Created using Figma</desc>
 <g id="Canvas" transform="translate(-45 -3872)" figma:type="canvas">
@@ -94,66 +95,35 @@
 <path id="path3_fill" d="M 0 0L 145 0L 145 198L 0 198L 0 0Z"/>
 </defs>
 </svg>
+</a>
 
-    </a>
-
-    <label id="menu-button" class="menu__button top icon icon--lg">
-        <span class="menu__hamburger menu__hamburger-1"></span>
-        <span class="menu__hamburger menu__hamburger-2"></span>
-        <span class="menu__hamburger menu__hamburger-3"></span>
-    </label>
-</div>
-
-<div id="menu-container" class="menu__container bg--blue pos--absolute" >
-    <nav class="menu__body">
-            
-                <h1 class="p--sm m--0">
-                    <a href="/blog " class="menu__list-item">
-                        Blog
-                    </a>
-                </h1>
-            
-                <h1 class="p--sm m--0">
-                    <a href="/portfolio " class="menu__list-item">
-                        Portfolio
-                    </a>
-                </h1>
-            
-                <h1 class="p--sm m--0">
-                    <a href="/hire-me " class="menu__list-item">
-                        Hire Me
-                    </a>
-                </h1>
-            
-                <h1 class="p--sm m--0">
-                    <a href="/about-me " class="menu__list-item">
-                        About Me
-                    </a>
-                </h1>
-            
-        </nav>
-        <nav class="menu__footer">
-            
-                <a href="http://twitter.com/devanipsum " class="menu__list-item">
-                    Twitter
-                </a>
-            
-                <a href="http://github.com/imdevan " class="menu__list-item">
-                    Github
-                </a>
-            
-                <a href="hire-me " class="menu__list-item">
-                    Contact
-                </a>
-            
-        </nav>
-</div>
+		<ul class="flex flex--space-around text--code" data-top-nav="text">
+			
+					<li class="px--sm">
+						<a class="" href="/blog">Blog</a>
+					</li>
+				
+					<li class="px--sm">
+						<a class="" href="/portfolio">Portfolio</a>
+					</li>
+				
+					<li class="px--sm">
+						<a class="" href="/hire">Hire</a>
+					</li>
+				
+					<li class="px--sm">
+						<a class="" href="/about">About</a>
+					</li>
+				
+		</ul>
+	</div>
+</nav>
 
 
 <main role="main" class="bg--white">
     <div class="center mw-80-80">
-        <div class="markdown pt--md pb--xxl">
-            <p class="text--center"><img src="http://i.imgur.com/0ieHv84.png" alt="me" class="br--md img--square-sm" /></p>
+    <div class="markdown pt--md pb--xxl">
+        <p class="text--center"><img src="http://i.imgur.com/0ieHv84.png" alt="me" class="br--md img--square-sm" /></p>
 
 <p class="text--center text--gray text--code br">Devan Huapaya • <a href="http://tamuhack.com" class="text--gray"><span class="caps">TAMU</span> Hack&nbsp;2016</a></p>
 
@@ -213,53 +183,42 @@ to 2200+ <span class="caps">IBM</span>&nbsp;teams.</p>
 
 <h2 id="thanks-for-you-time-strong-classtext--blueyoure-greatstrong">Thanks for you time! <strong class="text--blue">You’re&nbsp;great!</strong></h2>
 
-        </div>
     </div>
+</div>
+
 </main>
 
-    <!-- Footer -->
-	<footer class="bg--dark text--light shadow--inverted-lg" role="contentinfo">
-		<!-- Featured content -->
-		<div class="flex flex--column flex--row-md mw--95-90 m--auto pt--lg">
-			
-				<a href="http://hackdfw.com" class="flex__box--sm flex__box--gutter p--sm text--light  trans-all--fast-in-out">
-				        <h3>HackDFW</h3>
-				        I'm currently working to bring a really awesome hackathon to Dallas.
-                </a>
-			
-				<a href="/hire-me" class="flex__box--sm flex__box--gutter p--sm text--light  trans-all--fast-in-out">
-				        <h3>Hire Me</h3>
-				        I create digital experiences that have form and purpose.
-                </a>
-			
-				<a href="/blog/" class="flex__box--sm flex__box--gutter p--sm text--light  trans-all--fast-in-out">
-				        <h3>Latest Post</h3>
-				        Looking for something to read?
-                </a>
-			
+
+        <!-- Footer -->
+	<footer class="border-top--xs-gray">
+		<div class="flex flex--column flex--row-md flex--space-between flex--flag mw--95-95 m--auto">
+      <div class="p--sm">
+        <a href="http://twitter.com/devanipsum">Devan Huapaya</a>
+      </div>
+
+      <div class="flex flex--space-between">
+        
+          <div class="p--sm">
+            <a target="_blank" href="https://www.linkedin.com/in/devanhuapaya">linkedin</a>
+          </div>
+        
+          <div class="p--sm">
+            <a target="_blank" href="https://twitter.com/devanipsum">twitter</a>
+          </div>
+        
+          <div class="p--sm">
+            <a target="_blank" href="https://github.com/imdevan">github</a>
+          </div>
+        
+      </div>
 		</div>
+  </footer>
 
-		<!-- Feedback request -->
-		<div class="mw--95-90 m--auto pt--xl">
-            <p class="text--center">
-                <a class="typeform-share link" href="https://imdevan.typeform.com/to/k1LIHJ" data-mode="1" target="_blank">
-                    This site is a work in progress,&nbsp;what do you think?
-                </a>
-            </p>
-		</div>
+    <script type="text/javascript" src="/assets/js/top-nav.js"></script>
 
-		<!-- Salutation -->
-		<div class="mw--95-90 m--auto py--xl">
-			Thanks for visiting, <br>
-			<a target="_blank" class="text--light" href="http://twitter.com/devanipsum">
-				Devan
-			</a>
-		</div>
-	</footer>
+<script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()</script>
 
-    <script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()</script>
-
-    <script>
+<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -269,10 +228,6 @@ to 2200+ <span class="caps">IBM</span>&nbsp;teams.</p>
   ga('send', 'pageview');
 </script>
 
-    <script src="/assets/js/snap.min.js"></script>
-<script src="/assets/js/menu.js"></script>
 
-</body>
-
+  </body>
 </html>
-

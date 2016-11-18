@@ -1,0 +1,11 @@
+
+[data-top-nav='container'] {
+  transition: all transition(base, cubic);
+  background: color(white);
+}
+.onTop[data-top-nav='container'] {
+  background: none;
+}
+.hide[data-top-nav='container'] {
+  transform: translateY(-100%);
+}
