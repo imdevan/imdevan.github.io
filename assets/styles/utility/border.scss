@@ -16,6 +16,13 @@ $border-radius-sizes: (
           }
       }
     }
+    &-top {
+      @each $border, $border-val in $borders {
+          &--#{$border} {
+              border-top: $border-val
+          }
+      }
+    }
 }
 
 

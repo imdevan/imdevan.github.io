@@ -1,34 +1,6 @@
     <!-- Footer -->
-	<footer class="bg--dark text--light shadow--inverted-lg" role="contentinfo">
-		<!-- Featured content -->
-		<div class="flex flex--column flex--row-md mw--95-90 m--auto pt--lg">
-			{% for feature in site.data.footer.features %}
-				<a href="{{feature.link}}" class="flex__box--sm flex__box--gutter p--sm text--light  trans-all--fast-in-out">
-				        <h3>{{ feature.title }}</h3>
-				        {{ feature.caption }}
-                </a>
-			{% endfor %}
-		</div>
+	<footer class="text--light border-top--xs-gray" role="contentinfo">
+		<div class="flex flex--space-between flex--row-md mw--95-95 m--auto pt--lg">
 
-		<!-- Feedback request -->
-		<div class="mw--95-90 m--auto pt--xl">
-            <p class="text--center">
-                <a class="typeform-share link" href="https://imdevan.typeform.com/to/k1LIHJ" data-mode="1" target="_blank">
-                    This site is a work in progress,&nbsp;what do you think?
-                </a>
-            </p>
 		</div>
-
-		<!-- Salutation -->
-		<div class="mw--95-90 m--auto py--xl">
-			Thanks for visiting, <br>
-			<a target="_blank" class="text--light" href="http://twitter.com/devanipsum">
-				Devan
-			</a>
-		</div>
-	</footer>
-	
-    {% include scripts/scripts.html %}
-</body>
-
-</html>
+  </footer>

@@ -1,7 +1,10 @@
-{% include head.html %}
-
-<main role="main" class="bg--white">
+<!DOCTYPE html>
+<html lang=en{% if page.class %} class="{{ page.class }}"{% endif %}>
+  {% include head.html %}
+  <body>
     {{ content }}
-</main>
 
-{% include footer.html %}
+    {% include footer.html %}
+    {% include scripts/scripts.html %}
+  </body>
+</html>
