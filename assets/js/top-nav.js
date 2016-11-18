@@ -9,42 +9,28 @@ nav.TopNav= function() {
 }
 
 nav.TopNav.prototype.init = function() {
-  console.log('init');
-    this.initScroll();
+    window.setInterval(this.updateFrame.bind(this), 150);
 }
 
-nav.TopNav.prototype.hide = function() {
-  this.container.classList.add('hide');
-}
+nav.TopNav.prototype.updateFrame = function() {
+  var pos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop,
+      ths = this;
 
-nav.TopNav.prototype.unHide = function() {
-  this.container.classList.remove('hide');
-}
+  if (pos < 300){
+    ths.container.classList.add('onTop');
+  } else {
+    ths.container.classList.remove('onTop');
+  }
+  if (pos < ths.position) {
+    ths.container.classList.remove('hide');
+  } else if (pos > ths.position) {
+    ths.container.classList.add('hide');
+  }
 
-nav.TopNav.prototype.initScroll = function() {
-    var ths = this;
-
-  window.setInterval(function() {
-    var pos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-
-    if (pos < 300){
-      ths.container.classList.add('onTop');
-    } else {
-      ths.container.classList.remove('onTop');
-    }
-    console.log(ths.position);
-    if (pos < ths.position) {
-      ths.unHide();
-    } else if (pos > ths.position) {
-      ths.hide();
-    }
-
-    ths.position = pos;
-  }, 150);
+  ths.position = pos;
 }
 
 nav.TopNav.prototype.onTop = function() {
-    console.log(pos);
     return pos < 1
 }
 
