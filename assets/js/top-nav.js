@@ -6,6 +6,7 @@ nav.TopNav= function() {
   this.text = document.querySelector("[data-top-nav='text']");
   this.elements = [this.container, this.icon, this.text];
   this.position = 0;
+  this.theFold = 500;
 }
 
 nav.TopNav.prototype.init = function() {
@@ -16,7 +17,7 @@ nav.TopNav.prototype.updateFrame = function() {
   var pos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop,
       ths = this;
 
-  if (pos < 300){
+  if (pos < ths.theFold){
     ths.container.classList.add('onTop');
   } else {
     ths.container.classList.remove('onTop');
