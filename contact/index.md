@@ -1,7 +1,7 @@
 ---
 layout: markdown
-title: Hire Me
-slug: hire-me
+title: Contact
+slug: contact
 color: purple
 nav-item: true
 ---
