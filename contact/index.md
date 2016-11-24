@@ -58,11 +58,13 @@ nav-item: true
 
 > Devan was super awesome to work with,<br class="hide show--md">
   he is a great developer and a delight to the team.<br><br>
-  <span>~ <a href="twitter.com/">Matthew Paul, IBM Design</a></span>
+  <span>~ <a href="https://twitter.com/matthewcpaul">Matthew Paul, IBM Design</a></span>
 {: .blockquote--right .s}
 
-> We were able to build our system in two weeks.<br class="hide show--md">
-  Devan is a fantastic developer who was great to work with.<br><br>
-  <span>~ <a href="twitter.com/">Quinn Manly, IBM Design</a></span>
+> Devan was a huge help when it came to ramping up and contributing in a<br class="hide show--md">
+  production-level code environment. Devan exhibits great team-playership<br class="hide show--md">
+  and has an established, technical foundation that he enjoys sharing with<br class="hide show--md">
+  other developers and engineers.<br><br>
+  <span>~ <a href="https://twitter.com/techtolentino">Randy Tolentino, IBM Design</a></span>
 {: .s}
 {: .pb--lg}
