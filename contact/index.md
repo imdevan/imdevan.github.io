@@ -15,35 +15,6 @@ nav-item: true
     </div>
 </div>
 
-<section class="flex flex--center flex--column flex--row-md mw--80-600 m--auto shadow--lg  p--lg">
-    <div class="text--code flex__box--md">
-        <h2>Development</h2>
-        <section class="text--gray pb--xl">
-            <p>Websites</p>
-            <p>Dynamic Web Apps</p>
-            <p>Improvements and Audits</p>
-        </section>
-        <section class="pb--lg p--reset-md">
-            <a class="typeform-share link cta"
-                href="https://imdevan.typeform.com/to/DJyZhU"
-                data-mode="1">hire me</a>
-        </section>
-    </div>
-
-    <div class="text--code flex__box--md">
-        <h2>Tutoring</h2>
-        <section class="text--gray pb--xl">
-            <p>1:1 Mentorship</p>
-            <p>Coding HTML, Sass, & Javascript</p>
-            <p>React and Node</p>
-        </section>
-
-        <a class="typeform-share link cta"
-            href="https://imdevan.typeform.com/to/OKghBi"
-            data-mode="1">tutoring</a>
-    </div>
-</section>
-
  Open to remote or travel • Located in Plano, Tx.
 {: .text--gray .text--code .text--center .pt--md .pb--xl}
 
