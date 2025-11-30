@@ -1,4 +1,4 @@
-import { Github, Linkedin, Briefcase, Moon, Sun } from "lucide-react";
+import { Github, Linkedin, Briefcase, Moon, Sun, Mic, Code } from "lucide-react";
 import { useTheme } from "@/components/ThemeProvider";
 import { Button } from "@/components/ui/button";
 
@@ -11,6 +11,20 @@ const Index = () => {
       icon: Briefcase,
       url: "#",
       gradient: "from-primary to-primary/80",
+    },
+    {
+      title: "Tech Talk",
+      description: "Watch my latest presentation",
+      icon: Mic,
+      url: "#",
+      gradient: "from-[#FF6B6B] to-[#FF8E53]",
+    },
+    {
+      title: "Open Source Project",
+      description: "Explore my contributions",
+      icon: Code,
+      url: "#",
+      gradient: "from-[#4ECDC4] to-[#44A08D]",
     },
     {
       title: "GitHub",
