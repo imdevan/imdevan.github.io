@@ -9,35 +9,35 @@ const Index = () => {
       title: "Portfolio",
       description: "View my work and projects",
       icon: Briefcase,
-      url: "#",
+      url: "https://devanhuapaya.com/",
       gradient: "from-primary to-primary/80",
     },
     {
       title: "Tech Talk",
       description: "Watch my latest presentation",
       icon: Mic,
-      url: "#",
+      url: "https://imdevan.github.io/dotfiles-for-web-devs-presentation/",
       gradient: "from-[#FF6B6B] to-[#FF8E53]",
     },
     {
-      title: "Open Source Project",
+      title: "PyPo",
       description: "Explore my contributions",
       icon: Code,
-      url: "#",
+      url: "https://imdevan.github.io/pypo",
       gradient: "from-[#4ECDC4] to-[#44A08D]",
     },
     {
       title: "GitHub",
       description: "Check out my code",
       icon: Github,
-      url: "#",
+      url: "http://github.com/imdevan",
       gradient: "from-foreground to-foreground/80",
     },
     {
       title: "LinkedIn",
       description: "Let's connect professionally",
       icon: Linkedin,
-      url: "#",
+      url: "https://www.linkedin.com/in/devanhuapaya",
       gradient: "from-[#0077B5] to-[#00A0DC]",
     },
   ];
@@ -65,7 +65,8 @@ const Index = () => {
 
           <div className="space-y-2">
             <h1 className="text-4xl font-bold text-foreground tracking-tight group cursor-default">
-              Dev<span className="inline-block opacity-0 group-hover:opacity-100 transition-opacity duration-300">an</span> Huap<span className="inline-block opacity-0 group-hover:opacity-100 transition-opacity duration-300">aya</span>
+              Dev Huap
+              {/* Dev<span className="inline-block opacity-0 group-hover:opacity-100 transition-opacity duration-300">an</span> Huap<span className="inline-block opacity-0 group-hover:opacity-100 transition-opacity duration-300">aya</span> */}
             </h1>
             <p className="text-lg text-muted-foreground">
               Developer • Designer • Creator
