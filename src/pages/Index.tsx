@@ -65,7 +65,7 @@ const Index = () => {
 
           <div className="space-y-2">
             <h1 className="text-4xl font-bold text-foreground tracking-tight">
-              Your Name
+              Dev<span>an</span> Huap<span>aya</span>
             </h1>
             <p className="text-lg text-muted-foreground">
               Developer • Designer • Creator
