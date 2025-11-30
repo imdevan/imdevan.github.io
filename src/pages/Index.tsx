@@ -48,7 +48,7 @@ const Index = () => {
             <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-accent mx-auto animate-scale-in" />
             <div className="absolute inset-0 w-24 h-24 rounded-full bg-gradient-to-br from-primary to-accent blur-lg opacity-50 mx-auto" />
           </div>
-          
+
           <div className="space-y-2">
             <h1 className="text-4xl font-bold text-foreground tracking-tight">
               Your Name
@@ -72,14 +72,14 @@ const Index = () => {
                 animation: `fade-in 0.5s ease-out ${0.1 * (index + 1)}s backwards`,
               }}
             >
-              <div className="relative overflow-hidden rounded-2xl bg-card border-2 transition-all duration-300 shadow-[4px_4px_0px_hsl(var(--foreground))] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0px_hsl(var(--foreground))] border-border hover:border-transparent group-hover:bg-gradient-to-r group-hover:from-[#ff8719] group-hover:via-[#4651ff] group-hover:to-[#d4db00] group-hover:bg-[length:300%_300%] group-hover:animate-gradient-xy dark:group-hover:from-[rgb(255,121,26)] dark:group-hover:via-[rgb(230,230,0)] dark:group-hover:to-[rgb(255,219,112)]">
-                <div className="absolute inset-[2px] bg-card rounded-xl" />
-                
+              <div className="relative overflow-hidden  bg-card border-2 transition-all duration-300 shadow-[4px_4px_0px_hsl(var(--foreground))] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0px_hsl(var(--foreground))] border-border hover:border-transparent group-hover:bg-gradient-to-r group-hover:from-[#ff8719] group-hover:via-[#4651ff] group-hover:to-[#d4db00] group-hover:bg-[length:300%_300%] group-hover:animate-gradient-xy dark:group-hover:from-[rgb(255,121,26)] dark:group-hover:via-[rgb(230,230,0)] dark:group-hover:to-[rgb(255,219,112)]">
+                <div className="absolute inset-[2px] bg-card " />
+
                 <div className="relative p-6 flex items-center gap-4">
                   <div className={`p-3 rounded-xl bg-gradient-to-br ${link.gradient} text-white shadow-md group-hover:scale-110 transition-transform duration-300`}>
                     <link.icon className="w-6 h-6" />
                   </div>
-                  
+
                   <div className="flex-1">
                     <h3 className="text-lg font-medium text-foreground bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#ff8719] group-hover:via-[#4651ff] group-hover:to-[#d4db00] group-hover:bg-[length:300%_300%] group-hover:animate-gradient-xy dark:group-hover:from-[rgb(255,121,26)] dark:group-hover:via-[rgb(230,230,0)] dark:group-hover:to-[rgb(255,219,112)] transition-all duration-300">
                       {link.title}
@@ -88,7 +88,7 @@ const Index = () => {
                       {link.description}
                     </p>
                   </div>
-                  
+
                   <svg
                     className="w-5 h-5 text-muted-foreground group-hover:text-foreground group-hover:translate-x-1 transition-all duration-300"
                     fill="none"
