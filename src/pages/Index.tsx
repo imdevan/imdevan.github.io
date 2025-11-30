@@ -75,7 +75,7 @@ const Index = () => {
 
         {/* Links Section */}
         <div className="space-y-3">
-          {links.map((link, index) => (
+          {links.slice(0, 3).map((link, index) => (
             <a
               key={link.title}
               href={link.url}
@@ -86,8 +86,8 @@ const Index = () => {
                 animation: `fade-in 0.5s ease-out ${0.1 * (index + 1)}s backwards`,
               }}
             >
-              <div className="relative overflow-hidden  bg-card border-2 transition-all duration-300 shadow-[4px_4px_0px_hsl(var(--foreground))] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0px_hsl(var(--foreground))] border-border hover:border-transparent group-hover:bg-gradient-to-r group-hover:from-[#ff8719] group-hover:via-[#4651ff] group-hover:to-[#d4db00] group-hover:bg-[length:300%_300%] group-hover:animate-gradient-xy dark:group-hover:from-[rgb(255,121,26)] dark:group-hover:via-[rgb(230,230,0)] dark:group-hover:to-[rgb(255,219,112)]">
-                <div className="absolute inset-[2px] bg-card " />
+              <div className="relative overflow-hidden bg-card border-2 transition-all duration-300 shadow-[4px_4px_0px_hsl(var(--foreground))] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0px_hsl(var(--foreground))] border-border hover:border-transparent group-hover:bg-gradient-to-r group-hover:from-[#ff8719] group-hover:via-[#4651ff] group-hover:to-[#d4db00] group-hover:bg-[length:300%_300%] group-hover:animate-gradient-xy dark:group-hover:from-[rgb(255,121,26)] dark:group-hover:via-[rgb(230,230,0)] dark:group-hover:to-[rgb(255,219,112)]">
+                <div className="absolute inset-[2px] bg-card" />
 
                 <div className="relative p-6 flex items-center gap-4">
                   <div className={`p-3 rounded-xl bg-gradient-to-br ${link.gradient} text-white shadow-md group-hover:scale-110 transition-transform duration-300`}>
@@ -120,6 +120,41 @@ const Index = () => {
               </div>
             </a>
           ))}
+
+          {/* GitHub and LinkedIn in same row */}
+          <div className="grid grid-cols-2 gap-3">
+            {links.slice(3, 5).map((link, index) => (
+              <a
+                key={link.title}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block"
+                style={{
+                  animation: `fade-in 0.5s ease-out ${0.1 * (index + 4)}s backwards`,
+                }}
+              >
+                <div className="relative overflow-hidden bg-card border-2 transition-all duration-300 shadow-[4px_4px_0px_hsl(var(--foreground))] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0px_hsl(var(--foreground))] border-border hover:border-transparent group-hover:bg-gradient-to-r group-hover:from-[#ff8719] group-hover:via-[#4651ff] group-hover:to-[#d4db00] group-hover:bg-[length:300%_300%] group-hover:animate-gradient-xy dark:group-hover:from-[rgb(255,121,26)] dark:group-hover:via-[rgb(230,230,0)] dark:group-hover:to-[rgb(255,219,112)]">
+                  <div className="absolute inset-[2px] bg-card" />
+
+                  <div className="relative p-6 flex flex-col items-center gap-3 text-center">
+                    <div className={`p-3 rounded-xl bg-gradient-to-br ${link.gradient} text-white shadow-md group-hover:scale-110 transition-transform duration-300`}>
+                      <link.icon className="w-6 h-6" />
+                    </div>
+
+                    <div>
+                      <h3 className="text-base font-medium text-foreground bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#ff8719] group-hover:via-[#4651ff] group-hover:to-[#d4db00] group-hover:bg-[length:300%_300%] group-hover:animate-gradient-xy dark:group-hover:from-[rgb(255,121,26)] dark:group-hover:via-[rgb(230,230,0)] dark:group-hover:to-[rgb(255,219,112)] transition-all duration-300">
+                        {link.title}
+                      </h3>
+                      <p className="text-xs text-muted-foreground font-light truncate">
+                        {link.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
 
         {/* Footer */}
