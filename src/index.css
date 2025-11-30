@@ -49,6 +49,11 @@ All colors MUST be HSL.
     --shadow-sm: 0 2px 8px hsla(0 0% 0% / 0.04);
     --shadow-md: 0 4px 16px hsla(0 0% 0% / 0.08);
     --shadow-lg: 0 8px 24px hsla(0 0% 0% / 0.12);
+    --shadow-hard: 4px 4px 0px hsl(var(--foreground));
+    
+    /* Animated Gradients */
+    --gradient-hover: linear-gradient(135deg, #ff8719 0%, #4651ff 20.13%, #93c0ff 41.517%, #d4db00 61.635%, #ffe87a 81.138%, #ff8719 100%);
+    --gradient-hover-start: -5%;
     
     /* Transitions */
     --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -106,6 +111,10 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 40 20% 94%;
     --sidebar-border: 0 0% 20%;
     --sidebar-ring: 260 60% 65%;
+    
+    --shadow-hard: 4px 4px 0px hsl(var(--foreground));
+    --gradient-hover: linear-gradient(135deg, rgb(255, 121, 26), rgb(230, 230, 0), rgb(255, 219, 112));
+    --gradient-hover-start: -5%;
   }
 }
 
