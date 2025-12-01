@@ -42,7 +42,9 @@ const Index = () => {
       description: "work, project, notes",
       icon: Briefcase,
       url: "https://devanhuapaya.com/",
-      gradient: "from-primary to-primary/80",
+      // gradient: "from-primary to-primary/80",
+      // gradient: "from-[rgb(255,90,150)] via-[rgb(120,100,255)] via-[rgb(0,200,255)] to-[rgb(255,245,150)]",
+      gradient: "from-[rgb(253,139,169)] via-[rgb(154,148,232)] via-[rgb(46,219,248)] via-[rgb(245,241,200)] to-[rgb(253,139,169)]",
     },
     {
       title: "Dotfiles Presentation",
@@ -106,9 +108,9 @@ const Index = () => {
               Dev Huap
               {/* Dev<span className="inline-block opacity-0 group-hover:opacity-100 transition-opacity duration-300">an</span> Huap<span className="inline-block opacity-0 group-hover:opacity-100 transition-opacity duration-300">aya</span> */}
             </h1>
-            <p className="text-lg text-muted-foreground">
-              Developer • Creator • Thinker
-            </p>
+            {/* <p className="text-lg text-muted-foreground"> */}
+            {/*   Developer • Creator • Thinker */}
+            {/* </p> */}
           </div>
         </div>
 
@@ -178,12 +180,12 @@ const Index = () => {
                       <h3 className="text-lg font-medium text-foreground transition-all duration-300">
                         {link.title}
                       </h3>
-                      <p className="text-sm text-muted-foreground font-light">
+                      <p className="hidden-sm hidden-xs block-md text-sm text-muted-foreground font-light">
                         {link.description}
                       </p>
                     </div>
-
                     <svg
+
                       className="w-5 h-5 text-muted-foreground group-hover:text-foreground group-hover:translate-x-1 transition-all duration-300"
                       fill="none"
                       viewBox="0 0 24 24"
