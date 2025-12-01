@@ -1,9 +1,26 @@
 import { Github, Linkedin, Briefcase, Moon, Sun, Mic, Code } from "lucide-react";
 import { useTheme } from "@/components/ThemeProvider";
 import { Button } from "@/components/ui/button";
+import { useEffect, useState, useRef } from "react";
 
 const Index = () => {
   const { theme, setTheme } = useTheme();
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect mobile webview on mount
+  useEffect(() => {
+    const detectMobile = () => {
+      if (typeof window === 'undefined') return false;
+      const userAgent = window.navigator.userAgent.toLowerCase();
+      const isMobileDevice = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
+      const isWebView = /(webview|wv)/i.test(userAgent) || 
+                        ((window.navigator as any).standalone === true) ||
+                        (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches);
+      const isSmallScreen = window.innerWidth < 768; // md breakpoint
+      return (isMobileDevice || isWebView) && isSmallScreen;
+    };
+    setIsMobile(detectMobile());
+  }, []);
 
   // Helper function to extract colors from gradient string and build gradient
   const getGradientColors = (gradient: string) => {
@@ -159,6 +176,7 @@ const Index = () => {
         <div className="space-y-3">
           {links.slice(0, 3).map((link, index) => {
             const colors = getGradientColors(link.gradient);
+            const titleRef = useRef<HTMLHeadingElement>(null);
             // Create animated gradient that loops - repeat the color sequence for seamless animation
             const animatedGradient = colors.allColors.length > 1
               ? `linear-gradient(90deg, ${[
@@ -176,6 +194,28 @@ const Index = () => {
               : colors.allColors.length === 1
                 ? `linear-gradient(90deg, ${colors.allColors[0]} 0%, ${colors.allColors[0]} 50%, ${colors.allColors[0]} 100%)`
                 : colors.gradient;
+
+            // Apply gradient to text on mobile
+            useEffect(() => {
+              if (isMobile && titleRef.current) {
+                titleRef.current.style.backgroundImage = animatedGradient;
+                titleRef.current.style.backgroundSize = '300% 300%';
+                titleRef.current.style.backgroundPosition = '0% 0%';
+                titleRef.current.style.animation = 'gradient-xy 45s linear infinite';
+                titleRef.current.style.webkitBackgroundClip = 'text';
+                titleRef.current.style.backgroundClip = 'text';
+                titleRef.current.style.color = 'transparent';
+              } else if (!isMobile && titleRef.current) {
+                // Reset on desktop
+                titleRef.current.style.backgroundImage = 'none';
+                titleRef.current.style.backgroundSize = '';
+                titleRef.current.style.animation = '';
+                titleRef.current.style.webkitBackgroundClip = '';
+                titleRef.current.style.backgroundClip = '';
+                titleRef.current.style.color = '';
+              }
+            }, [isMobile, animatedGradient]);
+
             return (
               <a
                 key={link.title}
@@ -189,40 +229,49 @@ const Index = () => {
                 } as React.CSSProperties}
               >
                 <div
-                  className="relative overflow-hidden bg-card border-2 transition-all duration-300 shadow-[4px_4px_0px_hsl(var(--foreground))] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0px_hsl(var(--foreground))] border-border hover:border-transparent"
+                  className="relative overflow-hidden bg-card border-2 transition-all duration-300 shadow-[4px_4px_0px_hsl(var(--foreground))] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0px_hsl(var(--foreground))] border-border hover:border-transparent md:hover:border-transparent"
                   style={{
-                    backgroundImage: 'none',
+                    backgroundImage: isMobile ? animatedGradient : 'none',
+                    backgroundSize: isMobile ? '300% 300%' : undefined,
+                    backgroundPosition: isMobile ? '0% 0%' : undefined,
+                    animation: isMobile ? 'gradient-xy 45s linear infinite' : undefined,
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundImage = animatedGradient;
-                    e.currentTarget.style.backgroundSize = '300% 300%';
-                    e.currentTarget.style.backgroundPosition = '0% 0%';
-                    e.currentTarget.style.animation = 'gradient-xy 45s linear infinite';
-                    // Apply gradient to text
-                    const title = e.currentTarget.querySelector('h3');
-                    if (title) {
-                      title.style.backgroundImage = animatedGradient;
-                      title.style.backgroundSize = '300% 300%';
-                      title.style.backgroundPosition = '0% 0%';
-                      title.style.animation = 'gradient-xy 45s linear infinite';
-                      title.style.webkitBackgroundClip = 'text';
-                      title.style.backgroundClip = 'text';
-                      title.style.color = 'transparent';
+                    // Only apply on hover for md+ screens
+                    if (!isMobile && window.innerWidth >= 768) {
+                      e.currentTarget.style.backgroundImage = animatedGradient;
+                      e.currentTarget.style.backgroundSize = '300% 300%';
+                      e.currentTarget.style.backgroundPosition = '0% 0%';
+                      e.currentTarget.style.animation = 'gradient-xy 45s linear infinite';
+                      // Apply gradient to text
+                      const title = e.currentTarget.querySelector('h3');
+                      if (title) {
+                        title.style.backgroundImage = animatedGradient;
+                        title.style.backgroundSize = '300% 300%';
+                        title.style.backgroundPosition = '0% 0%';
+                        title.style.animation = 'gradient-xy 45s linear infinite';
+                        title.style.webkitBackgroundClip = 'text';
+                        title.style.backgroundClip = 'text';
+                        title.style.color = 'transparent';
+                      }
                     }
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundImage = 'none';
-                    e.currentTarget.style.backgroundSize = '';
-                    e.currentTarget.style.animation = '';
-                    // Remove gradient from text
-                    const title = e.currentTarget.querySelector('h3');
-                    if (title) {
-                      title.style.backgroundImage = 'none';
-                      title.style.backgroundSize = '';
-                      title.style.animation = '';
-                      title.style.webkitBackgroundClip = '';
-                      title.style.backgroundClip = '';
-                      title.style.color = '';
+                    // Only remove on hover for md+ screens
+                    if (!isMobile && window.innerWidth >= 768) {
+                      e.currentTarget.style.backgroundImage = 'none';
+                      e.currentTarget.style.backgroundSize = '';
+                      e.currentTarget.style.animation = '';
+                      // Remove gradient from text
+                      const title = e.currentTarget.querySelector('h3');
+                      if (title) {
+                        title.style.backgroundImage = 'none';
+                        title.style.backgroundSize = '';
+                        title.style.animation = '';
+                        title.style.webkitBackgroundClip = '';
+                        title.style.backgroundClip = '';
+                        title.style.color = '';
+                      }
                     }
                   }}
                 >
@@ -234,7 +283,7 @@ const Index = () => {
                     </div>
 
                     <div className="flex-1">
-                      <h3 className="text-lg font-medium text-foreground transition-all duration-300">
+                      <h3 ref={titleRef} className="text-lg font-medium text-foreground transition-all duration-300">
                         {link.title}
                       </h3>
                       <p className="hidden md:block text-sm text-muted-foreground font-light">
@@ -294,20 +343,29 @@ const Index = () => {
                   }}
                 >
                   <div
-                    className="relative overflow-hidden bg-card border-2 transition-all duration-300 shadow-[4px_4px_0px_hsl(var(--foreground))] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0px_hsl(var(--foreground))] border-border hover:border-transparent"
+                    className="relative overflow-hidden bg-card border-2 transition-all duration-300 shadow-[4px_4px_0px_hsl(var(--foreground))] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0px_hsl(var(--foreground))] border-border hover:border-transparent md:hover:border-transparent"
                     style={{
-                      backgroundImage: 'none',
+                      backgroundImage: isMobile ? animatedGradient : 'none',
+                      backgroundSize: isMobile ? '300% 300%' : undefined,
+                      backgroundPosition: isMobile ? '0% 0%' : undefined,
+                      animation: isMobile ? 'gradient-xy 45s linear infinite' : undefined,
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundImage = animatedGradient;
-                      e.currentTarget.style.backgroundSize = '300% 300%';
-                      e.currentTarget.style.backgroundPosition = '0% 0%';
-                      e.currentTarget.style.animation = 'gradient-xy 45s linear infinite';
+                      // Only apply on hover for md+ screens
+                      if (!isMobile && window.innerWidth >= 768) {
+                        e.currentTarget.style.backgroundImage = animatedGradient;
+                        e.currentTarget.style.backgroundSize = '300% 300%';
+                        e.currentTarget.style.backgroundPosition = '0% 0%';
+                        e.currentTarget.style.animation = 'gradient-xy 45s linear infinite';
+                      }
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.backgroundImage = 'none';
-                      e.currentTarget.style.backgroundSize = '';
-                      e.currentTarget.style.animation = '';
+                      // Only remove on hover for md+ screens
+                      if (!isMobile && window.innerWidth >= 768) {
+                        e.currentTarget.style.backgroundImage = 'none';
+                        e.currentTarget.style.backgroundSize = '';
+                        e.currentTarget.style.animation = '';
+                      }
                     }}
                   >
                     <div className="absolute inset-[2px] bg-card" />
