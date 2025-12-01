@@ -13,7 +13,7 @@ const Index = () => {
       gradient: "from-primary to-primary/80",
     },
     {
-      title: "Tech Talk",
+      title: "Dotfiles Presentation",
       description: "Watch my latest presentation",
       icon: Mic,
       url: "https://imdevan.github.io/dotfiles-for-web-devs-presentation/",
@@ -61,6 +61,12 @@ const Index = () => {
           <div className="relative inline-block">
             <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-accent mx-auto animate-scale-in" />
             <div className="absolute inset-0 w-24 h-24 rounded-full bg-gradient-to-br from-primary to-accent blur-lg opacity-50 mx-auto" />
+            <img 
+              src="/compy-guy.png" 
+              alt="Profile" 
+              className="absolute inset-0 w-24 h-24 rounded-full object-cover mx-auto z-10"
+              style={{ filter: 'none' }}
+            />
           </div>
 
           <div className="space-y-2">
