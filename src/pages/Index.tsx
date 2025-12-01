@@ -4,6 +4,38 @@ import { Button } from "@/components/ui/button";
 
 const Index = () => {
   const { theme, setTheme } = useTheme();
+
+  // Helper function to extract colors from gradient string
+  const getGradientColors = (gradient: string) => {
+    // Extract colors from Tailwind gradient format
+    const fromMatch = gradient.match(/from-\[([^\]]+)\]/) || gradient.match(/from-(\w+(?:\/\d+)?)/);
+    const toMatch = gradient.match(/to-\[([^\]]+)\]/) || gradient.match(/to-(\w+(?:\/\d+)?)/);
+    
+    let fromColor = fromMatch ? fromMatch[1] : '';
+    let toColor = toMatch ? toMatch[1] : '';
+    
+    // Convert CSS variables to hsl format
+    const convertToColor = (color: string) => {
+      if (color.startsWith('#')) {
+        return color;
+      }
+      // Handle opacity modifiers (e.g., primary/80)
+      const [varName, opacity] = color.split('/');
+      if (varName === 'primary' || varName === 'accent' || varName === 'foreground') {
+        const opacityValue = opacity ? ` / ${parseInt(opacity) / 100}` : '';
+        return `hsl(var(--${varName})${opacityValue})`;
+      }
+      // Default case for other CSS variables
+      const opacityValue = opacity ? ` / ${parseInt(opacity) / 100}` : '';
+      return `hsl(var(--${varName})${opacityValue})`;
+    };
+    
+    return {
+      from: convertToColor(fromColor),
+      to: convertToColor(toColor),
+    };
+  };
+
   const links = [
     {
       title: "Portfolio",
@@ -82,7 +114,10 @@ const Index = () => {
 
         {/* Links Section */}
         <div className="space-y-3">
-          {links.slice(0, 3).map((link, index) => (
+          {links.slice(0, 3).map((link, index) => {
+            const colors = getGradientColors(link.gradient);
+            const gradientStyle = `linear-gradient(90deg, ${colors.from} 0%, ${colors.to} 50%, ${colors.from} 100%)`;
+            return (
             <a
               key={link.title}
               href={link.url}
@@ -91,9 +126,47 @@ const Index = () => {
               className="group block"
               style={{
                 animation: `fade-in 0.5s ease-out ${0.1 * (index + 1)}s backwards`,
-              }}
+                '--link-gradient': gradientStyle,
+              } as React.CSSProperties}
             >
-              <div className="relative overflow-hidden bg-card border-2 transition-all duration-300 shadow-[4px_4px_0px_hsl(var(--foreground))] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0px_hsl(var(--foreground))] border-border hover:border-transparent group-hover:bg-gradient-to-r group-hover:from-[#ff8719] group-hover:via-[#4651ff] group-hover:to-[#d4db00] group-hover:bg-[length:300%_300%] group-hover:animate-gradient-xy dark:group-hover:from-[rgb(255,121,26)] dark:group-hover:via-[rgb(230,230,0)] dark:group-hover:to-[rgb(255,219,112)]">
+              <div 
+                className="relative overflow-hidden bg-card border-2 transition-all duration-300 shadow-[4px_4px_0px_hsl(var(--foreground))] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0px_hsl(var(--foreground))] border-border hover:border-transparent"
+                style={{
+                  backgroundImage: 'none',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundImage = gradientStyle;
+                  e.currentTarget.style.backgroundSize = '300% 300%';
+                  e.currentTarget.style.backgroundPosition = '0% 0%';
+                  e.currentTarget.style.animation = 'gradient-xy 45s linear infinite';
+                  // Apply gradient to text
+                  const title = e.currentTarget.querySelector('h3');
+                  if (title) {
+                    title.style.backgroundImage = gradientStyle;
+                    title.style.backgroundSize = '300% 300%';
+                    title.style.backgroundPosition = '0% 0%';
+                    title.style.animation = 'gradient-xy 45s linear infinite';
+                    title.style.webkitBackgroundClip = 'text';
+                    title.style.backgroundClip = 'text';
+                    title.style.color = 'transparent';
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundImage = 'none';
+                  e.currentTarget.style.backgroundSize = '';
+                  e.currentTarget.style.animation = '';
+                  // Remove gradient from text
+                  const title = e.currentTarget.querySelector('h3');
+                  if (title) {
+                    title.style.backgroundImage = 'none';
+                    title.style.backgroundSize = '';
+                    title.style.animation = '';
+                    title.style.webkitBackgroundClip = '';
+                    title.style.backgroundClip = '';
+                    title.style.color = '';
+                  }
+                }}
+              >
                 <div className="absolute inset-[2px] bg-card" />
 
                 <div className="relative p-6 flex items-center gap-4">
@@ -102,7 +175,7 @@ const Index = () => {
                   </div>
 
                   <div className="flex-1">
-                    <h3 className="text-lg font-medium text-foreground bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#ff8719] group-hover:via-[#4651ff] group-hover:to-[#d4db00] group-hover:bg-[length:300%_300%] group-hover:animate-gradient-xy dark:group-hover:from-[rgb(255,121,26)] dark:group-hover:via-[rgb(230,230,0)] dark:group-hover:to-[rgb(255,219,112)] transition-all duration-300">
+                    <h3 className="text-lg font-medium text-foreground transition-all duration-300">
                       {link.title}
                     </h3>
                     <p className="text-sm text-muted-foreground font-light">
@@ -126,11 +199,15 @@ const Index = () => {
                 </div>
               </div>
             </a>
-          ))}
+            );
+          })}
 
           {/* GitHub and LinkedIn in same row */}
           <div className="grid grid-cols-2 gap-3">
-            {links.slice(3, 5).map((link, index) => (
+            {links.slice(3, 5).map((link, index) => {
+              const colors = getGradientColors(link.gradient);
+              const gradientStyle = `linear-gradient(90deg, ${colors.from} 0%, ${colors.to} 50%, ${colors.from} 100%)`;
+              return (
               <a
                 key={link.title}
                 href={link.url}
@@ -141,7 +218,23 @@ const Index = () => {
                   animation: `fade-in 0.5s ease-out ${0.1 * (index + 4)}s backwards`,
                 }}
               >
-                <div className="relative overflow-hidden bg-card border-2 transition-all duration-300 shadow-[4px_4px_0px_hsl(var(--foreground))] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0px_hsl(var(--foreground))] border-border hover:border-transparent group-hover:bg-gradient-to-r group-hover:from-[#ff8719] group-hover:via-[#4651ff] group-hover:to-[#d4db00] group-hover:bg-[length:300%_300%] group-hover:animate-gradient-xy dark:group-hover:from-[rgb(255,121,26)] dark:group-hover:via-[rgb(230,230,0)] dark:group-hover:to-[rgb(255,219,112)]">
+                <div 
+                  className="relative overflow-hidden bg-card border-2 transition-all duration-300 shadow-[4px_4px_0px_hsl(var(--foreground))] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0px_hsl(var(--foreground))] border-border hover:border-transparent"
+                  style={{
+                    backgroundImage: 'none',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundImage = gradientStyle;
+                    e.currentTarget.style.backgroundSize = '300% 300%';
+                    e.currentTarget.style.backgroundPosition = '0% 0%';
+                    e.currentTarget.style.animation = 'gradient-xy 45s linear infinite';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundImage = 'none';
+                    e.currentTarget.style.backgroundSize = '';
+                    e.currentTarget.style.animation = '';
+                  }}
+                >
                   <div className="absolute inset-[2px] bg-card" />
 
                   <div className="relative p-6 flex flex-col items-center gap-3 text-center">
@@ -160,7 +253,8 @@ const Index = () => {
                   </div>
                 </div>
               </a>
-            ))}
+              );
+            })}
           </div>
         </div>
 
