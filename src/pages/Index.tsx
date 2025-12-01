@@ -5,17 +5,33 @@ import { Button } from "@/components/ui/button";
 const Index = () => {
   const { theme, setTheme } = useTheme();
 
-  // Helper function to extract colors from gradient string
+  // Helper function to extract colors from gradient string and build gradient
   const getGradientColors = (gradient: string) => {
-    // Extract colors from Tailwind gradient format
+    // Extract all color stops (from, via, to)
     const fromMatch = gradient.match(/from-\[([^\]]+)\]/) || gradient.match(/from-(\w+(?:\/\d+)?)/);
+
+    // Extract all via colors - match both via-[...] and via-... patterns
+    const viaArray: string[] = [];
+    const viaMatches = gradient.matchAll(/via-\[([^\]]+)\]|via-(\w+(?:\/\d+)?)/g);
+    for (const match of viaMatches) {
+      const color = match[1] || match[2]; // match[1] for bracketed, match[2] for unbracketed
+      if (color) {
+        viaArray.push(color);
+      }
+    }
+
     const toMatch = gradient.match(/to-\[([^\]]+)\]/) || gradient.match(/to-(\w+(?:\/\d+)?)/);
 
     let fromColor = fromMatch ? fromMatch[1] : '';
     let toColor = toMatch ? toMatch[1] : '';
 
-    // Convert CSS variables to hsl format
+    // Convert CSS variables to hsl format, handle rgb() and hex
     const convertToColor = (color: string) => {
+      // Handle rgb() format
+      if (color.startsWith('rgb(') || color.startsWith('rgba(')) {
+        return color;
+      }
+      // Handle hex colors
       if (color.startsWith('#')) {
         return color;
       }
@@ -30,9 +46,34 @@ const Index = () => {
       return `hsl(var(--${varName})${opacityValue})`;
     };
 
+    // Build array of all colors in order
+    const allColors = [
+      convertToColor(fromColor),
+      ...viaArray.map(convertToColor),
+      convertToColor(toColor),
+    ].filter(Boolean);
+
+    // Build gradient string with proper stops
+    const buildGradient = (colors: string[]) => {
+      if (colors.length === 0) return '';
+      if (colors.length === 1) return colors[0];
+
+      const stopCount = colors.length;
+      const stops = colors.map((color, index) => {
+        const percentage = (index / (stopCount - 1)) * 100;
+        return `${color} ${percentage}%`;
+      });
+
+      return `linear-gradient(90deg, ${stops.join(', ')})`;
+    };
+
+    const fullGradient = buildGradient(allColors);
+
     return {
       from: convertToColor(fromColor),
       to: convertToColor(toColor),
+      allColors,
+      gradient: fullGradient,
     };
   };
 
@@ -118,7 +159,23 @@ const Index = () => {
         <div className="space-y-3">
           {links.slice(0, 3).map((link, index) => {
             const colors = getGradientColors(link.gradient);
-            const gradientStyle = `linear-gradient(90deg, ${colors.from} 0%, ${colors.to} 50%, ${colors.from} 100%)`;
+            // Create animated gradient that loops - repeat the color sequence for seamless animation
+            const animatedGradient = colors.allColors.length > 1
+              ? `linear-gradient(90deg, ${[
+                // First half: all colors from 0% to 50%
+                ...colors.allColors.map((color, i) => {
+                  const stop = (i / (colors.allColors.length - 1)) * 50;
+                  return `${color} ${stop}%`;
+                }),
+                // Second half: repeat colors from 50% to 100% for seamless loop
+                ...colors.allColors.map((color, i) => {
+                  const stop = 50 + (i / (colors.allColors.length - 1)) * 50;
+                  return `${color} ${stop}%`;
+                }),
+              ].join(', ')})`
+              : colors.allColors.length === 1
+                ? `linear-gradient(90deg, ${colors.allColors[0]} 0%, ${colors.allColors[0]} 50%, ${colors.allColors[0]} 100%)`
+                : colors.gradient;
             return (
               <a
                 key={link.title}
@@ -128,7 +185,7 @@ const Index = () => {
                 className="group block"
                 style={{
                   animation: `fade-in 0.5s ease-out ${0.1 * (index + 1)}s backwards`,
-                  '--link-gradient': gradientStyle,
+                  '--link-gradient': animatedGradient,
                 } as React.CSSProperties}
               >
                 <div
@@ -137,14 +194,14 @@ const Index = () => {
                     backgroundImage: 'none',
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundImage = gradientStyle;
+                    e.currentTarget.style.backgroundImage = animatedGradient;
                     e.currentTarget.style.backgroundSize = '300% 300%';
                     e.currentTarget.style.backgroundPosition = '0% 0%';
                     e.currentTarget.style.animation = 'gradient-xy 45s linear infinite';
                     // Apply gradient to text
                     const title = e.currentTarget.querySelector('h3');
                     if (title) {
-                      title.style.backgroundImage = gradientStyle;
+                      title.style.backgroundImage = animatedGradient;
                       title.style.backgroundSize = '300% 300%';
                       title.style.backgroundPosition = '0% 0%';
                       title.style.animation = 'gradient-xy 45s linear infinite';
@@ -180,7 +237,7 @@ const Index = () => {
                       <h3 className="text-lg font-medium text-foreground transition-all duration-300">
                         {link.title}
                       </h3>
-                      <p className="hidden-sm hidden-xs block-md text-sm text-muted-foreground font-light">
+                      <p className="hidden md:block text-sm text-muted-foreground font-light">
                         {link.description}
                       </p>
                     </div>
@@ -208,7 +265,23 @@ const Index = () => {
           <div className="grid grid-cols-2 gap-3">
             {links.slice(3, 5).map((link, index) => {
               const colors = getGradientColors(link.gradient);
-              const gradientStyle = `linear-gradient(90deg, ${colors.from} 0%, ${colors.to} 50%, ${colors.from} 100%)`;
+              // Create animated gradient that loops - repeat the color sequence for seamless animation
+              const animatedGradient = colors.allColors.length > 1
+                ? `linear-gradient(90deg, ${[
+                  // First half: all colors from 0% to 50%
+                  ...colors.allColors.map((color, i) => {
+                    const stop = (i / (colors.allColors.length - 1)) * 50;
+                    return `${color} ${stop}%`;
+                  }),
+                  // Second half: repeat colors from 50% to 100% for seamless loop
+                  ...colors.allColors.map((color, i) => {
+                    const stop = 50 + (i / (colors.allColors.length - 1)) * 50;
+                    return `${color} ${stop}%`;
+                  }),
+                ].join(', ')})`
+                : colors.allColors.length === 1
+                  ? `linear-gradient(90deg, ${colors.allColors[0]} 0%, ${colors.allColors[0]} 50%, ${colors.allColors[0]} 100%)`
+                  : colors.gradient;
               return (
                 <a
                   key={link.title}
@@ -226,7 +299,7 @@ const Index = () => {
                       backgroundImage: 'none',
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundImage = gradientStyle;
+                      e.currentTarget.style.backgroundImage = animatedGradient;
                       e.currentTarget.style.backgroundSize = '300% 300%';
                       e.currentTarget.style.backgroundPosition = '0% 0%';
                       e.currentTarget.style.animation = 'gradient-xy 45s linear infinite';
