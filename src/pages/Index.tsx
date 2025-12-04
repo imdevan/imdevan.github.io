@@ -1,4 +1,4 @@
-import { Github, Linkedin, Briefcase, Moon, Sun, Mic, Code } from "lucide-react";
+import { Github, Linkedin, Briefcase, Moon, Sun, Code, Footprints } from "lucide-react";
 import { useTheme } from "@/components/ThemeProvider";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState, useRef } from "react";
@@ -7,17 +7,18 @@ const Index = () => {
   const { theme, setTheme } = useTheme();
   const [isMobile, setIsMobile] = useState(false);
 
-  // Detect mobile webview on mount
+  // Detect mobile webview on mount - only for actual mobile devices/webviews, not just small screens
   useEffect(() => {
     const detectMobile = () => {
       if (typeof window === 'undefined') return false;
       const userAgent = window.navigator.userAgent.toLowerCase();
       const isMobileDevice = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
-      const isWebView = /(webview|wv)/i.test(userAgent) || 
-                        ((window.navigator as any).standalone === true) ||
-                        (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches);
-      const isSmallScreen = window.innerWidth < 768; // md breakpoint
-      return (isMobileDevice || isWebView) && isSmallScreen;
+      const isWebView = /(webview|wv)/i.test(userAgent) ||
+        ((window.navigator as any).standalone === true) ||
+        (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches);
+      // Only return true for actual mobile devices/webviews, not just small screens
+      // Small screens that aren't mobile devices will keep hover behavior
+      return (isMobileDevice || isWebView);
     };
     setIsMobile(detectMobile());
   }, []);
@@ -97,7 +98,7 @@ const Index = () => {
   const links = [
     {
       title: "Portfolio",
-      description: "work, project, notes",
+      description: "work, projects, notes",
       icon: Briefcase,
       url: "https://devanhuapaya.com/",
       // gradient: "from-primary to-primary/80",
@@ -105,18 +106,22 @@ const Index = () => {
       gradient: "from-[rgb(253,139,169)] via-[rgb(154,148,232)] via-[rgb(46,219,248)] via-[rgb(245,241,200)] to-[rgb(253,139,169)]",
     },
     {
-      title: "Dotfiles Presentation",
-      description: ".dotfiles for .js devs",
-      icon: Mic,
-      url: "https://imdevan.github.io/dotfiles-for-web-devs-presentation/",
-      gradient: "from-[#FF6B6B] to-[#FF8E53]",
+      title: "Dance Partner",
+      description: "an app for dance nerds",
+      icon: Footprints,
+      url: "https://devan.gg/get-dance-partner",
+      // gradient: "from-[#8b8ce8] to-[#9cced7]",
+      gradient: "from-[#8b8ce8] via-[#9cced7] to-[#8b8ce8]",
     },
     {
       title: "PyPo",
       description: "silly name, serious business",
       icon: Code,
       url: "https://imdevan.github.io/what-is-pypo",
-      gradient: "from-[#4ECDC4] to-[#44A08D]",
+      // gradient: "from-[#4ECDC4] to-[#44A08D]",
+      // gradient: "from-[#4242fe] via-[#7fd4ff] via-[#e5e500] via-[#ffdb70] to-[#ff7919]",
+      gradient: "from-[#4242fe] via-[#7fd4ff] via-[#e5e500] via-[#ffdb70] via-[#ff7919]  via-[#ffdb70] via-[#e5e500] via-[#7fd4ff] to-[#4242fe]",
+      // gradient: "from-[#4242fe]  via-[#e5e500] to-[#ff7919]",
     },
     {
       title: "GitHub",
@@ -124,13 +129,14 @@ const Index = () => {
       icon: Github,
       url: "http://github.com/imdevan",
       gradient: "from-foreground to-foreground/80",
+      gradient: "from-[#f0f6fc] via-[#0d1117] via-[#0d1117] to-[#f0f6fc]",
     },
     {
       title: "LinkedIn",
       description: "Let's connect professionally",
       icon: Linkedin,
       url: "https://www.linkedin.com/in/devanhuapaya",
-      gradient: "from-[#0077B5] to-[#00A0DC]",
+      gradient: "from-[#0077B5] via-[#00A0DC] via-[#00A0DC] to-[#0077B5]",
     },
   ];
 
@@ -206,8 +212,8 @@ const Index = () => {
                 titleRef.current.style.backgroundClip = 'text';
                 titleRef.current.style.color = 'transparent';
               } else if (!isMobile && titleRef.current) {
-                // Reset on desktop
-                titleRef.current.style.backgroundImage = 'none';
+                // Reset on desktop - but keep dimensions stable
+                titleRef.current.style.backgroundImage = '';
                 titleRef.current.style.backgroundSize = '';
                 titleRef.current.style.animation = '';
                 titleRef.current.style.webkitBackgroundClip = '';
@@ -229,12 +235,16 @@ const Index = () => {
                 } as React.CSSProperties}
               >
                 <div
-                  className="relative overflow-hidden bg-card border-2 transition-all duration-300 shadow-[4px_4px_0px_hsl(var(--foreground))] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0px_hsl(var(--foreground))] border-border hover:border-transparent md:hover:border-transparent"
+                  className="relative overflow-hidden bg-card  transition-all duration-300 shadow-[4px_4px_0px_hsl(var(--foreground))] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0px_hsl(var(--foreground))] border-border md:hover:border-card"
                   style={{
                     backgroundImage: isMobile ? animatedGradient : 'none',
                     backgroundSize: isMobile ? '300% 300%' : undefined,
                     backgroundPosition: isMobile ? '0% 0%' : undefined,
                     animation: isMobile ? 'gradient-xy 45s linear infinite' : undefined,
+                    willChange: 'transform, background-image, border-color',
+                    // Reserve space for shadow to prevent layout shift
+                    marginBottom: '2px',
+                    marginRight: '2px',
                   }}
                   onMouseEnter={(e) => {
                     // Only apply on hover for md+ screens
@@ -246,13 +256,15 @@ const Index = () => {
                       // Apply gradient to text
                       const title = e.currentTarget.querySelector('h3');
                       if (title) {
+                        // Set background-clip first to prevent layout shift
+                        title.style.webkitBackgroundClip = 'text';
+                        title.style.backgroundClip = 'text';
+                        title.style.color = 'transparent';
+                        // Then apply gradient
                         title.style.backgroundImage = animatedGradient;
                         title.style.backgroundSize = '300% 300%';
                         title.style.backgroundPosition = '0% 0%';
                         title.style.animation = 'gradient-xy 45s linear infinite';
-                        title.style.webkitBackgroundClip = 'text';
-                        title.style.backgroundClip = 'text';
-                        title.style.color = 'transparent';
                       }
                     }
                   }}
@@ -265,7 +277,7 @@ const Index = () => {
                       // Remove gradient from text
                       const title = e.currentTarget.querySelector('h3');
                       if (title) {
-                        title.style.backgroundImage = 'none';
+                        title.style.backgroundImage = '';
                         title.style.backgroundSize = '';
                         title.style.animation = '';
                         title.style.webkitBackgroundClip = '';
@@ -275,14 +287,14 @@ const Index = () => {
                     }
                   }}
                 >
-                  <div className="absolute inset-[2px] bg-card" />
+                  <div className="absolute inset-[3px] bg-card" />
 
                   <div className="relative p-6 flex items-center gap-4">
                     <div className={`p-3 rounded-xl bg-gradient-to-br ${link.gradient} text-white shadow-md group-hover:scale-110 transition-transform duration-300`}>
                       <link.icon className="w-6 h-6" />
                     </div>
 
-                    <div className="flex-1">
+                    <div className="flex-1" style={{ minHeight: '3rem' }}>
                       <h3 ref={titleRef} className="text-lg font-medium text-foreground transition-all duration-300">
                         {link.title}
                       </h3>
@@ -343,12 +355,16 @@ const Index = () => {
                   }}
                 >
                   <div
-                    className="relative overflow-hidden bg-card border-2 transition-all duration-300 shadow-[4px_4px_0px_hsl(var(--foreground))] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0px_hsl(var(--foreground))] border-border hover:border-transparent md:hover:border-transparent"
+                    className="relative overflow-hidden bg-card transition-all duration-300 shadow-[4px_4px_0px_hsl(var(--foreground))] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0px_hsl(var(--foreground))] border-border md:hover:border-card"
                     style={{
                       backgroundImage: isMobile ? animatedGradient : 'none',
                       backgroundSize: isMobile ? '300% 300%' : undefined,
                       backgroundPosition: isMobile ? '0% 0%' : undefined,
                       animation: isMobile ? 'gradient-xy 45s linear infinite' : undefined,
+                      willChange: 'transform, background-image, border-color',
+                      // Reserve space for shadow to prevent layout shift
+                      marginBottom: '2px',
+                      marginRight: '2px',
                     }}
                     onMouseEnter={(e) => {
                       // Only apply on hover for md+ screens
@@ -368,7 +384,7 @@ const Index = () => {
                       }
                     }}
                   >
-                    <div className="absolute inset-[2px] bg-card" />
+                    <div className="absolute inset-[3px] bg-card" />
 
                     <div className="relative p-6 flex flex-col items-center gap-3 text-center">
                       {/* <div className={`p-3 rounded-xl bg-gradient-to-br ${link.gradient} text-white shadow-md group-hover:scale-110 transition-transform duration-300`}> */}
