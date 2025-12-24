@@ -114,13 +114,13 @@ const Index = () => {
       gradient: "from-[#8b8ce8] via-[#9cced7] to-[#8b8ce8]",
     },
     {
-      title: "PyPo",
-      description: "silly name, serious business",
+      title: "Prompter CLI",
+      description: "a cli tool for organizing prompts",
       icon: Code,
-      url: "https://imdevan.github.io/what-is-pypo",
+      url: "https://devan.gg/prompter-cli",
       // gradient: "from-[#4ECDC4] to-[#44A08D]",
       // gradient: "from-[#4242fe] via-[#7fd4ff] via-[#e5e500] via-[#ffdb70] to-[#ff7919]",
-      gradient: "from-[#4242fe] via-[#7fd4ff] via-[#e5e500] via-[#ffdb70] via-[#ff7919]  via-[#ffdb70] via-[#e5e500] via-[#7fd4ff] to-[#4242fe]",
+      gradient: "from-[#30e874] via-[#101018] to-[#30e874]",
       // gradient: "from-[#4242fe]  via-[#e5e500] to-[#ff7919]",
     },
     {
