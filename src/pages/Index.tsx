@@ -1,4 +1,4 @@
-import { Github, Linkedin, Briefcase, Moon, Sun, Code, Footprints } from "lucide-react";
+import { Github, Linkedin, Briefcase, Moon, Sun, Code, Footprints, Palette, Coffee } from "lucide-react";
 import { useTheme } from "@/components/ThemeProvider";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState, useRef } from "react";
@@ -110,25 +110,35 @@ const Index = () => {
       description: "an app for dance nerds",
       icon: Footprints,
       url: "https://devan.gg/get-dance-partner",
-      // gradient: "from-[#8b8ce8] to-[#9cced7]",
       gradient: "from-[#8b8ce8] via-[#9cced7] to-[#8b8ce8]",
+    },
+    {
+      title: "Colorz",
+      description: "a util for converting colors",
+      icon: Palette,
+      url: "https://devan.gg/colorz",
+      gradient: "from-[rgb(255,80,100)] via-[rgb(255,150,50)] via-[rgb(255,220,50)] via-[rgb(50,255,150)] via-[rgb(50,150,255)] via-[rgb(150,50,255)] to-[rgb(255,80,100)]",
+    },
+    {
+      title: "Meassuring Spoon",
+      description: "a util for adjusting recipe ingredients",
+      icon: Coffee,
+      url: "https://devan.gg/meassuring-spoon",
+      // gradient: "from-[#db7082] via-[#18161d] to-[#db7082]",
+      gradient: "from-[#db7082] via-[#fbfaf8] to-[#db7082]",
     },
     {
       title: "Prompter CLI",
       description: "a cli tool for organizing prompts",
       icon: Code,
       url: "https://devan.gg/prompter-cli",
-      // gradient: "from-[#4ECDC4] to-[#44A08D]",
-      // gradient: "from-[#4242fe] via-[#7fd4ff] via-[#e5e500] via-[#ffdb70] to-[#ff7919]",
       gradient: "from-[#30e874] via-[#101018] to-[#30e874]",
-      // gradient: "from-[#4242fe]  via-[#e5e500] to-[#ff7919]",
     },
     {
       title: "GitHub",
       description: "Check out my code",
       icon: Github,
       url: "http://github.com/imdevan",
-      gradient: "from-foreground to-foreground/80",
       gradient: "from-[#f0f6fc] via-[#0d1117] via-[#0d1117] to-[#f0f6fc]",
     },
     {
@@ -180,7 +190,7 @@ const Index = () => {
 
         {/* Links Section */}
         <div className="space-y-3">
-          {links.slice(0, 3).map((link, index) => {
+          {links.slice(0, 5).map((link, index) => {
             const colors = getGradientColors(link.gradient);
             const titleRef = useRef<HTMLHeadingElement>(null);
             // Create animated gradient that loops - repeat the color sequence for seamless animation
@@ -324,7 +334,7 @@ const Index = () => {
 
           {/* GitHub and LinkedIn in same row */}
           <div className="grid grid-cols-2 gap-3">
-            {links.slice(3, 5).map((link, index) => {
+            {links.slice(5, 7).map((link, index) => {
               const colors = getGradientColors(link.gradient);
               // Create animated gradient that loops - repeat the color sequence for seamless animation
               const animatedGradient = colors.allColors.length > 1
